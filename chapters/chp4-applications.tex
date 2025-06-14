@@ -1,5 +1,9 @@
 % !TEX root = ../thesis.tex
 
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
 \chapter{Case Study I: Predictive Decision-Making in Building Health Monitoring} \label{chp:building}
 
 % This chapter presents the completed case study demonstrating CORTEX architecture
@@ -50,7 +54,9 @@ To address the challenges identified above, we developed DefectGPT, a comprehens
 
 \subsection{Digital Twin Construction with Multi-Source Data Integration}
 
-The DefectGPT framework implements a three-layer architecture comprising the Data Layer, the Digital Twin Layer, and the Decision Layer. This structure enables sophisticated data management and real-time synchronization between physical buildings and their digital counterparts.
+Building upon established methodologies in GeoBIM-assisted registration for building façade defects, the DefectGPT framework implements a comprehensive BIM+GIS-based DT modeling framework with a three-layer architecture comprising the Data Layer, the Digital Twin Layer, and the newly introduced Decision Layer. This structure enables sophisticated data management and real-time synchronization between physical buildings and their digital counterparts, facilitating advanced monitoring, analysis, and decision-making in building defect management.
+
+The architectural innovation lies in the seamless integration of heterogeneous data sources across multiple modalities and formats, enabling precise spatial registration of defect information within complex three-dimensional building models. Unlike traditional static BIM approaches that rely on periodic manual updates, our framework implements dynamic data carriers that manage and organize diverse information streams while maintaining temporal consistency and spatial coherence across different building areas and components.
 
 \begin{figure}[htbp]
     \centering
@@ -95,14 +101,40 @@ The system employs advanced computer vision algorithms to identify and classify 
 
 \subsubsection{Spatial Registration and Localization}
 
-Defect localization begins with UAV-based inspections capturing high-resolution images of building facades. Using RTK (Real-Time Kinematic) positioning, the UAV's pose is accurately determined, ensuring precise alignment between captured images and the 3D BIM model. The coordinate transformation process involves:
+Defect localization begins with UAV-based inspections capturing high-resolution images of building facades. Using RTK (Real-Time Kinematic) positioning, the UAV's pose is accurately determined, ensuring precise alignment between captured images and the 3D BIM model. Detected defects (RGB or infrared) are bound with bounding boxes and classifications, subsequently mapped from 2D image coordinates onto the 3D BIM model through a sophisticated coordinate transformation process involving depth and pose estimation, followed by tangential vector adjustments to align detected defects with facade surfaces.
 
-\begin{enumerate}
-    \item Depth estimation from UAV position to building facade
-    \item Pose estimation and orientation calculation
-    \item Tangential vector adjustments for facade surface alignment
-    \item Global coordinate transformation from image coordinates to world coordinates
-\end{enumerate}
+The global defect localization algorithm, formalized in Algorithm~\ref{alg:defect-localization}, implements a comprehensive approach to mapping detected defects from UAV imagery onto globally referenced building coordinates. This process begins with the geographical coordinates of each captured image and utilizes the distance to the wall and projection vectors to establish precise spatial relationships.
+
+\begin{algorithm}[htbp]
+\caption{Defect Global Localization}
+\label{alg:defect-localization}
+\begin{algorithmic}[1]
+\REQUIRE Geographical coordinates of image $P_{i}^{g}(lon_{i}, lat_{i}, alt_{i})$; Distance to the wall $d_{wall}$; Projection vector $\vec{n}$
+\ENSURE Global location of defect $d_{i,j}$: $g(i,j)(lng_{i,j}, lat_{i,j}, alt_{i,j})$
+\STATE Initialize array of detected images $i$
+\FOR{$t = 1$ to $i_{\max}$}
+    \STATE Project from image localization $P_{i}^{g}$ to the corresponding point on the wall
+    \STATE Given $\vec{n} = (\alpha_{i}, \beta_{i}, \gamma_{i})$
+    \STATE $P^{g\ast}_{i} = P^{g}_{i} + d_{wall} \times \vec{n}$
+    \FOR{$j = 1$ to $j_{\max}$}
+        \STATE $L_{D}(i) = 2d_{wall} \tan{\frac{FOV}{2}}$
+        \STATE $\vec{L}(i,j) = L_{D}(i) \cdot \frac{l(i,j)}{l_{D}(i)}$
+        \STATE $g(i,j) = P^{g\ast}_{i} + \vec{L}(i,j)$
+        \STATE $T \gets \sqrt{ \bigl(\frac{0.5}{unit_{lng}}\bigr)^2 + \bigl(\frac{0.5}{unit_{lat}}\bigr)^2 }$
+        \FOR{$k = 1$ to $i-1$}
+            \FOR{$t' = 1$ to $j_{\max}-1$}
+                \IF{$\sqrt{(g(k,t') - g(i,j))^2} > T$}
+                    \STATE Register new defect $g(i,j)$
+                \ENDIF
+            \ENDFOR
+        \ENDFOR
+    \ENDFOR
+\ENDFOR
+\RETURN $g(i,j)(lng_{i,j}, lat_{i,j}, alt_{i,j})$
+\end{algorithmic}
+\end{algorithm}
+
+Through the integration of GIS and BIM data, the DT environment unifies defect information with broader spatial context. The BIM model offers geometric and semantic data on structural elements, while GIS data provides real-world context, enabling geo-referencing and scalable defect tracking. The DT architecture accommodates incremental updating approaches, allowing new data from UAV surveys and sensors to be injected without reconstructing the entire model, thereby maintaining system efficiency while ensuring data freshness and accuracy.
 
 \section{CORTEX Implementation for Building Health Management}
 
@@ -177,14 +209,62 @@ The system implements a three-layer knowledge structure:
 
 \subsubsection{Context-Aware Retrieval Process}
 
-The retrieval system employs advanced algorithms that consider both explicit queries and contextual information:
+The context-aware retrieval process, formalized in Algorithm~\ref{alg:hybrid-retrieval}, enhances traditional search methods by incorporating contextual information alongside user queries. The algorithm processes both the query and its context through advanced embedding encoders, combining these representations to perform vector search over the knowledge base. Results are filtered and reranked based on contextual constraints such as building-specific parameters, temporal factors, and environmental conditions.
 
-\begin{itemize}
-    \item \textbf{Multi-dimensional Indexing}: Information categorized by defect types, locations, severity levels, timestamps, and building components
-    \item \textbf{Semantic Search Capabilities}: Natural language processing enabling intuitive query formulation
-    \item \textbf{Dynamic Knowledge Graph}: Representing relationships between defects, causative factors, inspection procedures, and maintenance actions
-    \item \textbf{Contextual Filtering}: Results filtered based on building-specific parameters, temporal factors, and environmental conditions
-\end{itemize}
+\begin{algorithm}[htbp]
+\caption{Hybrid Knowledge Retrieval for Building Inspection}
+\label{alg:hybrid-retrieval}
+\begin{algorithmic}[1]
+\REQUIRE Query $Q$, Context $C$, BIM Model $B$, GIS Data $G$, Defect Records $D_r$, Technical Standards $T_s$, Inspection History $H$
+\ENSURE Initial Candidate Documents $\text{candidates}$
+\STATE $E_q \gets \text{Encode}(Q)$
+\STATE $E_c \gets \text{Encode}(C)$
+\STATE $E_{\text{spatial}} \gets \text{ExtractSpatialContext}(B, G)$
+\STATE $E_{\text{combined}} \gets \text{CombineEmbeddings}(E_q, E_c, E_{\text{spatial}})$
+\STATE $\text{keywords} \gets \text{ExtractKeywords}(Q, C)$
+\STATE $\text{filters} \gets \text{BuildMetadataFilters}(B, G, D_r)$
+\STATE $C_{\text{dense}} \gets \text{DenseVectorSearch}(E_{\text{combined}}, [D_r, T_s, H])$
+\STATE $C_{\text{sparse}} \gets \text{KeywordSearch}(\text{keywords}, [D_r, T_s, H])$
+\STATE $C_{\text{spatial}} \gets \text{SpatialSearch}(E_{\text{spatial}}, [B, G])$
+\STATE $\text{candidates} \gets \text{FusionRanker}(C_{\text{dense}}, C_{\text{sparse}}, C_{\text{spatial}})$
+\RETURN $\text{candidates}$
+\end{algorithmic}
+\end{algorithm}
+
+This approach ensures that retrieved information is not only relevant to the query but also appropriate for the specific inspection scenario. For example, when analyzing a crack in a concrete beam, the system considers factors such as the building's age, local climate conditions, structural load history, and previous repair records to provide comprehensive analysis and recommendations. The semantic search capabilities allow users to issue queries in natural language or domain-specific terminology, with the system interpreting the intent behind queries and retrieving semantically related information even when not explicitly mentioned.
+
+The system implements a multi-dimensional indexing strategy that categorizes information based on defect types, locations, severity levels, timestamps, and associated building components. The indexing structure is complemented by a dynamic knowledge graph that represents relationships between different entities such as defects, causative factors, inspection procedures, and maintenance actions, enabling semantic understanding of queries and supporting sophisticated analysis capabilities.
+
+A subsequent context-aware reranking process, detailed in Algorithm~\ref{alg:context-rerank}, refines the initial candidate set by applying advanced scoring mechanisms that incorporate spatial proximity, temporal recency, evidence strength, and technical authority. This ensures that the final ranked results are optimally relevant to both the specific query and the broader inspection context.
+
+\begin{algorithm}[htbp]
+\caption{Context-Aware Reranking with Evidence}
+\label{alg:context-rerank}
+\begin{algorithmic}[1]
+\REQUIRE Candidate Documents $\text{candidates}$, Query $Q$, Context $C$, Spatial Context $E_{\text{spatial}}$
+\ENSURE Final Ranked Documents $R$ with Evidence
+\STATE $\text{filtered} \gets \emptyset$
+\FOR{$doc \in \text{candidates}$}
+    \STATE $\text{score} \gets \text{ContextualRelevance}(doc, C, E_{\text{spatial}})$
+    \IF{$\text{score} > \text{threshold}$}
+        \STATE $\text{filtered} \gets \text{filtered} \cup \{doc\}$
+    \ENDIF
+\ENDFOR
+\STATE $\text{evidence} \gets \text{ExtractEvidence}(\text{filtered}, Q)$
+\STATE $\text{verified} \gets \text{CrossValidate}(\text{filtered}, \text{evidence})$
+\STATE $\text{scores} \gets \emptyset$
+\FOR{$doc \in \text{verified}$}
+    \STATE $s_1 \gets \text{RelevanceScore}(doc, Q, C)$
+    \STATE $s_2 \gets \text{SpatialProximity}(doc, E_{\text{spatial}})$
+    \STATE $s_3 \gets \text{TemporalRecency}(doc)$
+    \STATE $s_4 \gets \text{EvidenceStrength}(doc, \text{evidence})$
+    \STATE $s_5 \gets \text{TechnicalAuthority}(doc)$
+    \STATE $\text{scores}[doc] \gets \text{CombineScores}(s_1, s_2, s_3, s_4, s_5)$
+\ENDFOR
+\STATE $R \gets \text{TopK}(\text{verified}, \text{scores}, k)$
+\RETURN $R$ with supporting evidence
+\end{algorithmic}
+\end{algorithm}
 
 \section{Experimental Design and Evaluation Framework}
 
@@ -203,6 +283,22 @@ The selected building represents a typical Hong Kong high-rise structure with th
     \item \textbf{Environmental Exposure}: Coastal environment with high humidity and typhoon exposure
     \item \textbf{Previous Maintenance}: Regular inspection records available for comparison
 \end{itemize}
+
+\subsubsection{Experimental Configuration and Infrastructure}
+
+All experiments were conducted on a High-performance Computing (HPC) infrastructure carefully designed to integrate multi-modal data ingestion, large-scale text embedding, high-dimensional similarity search, and real-time language model inference into a unified, responsive workflow. The hardware configuration included an Intel i9-13900 CPU and 128GB of DDR4 RAM. Python 3.9.0 served as the primary development environment, while FAISS 1.7.2 handled vector indexing to enable efficient nearest-neighbor retrieval. The LangChain framework was utilized to streamline the construction of the RAG pipeline, incorporating GPT-4 with OpenAI API for natural language understanding and response generation.
+
+This specialized stack enabled efficient processing of complex tasks, including embedding large batches of textual records and supporting multiple concurrent user queries. The system architecture was designed to maintain consistent performance under varying load conditions. The infrastructure demonstrated robust stability in handling simultaneous requests from multiple inspectors and engineers, while maintaining response latencies within acceptable thresholds for real-time interaction through effective API request management and optimized retrieval strategies.
+
+\subsubsection{Dataset Composition and Preprocessing}
+
+The dataset comprised approximately 10,000 multi-modal building inspection records, predominantly sourced from high-rise structures located throughout Hong Kong. Around 1,500 of these entries offered intensive detail on crucial defects, most notably surface cracks, large spalling areas, and evidence of water infiltration. This broad sampling encompassed a variety of facade types, ranging from reinforced concrete to composite curtain walls, thereby reflecting the region's diverse architectural and material profiles.
+
+Data collection was accomplished via autonomous drones executing standardized flight trajectories to ensure uniform coverage. The drones were equipped with high-resolution cameras for visual documentation and defect measurement. These measurements, along with textual field notes, were stored following KML conventions to preserve georeferencing fidelity in the WGS84 coordinate system. Each defect record included essential attributes such as severity, crack width and length estimates, spall dimensions, and qualitative observations regarding seepage intensity under varying environmental conditions.
+
+To enhance contextual depth, IFC-based BIM models were also incorporated, furnishing a wealth of structural references such as floor elevation, load-bearing column configurations, and layered material compositions. This integrated approach was pivotal in tracing how cracks might propagate along rebar lines, or in identifying critical zones where water seepage could amplify spalling in structurally compromised sections. Supplemental insights arose from humidity and vibration sensors, which illuminated environmental factors like thermal expansion or dynamic loads.
+
+All collected data underwent rigorous cleaning, including outlier detection, radiometric calibration to correct for drone camera variances, and textual standardization to unify diverse field-reporting formats. This multi-stage refinement ensured the reliability of both textual logs and image-based evidence, establishing a cohesive knowledge base for subsequent embedding, retrieval, and language-type inference.
 
 \subsubsection{Data Collection Protocol}
 
@@ -320,18 +416,15 @@ The most significant achievement was the 35\% reduction in false positive rates 
 
 \subsubsection{System Efficiency and Scalability Analysis}
 
-\textbf{Response Time Performance}:
-The system consistently maintained response times under 300 milliseconds for standard queries, even under high concurrent load conditions. Complex analytical queries requiring extensive knowledge retrieval and reasoning completed within 2.1 seconds on average.
+The system architecture implements a microservice-based design that ensures high extensibility and resilience. Each microservice, developed in Python, is responsible for a specific functional module, such as vector indexing, image preprocessing, or inference invocation, with data exchanged via asynchronous messaging. This distributed design simplifies maintenance while enhancing fault tolerance. When a crack is identified that exceeds predefined thresholds for dimensions or severity, the system promptly triggers updates to both the vector index and the 3D visualization.
 
-\textbf{Scalability Validation}:
-Stress testing demonstrated the system's ability to handle up to 500 concurrent users without performance degradation. The distributed architecture and optimized indexing strategies enabled linear scaling with additional computational resources.
+\textbf{Response Time Performance}: The system consistently maintained response times under 300 milliseconds for standard queries, even under high concurrent load conditions. Complex analytical queries requiring extensive knowledge retrieval and reasoning completed within 2.1 seconds on average. End-to-end response latency remained consistently low due to the integration of HPC-based scheduling and concurrency-aware job assignment.
 
-\textbf{Data Processing Efficiency}:
-\begin{itemize}
-    \item UAV image processing: Real-time analysis of 4K imagery with sub-second defect identification
-    \item Sensor data integration: Continuous processing of multi-modal sensor streams
-    \item Knowledge base updates: Incremental indexing enabling seamless integration of new information
-\end{itemize}
+\textbf{Scalability Validation}: Stress testing demonstrated the system's ability to handle up to 500 concurrent users without performance degradation. A specialized concurrency management layer ensured that large-batch embedding requests were processed efficiently without introducing significant queuing bottlenecks, underscoring the system's suitability for broader adoption. The distributed architecture and optimized indexing strategies enabled linear scaling with additional computational resources.
+
+\textbf{Retrieval Performance Analysis}: Retrieval performance was quantified by computing precision, recall, and Mean Reciprocal Rank (MRR). Fine-grained adjustments of the top-k parameter and the similarity threshold proved vital to sustain high recall without burdening GPT-4 with irrelevant data segments. Under typical operational loads, retrieval latency remained below 300 milliseconds, validating the efficiency of the underlying FAISS index. Notably, queries centered on cracks—often recognized as early indicators of deeper structural flaws—were particularly instructive. The system excelled at pinpointing records describing crack direction, approximate width, and potential steel reinforcement exposure, and it generated mitigation strategies such as epoxy sealing or polymer injection.
+
+\textbf{Data Processing Efficiency}: The system's RAG-enhanced retrieval pipeline transforms textual inputs into high-dimensional embeddings using OpenAI's text-embedding-3-large model, and indexes them in a FAISS structure optimized for approximate nearest-neighbor queries. Empirical testing determined that retrieving the top 6 matches, subject to a cosine similarity threshold around 0.5, achieves a realistic balance between precision and recall. The GPT-4 inference layer then consumes these retrieved segments, generating responses enriched with domain-specific guidance on crack formation, expansion, and other defect dynamics.
 
 \subsection{RAG System Performance and Knowledge Integration}
 
@@ -354,7 +447,34 @@ The integration of domain-specific knowledge with Large Language Models produced
 
 \textbf{Contextual Appropriateness}: 93.4\% of generated responses appropriately considered building-specific factors, environmental conditions, and regulatory requirements.
 
-\textbf{Actionability**: 88.9\% of system recommendations were directly implementable without additional expert consultation.
+\textbf{Actionability}: 88.9\% of system recommendations were directly implementable without additional expert consultation.
+
+\subsubsection{Quantitative Model Comparison}
+
+To comprehensively evaluate DefectGPT's performance against other state-of-the-art language models, we conducted extensive quantitative assessments using a range of text-generation and summarization metrics, including ROUGE (1, 2, L), BLEU, METEOR, BERTScore, and additional domain-specific measures such as Semantic Similarity and specialized "Sequence" coherence. These metrics capture various aspects of text quality, semantic fidelity, and structural coherence in the context of building inspection tasks.
+
+\begin{table}[htbp]
+\centering
+\caption{Performance Comparison of Different Models on Building Inspection Task}
+\label{tab:model-comparison}
+\begin{tabular}{l|ccc|ccc|ccc}
+\toprule
+\multirow{2}{*}{\textbf{Model}} & \multicolumn{3}{c|}{\textit{Text Generation}} & \multicolumn{3}{c|}{\textit{Semantic Understanding}} & \multicolumn{3}{c}{\textit{Additional Metrics}} \\
+\cmidrule{2-10}
+ & ROUGE-1 & ROUGE-2 & ROUGE-L & BLEU & Semantic & BERTScore & METEOR & Jaccard & Sequence \\
+\midrule
+GPT-4o & 0.293 & 0.066 & 0.191 & 0.056 & 0.629 & 0.797 & 0.167 & 0.108 & 0.067 \\
+Claude-3.5 & 0.292 & 0.046 & 0.184 & 0.020 & 0.591 & 0.798 & 0.114 & 0.078 & 0.063 \\
+Mistral-Large & 0.291 & 0.050 & 0.188 & 0.019 & 0.556 & 0.784 & 0.113 & 0.076 & 0.064 \\
+Gemini-1.5-Pro & 0.358 & 0.093 & 0.223 & 0.051 & 0.655 & 0.811 & 0.194 & 0.139 & 0.075 \\
+Llama-3.1-405B & 0.337 & 0.092 & 0.213 & 0.053 & 0.601 & 0.795 & 0.184 & 0.129 & 0.072 \\
+\midrule
+\textbf{DefectGPT (Ours)} & \textbf{0.592} & \textbf{0.297} & \textbf{0.503} & \textbf{0.233} & \textbf{0.856} & \textbf{0.905} & \textbf{0.423} & \textbf{0.306} & \textbf{0.273} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:model-comparison} summarizes the performance of the evaluated models. Standard metrics for text generation (ROUGE, BLEU) and semantic understanding (Semantic Similarity, BERTScore) are reported, alongside additional domain-oriented scores such as Jaccard and Sequence coherence. Notably, DefectGPT demonstrates superior outcomes across nearly all metrics, highlighting its balanced capability in generating coherent, semantically accurate texts specifically tailored for building inspection applications. The substantial improvements in BLEU (0.233 vs. 0.056 for GPT-4o) and Semantic Similarity (0.856 vs. 0.629 for GPT-4o) demonstrate the effectiveness of domain-specific RAG enhancement in building inspection contexts.
 
 \begin{figure}[htbp]
     \centering
@@ -375,16 +495,17 @@ The integration of domain-specific knowledge with Large Language Models produced
 
 \subsection{User Experience and Practical Impact}
 
-\subsubsection{Workflow Efficiency Improvements}
+\subsubsection{Workflow Efficiency Improvements and Real-World Impact}
 
-The deployment study revealed substantial improvements in inspection workflows:
+The deployment study revealed substantial improvements in inspection workflows, with quantitative benefits observed across multiple operational dimensions. The most significant achievement was a 30\% reduction in combined inspection and documentation time, attributing much of this gain to the platform's immediate retrieval of historical building data, such as previously patched spalls or known seepage zones. As a result, teams could dedicate more effort to remediation measures rather than manual data gathering.
 
-\begin{itemize}
-    \item \textbf{Documentation Time**: 30\% reduction in combined inspection and documentation time
-    \item \textbf{Report Generation**: Automated generation of comprehensive inspection reports
-    \item \textbf{Decision Support**: 40\% improvement in maintenance resource allocation efficiency
-    \item \textbf{Knowledge Access**: Immediate retrieval of relevant historical data and expert knowledge
-\end{itemize}
+\textbf{Documentation Time Optimization}: The traditional paper-based inspection process required inspectors to manually transcribe observations, cross-reference historical records, and compile reports using disparate software systems. DefectGPT's integrated approach streamlined this workflow by providing real-time access to historical context, automated report generation capabilities, and seamless integration with existing building management systems. The platform demonstrated efficient inspection report generation and seamless operation across diverse deployment scenarios, enabling inspectors to focus on high-value analytical tasks rather than administrative overhead.
+
+\textbf{Decision Support Enhancement**: The system achieved a 40\% improvement in maintenance resource allocation efficiency through its intelligent prioritization algorithms and predictive analytics capabilities. By analyzing defect severity, progression patterns, and resource constraints simultaneously, the platform enabled facility managers to optimize maintenance schedules and allocate personnel more effectively. The context-aware recommendations considered not only immediate safety concerns but also long-term cost implications and regulatory compliance requirements.
+
+\textbf{Knowledge Access and Institutional Memory**: One of the most significant advantages was the immediate retrieval of relevant historical data and expert knowledge, transforming how inspection teams accessed and utilized institutional memory. Previously, critical information about past repairs, environmental conditions, and defect evolution patterns was often scattered across multiple systems or existed only in the experience of senior staff. DefectGPT's knowledge management system democratized access to this expertise, enabling junior inspectors to benefit from decades of accumulated knowledge while maintaining consistency in inspection quality.
+
+\textbf{Multimodal Analysis Capabilities}: The platform's support for multimodal analysis represented a key innovation in defect management workflows. By integrating advanced image recognition algorithms with natural language processing, the system could process complex user queries combining text, voice, and images. For instance, an uploaded image of spalling could be cross-referenced with historical data to identify patterns, while voice queries enabled field inspectors to quickly obtain detailed explanations of underlying causes without interrupting their physical inspection activities.
 
 \subsubsection{User Satisfaction and Adoption}
 
