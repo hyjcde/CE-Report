@@ -8,39 +8,77 @@ The advent of Large Language Models (LLMs) has marked a transformative milestone
 
 LLMs derive their knowledge from vast corpora of static text data, resulting in internal world models that are inherently disembodied and lack temporal context. This limitation becomes particularly pronounced when these models are tasked with making decisions or generating plans that must account for physical constraints, spatial relationships, temporal dynamics, and real-time environmental states. The consequences of this disconnect can range from suboptimal performance to potentially dangerous outcomes in safety-critical applications.
 
-\section{Problem Statement}
+This thesis addresses this critical gap by proposing a systematic approach to enhance LLM decision-making capabilities through dynamic world representation integration.
 
-The core challenge addressed in this thesis is the development of a systematic approach to bridge the gap between LLM reasoning capabilities and physical world understanding. Specifically, we identify the need for:
+\section{Problem Statement and Research Questions}
+
+The core challenge addressed in this research is the development of a systematic approach to bridge the gap between LLM reasoning capabilities and physical world understanding. This research aims to answer the following key questions:
 
 \begin{itemize}
-    \item A dynamic and contextual world representation that can be actively queried and manipulated by LLMs
-    \item A structured decision-making framework that grounds abstract reasoning in physical reality
-    \item A feedback mechanism that enables continuous learning and adaptation based on real-world interactions
-    \item Validation across diverse domains to demonstrate the generalizability of the approach
+    \item \textbf{RQ1}: How can we systematically integrate dynamic world representations with LLM reasoning processes to improve decision-making in physical environments?
+    \item \textbf{RQ2}: What architectural framework can effectively coordinate LLM cognitive processes with real-time physical world feedback?
+    \item \textbf{RQ3}: How does the proposed approach perform across diverse domains requiring different types of physical world interaction?
+    \item \textbf{RQ4}: What are the key factors that influence the effectiveness and generalizability of such integrated systems?
 \end{itemize}
 
 \section{Proposed Solution: The CORTEX Architecture}
 
-To address these challenges, this thesis introduces CORTEX (Cognitive Reasoning and Task EXecution architecture), a novel cognitive architecture that fundamentally reframes the role of LLMs in physical world interaction. Rather than treating LLMs as standalone reasoning engines, CORTEX positions them as cognitive cores that are intrinsically dependent on dynamic world representations for effective decision-making.
+To address these research questions, this thesis proposes the development and validation of CORTEX (Cognitive Reasoning and Task EXecution architecture), a novel cognitive architecture that fundamentally reframes the role of LLMs in physical world interaction. Rather than treating LLMs as standalone reasoning engines, CORTEX positions them as cognitive cores that are intrinsically dependent on dynamic world representations for effective decision-making.
 
 The key innovation of CORTEX lies in its integration of Digital Twins (DTs) as the primary vehicle for world representation. We define a Digital Twin as any computational model that dynamically represents a physical system with sufficient fidelity to support task-specific decision-making requirements. This broad definition encompasses various forms of representation, from high-fidelity 3D geometric models to abstract feature-space representations.
 
-\section{Contributions}
+\section{Research Methodology and Validation Strategy}
 
-The primary contributions of this thesis are:
+This research employs a multi-case study approach to validate the CORTEX architecture across three distinct domains:
 
 \begin{enumerate}
-    \item \textbf{Architectural Innovation}: The development of the CORTEX cognitive architecture, which provides a systematic framework for LLM-driven decision-making in physical environments.
-    
-    \item \textbf{Theoretical Foundation}: A comprehensive analysis of the limitations of current LLM approaches in physical world interaction and the theoretical basis for Digital Twin-enhanced reasoning.
-    
-    \item \textbf{Implementation Framework}: A practical four-stage cognitive loop that operationalizes the integration of LLMs with Digital Twin environments.
-    
-    \item \textbf{Cross-Domain Validation}: Empirical validation through three diverse case studies spanning building health monitoring, medical diagnosis, and autonomous exploration.
-    
-    \item \textbf{Performance Enhancement}: Demonstrated improvements in decision quality, robustness, and safety across all evaluated domains.
+    \item \textbf{Building Health Monitoring} (Completed): Predictive decision-making using DTs that fuse Building Information Modeling (BIM) data with time-series sensor data.
+    \item \textbf{Medical Ultrasound Diagnosis} (In Progress): Assistive decision-making using non-visual DTs composed of features extracted from 2D ultrasound images.
+    \item \textbf{UAV Exploration} (In Progress): Autonomous decision-making using DTs built from real-time 3D point cloud data.
 \end{enumerate}
+
+This cross-domain validation strategy is designed to demonstrate the generalizability and robustness of the proposed architecture while addressing different types of decision-making challenges in physical environments.
+
+\section{Research Contributions and Expected Outcomes}
+
+The primary contributions of this research are:
+
+\begin{enumerate}
+    \item \textbf{Theoretical Framework}: Development of a comprehensive theoretical foundation for integrating LLM reasoning with dynamic world representations through Digital Twin technology.
+    
+    \item \textbf{Architectural Innovation}: Design and implementation of the CORTEX cognitive architecture, providing a systematic framework for LLM-driven decision-making in physical environments.
+    
+    \item \textbf{Implementation Methodology}: A practical four-stage cognitive loop that operationalizes the integration of LLMs with Digital Twin environments across diverse domains.
+    
+    \item \textbf{Empirical Validation}: Cross-domain validation through three distinct case studies, demonstrating improved decision quality, robustness, and safety compared to traditional approaches.
+    
+    \item \textbf{Guidelines and Best Practices}: Development of deployment guidelines and best practices for implementing such systems in real-world applications.
+\end{enumerate}
+
+\section{Current Progress and Timeline}
+
+\textbf{Completed Work (Year 1-2):}
+\begin{itemize}
+    \item Literature review and theoretical foundation establishment
+    \item CORTEX architecture design and initial implementation
+    \item Building health monitoring case study completed with 35\% improvement in false positive reduction
+    \item Publication of preliminary results at relevant conferences
+\end{itemize}
+
+\textbf{Current Work (Year 2-3):}
+\begin{itemize}
+    \item Medical ultrasound diagnosis case study implementation and testing
+    \item UAV exploration case study development and initial validation
+    \item Comparative analysis across domains and performance optimization
+\end{itemize}
+
+\textbf{Planned Work (Year 3-4):}
+\begin{itemize}
+    \item Completion of all case studies and comprehensive evaluation
+    \item Development of deployment guidelines and best practices
+    \item Thesis writing and submission of journal publications
+\end{itemize}
 
 \section{Structure of the Thesis}
 
-This thesis is organized as follows: \autoref{chp:preliminaries} provides the necessary background on LLMs, Digital Twins, and cognitive architectures. \autoref{chp:proof} presents the detailed design and implementation of the CORTEX architecture. \autoref{chp:applications} demonstrates the effectiveness of the proposed approach through comprehensive case studies across three distinct domains. Finally, the thesis concludes with a discussion of implications, limitations, and future research directions.
+This thesis is organized as follows: \autoref{chp:preliminaries} provides the necessary background on LLMs, Digital Twins, and cognitive architectures, along with a comprehensive literature review. \autoref{chp:proof} presents the detailed design, implementation, and theoretical analysis of the CORTEX architecture. \autoref{chp:applications} demonstrates the effectiveness of the proposed approach through comprehensive case studies across the three distinct domains. The thesis concludes with a discussion of contributions, implications, limitations, and future research directions.
