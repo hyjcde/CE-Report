@@ -11,13 +11,13 @@
 
 Building defect management faces significant challenges in handling evolving defects across complex urban structures. In contemporary urbanization processes, buildings serve as core carriers of human activity, with their safety and functionality directly related to social stability and development. However, as time progresses, buildings inevitably face issues of aging and wear. According to recent statistical data, over 50\% of private residences experience varying degrees of structural problems after 30 years of use \cite{spencer2019advances}. These issues range from surface cracks to severe structural defects, affecting not only building aesthetics and comfort but potentially endangering user safety \cite{zhang2023automated}.
 
-Traditional building defect management has evolved through different data governance paradigms. Document-based approaches, relying on inspection reports, maintenance logs, and repair records, suffer from unstructured information organization and limited searchability. Model-based methods, leveraging Building Information Models (BIMs) and Geographic Information Systems (GIS), provide better structure but lack flexibility in handling dynamic defect information and complex semantic relationships \cite{li2024single}. Both approaches struggle with the temporal nature of defect evolution and the complex interdependencies between different building components.
+Traditional building defect management has evolved through different data governance paradigms. Document-based approaches, relying on inspection reports, maintenance logs, and repair records, suffer from unstructured information organization and limited searchability \cite{bruno2018historic}. Model-based methods, leveraging Building Information Models (BIMs) and Geographic Information Systems (GIS), provide better structure but lack flexibility in handling dynamic defect information and complex semantic relationships \cite{li2024single,tsilimantou2020gis}. Both approaches struggle with the temporal nature of defect evolution and the complex interdependencies between different building components.
 
 \subsection{Decision-Making Challenges in Building Maintenance}
 
 The unique characteristics of building defects pose specific challenges for information management. Defects are inherently dynamic, evolving over time with varying progression patterns. They exhibit complex spatial-temporal relationships, where one defect may influence or indicate potential issues in other building components. Traditional defect modeling approaches often fail to capture these dynamic relationships and evolution patterns effectively \cite{wang2023augmented}.
 
-Furthermore, the interpretation and assessment of defects require extensive domain expertise, making it difficult to standardize the evaluation process. The challenges include:
+Furthermore, the interpretation and assessment of defects require extensive domain expertise, making it difficult to standardize the evaluation process \cite{hamdan2021semantic}. The challenges include:
 
 \begin{itemize}
     \item \textbf{Reactive vs. Predictive Paradigms}: Most current systems operate reactively, addressing defects after they become apparent rather than predicting their occurrence
@@ -28,7 +28,7 @@ Furthermore, the interpretation and assessment of defects require extensive doma
 
 \subsection{Requirements for Intelligent Building Health Management}
 
-With the advent of Industry 4.0, emerging technologies have provided new possibilities for addressing these challenges. The requirements for next-generation building health management systems include:
+With the advent of Industry 4.0, emerging technologies have provided new possibilities for addressing these challenges \cite{zhang2022integrating,chen2021geo}. The requirements for next-generation building health management systems include:
 
 \begin{itemize}
     \item \textbf{Real-time Monitoring}: Continuous surveillance capabilities with early warning systems for critical defects
@@ -39,11 +39,25 @@ With the advent of Industry 4.0, emerging technologies have provided new possibi
 
 \section{DefectGPT Framework: BIM-IoT Fusion Architecture}
 
-To address the challenges identified above, we developed DefectGPT, a comprehensive framework integrating UAV inspection, BIM, and GIS into a Digital Twin environment. This framework represents the first implementation of Retrieval-Augmented Generation (RAG) in building defect management, where domain-specific knowledge retrieval guides Large Language Models to generate compliance-aware recommendations.
+To address the challenges identified above, we developed DefectGPT, a comprehensive framework integrating UAV inspection, BIM, and GIS into a Digital Twin environment \cite{zhang2024automated}. This framework represents the first implementation of Retrieval-Augmented Generation (RAG) in building defect management \cite{lewis2020retrieval,fan2023retrieval}, where domain-specific knowledge retrieval guides Large Language Models to generate compliance-aware recommendations.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{DefectGPT/Overall Framework.png}
+    \caption{Overall DefectGPT framework showing the integration of three core components: Digital Twin Technology, Context-Aware Retrieval Engine, and Hierarchical Knowledge Base for comprehensive building defect management \cite{zhang2024automated}.}
+    \label{fig:defectgpt-framework}
+\end{figure}
 
 \subsection{Digital Twin Construction with Multi-Source Data Integration}
 
 The DefectGPT framework implements a three-layer architecture comprising the Data Layer, the Digital Twin Layer, and the Decision Layer. This structure enables sophisticated data management and real-time synchronization between physical buildings and their digital counterparts.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{DefectGPT/dt-framework.png}
+    \caption{Comprehensive Digital Twin architecture for building defect management, illustrating the three-layer structure: Data Layer (GeoBIM modeling, defect modeling, expert knowledge), Digital Twin Layer (spatial information carriers, defect data schemas, domain knowledge), and Decision Layer (RAG and LLM-based reasoning) \cite{zhang2024automated}.}
+    \label{fig:dt-architecture}
+\end{figure}
 
 \subsubsection{Data Layer Components}
 
@@ -67,7 +81,7 @@ The Digital Twin Layer serves as the core of the digital representation, impleme
 
 \subsection{UAV-Based Data Acquisition and Processing}
 
-Unmanned Aerial Vehicle technology provides the primary data acquisition mechanism for the DefectGPT system. UAVs equipped with high-resolution cameras and thermal sensors execute standardized flight trajectories to ensure uniform coverage of building facades.
+Unmanned Aerial Vehicle technology provides the primary data acquisition mechanism for the DefectGPT system \cite{ribeiro2020remote,tan2021automatic}. UAVs equipped with high-resolution cameras and thermal sensors execute standardized flight trajectories to ensure uniform coverage of building facades \cite{liu2021integrating}.
 
 \subsubsection{Defect Detection and Classification}
 
@@ -144,6 +158,13 @@ The final stage involves implementation of maintenance actions and continuous mo
 
 The DefectGPT system employs a sophisticated Retrieval-Augmented Generation approach that enhances Large Language Model performance through domain-specific knowledge integration.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{DefectGPT/rag_frameworks.png}
+    \caption{The Framework for RAG Knowledge Management in DefectGPT, showing the integration of document processing, vector indexing, semantic search, and response generation components for building-specific knowledge retrieval \cite{zhang2024automated}.}
+    \label{fig:rag-framework}
+\end{figure}
+
 \subsubsection{Hierarchical Knowledge Structure}
 
 The system implements a three-layer knowledge structure:
@@ -186,6 +207,13 @@ The selected building represents a typical Hong Kong high-rise structure with th
 \subsubsection{Data Collection Protocol}
 
 The experimental setup included systematic data collection across multiple modalities:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{DefectGPT/System Class.png}
+    \caption{High-level overview of the DefectGPT Digital Twin platform, integrating domain-specific retrieval, language modeling, and BIM-driven analytics for comprehensive building defect management \cite{zhang2024automated}.}
+    \label{fig:system-overview}
+\end{figure}
 
 \textbf{UAV Survey Protocol}:
 \begin{itemize}
@@ -283,6 +311,13 @@ The system achieved exceptional performance in identifying and classifying build
 
 The most significant achievement was the 35\% reduction in false positive rates compared to traditional automated inspection methods. This improvement was attributed to the sophisticated knowledge integration and contextual analysis capabilities of the RAG-enhanced system.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{DefectGPT/model_performance_heatmap.png}
+    \caption{Model Performance Comparison Heatmap showing DefectGPT's superior performance across multiple evaluation metrics (ROUGE, BLEU, METEOR, BERTScore) compared to state-of-the-art language models. Colors represent standardized z-scores with darker shades indicating better performance \cite{zhang2024automated}.}
+    \label{fig:performance-heatmap}
+\end{figure}
+
 \subsubsection{System Efficiency and Scalability Analysis}
 
 \textbf{Response Time Performance}:
@@ -302,7 +337,7 @@ Stress testing demonstrated the system's ability to handle up to 500 concurrent 
 
 \subsubsection{Retrieval Accuracy and Relevance}
 
-The RAG-enhanced knowledge management system demonstrated superior performance in retrieving relevant domain-specific information:
+The RAG-enhanced knowledge management system demonstrated superior performance in retrieving relevant domain-specific information \cite{borgeaud2022improving,izacard2021leveraging}:
 
 \begin{itemize}
     \item \textbf{Precision}: 94.3\% of retrieved documents were relevant to user queries
@@ -313,13 +348,30 @@ The RAG-enhanced knowledge management system demonstrated superior performance i
 
 \subsubsection{LLM Integration and Response Quality}
 
-The integration of domain-specific knowledge with Large Language Models produced significant improvements in response quality:
+The integration of domain-specific knowledge with Large Language Models produced significant improvements in response quality \cite{gao2023survey,ding2024survey}:
 
 \textbf{Technical Accuracy}: 91.7\% agreement with expert assessments in defect analysis and maintenance recommendations.
 
 \textbf{Contextual Appropriateness}: 93.4\% of generated responses appropriately considered building-specific factors, environmental conditions, and regulatory requirements.
 
 \textbf{Actionability**: 88.9\% of system recommendations were directly implementable without additional expert consultation.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{DefectGPT/performance_radar_plot.png}
+        \caption{Standardized Performance Radar Plot comparing DefectGPT with baseline models across key evaluation metrics \cite{zhang2024automated}.}
+        \label{fig:radar-plot}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{DefectGPT/performance_metrics_distribution.png}
+        \caption{Performance Metrics Distribution Analysis using violin plots showing score distributions across different models \cite{zhang2024automated}.}
+        \label{fig:performance-distribution}
+    \end{minipage}
+\end{figure}
 
 \subsection{User Experience and Practical Impact}
 
@@ -337,6 +389,30 @@ The deployment study revealed substantial improvements in inspection workflows:
 \subsubsection{User Satisfaction and Adoption}
 
 Feedback from building inspection professionals indicated high satisfaction with the system:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{DefectGPT/defectgpt_platform.png}
+    \caption{DefectGPT Platform interface showing integrated GeoBIM analytics with Digital Twin visualization system. The interface provides comprehensive insights into façade defect detection, distributions, and comparative analysis for enhanced defect management workflows \cite{zhang2024automated}.}
+    \label{fig:defectgpt-platform}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{DefectGPT/defectgpt_mobile.png}
+        \caption{DefectGPT Mobile Interface optimized for real-time field inspections with multimodal capabilities \cite{zhang2024automated}.}
+        \label{fig:defectgpt-mobile}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{DefectGPT/defectgpt_interface.png}
+        \caption{DefectGPT analysis interface demonstrating comprehensive defect distribution analysis with natural language processing capabilities \cite{zhang2024automated}.}
+        \label{fig:defectgpt-interface}
+    \end{minipage}
+\end{figure}
 
 \begin{itemize}
     \item \textbf{Usability Rating**: 4.7/5.0 average rating from inspection professionals
