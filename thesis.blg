@@ -1,0 +1,181 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapters/chp1-introduction.aux
+A level-1 auxiliary file: chapters/chp2-preliminaries.aux
+Case mismatch error between cite keys iso23247 and ISO23247
+---line 13 of file chapters/chp2-preliminaries.aux
+ : \citation{iso23247
+ :                   }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapters/chp3-proof.aux
+Case mismatch error between cite keys iso23247 and ISO23247
+---line 3 of file chapters/chp3-proof.aux
+ : \citation{glaessgen2012digital,iso23247
+ :                                        }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapters/chp4-applications.aux
+A level-1 auxiliary file: chapters/chp5-medical-case.aux
+A level-1 auxiliary file: chapters/chp6-uav-case.aux
+A level-1 auxiliary file: chapters/chp7-discussion.aux
+A level-1 auxiliary file: chapters/chp8-conclusion.aux
+A level-1 auxiliary file: appendices/appx-A.aux
+The style file: plain.bst
+Database file #1: reference/reference.bib
+Warning--entry type for "iso23247" isn't style-file defined
+--line 592 of file reference/reference.bib
+Repeated entry---line 1509 of file reference/reference.bib
+ : @book{jones2020cognitive
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1676 of file reference/reference.bib
+ : @article{izacard2021leveraging
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1683 of file reference/reference.bib
+ : @article{rogers2021primer
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1693 of file reference/reference.bib
+ : @article{duan2022survey
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1704 of file reference/reference.bib
+ : @article{amodei2016concrete
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1711 of file reference/reference.bib
+ : @article{gat1998three
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1720 of file reference/reference.bib
+ : @article{grieves2014digital
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1727 of file reference/reference.bib
+ : @article{lu2020digital
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1737 of file reference/reference.bib
+ : @article{kritzinger2018digital
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1748 of file reference/reference.bib
+ : @article{fuller2020digital
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "pearl2019seven"
+Warning--I didn't find a database entry for "peters2017elements"
+Warning--I didn't find a database entry for "pearl2000causality"
+Warning--I didn't find a database entry for "spirtes2000causation"
+Warning--I didn't find a database entry for "hendrycks2019natural"
+Warning--I didn't find a database entry for "chen2020cognitive"
+Warning--I didn't find a database entry for "zhang2021cognitive"
+Warning--I didn't find a database entry for "marcus2020next"
+Warning--I didn't find a database entry for "smith1987situated"
+Warning--I didn't find a database entry for "suchman1987plans"
+Warning--I didn't find a database entry for "barsalou2008grounded"
+Warning--I didn't find a database entry for "hayes1985naive"
+Warning--I didn't find a database entry for "davis1990representation"
+Warning--I didn't find a database entry for "lake2018generalization"
+Warning--I didn't find a database entry for "fodor1988connectionism"
+Warning--I didn't find a database entry for "tao2019digital"
+Warning--I didn't find a database entry for "jones2020characterising"
+Warning--I didn't find a database entry for "smeulders2000content"
+Warning--I didn't find a database entry for "datta2008image"
+Warning--I didn't find a database entry for "gruber1993translation"
+Warning--I didn't find a database entry for "studer1998knowledge"
+Warning--I didn't find a database entry for "baltrusaitis2018multimodal"
+Warning--I didn't find a database entry for "ramesh2021zero"
+Warning--I didn't find a database entry for "peng2018sim"
+Warning--I didn't find a database entry for "schluse2018experimentable"
+Warning--I didn't find a database entry for "minerva2020digital"
+Warning--I didn't find a database entry for "garcia1989model"
+Warning--I didn't find a database entry for "rawlings2009model"
+Warning--I didn't find a database entry for "gibson1979ecological"
+Warning--I didn't find a database entry for "aloimonos1988active"
+Warning--I didn't find a database entry for "wei2022emergent"
+Warning--I didn't find a database entry for "dong2022survey"
+Warning--I didn't find a database entry for "liu2023pre"
+Warning--I didn't find a database entry for "kojima2022large"
+Warning--I didn't find a database entry for "zhang2022automatic"
+Warning--I didn't find a database entry for "huang2022language"
+Warning--I didn't find a database entry for "newell1972human"
+Warning--I didn't find a database entry for "anderson1993rules"
+Warning--I didn't find a database entry for "valmeekam2022large"
+Warning--I didn't find a database entry for "pallagani2023planbench"
+Warning--I didn't find a database entry for "clark1998extended"
+Warning--I didn't find a database entry for "clark2010supersizing"
+Warning--I didn't find a database entry for "parisi2022talm"
+Warning--I didn't find a database entry for "qin2023toolllm"
+Warning--I didn't find a database entry for "mnih2016asynchronous"
+Warning--I didn't find a database entry for "sutton2018reinforcement"
+Warning--I didn't find a database entry for "treisman1996binding"
+Warning--I didn't find a database entry for "shadlen2003neural"
+Warning--I didn't find a database entry for "leveson2011engineering"
+Warning--I didn't find a database entry for "knight2002safety"
+Warning--I didn't find a database entry for "avizienis2004basic"
+Warning--I didn't find a database entry for "powell1992delta"
+Warning--I didn't find a database entry for "guu2020retrieval"
+Warning--I didn't find a database entry for "yu2022generate"
+Warning--I didn't find a database entry for "tang2019retrieving"
+Warning--I didn't find a database entry for "chen2022murag"
+Warning--I didn't find a database entry for "yu2018spider"
+Warning--I didn't find a database entry for "berant2013semantic"
+Warning--I didn't find a database entry for "mialon2023augmented"
+Warning--I didn't find a database entry for "nijkamp2022codegen"
+Warning--I didn't find a database entry for "press2022measuring"
+Warning--I didn't find a database entry for "deng2023mind2web"
+Warning--I didn't find a database entry for "sumers2023cognitive"
+Warning--I didn't find a database entry for "bisk2020experience"
+Warning--I didn't find a database entry for "lu2021physics"
+Warning--I didn't find a database entry for "li2023apibank"
+Warning--I didn't find a database entry for "chen2021evaluating"
+Warning--I didn't find a database entry for "pecka2014safe"
+Warning--I didn't find a database entry for "ahn2022saycan"
+Warning--I didn't find a database entry for "tobin2017domain"
+Warning--I didn't find a database entry for "liu2023lost"
+Warning--I didn't find a database entry for "zhang2023siren"
+Warning--can't use both volume and number fields in yue2022ts2vec
+You've used 60 entries,
+            2118 wiz_defined-function locations,
+            906 strings with 17256 characters,
+and the built_in function-call counts, 23359 in all, are:
+= -- 2210
+> -- 1480
+< -- 11
++ -- 593
+- -- 524
+* -- 1790
+:= -- 3992
+add.period$ -- 182
+call.type$ -- 60
+change.case$ -- 425
+chr.to.int$ -- 0
+cite$ -- 61
+duplicate$ -- 756
+empty$ -- 1535
+format.name$ -- 524
+if$ -- 4706
+int.to.chr$ -- 0
+int.to.str$ -- 60
+missing$ -- 65
+newline$ -- 302
+num.names$ -- 120
+pop$ -- 423
+preamble$ -- 1
+purify$ -- 371
+quote$ -- 0
+skip$ -- 559
+stack$ -- 0
+substring$ -- 1311
+swap$ -- 159
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 228
+warning$ -- 1
+while$ -- 195
+width$ -- 62
+write$ -- 642
+(There were 12 error messages)
