@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1217,12 +1217,12 @@ Overfull \hbox (2.99506pt too wide) in paragraph at lines 126--127
 h validation phase.
  []
 
-) [31] [32]
+) [31]
 \openout2 = `chapters/chp4-applications.aux'.
 
  (./chapters/chp4-applications.tex
 Chapter 4.
-[33
+[32
 
 
 
@@ -1236,26 +1236,33 @@ Overfull \hbox (11.05905pt too wide) in paragraph at lines 20--21
 n simple threshold-
  []
 
-[34]
+[33]
 Overfull \hbox (4.12282pt too wide) in paragraph at lines 28--28
 []\TU/lmr/bx/n/17.28 Twin Construction and CORTEX Implemen-
  []
 
-[35]
+File: figures/DefectGPT//dt-framework.png Graphic file (type bmp)
+<figures/DefectGPT//dt-framework.png>
+
+LaTeX Warning: Reference `fig:dt-framework-building' on page 34 undefined on in
+put line 39.
+
+[34] [35] [36]
 File: figures//DefectGPT/System_implement.png Graphic file (type bmp)
 <figures//DefectGPT/System_implement.png>
- [36]
+ [37]
 File: figures//DefectGPT/cognitive_agent_framework.png Graphic file (type bmp)
 <figures//DefectGPT/cognitive_agent_framework.png>
- [37]
+ [38]
 File: figures//DefectGPT/hybrid_retrieval_engine.png Graphic file (type bmp)
 <figures//DefectGPT/hybrid_retrieval_engine.png>
- [38] [39] [40] [41]) [42]
+ [39] [40] [41] [42]) [43]
 \openout2 = `chapters/chp5-medical-case.aux'.
 
- (./chapters/chp5-medical-case.tex
+
+(./chapters/chp5-medical-case.tex
 Chapter 5.
-[43
+[44
 
 
 
@@ -1267,51 +1274,51 @@ Overfull \hbox (2.42938pt too wide) in paragraph at lines 15--15
 
 File: figures//Med/med_framework.png Graphic file (type bmp)
 <figures//Med/med_framework.png>
-[44] [45] [46]
+[45] [46] [47]
 File: figures//Med/medsam_result.png Graphic file (type bmp)
 <figures//Med/medsam_result.png>
- [47] [48]) [49] [50]
+ [48] [49]) [50] [51]
 \openout2 = `chapters/chp6-uav-case.aux'.
 
  (./chapters/chp6-uav-case.tex
 Chapter 6.
-[51
+[52
 
 
 
 
-] [52]
+] [53]
 Overfull \hbox (3.87505pt too wide) in paragraph at lines 27--28
 []\TU/lmr/m/n/12 The experimental design emphasizes controlled comparison betwe
 en CORTEX-
  []
 
-) [53] [54]
+) [54] [55]
 \openout2 = `chapters/chp7-discussion.aux'.
 
  (./chapters/chp7-discussion.tex
 Chapter 7.
-[55
+[56
 
 
 
 
-] [56] [57]) [58]
+] [57] [58]) [59]
 \openout2 = `chapters/chp8-conclusion.aux'.
 
  (./chapters/chp8-conclusion.tex
 Chapter 8.
-[59
+[60
 
 
 
 
-] [60]) [61]
+] [61]) [62]
 \openout2 = `appendices/appx-A.aux'.
 
  (./appendices/appx-A.tex
 Appendix A.
-) [62
+) [63
 
 
 
@@ -1320,7 +1327,7 @@ Appendix A.
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [63
+ [64
 
 
 
@@ -1330,30 +1337,36 @@ Underfull \hbox (badness 1189) in paragraph at lines 74--74
 t/12 arXiv preprint
  []
 
-[64] [65] [66] [67] [68] [69] [70] [71]) [72] (./thesis.aux
+[65] [66] [67] [68] [69] [70] [71] [72] [73]) [74] (./thesis.aux
 (./chapters/chp1-introduction.aux) (./chapters/chp2-preliminaries.aux)
 (./chapters/chp3-proof.aux) (./chapters/chp4-applications.aux)
 (./chapters/chp5-medical-case.aux) (./chapters/chp6-uav-case.aux)
 (./chapters/chp7-discussion.aux) (./chapters/chp8-conclusion.aux)
 (./appendices/appx-A.aux))
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7A42745B9B27B05162CAD97BBA5F4EDD;9116.
+
+LaTeX Warning: There were undefined references.
 
 
-Package rerunfilecheck Warning: File `thesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `thesis.brf':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  22AB020D07AD918C7E9DA9DCAAB1CB02;5478.
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 7A42745B9B27B05162CAD97BBA5F4EDD;9116
+(rerunfilecheck)             After:  5AF0CDCFB9CF93CE860840C9772A5B30;8850.
+Package rerunfilecheck Info: File `thesis.brf' has not changed.
+(rerunfilecheck)             Checksum: 22AB020D07AD918C7E9DA9DCAAB1CB02;5478.
  ) 
 Here is how much of TeX's memory you used:
- 30833 strings out of 476683
- 667677 string characters out of 5804048
+ 30850 strings out of 476683
+ 668226 string characters out of 5804048
  1856018 words of memory out of 5000000
- 50469 multiletter control sequences out of 15000+600000
+ 50479 multiletter control sequences out of 15000+600000
  519580 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 105i,8n,107p,980b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,8n,107p,980b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (82 pages).
+Output written on thesis.pdf (84 pages).

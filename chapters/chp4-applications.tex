@@ -27,6 +27,21 @@ Secondary objectives involve establishing performance baselines for information 
 
 \section{Twin Construction and CORTEX Implementation}
 
+Building upon the principles of comprehensive DT architecture, we implement a three-layer framework that enables sophisticated data management and real-time synchronization between physical buildings and their digital counterparts. This structure facilitates advanced monitoring, analysis, and decision-making in building defect management.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{dt-framework.png}
+\caption{A comprehensive DT architecture for building defect management, illustrating the three-layer structure: (1) Data Layer incorporating GeoBIM modeling, defect modeling, and expert knowledge integration, (2) DT Layer managing spatial information carriers, defect data schemas, and domain knowledge repositories, and (3) Decision Layer leveraging RAG and LLM techniques for advanced reasoning and human-in-the-loop decision-making.}
+\label{fig:dt-framework-building}
+\end{figure}
+
+As shown in Fig.~\ref{fig:dt-framework-building}, the \textbf{Data Layer} incorporates three primary components: GeoBIM modeling, defect modeling, and expert knowledge integration. The GeoBIM modeling component combines multiple data sources, including 3D mesh models, BIM models, GIS information, and geo-AI knowledge bases. The defect modeling component processes aerial photographs of building facades, employing detection algorithms to identify RGB defects, infrared anomalies, and defect classifications. Expert knowledge integration leverages inspection reports, technical standards, legal frameworks, and defect manuals to enrich the defect data with domain-specific insights.
+
+The \textbf{DT Layer} serves as the core of the digital representation, implementing three distinct data carriers to manage and organize the diverse information streams. Spatial information carriers handle formats such as IFC, RVT, and KML, ensuring proper management of spatial data and geometric relationships. Additionally, defect data schemas (XML, JSON, CSV, database) and domain knowledge repositories (PDF, DOCX, Markdown) provide standardized storage formats, ensuring seamless compatibility with the retrieval workflows.
+
+The \textbf{Decision Layer} leverages retrieval augmented generation (RAG) and large language model (LLM) techniques for advanced reasoning and human-in-the-loop decision-making. By storing vector embeddings in databases, retrieving and reranking relevant chunks of domain-specific information, and routing user queries through AI-driven modules, this layer provides actionable insights in building defect management.
+
 The building diagnosis task formalization establishes a systematic framework for evaluating diagnostic reasoning capabilities in complex infrastructure systems. The task requires identifying potential faults or anomalies in building systems based on comprehensive analysis of available data sources and providing explanatory reasoning that justifies diagnostic conclusions.
 
 Formal problem definition: Given a building Digital Twin containing BIM data (B), sensor time series (S), maintenance records (M), and operational documentation (D), along with a natural language query describing symptoms or concerns (Q), generate a diagnostic assessment (A) that includes fault identification, confidence estimation, explanatory reasoning, and recommended actions.
