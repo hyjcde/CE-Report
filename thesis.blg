@@ -1,0 +1,111 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapters/chp1-introduction.aux
+A level-1 auxiliary file: chapters/chp2-preliminaries.aux
+A level-1 auxiliary file: chapters/chp3-proof.aux
+A level-1 auxiliary file: chapters/chp4-applications.aux
+A level-1 auxiliary file: chapters/chp5-medical-case.aux
+A level-1 auxiliary file: chapters/chp6-uav-case.aux
+A level-1 auxiliary file: chapters/chp7-discussion.aux
+A level-1 auxiliary file: chapters/chp8-conclusion.aux
+A level-1 auxiliary file: appendices/appx-A.aux
+The style file: plain.bst
+Database file #1: reference/reference.bib
+Warning--entry type for "iso23247" isn't style-file defined
+--line 592 of file reference/reference.bib
+Repeated entry---line 1509 of file reference/reference.bib
+ : @book{jones2020cognitive
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "pearl2019seven"
+Warning--I didn't find a database entry for "peters2017elements"
+Warning--I didn't find a database entry for "pearl2000causality"
+Warning--I didn't find a database entry for "spirtes2000causation"
+Warning--I didn't find a database entry for "hendrycks2019natural"
+Warning--I didn't find a database entry for "chen2020cognitive"
+Warning--I didn't find a database entry for "zhang2021cognitive"
+Warning--I didn't find a database entry for "barsalou2008grounded"
+Warning--I didn't find a database entry for "marcus2020next"
+Warning--I didn't find a database entry for "smith1987situated"
+Warning--I didn't find a database entry for "suchman1987plans"
+Warning--I didn't find a database entry for "hayes1985naive"
+Warning--I didn't find a database entry for "davis1990representation"
+Warning--I didn't find a database entry for "lake2018generalization"
+Warning--I didn't find a database entry for "fodor1988connectionism"
+Warning--I didn't find a database entry for "tao2019digital"
+Warning--I didn't find a database entry for "jones2020characterising"
+Warning--I didn't find a database entry for "baltrusaitis2018multimodal"
+Warning--I didn't find a database entry for "ramesh2021zero"
+Warning--I didn't find a database entry for "smeulders2000content"
+Warning--I didn't find a database entry for "datta2008image"
+Warning--I didn't find a database entry for "gruber1993translation"
+Warning--I didn't find a database entry for "studer1998knowledge"
+Warning--I didn't find a database entry for "leveson2011engineering"
+Warning--I didn't find a database entry for "knight2002safety"
+Warning--I didn't find a database entry for "avizienis2004basic"
+Warning--I didn't find a database entry for "powell1992delta"
+Warning--I didn't find a database entry for "guu2020retrieval"
+Warning--I didn't find a database entry for "yu2022generate"
+Warning--I didn't find a database entry for "tang2019retrieving"
+Warning--I didn't find a database entry for "chen2022murag"
+Warning--I didn't find a database entry for "yu2018spider"
+Warning--I didn't find a database entry for "berant2013semantic"
+Warning--I didn't find a database entry for "mialon2023augmented"
+Warning--I didn't find a database entry for "nijkamp2022codegen"
+Warning--I didn't find a database entry for "press2022measuring"
+Warning--I didn't find a database entry for "deng2023mind2web"
+Warning--I didn't find a database entry for "sumers2023cognitive"
+Warning--I didn't find a database entry for "bisk2020experience"
+Warning--I didn't find a database entry for "lu2021physics"
+Warning--I didn't find a database entry for "li2023apibank"
+Warning--I didn't find a database entry for "chen2021evaluating"
+Warning--I didn't find a database entry for "pecka2014safe"
+Warning--I didn't find a database entry for "ahn2022saycan"
+Warning--I didn't find a database entry for "tobin2017domain"
+Warning--I didn't find a database entry for "gao2023retrieval"
+Warning--I didn't find a database entry for "liu2023lost"
+Warning--I didn't find a database entry for "zhang2023siren"
+Warning--can't use both volume and number fields in yue2022ts2vec
+You've used 52 entries,
+            2118 wiz_defined-function locations,
+            844 strings with 15274 characters,
+and the built_in function-call counts, 20432 in all, are:
+= -- 1944
+> -- 1258
+< -- 11
++ -- 505
+- -- 444
+* -- 1553
+:= -- 3458
+add.period$ -- 158
+call.type$ -- 52
+change.case$ -- 363
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 673
+empty$ -- 1369
+format.name$ -- 444
+if$ -- 4146
+int.to.chr$ -- 0
+int.to.str$ -- 52
+missing$ -- 57
+newline$ -- 262
+num.names$ -- 104
+pop$ -- 367
+preamble$ -- 1
+purify$ -- 317
+quote$ -- 0
+skip$ -- 500
+stack$ -- 0
+substring$ -- 1196
+swap$ -- 151
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 196
+warning$ -- 1
+while$ -- 173
+width$ -- 54
+write$ -- 559
+(There was 1 error message)

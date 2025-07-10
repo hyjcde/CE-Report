@@ -4,7 +4,7 @@
 
 This chapter aims to systematically review the current state of research across four critical domains through a critical examination of existing literature, thereby precisely identifying the theoretical and technological gaps that this research seeks to address and elucidating the innovative starting point of this investigation. These four domains are: Digital Twin maturity models, Retrieval-Augmented Generation (RAG), Large Language Model (LLM) Agent paradigms, and classical decision and control architectures in physical systems.
 
-\section{Digital Twin Models and Applications}
+\section{Digital Twins: Maturity Models and Functional Gaps}
 
 Digital Twins (DT), as a core enabling technology for Cyber-Physical Systems, have undergone extensive research and continuous evolution in both academic and industrial communities. The theoretical foundations of this field can be traced back to early concepts proposed by NASA for addressing aircraft health management challenges, which emphasized the three fundamental components: physical entities, virtual models, and data connections \cite{glaessgen2012digital}. Building upon this foundation, Grieves proposed a three-dimensional conceptual model consisting of physical space entities, virtual space models, and the connections between them, providing a concise yet profoundly influential starting point for theoretical development in this field \cite{grieves2014digital}.
 
@@ -26,7 +26,7 @@ This limitation reveals a critical gap in existing frameworks: the absence of a 
 
 Recent research has begun to address this gap through cognitive-oriented taxonomies that classify Digital Twins based on their decision-support capabilities rather than their technical implementation characteristics \cite{jones2020cognitive, negri2017review}. These emerging frameworks recognize three primary functional categories: monitoring-oriented twins that support descriptive analytics, prediction-oriented twins that enable scenario analysis, and optimization-oriented twins that facilitate autonomous decision-making. However, these classifications remain preliminary and lack the systematic theoretical development necessary for principled AI system design.
 
-\section{RAG: Principles and Limitations}
+\section{Large Language Models and the Grounding Problem}
 
 Retrieval-Augmented Generation (RAG) has emerged as the standard paradigm for mitigating knowledge staleness and factual hallucination issues in Large Language Models (LLMs). The core mechanism involves utilizing user queries to retrieve relevant information fragments from external knowledge bases (typically text vector databases) prior to generation, injecting this information as context into the prompt provided to the LLM \cite{lewis2020retrieval, karpukhin2020dense}.
 
@@ -58,7 +58,7 @@ Text-to-SQL generation approaches attempt to bridge this gap by training models 
 
 Recent work on semantic parsing for structured knowledge bases shows promise for more sophisticated integration approaches. These methods learn to map natural language to formal meaning representations that can be executed against structured data sources \cite{berant2013semantic}. However, adapting these approaches to the dynamic, multimodal nature of Digital Twin data requires substantial extensions to current methodologies.
 
-\section{LLM Agents: Evolution and Challenges}
+\section{Cognitive Agents: Integration Paradigms and Architectural Deficiencies}
 
 The emergence of Large Language Models (LLMs) has catalyzed not only a revolution in natural language processing but also a paradigmatic shift toward transforming LLMs from passive text generators into active, goal-oriented intelligent agents. This evolution centers on endowing LLMs with the capabilities to plan and utilize external tools, fundamentally expanding their operational scope from text generation to autonomous action \cite{mialon2023augmented}.
 
@@ -84,23 +84,17 @@ The development of sophisticated memory and planning mechanisms has enabled agen
 
 However, when attention shifts from the purely digital world to complex physical environments, the foundational assumptions underlying current LLM agent paradigms begin to falter, revealing a profound ``cognitive-physical gap.'' This gap is not merely a technical interface incompatibility issue but stems from fundamental mismatches between LLM cognitive patterns and the intrinsic laws of the physical world, manifesting across three critical dimensions.
 
-\subsubsection{Physical Commonsense and Grounding Difficulties}
-
-LLMs' knowledge derives from textual statistics rather than embodied physical interaction, resulting in a lack of causally grounded physical commonsense. While an LLM may know textual definitions of ``force'' and ``temperature,'' it cannot truly understand that applying force generates acceleration or that heating an object requires energy and involves temporal delays \cite{bisk2020experience}. Consequently, when planning for physical systems, LLM-generated strategies may appear syntactically and logically reasonable but prove physically meaningless or even dangerous.
+\textbf{Physical Commonsense and Grounding Difficulties}: LLMs' knowledge derives from textual statistics rather than embodied physical interaction, resulting in a lack of causally grounded physical commonsense. While an LLM may know textual definitions of ``force'' and ``temperature,'' it cannot truly understand that applying force generates acceleration or that heating an object requires energy and involves temporal delays \cite{bisk2020experience}. Consequently, when planning for physical systems, LLM-generated strategies may appear syntactically and logically reasonable but prove physically meaningless or even dangerous.
 
 This grounding problem is exacerbated by the symbolic nature of LLM representations, which lack the sensorimotor foundations that enable humans to develop intuitive physical understanding \cite{harnad1990symbol}. Recent work on physics-informed language models attempts to address these limitations by incorporating physical principles into training objectives, but these approaches remain preliminary \cite{lu2021physics}.
 
-\subsubsection{Complex Physical Model Utilization Barriers}
-
-Physical world ``tools'' are vastly more complex than Web APIs that return JSON-formatted data. For instance, a Finite Element Analysis (FEA) or Computational Fluid Dynamics (CFD) simulation model requires structured mesh files and complex boundary condition configurations as inputs, involves computationally intensive and time-consuming execution processes, and produces multi-dimensional data fields or visualization outputs requiring professional expertise to interpret \cite{hughes2012finite}.
+\textbf{Complex Physical Model Utilization Barriers}: Physical world ``tools'' are vastly more complex than Web APIs that return JSON-formatted data. For instance, a Finite Element Analysis (FEA) or Computational Fluid Dynamics (CFD) simulation model requires structured mesh files and complex boundary condition configurations as inputs, involves computationally intensive and time-consuming execution processes, and produces multi-dimensional data fields or visualization outputs requiring professional expertise to interpret \cite{hughes2012finite}.
 
 Current agent frameworks' simple ``tool selection-API invocation'' patterns are entirely inadequate for handling such ``heavy-duty tools'' that demand deep understanding and complex interaction protocols. The gap between natural language instructions and formal simulation setup requirements represents a significant challenge for LLM-based systems \cite{li2023apibank}.
 
 Recent work on code generation for scientific computing shows promise but remains limited in scope and requires substantial domain expertise to implement effectively \cite{chen2021evaluating}. The challenge of automatically configuring complex simulation environments based on natural language descriptions remains largely unsolved.
 
-\subsubsection{Safety and Real-Time Execution Assurance Deficits}
-
-LLM reasoning processes are inherently slow and non-deterministic, with complex reasoning potentially requiring seconds or longer, and results not being entirely consistent across iterations. This conflicts sharply with physical systems, especially robotics or industrial control systems, which demand high-frequency, deterministic, and safety-first operation principles \cite{thrun2002probabilistic}.
+\textbf{Safety and Real-Time Execution Assurance Deficits}: LLM reasoning processes are inherently slow and non-deterministic, with complex reasoning potentially requiring seconds or longer, and results not being entirely consistent across iterations. This conflicts sharply with physical systems, especially robotics or industrial control systems, which demand high-frequency, deterministic, and safety-first operation principles \cite{thrun2002probabilistic}.
 
 In dynamic environments, robots cannot wait for LLMs to complete ``deliberate'' planning but must respond to obstacles within millisecond timeframes. Current agent frameworks universally lack reliable mechanisms to coordinate LLM slow cognitive planning with the rapid safety responses required by the physical world. Any instance of ``hallucination'' or planning error could result in equipment damage or safety incidents \cite{amodei2016concrete}.
 

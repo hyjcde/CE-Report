@@ -1,0 +1,262 @@
+\begin{thebibliography}{10}
+
+\bibitem{alayrac2022flamingo}
+Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch, Katherine Millican, Malcolm Reynolds, et~al.
+\newblock Flamingo: a visual language model for few-shot learning.
+\newblock {\em Advances in Neural Information Processing Systems}, 35:23716--23736, 2022.
+
+\bibitem{amodei2016concrete}
+Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Man{\'e}.
+\newblock Concrete problems in ai safety.
+\newblock {\em arXiv preprint arXiv:1606.06565}, 2016.
+
+\bibitem{asai2023self}
+Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, and Hannaneh Hajishirzi.
+\newblock Self-rag: Learning to retrieve, generate, and critique through self-reflection.
+\newblock {\em arXiv preprint arXiv:2310.11511}, 2023.
+
+\bibitem{ashby1956introduction}
+W~Ross Ashby.
+\newblock {\em An introduction to cybernetics}.
+\newblock Chapman \& Hall, 1956.
+
+\bibitem{baheti2011cyber}
+Radhakisan Baheti and Helen Gill.
+\newblock Cyber-physical systems.
+\newblock {\em The impact of control technology}, 12(1):161--166, 2011.
+
+\bibitem{boje2020towards}
+Calin Boje, Antonio Guerriero, Sylvain Kubicki, and Yacine Rezgui.
+\newblock Towards a semantic construction digital twin: directions for future research.
+\newblock {\em Automation in Construction}, 114:103179, 2020.
+
+\bibitem{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et~al.
+\newblock Language models are few-shot learners.
+\newblock In {\em Advances in neural information processing systems}, volume~33, pages 1877--1901, 2020.
+
+\bibitem{bruno2018historic}
+Silvana Bruno, Mariella De~Fino, and Fabio Fatiguso.
+\newblock Historic building information modelling: performance assessment for diagnosis-aided information modelling and management.
+\newblock {\em Automation in Construction}, 86:256--276, 2018.
+
+\bibitem{chowdhery2022palm}
+Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung~Won Chung, Charles Sutton, Sebastian Gehrmann, et~al.
+\newblock Palm: Scaling language modeling with pathways.
+\newblock {\em arXiv preprint arXiv:2204.02311}, 2022.
+
+\bibitem{doyle1989robust}
+John~C Doyle, Keith Glover, Pramod~P Khargonekar, and Bruce~A Francis.
+\newblock {\em Robust and optimal control}.
+\newblock Prentice Hall, 1989.
+
+\bibitem{duan2022survey}
+Jiafei Duan, Samson Yu, Hui~Li Tan, Hongyuan Zhu, and Cheston Tan.
+\newblock A survey of embodied ai: From simulators to research tasks.
+\newblock {\em IEEE Transactions on Emerging Topics in Computational Intelligence}, 6(2):230--244, 2022.
+
+\bibitem{fan2023retrieval}
+Wenqi Fan et~al.
+\newblock Retrieval-augmented generation for ai-generated content: A survey.
+\newblock {\em arXiv preprint arXiv:2312.10997}, 2023.
+
+\bibitem{fuller2020digital}
+Aidan Fuller, Zhong Fan, Charles Day, and Chris Barlow.
+\newblock Digital twin: Enabling technologies, challenges and open research.
+\newblock {\em IEEE Access}, 8:108952--108971, 2020.
+
+\bibitem{gat1998three}
+Erann Gat.
+\newblock Three-layer architectures.
+\newblock {\em Artificial intelligence and mobile robots}, pages 195--210, 1998.
+
+\bibitem{glaessgen2012digital}
+Edward~H Glaessgen and David~S Stargel.
+\newblock The digital twin paradigm for future nasa and us air force vehicles.
+\newblock In {\em 53rd AIAA/ASME/ASCE/AHS/ASC structures, structural dynamics and materials conference}, page 1818. American Institute of Aeronautics and Astronautics, 2012.
+
+\bibitem{grande2012scan}
+Matteo Grande et~al.
+\newblock Scan: Uav-delivered imaging system for 3d surveying applications.
+\newblock {\em Sensors}, 12(12):16557--16574, 2012.
+
+\bibitem{grieves2014digital}
+Michael Grieves.
+\newblock Digital twin: Manufacturing excellence through virtual factory replication.
+\newblock {\em Digital Manufacturing}, 1(1):1--7, 2014.
+
+\bibitem{hamdan2021semantic}
+Ahmad-Hasan Hamdan, Jakob Taraben, Mathias Helmrich, Tobias Mansperger, Guido Morgenthal, and Raimar~J Scherer.
+\newblock A semantic modeling approach for the automated detection and interpretation of structural damage.
+\newblock {\em Automation in Construction}, 128:103742, 2021.
+
+\bibitem{harnad1990symbol}
+Stevan Harnad.
+\newblock The symbol grounding problem.
+\newblock {\em Physica D: Nonlinear Phenomena}, 42(1-3):335--346, 1990.
+
+\bibitem{hernandez2022measuring}
+Danny Hernandez and Tom Brown.
+\newblock Measuring progress in artificial intelligence.
+\newblock {\em AI Index Report}, 2022.
+
+\bibitem{hughes2012finite}
+Thomas~JR Hughes.
+\newblock {\em The finite element method: linear static and dynamic finite element analysis}.
+\newblock Courier Corporation, 2012.
+
+\bibitem{ISO23247}
+{ISO}.
+\newblock Iso 23247-1:2021 - automation systems and integration -- digital twin framework for manufacturing -- part 1: Overview and general principles, 2021.
+
+\bibitem{izacard2021leveraging}
+Gautier Izacard and Edouard Grave.
+\newblock Leveraging passage retrieval with generative models for open domain question answering.
+\newblock In {\em Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume}, pages 874--880, 2021.
+
+\bibitem{ji2023survey}
+Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Andrea Madotto, and Pascale Fung.
+\newblock Survey of hallucination in natural language generation.
+\newblock {\em ACM Computing Surveys}, 55(12):1--38, 2023.
+
+\bibitem{jones2020cognitive}
+Randolph~M Jones and Pat Langley.
+\newblock {\em Cognitive architectures: Research issues and challenges}.
+\newblock MIT Press, 2020.
+
+\bibitem{karpukhin2020dense}
+Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and Wen-tau Yih.
+\newblock Dense passage retrieval for open-domain question answering.
+\newblock In {\em Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)}, pages 6769--6781, 2020.
+
+\bibitem{kim2012cyber}
+Kyoung-Dae Kim and Panganamala~R Kumar.
+\newblock Cyber--physical systems: A perspective at the centennial.
+\newblock {\em Proceedings of the IEEE}, 100(Special Centennial Issue):1287--1308, 2012.
+
+\bibitem{koh2021wilds}
+Pang~Wei Koh, Shiori Sagawa, Henrik Marklund, Sang~Michael Xie, Marvin Zhang, Akshay Balsubramani, Weihua Hu, Michihiro Yasunaga, Richard~Lanas Phillips, Irene Gao, et~al.
+\newblock Wilds: A benchmark of in-the-wild distribution shifts.
+\newblock {\em arXiv preprint arXiv:2012.07421}, 2021.
+
+\bibitem{kritzinger2018digital}
+Werner Kritzinger, Matthias Karner, Georg Traar, Jan Henjes, and Wilfried Sihn.
+\newblock Digital twin in manufacturing: A categorical literature review and classification.
+\newblock {\em IFAC-PapersOnLine}, 51(11):1016--1022, 2018.
+
+\bibitem{lake2017building}
+Brenden~M Lake, Tomer~D Ullman, Joshua~B Tenenbaum, and Samuel~J Gershman.
+\newblock Building machines that learn and think like people.
+\newblock {\em Behavioral and brain sciences}, 40:e253, 2017.
+
+\bibitem{lasi2014industry}
+Heiner Lasi, Peter Fettke, Hans-Georg Kemper, Thomas Feld, and Michael Hoffmann.
+\newblock Industry 4.0.
+\newblock {\em Business \& information systems engineering}, 6(4):239--242, 2014.
+
+\bibitem{lee2008cyber}
+Edward~A Lee.
+\newblock Cyber physical systems: Design challenges.
+\newblock {\em 11th IEEE International Symposium on Object and Component-Oriented Real-Time Distributed Computing (ISORC)}, pages 363--369, 2008.
+
+\bibitem{lewis2020retrieval}
+Patrick Lewis et~al.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock {\em Advances in Neural Information Processing Systems}, 33:9459--9474, 2020.
+
+\bibitem{li2024single}
+Qingxiang Li, Guidong Yang, Chuanxiang Gao, Yijun Huang, Jihan Zhang, Dongyue Huang, Benyun Zhao, Xi~Chen, and Ben~M Chen.
+\newblock Single drone-based 3d reconstruction approach to improve public engagement in conservation of heritage buildings: A case of hakka tulou.
+\newblock {\em Journal of Building Engineering}, 87:108954, 2024.
+
+\bibitem{lu2022unified}
+Ying Lu et~al.
+\newblock A unified framework for systematic analysis of multi-agent reinforcement learning algorithms.
+\newblock {\em Nature Machine Intelligence}, 4(8):656--667, 2022.
+
+\bibitem{lu2020digital}
+Yuqian Lu, Chao Liu, Kevin I-Kai Wang, Houbing Huang, and Xun Xu.
+\newblock Digital twin-driven smart manufacturing: Connotation, reference model, applications and research issues.
+\newblock {\em Robotics and Computer-Integrated Manufacturing}, 61:101837, 2020.
+
+\bibitem{negri2017review}
+Elisa Negri, Luca Fumagalli, and Marco Macchi.
+\newblock A review of the roles of digital twin in cps-based production systems.
+\newblock {\em Procedia manufacturing}, 11:939--948, 2017.
+
+\bibitem{rajkumar2010cyber}
+Ragunathan Rajkumar, Insup Lee, Lui Sha, and John Stankovic.
+\newblock Cyber-physical systems: the next computing revolution.
+\newblock In {\em Proceedings of the 47th Design Automation Conference}, pages 731--736. ACM, 2010.
+
+\bibitem{rasheed2020digital}
+Adil Rasheed, Omer San, and Trond Kvamsdal.
+\newblock Digital twin: Values, challenges and enablers from a modeling perspective.
+\newblock {\em IEEE Access}, 8:21980--22012, 2020.
+
+\bibitem{richards2023autogpt}
+Toran~Bruce Richards.
+\newblock Autogpt: An autonomous gpt-4 experiment.
+\newblock {\em GitHub repository}, 2023.
+
+\bibitem{rogers2021primer}
+Anna Rogers, Matt Gardner, and Isabelle Augenstein.
+\newblock A primer on neural network models for natural language processing.
+\newblock {\em Journal of Artificial Intelligence Research}, 61:65--95, 2021.
+
+\bibitem{schick2023toolformer}
+Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola Cancedda, and Thomas Scialom.
+\newblock Toolformer: Language models can teach themselves to use tools.
+\newblock {\em arXiv preprint arXiv:2302.04761}, 2023.
+
+\bibitem{scholak2021duorat}
+Torsten Scholak, Nathan Schucher, and Dzmitry Bahdanau.
+\newblock Duorat: Towards simpler text-to-sql models.
+\newblock In {\em Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies}, pages 1313--1321. Association for Computational Linguistics, 2021.
+
+\bibitem{spencer2019advances}
+Billie~F Spencer~Jr, Vedhus Hoskere, and Yasutaka Narazaki.
+\newblock Advances in computer vision-based civil infrastructure inspection and monitoring.
+\newblock {\em Engineering}, 5(2):199--222, 2019.
+
+\bibitem{stone2016artificial}
+Peter Stone et~al.
+\newblock Artificial intelligence and life in 2030.
+\newblock {\em One hundred year study on artificial intelligence: Report of the 2015-2016 study panel}, 2016.
+
+\bibitem{tao2018digital}
+Fei Tao, Jiangfeng Cheng, Qinglin Qi, Meng Zhang, He~Zhang, and Fangyuan Sui.
+\newblock Digital twin in industry: State-of-the-art.
+\newblock {\em Future generation computer systems}, 83:721--735, 2018.
+
+\bibitem{thrun2002probabilistic}
+Sebastian Thrun, Wolfram Burgard, and Dieter Fox.
+\newblock {\em Probabilistic robotics}.
+\newblock MIT press, 2002.
+
+\bibitem{wei2022chain}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed~Chi, Quoc Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language models.
+\newblock {\em arXiv preprint arXiv:2201.11903}, 2022.
+
+\bibitem{xu2018industry}
+Li~Da Xu, Eric~L Xu, and Ling Li.
+\newblock Industry 4.0: state of the art and future trends.
+\newblock {\em International journal of production research}, 56(8):2941--2962, 2018.
+
+\bibitem{yao2022react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Avidan, Te-Yen Edwards, and Quoc~V Le.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock {\em arXiv preprint arXiv:2210.03629}, 2022.
+
+\bibitem{yue2022ts2vec}
+Zhihan Yue, Yujing Wang, Juanyong Duan, Tianmeng Yang, Congrui Huang, Yunhai Tong, and Bixiong Xu.
+\newblock Ts2vec: Towards universal representation of time series.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial Intelligence}, volume~36, pages 8980--8987, 2022.
+
+\bibitem{zhou1996robust}
+Kemin Zhou, John~C Doyle, and Keith Glover.
+\newblock {\em Robust and optimal control}.
+\newblock Prentice hall, 1996.
+
+\end{thebibliography}

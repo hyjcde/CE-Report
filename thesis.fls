@@ -1226,26 +1226,26 @@ INPUT ./chapters/chp4-applications.tex
 INPUT chapters/chp4-applications.tex
 INPUT ./chapters/chp4-applications.tex
 INPUT chapters/chp4-applications.tex
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
+INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
+INPUT figures/DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
 INPUT ./figures/DefectGPT/System_implement.png
 INPUT ./figures/DefectGPT/System_implement.png
 INPUT figures/DefectGPT/System_implement.png
 INPUT ./figures/DefectGPT/System_implement.png
 INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
+INPUT ./figures/DefectGPT/cognitive_agent_framework.png
+INPUT ./figures/DefectGPT/cognitive_agent_framework.png
+INPUT figures/DefectGPT/cognitive_agent_framework.png
+INPUT ./figures/DefectGPT/cognitive_agent_framework.png
+INPUT ./figures/DefectGPT/cognitive_agent_framework.png
+INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
+INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
+INPUT figures/DefectGPT/hybrid_retrieval_engine.png
+INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
+INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
 INPUT ./figures/DefectGPT/performance comparison.png
 INPUT ./figures/DefectGPT/performance comparison.png
 INPUT figures/DefectGPT/performance comparison.png
@@ -1316,6 +1316,12 @@ INPUT ./thesis.bbl
 INPUT thesis.bbl
 INPUT ./thesis.bbl
 INPUT thesis.bbl
+INPUT ./thesis.brf
+INPUT thesis.brf
+INPUT thesis.brf
+INPUT ./thesis.brf
+INPUT ./thesis.brf
+OUTPUT thesis.brf
 INPUT thesis.aux
 INPUT ./chapters/chp1-introduction.aux
 INPUT chapters/chp1-introduction.aux
@@ -1346,3 +1352,5 @@ INPUT appendices/appx-A.aux
 INPUT appendices/appx-A.aux
 INPUT ./thesis.out
 INPUT ./thesis.out
+INPUT ./thesis.brf
+INPUT ./thesis.brf

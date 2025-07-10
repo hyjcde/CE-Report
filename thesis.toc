@@ -2,96 +2,135 @@
 \contentsline {chapter}{List of Figures}{iv}{section*.3}%
 \contentsline {chapter}{List of Tables}{v}{section*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Research Background and Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Background and Motivation}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Cyber-Physical Systems Evolution}{1}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Digital Twins as Cognitive Bridges}{4}{subsection.1.1.2}%
-\contentsline {subsubsection}{Semantic Integration}{4}{section*.7}%
-\contentsline {subsubsection}{Predictive Simulation Integration}{6}{section*.8}%
-\contentsline {subsubsection}{Temporal Evolution Tracking}{7}{section*.9}%
-\contentsline {subsubsection}{Safety-Critical Interaction}{7}{section*.10}%
 \contentsline {subsection}{\numberline {1.1.3}Large Language Models as Cognitive Cores}{8}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Integration Challenges}{10}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}The Cognitive-Physical Gap}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.1.4}Integration Challenges}{9}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}The Cognitive-Physical Gap in Cyber-Physical Systems}{10}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Reality Grounding Problem}{11}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Model Utilization Problem}{12}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Safe Execution Problem}{13}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Systematic Approach}{14}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Research Objectives}{15}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Research Contributions}{16}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Thesis Organization}{18}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.3}Research Objectives and Questions}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Core Contributions}{16}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Thesis Structure}{18}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Literature Review}{20}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Digital Twin Models and Applications}{20}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Digital Twins: Maturity Models and Functional Gaps}{20}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Engineering Maturity Frameworks}{21}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Functional Classification Gaps}{22}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}RAG: Principles and Limitations}{23}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Large Language Models and the Grounding Problem}{23}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}RAG Architecture and Implementations}{24}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Paradigm Mismatch in Physical Environments}{24}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Structured Query Integration Challenges}{25}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}LLM Agents: Evolution and Challenges}{26}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}From Language Models to Autonomous Agents}{26}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Success in Digital Domains}{27}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.3}Cognitive Agents: Integration Paradigms and Architectural Deficiencies}{26}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}From Language Models to Autonomous Agents}{27}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Success in Digital Domains}{28}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}The Cognitive-Physical Gap}{28}{subsection.2.3.3}%
-\contentsline {subsubsection}{Physical Commonsense and Grounding Difficulties}{28}{section*.11}%
-\contentsline {subsubsection}{Complex Physical Model Utilization Barriers}{29}{section*.12}%
-\contentsline {subsubsection}{Safety and Real-Time Execution Assurance Deficits}{30}{section*.13}%
 \contentsline {subsection}{\numberline {2.3.4}Limitations of Current Integration Approaches}{30}{subsection.2.3.4}%
 \contentsline {section}{\numberline {2.4}Research Gap Analysis}{31}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Integration Challenges}{31}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Absence of Systematic Solutions}{32}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Evaluation and Benchmarking Gaps}{32}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Future Research Directions}{33}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}Chapter Summary}{33}{section.2.5}%
-\contentsline {chapter}{\numberline {3}Methodology}{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Three-Tier Digital Twin Framework}{35}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Framework Structure and Definitions}{36}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}L1 - Descriptive Twin: Authoritative Record of Reality}{36}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}L2 - Predictive Twin: Causal Simulator of Time}{37}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}L3 - Interactive Twin: Counterfactual Sandbox for Action}{39}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Framework Validation and Application}{40}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}CORTEX Architecture Design}{40}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Perception Module: Digital Twin-native Retrieval-Augmented Generation (DT-RAG)}{42}{subsection.3.2.1}%
-\contentsline {subsubsection}{Multi-Modal Data Adapter Suite}{42}{section*.16}%
-\contentsline {subsubsection}{Information Fusion and Contextualization}{43}{section*.17}%
-\contentsline {subsection}{\numberline {3.2.2}Reasoning Module: Model-Profile-Driven Deep Tool Orchestration}{44}{subsection.3.2.2}%
-\contentsline {subsubsection}{Model Profile System}{44}{section*.18}%
-\contentsline {subsubsection}{Multi-Step Engineering Orchestration}{45}{section*.19}%
-\contentsline {subsection}{\numberline {3.2.3}Action Module: Slow-Fast Dual-Loop Coordination Mechanism}{45}{subsection.3.2.3}%
-\contentsline {subsubsection}{Dual-Loop Architecture}{46}{section*.20}%
-\contentsline {subsubsection}{Safety-First Execution Protocol}{47}{section*.21}%
-\contentsline {section}{\numberline {3.3}Evaluation Framework and Metrics}{47}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Experimental Design and Methodology}{48}{subsection.3.3.1}%
-\contentsline {subsubsection}{Controlled Experiment Design}{48}{section*.22}%
-\contentsline {subsubsection}{Baseline Selection and Validation}{49}{section*.23}%
-\contentsline {subsection}{\numberline {3.3.2}Key Performance Indicators (KPIs)}{49}{subsection.3.3.2}%
-\contentsline {subsubsection}{Task Effectiveness Metrics}{50}{section*.24}%
-\contentsline {subsubsection}{Decision Quality Metrics}{50}{section*.25}%
-\contentsline {subsubsection}{Robustness and Adaptability Metrics}{51}{section*.26}%
+\contentsline {section}{\numberline {2.5}Chapter Summary}{34}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Methodology}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The Three-Tier Digital Twin Framework}{36}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Framework Structure and Definitions}{37}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}L1 - Descriptive Twin: Authoritative Record of Reality}{37}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}L2 - Predictive Twin: Causal Simulator of Time}{38}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}L3 - Interactive Twin: Counterfactual Sandbox for Action}{40}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Framework Validation and Application}{41}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}CORTEX: A Cognitive Architecture for LLM-driven Agents}{41}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Perception Module: Digital Twin-native Retrieval-Augmented Generation (DT-RAG)}{43}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Reasoning Module: Model-Profile-Driven Deep Tool Orchestration}{45}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Action Module: Slow-Fast Dual-Loop Coordination Mechanism}{46}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Evaluation Framework and Metrics}{48}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Experimental Design and Methodology}{49}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Key Performance Indicators (KPIs)}{50}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Cognitive Gain: A Comprehensive Performance Metric}{52}{subsection.3.3.3}%
-\contentsline {subsubsection}{Mathematical Definition}{52}{section*.27}%
-\contentsline {subsubsection}{Multi-Dimensional Cognitive Gain Analysis}{53}{section*.28}%
-\contentsline {subsubsection}{Statistical Significance and Confidence Intervals}{53}{section*.29}%
 \contentsline {subsection}{\numberline {3.3.4}Evaluation Protocol and Procedures}{54}{subsection.3.3.4}%
-\contentsline {subsubsection}{Pre-Evaluation Phase}{54}{section*.30}%
-\contentsline {subsubsection}{Evaluation Execution}{54}{section*.31}%
-\contentsline {subsubsection}{Post-Evaluation Analysis}{55}{section*.32}%
-\contentsline {subsection}{\numberline {3.3.5}Chapter Summary}{55}{subsection.3.3.5}%
-\contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring (L1)}{58}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{58}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Critical Flaws in Direct LLM Application}{60}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Research Objectives}{61}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Problem Definition and L1 Environment}{62}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Building Diagnosis Task Formalization}{62}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}L1 Descriptive Twin Construction}{63}{subsection.4.2.2}%
-\contentsline {subsubsection}{Data Layer: Multi-Modal Information Processing}{64}{section*.35}%
-\contentsline {subsubsection}{Digital Twin Layer: Knowledge Organization}{65}{section*.36}%
-\contentsline {section}{\numberline {4.3}CORTEX Perception Module}{66}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Planner: Task Decomposition}{67}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Execution Engine: Hybrid Retrieval}{67}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Reasoning \& Synthesis}{70}{subsection.4.3.3}%
-\contentsline {subsubsection}{Evidence Refinement Process}{70}{section*.39}%
-\contentsline {subsubsection}{Evidence-Driven Generation}{70}{section*.40}%
-\contentsline {subsubsection}{Decision Support Visualization}{71}{section*.41}%
-\contentsline {section}{\numberline {4.4}Experimental Design}{71}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Dataset Construction}{71}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Baseline Model Configuration}{72}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Evaluation Metrics}{72}{subsection.4.4.3}%
+\contentsline {section}{\numberline {3.4}Research Plan}{56}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Three-Phased Implementation Strategy}{56}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Cross-Domain Validation Strategy}{57}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Evaluation and Validation Protocol}{57}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Expected Outcomes and Validation Criteria}{58}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Risk Mitigation and Contingency Planning}{58}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Chapter Summary}{59}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring}{61}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Domain and Experimental Objectives}{61}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Critical Flaws in Direct LLM Application}{63}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Research Objectives}{64}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Twin Construction and CORTEX Implementation}{65}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Building Diagnosis Task Formalization}{65}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}L1 Descriptive Twin Construction}{66}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}CORTEX Perception Module Implementation}{69}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Planner: Task Decomposition}{69}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Execution Engine: Hybrid Retrieval}{70}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Reasoning \& Synthesis}{72}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}Experimental Design and Results}{74}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Dataset Construction}{74}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Baseline Model Configuration}{75}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Evaluation Metrics and Results}{75}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Ablation Study}{77}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Summary of Findings}{78}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Response to Research Questions}{78}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Architectural Innovations}{79}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Limitations and Future Directions}{79}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Case Study II: Medical Ultrasound Diagnosis}{81}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Clinical Problem Statement}{81}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Diagnostic Complexity in Medical Imaging}{82}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Current Limitations in Medical AI}{83}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Predictive Twin Design and CORTEX Adaptation}{83}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Non-Visual Digital Twin Architecture}{83}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}CORTEX Medical Adaptation}{85}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Safety and Ethics Implementation}{87}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Experimental Design and Validation}{87}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Clinical Collaboration Framework}{87}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Evaluation Framework}{88}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Validation Protocol}{88}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Summary of Findings}{89}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Clinical Value Assessment}{89}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Technical Validation}{90}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Limitations and Future Directions}{90}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Theoretical Contributions}{91}{subsection.5.4.4}%
+\contentsline {chapter}{\numberline {6}Case Study III: Autonomous Task Planning for UAVs}{92}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Domain and Mission Objectives}{92}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}GPS-Denied UAV Reconnaissance}{92}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}L3 Interactive Twins Requirements}{93}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Research Hypothesis}{93}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Interactive Twin Design and CORTEX Configuration}{95}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Dual-Loop Architecture Mapping}{95}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Interactive Digital Twin Environment}{96}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}CORTEX Configuration}{96}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Implementation and Validation}{97}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Implementation Plan}{97}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Experimental Design}{98}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Expected Results and Cognitive Gains}{98}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Technical Challenges and Solutions}{99}{subsection.6.3.4}%
+\contentsline {subsubsection}{Innovative Solutions}{99}{section*.17}%
+\contentsline {section}{\numberline {6.4}Summary of Findings}{100}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}L3 Interactive Twins Validation}{100}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}CORTEX Architecture Completion}{100}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Theoretical and Practical Implications}{101}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Implementation Timeline and Future Work}{101}{subsection.6.4.4}%
+\contentsline {chapter}{\numberline {7}General Discussion}{103}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Synthesis Across the Cognitive Layers}{103}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Overall Validation Results Across Three Case Studies}{103}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}CORTEX Architecture Effectiveness and Adaptability}{104}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Theoretical Validation of the Three-Layer Framework}{105}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}Answering the Research Questions}{106}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}RQ1: Classification Framework}{106}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}RQ2: Architecture Design}{107}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}RQ3: Empirical Evaluation}{108}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Theoretical Contributions and Practical Implications}{109}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Theoretical Impact}{110}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Practical Impact}{111}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Limitations and Future Work}{112}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Current Limitations Analysis}{113}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Technical Development Directions}{114}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Research Frontiers and Challenges}{115}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Long-term Vision}{116}{subsection.7.4.4}%
+\contentsline {chapter}{\numberline {8}Conclusion}{118}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Index of glossary terms}{121}{appendix.A}%
+\contentsline {chapter}{Bibliography}{122}{section*.18}%

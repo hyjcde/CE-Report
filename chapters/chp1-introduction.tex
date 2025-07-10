@@ -2,7 +2,7 @@
 
 \chapter{Introduction} \label{chp:intro}
 
-\section{Research Background and Motivation}
+\section{Background and Motivation}
 
 A central discourse in contemporary science and engineering concerns the deepening of interaction capabilities between intelligent computational systems and the complex physical world. Physical systems, as dynamic, high-dimensional, and often safety-critical entities, impose far more stringent requirements on embedded intelligent agents than those found in purely digital environments. The motivation for this research emerges from the convergence of three critical academic and technological development trajectories, whose fusion heralds a new paradigm of intelligence while simultaneously revealing a fundamental scientific problem that demands urgent resolution.
 
@@ -36,9 +36,7 @@ This demand for cognitive depth forms the fundamental driving force of this rese
 
 Achieving cognitive autonomy in physical world interaction necessitates first solving a prerequisite problem: how can intelligent agents obtain a computable, high-fidelity, and safely interactive representation of the world? Digital Twins (DT) provide the crucial computational substrate for addressing this challenge \cite{grieves2014digital, tao2019digital}. A Digital Twin that conforms to standards such as ISO 23247 and similar frameworks extends far beyond three-dimensional visualization; it constitutes an epistemological bridge connecting cognition with physics, manifested through several key dimensions \cite{ISO23247, jones2020characterising}.
 
-\subsubsection{Semantic Integration}
-
-Modern DT implementations must handle diverse information types—geometric models from CAD systems, temporal sensor data from IoT devices, textual documentation from technical manuals, and visual inspection data from mobile devices \cite{boje2020towards, lu2020digital}. This multimodal integration challenge requires sophisticated information fusion techniques that go beyond simple data aggregation to achieve semantic alignment across different representational frameworks.
+\textbf{Semantic Integration}: Modern DT implementations must handle diverse information types—geometric models from CAD systems, temporal sensor data from IoT devices, textual documentation from technical manuals, and visual inspection data from mobile devices \cite{boje2020towards, lu2020digital}. This multimodal integration challenge requires sophisticated information fusion techniques that go beyond simple data aggregation to achieve semantic alignment across different representational frameworks.
 
 Traditional approaches to multimodal integration rely primarily on geometric co-registration and temporal synchronization. While these approaches achieve spatial and temporal alignment, they do not address semantic alignment—ensuring that different data types refer to the same conceptual entities and relationships. This semantic alignment challenge becomes particularly acute when integrating structured engineering data with unstructured textual information or when combining quantitative sensor measurements with qualitative inspection reports.
 
@@ -48,9 +46,7 @@ Content-based retrieval systems must enable intelligent agents to query DT envir
 
 Furthermore, DT systems must incorporate formal knowledge representation frameworks that enable reasoning about complex relationships between system components \cite{gruber1993translation, studer1998knowledge}. This knowledge representation must be sufficiently expressive to capture the complex dependencies and interactions that characterize real-world physical systems while remaining computationally tractable for real-time querying and reasoning.
 
-\subsubsection{Predictive Simulation Integration}
-
-Digital Twins must provide access to sophisticated simulation capabilities that enable intelligent agents to explore "what-if" scenarios and predict the consequences of different actions before implementation \cite{negri2017review, kritzinger2018digital}. This predictive capability is essential for safe and effective decision-making in physical environments where mistakes can have serious consequences.
+\textbf{Predictive Simulation Integration}: Digital Twins must provide access to sophisticated simulation capabilities that enable intelligent agents to explore "what-if" scenarios and predict the consequences of different actions before implementation \cite{negri2017review, kritzinger2018digital}. This predictive capability is essential for safe and effective decision-making in physical environments where mistakes can have serious consequences.
 
 The integration of predictive simulation into DT environments requires addressing several technical challenges. First, simulation models must be automatically configured and parameterized based on current system state and environmental conditions. This requires sophisticated parameter estimation techniques that can infer appropriate simulation settings from available sensor data and system observations.
 
@@ -60,17 +56,13 @@ Third, multiple simulation models often need to be coupled together to capture t
 
 The causal modeling capabilities required for effective predictive simulation extend beyond traditional correlation-based approaches to include explicit representation of causal relationships and mechanisms \cite{pearl2019seven}. This causal understanding is essential for generating reliable predictions in novel scenarios that differ from historical training data.
 
-\subsubsection{Temporal Evolution Tracking}
-
-Digital Twins must maintain continuous correspondence with evolving physical systems, incorporating new information and updating internal representations as system states change over time. This temporal tracking capability requires sophisticated state estimation techniques that can handle partial observability, sensor noise, and intermittent communication with physical systems.
+\textbf{Temporal Evolution Tracking}: Digital Twins must maintain continuous correspondence with evolving physical systems, incorporating new information and updating internal representations as system states change over time. This temporal tracking capability requires sophisticated state estimation techniques that can handle partial observability, sensor noise, and intermittent communication with physical systems.
 
 The temporal evolution tracking challenge is particularly complex because physical systems operate across multiple timescales. Some system changes occur rapidly (milliseconds to seconds), such as control system responses or emergency events. Other changes occur slowly (hours to years), such as material degradation or environmental adaptation. DT systems must be capable of tracking evolution across all relevant timescales while maintaining computational efficiency.
 
 Furthermore, temporal tracking must handle both continuous evolution and discrete events. Continuous evolution includes processes like temperature changes, material wear, or gradual performance degradation. Discrete events include component failures, maintenance actions, or sudden environmental changes. DT systems must be capable of detecting, modeling, and responding to both types of temporal changes.
 
-\subsubsection{Safety-Critical Interaction}
-
-Perhaps most critically, DT environments must enable safe exploration and experimentation without risking damage to physical systems. This safety-critical interaction capability requires sophisticated verification and validation techniques that can ensure simulation fidelity while maintaining clear boundaries between virtual experimentation and physical implementation.
+\textbf{Safety-Critical Interaction}: Perhaps most critically, DT environments must enable safe exploration and experimentation without risking damage to physical systems. This safety-critical interaction capability requires sophisticated verification and validation techniques that can ensure simulation fidelity while maintaining clear boundaries between virtual experimentation and physical implementation.
 
 Safety-critical interaction requires multiple layers of protection. First, DT systems must maintain accurate representation of system safety constraints and operational boundaries. This requires sophisticated constraint modeling techniques that can capture both hard constraints (absolute safety limits) and soft constraints (performance optimization boundaries).
 
@@ -104,7 +96,7 @@ The scale and scope of potential applications for LLM-DT integration span virtua
 
 The enormous potential for fusion and the fundamental gaps it contains constitute the core issue of this doctoral thesis research. The work presented here aims to bridge these gaps through the development of novel architectures, methodologies, and validation frameworks that enable the safe and effective integration of Large Language Models with Digital Twins for cognitive autonomy in physical world applications.
 
-\section{The Cognitive-Physical Gap}
+\section{The Cognitive-Physical Gap in Cyber-Physical Systems}
 
 Despite the remarkable convergence of technological capabilities described above, a fundamental challenge emerges when these systems are tasked with making autonomous decisions in complex, dynamic physical environments. This challenge extends beyond simple task execution to concern the very foundation of how intelligent decisions are made when dealing with systems that exhibit continuous change, multi-scale interactions, and emergent behaviors. We term this fundamental challenge the "Cognitive-Physical Gap"—a systematic disconnect between the symbolic reasoning capabilities of LLMs and the continuous, interconnected nature of physical reality.
 
@@ -152,7 +144,7 @@ For the safe execution problem, CORTEX implements a "slow-fast dual-loop" archit
 
 The systematic integration of these solutions represents a novel approach to bridging the Cognitive-Physical Gap, providing a foundation for developing autonomous systems that can reason effectively about complex physical environments while maintaining safety and reliability requirements.
 
-\section{Research Objectives}
+\section{Research Objectives and Questions}
 
 This research is structured around five fundamental research questions that systematically address the theoretical, architectural, and practical challenges of integrating Large Language Models with Digital Twin environments for physical world decision-making. These questions collectively span the entire research scope from theoretical foundations to practical deployment considerations.
 
@@ -173,7 +165,7 @@ What are the practical requirements and constraints for deploying LLM-DT integra
 
 These research questions are designed to address the fundamental scientific challenges while maintaining focus on practical applicability and real-world deployment considerations.
 
-\section{Research Contributions}
+\section{Core Contributions}
 
 This research makes several distinct contributions to the fields of cognitive autonomy, physical world interaction, and AI system integration. These contributions span theoretical frameworks, architectural designs, methodological innovations, and empirical validations that collectively advance the state of knowledge in LLM-based physical world reasoning.
 
@@ -187,7 +179,7 @@ The empirical contribution provides comprehensive validation across three distin
 
 Finally, the research develops systematic evaluation frameworks and performance metrics specifically designed for assessing cognitive autonomy in physical systems. These contributions provide standardized approaches for measuring system performance and enable comparative analysis across different implementations and domains.
 
-\subsection{Thesis Organization}
+\section{Thesis Structure}
 
 This thesis is organized into eight chapters that systematically develop and validate the proposed approach:
 
