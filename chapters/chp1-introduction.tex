@@ -154,114 +154,6 @@ For the safe execution problem, CORTEX implements a "slow-fast dual-loop" archit
 
 The systematic integration of these solutions represents a novel approach to bridging the Cognitive-Physical Gap, providing a foundation for developing autonomous systems that can reason effectively about complex physical environments while maintaining safety and reliability requirements.
 
-\section{Proposed Solution: The CORTEX Cognitive Architecture and Three-Tier Digital Twin Decision Framework}
-
-To systematically address the fundamental challenges outlined above, this doctoral research plan centers on the conceptualization and design of a novel Agent architecture named CORTEX (Cognitive Reasoning with Orchestrated Twin EXecution). The theoretical foundation of this work is a novel "Three-Tier Digital Twin Decision Framework" that categorizes physical decision tasks by complexity evolution into three distinct levels, providing both logical justification for the CORTEX architecture design and a standardized "capability testing ground" for subsequent empirical evaluation.
-
-\subsection{The Three-Tier Digital Twin Decision Framework}
-
-The theoretical framework proposed in this research recognizes that physical decision tasks exist across a spectrum of complexity, requiring different types of cognitive capabilities and system architectures. This framework categorizes these tasks into three hierarchical levels based on their cognitive demands and interaction patterns:
-
-\subsubsection{L1-Descriptive Twins: Diagnostic Decision Making}
-
-Level 1 represents diagnostic decision-making scenarios where the primary cognitive task involves interpreting current system state and identifying patterns, anomalies, or conditions that require attention \cite{russell2010artificial, pearl2000causality}. These tasks primarily require sophisticated pattern recognition and classification capabilities, often involving the analysis of complex, multi-modal sensor data to determine system health, performance, or operational status.
-
-L1 tasks are characterized by their focus on "what is happening now" questions, requiring systems to process large volumes of real-time data and extract meaningful insights about current conditions. The cognitive demands center on perception, classification, and basic causal inference, with decisions typically involving alerting, reporting, or recommending immediate interventions.
-
-Examples of L1 tasks include building structural health monitoring, where systems must analyze sensor data to detect developing problems such as cracks, settlements, or thermal bridges; industrial equipment condition monitoring, where vibration, temperature, and performance data must be analyzed to predict maintenance needs; and medical diagnostic support, where patient data must be analyzed to identify potential health issues or monitor treatment progress.
-
-The Digital Twin requirements for L1 tasks focus on accurate representation of current system state and historical patterns, with emphasis on data integration, sensor fusion, and pattern recognition capabilities. These twins typically maintain comprehensive databases of historical performance and known failure modes, enabling comparison of current observations with established patterns.
-
-\subsubsection{L2-Predictive Twins: Strategic Decision Making}
-
-Level 2 encompasses strategic decision-making scenarios where the cognitive task involves predicting future system behavior and evaluating alternative strategies for achieving desired outcomes \cite{sutton2018reinforcement, kaelbling1996reinforcement}. These tasks require sophisticated simulation and optimization capabilities, often involving the exploration of complex trade-offs between competing objectives and the evaluation of long-term consequences of different action strategies.
-
-L2 tasks are characterized by their focus on "what will happen if" questions, requiring systems to engage in counterfactual reasoning and prospective analysis. The cognitive demands include temporal reasoning, causal modeling, and strategic planning, with decisions typically involving resource allocation, scheduling, and policy optimization.
-
-Examples of L2 tasks include cancer treatment strategy planning, where systems must predict the likely outcomes of different treatment protocols based on patient-specific tumor characteristics and medical history; energy system optimization, where demand forecasting and resource allocation must be optimized across multiple time horizons; and supply chain management, where inventory levels, production schedules, and distribution strategies must be coordinated to meet uncertain demand.
-
-The Digital Twin requirements for L2 tasks emphasize predictive modeling capabilities, with sophisticated simulation engines that can explore different scenarios and evaluate their likely outcomes. These twins typically incorporate physics-based models, statistical forecasting methods, and optimization algorithms that can identify optimal or near-optimal strategies for achieving specified objectives.
-
-\subsubsection{L3-Interactive Twins: Action-Oriented Decision Making}
-
-Level 3 represents action-oriented decision-making scenarios where the cognitive task involves real-time interaction with dynamic environments and autonomous execution of complex task sequences \cite{duan2022survey, kober2013reinforcement}. These tasks require sophisticated coordination between perception, reasoning, and action, often involving navigation through uncertain environments and adaptation to unexpected conditions.
-
-L3 tasks are characterized by their focus on "how to achieve" questions, requiring systems to generate and execute action sequences while continuously adapting to changing conditions. The cognitive demands include spatial reasoning, temporal coordination, and adaptive planning, with decisions typically involving real-time control, navigation, and task execution.
-
-Examples of L3 tasks include autonomous UAV exploration in unknown environments, where systems must navigate safely while gathering information about terrain, obstacles, and points of interest; robotic assembly operations, where complex manipulation sequences must be executed while adapting to variations in part positioning and environmental conditions; and autonomous vehicle operation, where navigation, obstacle avoidance, and traffic interaction must be coordinated in real-time.
-
-The Digital Twin requirements for L3 tasks emphasize real-time simulation and control capabilities, with high-fidelity physics engines that can predict the immediate consequences of different actions. These twins typically incorporate detailed geometric models, dynamics simulation, and control interfaces that enable direct manipulation of physical systems.
-
-\subsection{The CORTEX Architecture: Systematic Response to Cognitive-Physical Challenges}
-
-The CORTEX architecture directly responds to the three core challenges of the Cognitive-Physical Gap through deep extensions of existing paradigms, providing systematic solutions that enable effective integration of LLM reasoning with Digital Twin representations.
-
-\subsubsection{Perception Module: Digital Twin Retrieval-Augmented Generation (DT-RAG)}
-
-To address the reality grounding problem, CORTEX employs a novel Digital Twin Retrieval-Augmented Generation (DT-RAG) mechanism that provides LLMs with grounded, contextual access to physical system information \cite{lewis2020retrieval, gao2023retrieval}. Unlike traditional RAG approaches that retrieve from static document collections, DT-RAG operates on dynamic, physics-aware representations that are continuously updated with real-time system data.
-
-The DT-RAG mechanism operates through several key components. The semantic indexing system maintains vector representations of system components, sensor data, and operational states that enable efficient similarity-based retrieval of relevant information. The temporal correlation engine identifies relationships between current observations and historical patterns, providing context for interpreting sensor data and system behaviors. The multi-modal fusion component integrates information from different sensor types and data sources, creating coherent representations that account for cross-modal dependencies and interactions.
-
-The contextual query processing system enables LLMs to formulate sophisticated queries about system state and behavior, automatically translating high-level questions into specific data retrieval operations. This enables natural language interaction with complex technical systems while maintaining the precision and accuracy required for engineering applications.
-
-\subsubsection{Reasoning Module: LLM-Callable Simulation Tools}
-
-To address the model utilization problem, CORTEX encapsulates complex physical models as LLM-callable tools with standardized interfaces and automated configuration capabilities \cite{schick2023toolformer, qin2023toolllm}. This approach enables LLMs to leverage sophisticated analytical capabilities without requiring deep domain expertise in specific modeling frameworks.
-
-The tool encapsulation framework provides standardized APIs for different types of simulation models, enabling LLMs to invoke finite element analysis, computational fluid dynamics, thermal simulation, and other specialized modeling capabilities through consistent interfaces. The automated configuration system uses knowledge of system geometry, material properties, and boundary conditions stored in the Digital Twin to automatically configure simulation parameters, reducing the expertise required for accurate model setup.
-
-The result interpretation component translates simulation outputs into natural language summaries that highlight key insights and their implications for system behavior. This enables LLMs to understand and reason about simulation results without requiring detailed knowledge of numerical analysis techniques or engineering visualization tools.
-
-The multi-model coordination system enables LLMs to orchestrate coupled simulations that capture interactions between different physical phenomena. This is crucial for understanding complex systems where structural, thermal, fluid, and electrical behaviors are interconnected and influence each other.
-
-\subsubsection{Action Module: Slow-Fast Dual-Loop Safety Coordinator}
-
-To address the safe execution problem, CORTEX designs a "slow-fast dual-loop" safety coordinator that combines deliberative LLM reasoning for strategic decision-making with rapid autonomous safety systems for immediate response to critical conditions \cite{leveson2011engineering, knight2002safety}.
-
-The slow loop operates on timescales of seconds to minutes, providing deliberative reasoning about strategic objectives, long-term planning, and complex optimization problems. This loop leverages the full cognitive capabilities of LLMs, including natural language understanding, causal reasoning, and creative problem-solving, to generate sophisticated action strategies and policies.
-
-The fast loop operates on timescales of milliseconds to seconds, providing immediate response to safety-critical conditions and emergency situations. This loop uses traditional control systems, safety interlocks, and automated response mechanisms that can react quickly to dangerous conditions without waiting for deliberative reasoning to complete.
-
-The coordination mechanism ensures seamless interaction between the slow and fast loops, allowing deliberative reasoning to set policies and objectives while maintaining the rapid response times required for safety-critical applications. The handoff protocols define clear conditions under which control transitions between the deliberative and reactive systems, ensuring that safety is maintained while preserving the benefits of cognitive reasoning.
-
-The verification and validation framework provides systematic approaches for testing and validating the behavior of the integrated system, ensuring that the combination of deliberative and reactive components produces safe and reliable system behavior across a wide range of operating conditions.
-
-\subsection{Empirical Validation Through Representative Case Studies}
-
-The effectiveness of the CORTEX architecture will be rigorously evaluated through a series of representative case studies that map directly to the three levels of the Digital Twin Decision Framework. This evaluation strategy demonstrates not only the effectiveness of the approach but also its generalizability and robustness across fundamentally different types of physical world interaction.
-
-\subsubsection{L1 Case Study: Building Structural Health Monitoring}
-
-The L1 evaluation focuses on diagnostic decision-making through building structural health monitoring, where CORTEX must analyze multi-sensor data streams to identify developing structural problems and recommend appropriate interventions. This case study leverages Building Information Models (BIM) integrated with IoT sensor networks to create comprehensive Digital Twins that can detect and classify various types of structural anomalies.
-
-The cognitive challenges include interpreting complex sensor signatures, correlating observations across multiple measurement points, and distinguishing between normal variations and developing problems. The system must demonstrate the ability to ground LLM reasoning in real-time sensor data while leveraging historical patterns and engineering knowledge to make accurate diagnostic assessments.
-
-Key performance metrics include detection accuracy for different types of structural problems, false positive and false negative rates, and the ability to provide explanatory reasoning for diagnostic conclusions. The evaluation will compare CORTEX performance with traditional automated monitoring systems and human expert assessments.
-
-\subsubsection{L2 Case Study: Cancer Treatment Strategy Planning Based on Tumor Microenvironment Twins}
-
-The L2 evaluation examines strategic decision-making through cancer treatment planning, where CORTEX must analyze patient-specific tumor characteristics and predict the likely outcomes of different treatment protocols. This case study utilizes detailed models of tumor microenvironments to create predictive Digital Twins that can explore treatment scenarios and optimize therapeutic strategies.
-
-The cognitive challenges include integrating complex biomedical data, reasoning about treatment interactions and side effects, and optimizing treatment protocols across multiple objectives such as efficacy, toxicity, and quality of life. The system must demonstrate the ability to generate and evaluate sophisticated treatment strategies while accounting for patient-specific factors and uncertainty in treatment response.
-
-Key performance metrics include the accuracy of treatment outcome predictions, the optimality of generated treatment strategies, and the ability to adapt strategies based on treatment response and changing patient conditions. The evaluation will compare CORTEX recommendations with expert oncologist assessments and established treatment protocols.
-
-\subsubsection{L3 Case Study: Autonomous UAV Exploration in Unknown Environments}
-
-The L3 evaluation addresses action-oriented decision-making through autonomous UAV exploration, where CORTEX must navigate safely through unknown environments while gathering information about terrain, obstacles, and points of interest. This case study utilizes real-time 3D point cloud data to create dynamic Digital Twins that enable safe navigation and effective exploration strategies.
-
-The cognitive challenges include real-time spatial reasoning, adaptive path planning under uncertainty, and coordination between exploration objectives and safety constraints. The system must demonstrate the ability to generate and execute complex navigation sequences while continuously adapting to changing environmental conditions and unexpected obstacles.
-
-Key performance metrics include exploration efficiency, navigation safety, and the quality of information gathered during exploration missions. The evaluation will compare CORTEX performance with traditional autonomous navigation systems and human pilot performance in similar scenarios.
-
-\subsection{Expected Contribution: A Cognitive Gain Metric}
-
-The evaluation of CORTEX centers on quantifying a novel metric called "Cognitive Gain," which measures the performance improvement that CORTEX brings compared to the best traditional methods in each domain. This metric captures not just raw performance improvements but also the qualitative benefits of cognitive reasoning, such as adaptability, explainability, and robustness to novel situations.
-
-Cognitive Gain is calculated as a multi-dimensional measure that includes task performance metrics (accuracy, efficiency, reliability), cognitive capabilities (adaptability, learning, explanation), and operational benefits (deployment flexibility, maintenance requirements, user satisfaction). This comprehensive metric enables systematic comparison across different domains and applications while capturing the unique value proposition of cognitive approaches to physical world interaction.
-
-The ultimate goal of this doctoral research is to deliver a thoroughly validated, scalable architectural blueprint that lays the foundation for future development of powerful next-generation artificial intelligence systems capable of advanced reasoning and reliable action in complex, dynamic physical worlds. Through systematic theoretical development, rigorous empirical validation, and comprehensive evaluation across diverse domains, this work aims to bridge the Cognitive-Physical Gap and enable a new generation of truly autonomous intelligent systems.
-
 \section{Research Objectives and Key Questions}
 
 This research is structured around five fundamental research questions that systematically address the theoretical, architectural, and practical challenges of integrating Large Language Models with Digital Twin environments for physical world decision-making. These questions collectively span the entire research scope from theoretical foundations to practical deployment considerations.
@@ -315,14 +207,12 @@ This thesis is organized into eight chapters that systematically develop and val
 
 \textbf{Chapter 8 (Conclusion and Future Work)} (\autoref{chp:conclusion}): Summarizes research contributions, presents conclusions, and outlines directions for future research in cognitive autonomy and physical world interaction.
 
-\textbf{Chapter 5 (Case Study II: Medical Ultrasound Diagnosis)} (\autoref{chp:medical}): Evaluation of CORTEX in assistive decision-making for medical diagnosis, showcasing the use of non-visual, feature-based Digital Twins.
+\textbf{Chapter 5 (Proposed Case Study II: Medical Ultrasound Diagnosis)} (\autoref{chp:medical}): Proposed evaluation of CORTEX in assistive decision-making for medical diagnosis, showcasing the use of non-visual, feature-based Digital Twins.
 
-\textbf{Chapter 6 (Case Study III: UAV Autonomous Exploration)} (\autoref{chp:uav}): Assessment of CORTEX in autonomous decision-making for UAV exploration, utilizing real-time 3D point cloud data for dynamic environment understanding.
+\textbf{Chapter 6 (Proposed Case Study III: UAV Autonomous Exploration)} (\autoref{chp:uav}): Proposed assessment of CORTEX in autonomous decision-making for UAV exploration, utilizing real-time 3D point cloud data for dynamic environment understanding.
 
 \textbf{Chapter 7 (General Discussion)} (\autoref{chp:discussion}): Cross-domain analysis, discussion of findings, limitations, and broader implications of the research.
 
 \textbf{Chapter 8 (Conclusion and Future Work)} (\autoref{chp:conclusion}): Summary of contributions, conclusions, and directions for future research.
 
-Each case study is designed to validate different aspects of the CORTEX architecture while demonstrating its applicability across diverse domains requiring different types of physical world interaction. The progressive complexity of the case studies—from static building monitoring to dynamic autonomous exploration—provides a comprehensive evaluation of the architecture's capabilities and limitations.
-
-\textbf{Appendix A (Research Plan and Technical Roadmap)} (\autoref{app:research-plan}): Detailed research plan and technical roadmap outlining the three-phase progressive research strategy, including timelines, deliverables, and expected outcomes for the comprehensive validation of the CORTEX architecture.
+The proposed case studies are designed to validate different aspects of the CORTEX architecture while demonstrating its applicability across diverse domains requiring different types of physical world interaction.

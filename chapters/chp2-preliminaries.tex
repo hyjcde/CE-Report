@@ -114,48 +114,6 @@ Simulation-based approaches attempt to provide safe environments for LLM agents 
 
 Multi-modal LLMs that can process visual and textual inputs represent important progress toward physical world understanding, but these systems still lack the temporal reasoning and causal understanding necessary for effective physical world interaction \cite{alayrac2022flamingo}. The integration of multimodal perception with physical action remains an open challenge.
 
-\section{Decision and Control Architectures in Physical Systems}
-
-In robotics and autonomous systems, hierarchical control architectures represent time-tested classical paradigms for addressing complex and dynamically uncertain environments. The most representative approach is the deliberative-reactive model centered on Gat's Three-Tier (3T) architecture, which provides a principled framework for integrating different types of intelligent behavior \cite{gat1998three}.
-
-\subsection{Classical Hierarchical Control}
-
-The 3T architecture logically decouples control systems into three distinct levels, each operating at different temporal scales and abstraction levels. The top deliberative layer operates on abstract world models and performs time-intensive but globally-informed symbolic planning, often utilizing Planning Domain Definition Language (PDDL) to generate macro-level goal achievement strategies \cite{mcdermott1998pddl}. This layer handles strategic reasoning about long-term objectives and high-level task decomposition.
-
-The middle executive/sequencing layer serves a crucial bridging role, decomposing abstract plans output by the deliberative layer into specific, sequentially executable behavioral instructions. This layer handles task scheduling, resource allocation, and coordination between different system components while managing the translation between abstract planning representations and concrete actions \cite{simmons1995structured}.
-
-The bottom reactive layer couples directly with sensors and actuators, executing basic operations and performing rapid, state-based real-time reactions such as emergency obstacle avoidance or attitude stabilization. This layer ensures immediate responsiveness to environmental changes and safety-critical situations that require sub-second response times \cite{brooks1986robust}.
-
-This hierarchical design achieves remarkable robustness and reliability by separating decision-making tasks across different temporal scales and abstraction levels, thereby balancing goal-oriented planning capabilities with rapid emergency response abilities. The architecture has been successfully deployed in numerous real-world systems, from Mars rovers to autonomous vehicles, demonstrating its effectiveness in complex, uncertain environments \cite{volpe2001rover}.
-
-\subsection{Symbolic Planning Limitations}
-
-Despite classical hierarchical architectures' excellent performance in safety and reliability, their cognitive capability bottlenecks are equally apparent. The core deliberative layer typically relies entirely on symbolic logic systems, leading to two fundamental and difficult-to-overcome problems.
-
-\subsubsection{Knowledge Representation Rigidity and Brittleness}
-
-All planning knowledge must be pre-encoded by human experts as precise symbolic rules and logical predicates. This approach struggles to handle the ambiguous, incomplete, and undefined information prevalent in real-world scenarios. When encountering novel situations outside the model's scope, systems fail due to lack of corresponding rules \cite{russell2010artificial}.
-
-The closed-world assumption inherent in symbolic planning systems limits their ability to handle incomplete information or reason about unknown aspects of the environment. This brittleness becomes particularly problematic in open-world scenarios where complete environmental models cannot be pre-specified \cite{reiter1980logic}.
-
-\subsubsection{Planning Capability Limitations}
-
-Symbol-based planners essentially perform search within closed-world models, capable of finding rule-compliant solutions but unable to engage in the creative, framework-transcending thinking that characterizes human problem-solving when facing novel challenges. They lack the semantic understanding, flexible reasoning, and generalization capabilities demonstrated by Large Language Models \cite{ghallab2004automated}.
-
-Classical planning approaches also struggle with uncertainty, continuous state spaces, and partial observability—characteristics common in real-world physical environments. While probabilistic planning approaches attempt to address these limitations, they require explicit uncertainty models that may be difficult to obtain or maintain \cite{kaelbling1998planning}.
-
-Recent advances in neural planning approaches attempt to address these limitations by learning planning policies from data rather than relying on hand-coded rules. However, these approaches often sacrifice the interpretability and formal guarantees that make classical planning attractive for safety-critical applications \cite{silver2016mastering}.
-
-\subsection{Hybrid Approaches and Modern Extensions}
-
-Recognizing the complementary strengths and weaknesses of symbolic and neural approaches, recent research has explored hybrid architectures that attempt to combine the best aspects of both paradigms. These approaches typically maintain symbolic reasoning for high-level planning while incorporating learning components for perception, adaptation, and low-level control \cite{sun2007hybrid}.
-
-Neuro-symbolic integration in robotics has shown promise for creating more flexible and capable systems. These approaches use neural networks for perception and pattern recognition while maintaining symbolic representations for planning and reasoning. The challenge lies in creating effective interfaces between these different representational schemes \cite{garcez2023neurosymbolic}.
-
-Learned planning approaches attempt to acquire planning capabilities through experience rather than relying solely on pre-programmed knowledge. These methods can potentially overcome the brittleness of classical planning while maintaining some of the interpretability and correctness guarantees that make symbolic approaches attractive \cite{silver2021reward}.
-
-However, most hybrid approaches have not yet achieved the seamless integration of symbolic and neural capabilities that would be necessary for truly robust physical world intelligence. The development of principled integration frameworks that can leverage the complementary strengths of different computational paradigms remains an active area of research.
-
 \section{Research Gap Analysis}
 
 Through systematic review of these four critical technology domains, this chapter reveals a clear and important research gap. The Digital Twin domain provides ideal carriers and environments for digital representation of the physical world, but existing maturity models primarily approach from engineering implementation perspectives, universally lacking functional classification frameworks oriented toward artificial intelligence decision-making requirements.
