@@ -1,0 +1,475 @@
+\begin{thebibliography}{10}
+
+\bibitem{ahn2022can}
+Michael Ahn, Anthony Brohan, Noah Brown, Yevgen Chebotar, Omar Cortes, Byron
+  David, Chelsea Finn, Keerthana Gopalakrishnan, Karol Hausman, Alex Herzog,
+  et~al.
+\newblock Do as i can, not as i say: Grounding language in robotic affordances.
+\newblock {\em arXiv preprint arXiv:2204.01691}, 2022.
+
+\bibitem{ashby1956introduction}
+W~Ross Ashby.
+\newblock {\em An introduction to cybernetics}.
+\newblock Chapman \& Hall, 1956.
+
+\bibitem{austin2021program}
+Jacob Austin, Augustus Odena, Maxwell Nye, Maarten Bosma, Henryk Michalewski,
+  David Dohan, Ellen Jiang, Carrie Cai, Michael Terry, Quoc Le, et~al.
+\newblock Program synthesis with large language models.
+\newblock {\em arXiv preprint arXiv:2108.07732}, 2021.
+
+\bibitem{avizienis2004basic}
+Algirdas Avizienis, Jean-Claude Laprie, Brian Randell, and Carl Landwehr.
+\newblock Basic concepts and taxonomy of dependable and secure computing.
+\newblock {\em IEEE transactions on dependable and secure computing},
+  1(1):11--33, 2004.
+
+\bibitem{baheti2011cyber}
+Radhakisan Baheti and Helen Gill.
+\newblock Cyber-physical systems.
+\newblock {\em The impact of control technology}, 12(1):161--166, 2011.
+
+\bibitem{baltrusaitis2018multimodal}
+Tadas Baltrušaitis, Chaitanya Ahuja, and Louis-Philippe Morency.
+\newblock Multimodal machine learning: A survey and taxonomy.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  41(2):423--443, 2018.
+
+\bibitem{barsalou2008grounded}
+Lawrence~W Barsalou.
+\newblock Grounded cognition.
+\newblock {\em Annual review of psychology}, 59:617--645, 2008.
+
+\bibitem{boje2020towards}
+Calin Boje, Antonio Guerriero, Sylvain Kubicki, and Yacine Rezgui.
+\newblock Towards a semantic construction digital twin: directions for future
+  research.
+\newblock {\em Automation in Construction}, 114:103179, 2020.
+
+\bibitem{brown2020language}
+Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared~D Kaplan, Prafulla
+  Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell,
+  et~al.
+\newblock Language models are few-shot learners.
+\newblock In {\em Advances in neural information processing systems},
+  volume~33, pages 1877--1901, 2020.
+
+\bibitem{buttazzo2011hard}
+Giorgio~C Buttazzo.
+\newblock Hard real-time computing systems: predictable scheduling algorithms
+  and applications.
+\newblock {\em Springer Science \& Business Media}, 2011.
+
+\bibitem{chen2021evaluating}
+Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan, Henrique Ponde de~Oliveira
+  Pinto, Jared Kaplan, Harri Edwards, Yuri Burda, Nicholas Joseph, Greg
+  Brockman, et~al.
+\newblock Evaluating large language models trained on code.
+\newblock {\em arXiv preprint arXiv:2107.03374}, 2021.
+
+\bibitem{chen2020cognitive}
+Xinyun Chen, Chen Liang, Adams~Wei Yu, Dawn Song, and Denny Zhou.
+\newblock Cognitive architectures for language agents.
+\newblock {\em arXiv preprint arXiv:2309.02427}, 2020.
+
+\bibitem{chowdhery2022palm}
+Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra,
+  Adam Roberts, Paul Barham, Hyung~Won Chung, Charles Sutton, Sebastian
+  Gehrmann, et~al.
+\newblock Palm: Scaling language modeling with pathways.
+\newblock {\em arXiv preprint arXiv:2204.02311}, 2022.
+
+\bibitem{datta2008image}
+Ritendra Datta, Dhiraj Joshi, Jia Li, and James~Z Wang.
+\newblock Image retrieval: Ideas, influences, and trends of the new age.
+\newblock {\em ACM Computing Surveys}, 40(2):1--60, 2008.
+
+\bibitem{davis1990representation}
+Randall Davis, Howard Shrobe, and Peter Szolovits.
+\newblock What is a knowledge representation?
+\newblock {\em AI magazine}, 14(1):17--33, 1990.
+
+\bibitem{deng2023mind2web}
+Xiang Deng, Yu~Gu, Boyuan Zheng, Shijie Chen, Samuel Stevens, Boshi Wang, Huan
+  Sun, and Yu~Su.
+\newblock Mind2web: Towards a generalist agent for the web.
+\newblock {\em arXiv preprint arXiv:2306.06070}, 2023.
+
+\bibitem{doyle1989robust}
+John~C Doyle, Keith Glover, Pramod~P Khargonekar, and Bruce~A Francis.
+\newblock {\em Robust and optimal control}.
+\newblock Prentice Hall, 1989.
+
+\bibitem{fodor1988connectionism}
+Jerry~A Fodor and Zenon~W Pylyshyn.
+\newblock Connectionism and cognitive architecture: A critical analysis.
+\newblock {\em Cognition}, 28(1-2):3--71, 1988.
+
+\bibitem{grieves2014digital}
+Michael Grieves.
+\newblock Digital twin: Manufacturing excellence through virtual factory
+  replication.
+\newblock {\em Digital Manufacturing}, 1(1):1--7, 2014.
+
+\bibitem{gruber1993translation}
+Thomas~R Gruber.
+\newblock {\em A translation approach to portable ontology specifications}.
+\newblock Knowledge systems laboratory, Stanford university, 1993.
+
+\bibitem{harnad1990symbol}
+Stevan Harnad.
+\newblock The symbol grounding problem.
+\newblock {\em Physica D: Nonlinear Phenomena}, 42(1-3):335--346, 1990.
+
+\bibitem{hayes1985naive}
+Patrick~J Hayes.
+\newblock The naive physics manifesto.
+\newblock {\em The robot's dilemma: The frame problem in artificial
+  intelligence}, pages 171--205, 1985.
+
+\bibitem{hendrycks2019natural}
+Dan Hendrycks, Kevin Zhao, Steven Basart, Jacob Steinhardt, and Dawn Song.
+\newblock Natural adversarial examples.
+\newblock {\em arXiv preprint arXiv:1907.07174}, 2019.
+
+\bibitem{hong2023metagpt}
+Sirui Hong, Xiawu Zheng, Jonathan Chen, Yuheng Cheng, Ceyao Zhang, Zili Wang,
+  Steven Ka~Shing Yau, Zijuan Lin, Liyang Zhou, Chenyu Ran, et~al.
+\newblock Metagpt: Meta programming for multi-agent collaborative framework.
+\newblock {\em arXiv preprint arXiv:2308.00352}, 2023.
+
+\bibitem{huang2022language}
+Wenlong Huang, Pieter Abbeel, Deepak Pathak, and Igor Mordatch.
+\newblock Language models as zero-shot planners: Extracting actionable
+  knowledge for embodied agents.
+\newblock {\em arXiv preprint arXiv:2201.07207}, 2022.
+
+\bibitem{ISO23247}
+{ISO}.
+\newblock Iso 23247-1:2021 - automation systems and integration -- digital twin
+  framework for manufacturing -- part 1: Overview and general principles, 2021.
+
+\bibitem{jones2020characterising}
+David Jones, Chris Snider, Aydin Nassehi, Jason Yon, and Ben Hicks.
+\newblock Characterising the digital twin: A systematic literature review.
+\newblock {\em CIRP Journal of Manufacturing Science and Technology},
+  29:36--52, 2020.
+
+\bibitem{karpukhin2020dense}
+Vladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey
+  Edunov, Danqi Chen, and Wen-tau Yih.
+\newblock Dense passage retrieval for open-domain question answering.
+\newblock In {\em Proceedings of the 2020 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 6769--6781, 2020.
+
+\bibitem{khattab2020colbert}
+Omar Khattab and Matei Zaharia.
+\newblock Colbert: Efficient and effective passage search via contextualized
+  late interaction over bert.
+\newblock {\em arXiv preprint arXiv:2004.12832}, 2020.
+
+\bibitem{kim2012cyber}
+Kyoung-Dae Kim and Panganamala~R Kumar.
+\newblock Cyber--physical systems: A perspective at the centennial.
+\newblock {\em Proceedings of the IEEE}, 100(Special Centennial
+  Issue):1287--1308, 2012.
+
+\bibitem{knight2002safety}
+John~C Knight.
+\newblock Safety critical systems: challenges and directions.
+\newblock {\em Proceedings of the 24th international conference on software
+  engineering}, pages 547--550, 2002.
+
+\bibitem{koh2021wilds}
+Pang~Wei Koh, Shiori Sagawa, Henrik Marklund, Sang~Michael Xie, Marvin Zhang,
+  Akshay Balsubramani, Weihua Hu, Michihiro Yasunaga, Richard~Lanas Phillips,
+  Irene Gao, et~al.
+\newblock Wilds: A benchmark of in-the-wild distribution shifts.
+\newblock {\em arXiv preprint arXiv:2012.07421}, 2021.
+
+\bibitem{kritzinger2018digital}
+Werner Kritzinger, Matthias Karner, Georg Traar, Jan Henjes, and Wilfried Sihn.
+\newblock Digital twin in manufacturing: A categorical literature review and
+  classification.
+\newblock {\em IFAC-PapersOnLine}, 51(11):1016--1022, 2018.
+
+\bibitem{lake2018generalization}
+Brenden Lake and Marco Baroni.
+\newblock Generalization without systematicity: On the compositional skills of
+  sequence-to-sequence recurrent networks.
+\newblock {\em International conference on machine learning}, pages 2873--2882,
+  2018.
+
+\bibitem{lake2017building}
+Brenden~M Lake, Tomer~D Ullman, Joshua~B Tenenbaum, and Samuel~J Gershman.
+\newblock Building machines that learn and think like people.
+\newblock {\em Behavioral and brain sciences}, 40:e253, 2017.
+
+\bibitem{lasi2014industry}
+Heiner Lasi, Peter Fettke, Hans-Georg Kemper, Thomas Feld, and Michael
+  Hoffmann.
+\newblock Industry 4.0.
+\newblock {\em Business \& information systems engineering}, 6(4):239--242,
+  2014.
+
+\bibitem{lee2008cyber}
+Edward~A Lee.
+\newblock Cyber physical systems: Design challenges.
+\newblock {\em 11th IEEE International Symposium on Object and
+  Component-Oriented Real-Time Distributed Computing (ISORC)}, pages 363--369,
+  2008.
+
+\bibitem{leveson2011engineering}
+Nancy Leveson.
+\newblock {\em Engineering a safer world: Systems thinking applied to safety}.
+\newblock MIT press, 2011.
+
+\bibitem{lewis2020retrieval}
+Patrick Lewis et~al.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock {\em Advances in Neural Information Processing Systems},
+  33:9459--9474, 2020.
+
+\bibitem{li2023can}
+Qian Li, Hao Peng, Jiajie Li, Congying Xia, Ruifeng Yang, Lichao Sun, Philip~S
+  Yu, and Lifang He.
+\newblock Can large language models understand real-world complex instructions?
+\newblock {\em arXiv preprint arXiv:2309.09150}, 2023.
+
+\bibitem{li2022competition}
+Yujia Li, David Choi, Junyoung Chung, Nate Kushman, Julian Schrittwieser, Rémi
+  Leblond, Tom Eccles, James Keeling, Felix Gimeno, Agustin Dal~Lago, et~al.
+\newblock Competition-level code generation with alphacode.
+\newblock {\em Science}, 378(6624):1092--1097, 2022.
+
+\bibitem{liu2023comprehensive}
+Aiwei Liu, Xuming Hu, Lijie Li, and Lijie Wen.
+\newblock A comprehensive evaluation of chatgpt's zero-shot text-to-sql
+  capability.
+\newblock {\em arXiv preprint arXiv:2303.13547}, 2023.
+
+\bibitem{liu2023agentbench}
+Xiao Liu, Hao Yu, Hanchen Zhang, Yifan Xu, Xuanyu Lei, Hanyu Lai, Yu~Gu,
+  Hangliang Ding, Kaiwen Men, Kejuan Yang, et~al.
+\newblock Agentbench: Evaluating llms as agents.
+\newblock {\em arXiv preprint arXiv:2308.03688}, 2023.
+
+\bibitem{lu2020digital}
+Yuqian Lu, Chao Liu, Kevin I-Kai Wang, Houbing Huang, and Xun Xu.
+\newblock Digital twin-driven smart manufacturing: Connotation, reference
+  model, applications and research issues.
+\newblock {\em Robotics and Computer-Integrated Manufacturing}, 61:101837,
+  2020.
+
+\bibitem{marcus2020next}
+Gary Marcus.
+\newblock The next decade in ai: four steps towards robust artificial
+  intelligence.
+\newblock {\em arXiv preprint arXiv:2002.06177}, 2020.
+
+\bibitem{nakano2021webgpt}
+Reiichiro Nakano, Jacob Hilton, Suchir Balaji, Jeff Wu, Long Ouyang, Christina
+  Kim, Christopher Hesse, Shantanu Jain, Vineet Kosaraju, William Saunders,
+  et~al.
+\newblock Webgpt: Browser-assisted question-answering with human feedback.
+\newblock {\em arXiv preprint arXiv:2112.09332}, 2021.
+
+\bibitem{negri2017review}
+Elisa Negri, Luca Fumagalli, and Marco Macchi.
+\newblock A review of the roles of digital twin in cps-based production
+  systems.
+\newblock {\em Procedia manufacturing}, 11:939--948, 2017.
+
+\bibitem{nijkamp2022codegen}
+Erik Nijkamp, Bo~Pang, Hiroaki Hayashi, Lifu Tu, Huan Wang, Yingbo Zhou, Silvio
+  Savarese, and Caiming Xiong.
+\newblock Codegen: An open large language model for code with multi-turn
+  program synthesis.
+\newblock {\em arXiv preprint arXiv:2203.13474}, 2022.
+
+\bibitem{openai2023gpt4}
+OpenAI.
+\newblock Gpt-4 technical report.
+\newblock {\em arXiv preprint arXiv:2303.08774}, 2023.
+
+\bibitem{pearl2000causality}
+Judea Pearl.
+\newblock {\em Causality: models, reasoning and inference}.
+\newblock Cambridge university press, 2000.
+
+\bibitem{pearl2019seven}
+Judea Pearl.
+\newblock The seven tools of causal inference, with reflections on machine
+  learning.
+\newblock {\em Communications of the ACM}, 62(3):54--60, 2019.
+
+\bibitem{peters2017elements}
+Jonas Peters, Dominik Janzing, and Bernhard Schölkopf.
+\newblock {\em Elements of causal inference: foundations and learning
+  algorithms}.
+\newblock The MIT Press, 2017.
+
+\bibitem{petroni2021kilt}
+Fabio Petroni, Aleksandra Piktus, Angela Fan, Patrick Lewis, Majid Yazdani,
+  Nicola De~Cao, James Thorne, Yacine Jernite, Vladimir Karpukhin, Jean
+  Maillard, et~al.
+\newblock Kilt: a benchmark for knowledge intensive language tasks.
+\newblock {\em arXiv preprint arXiv:2009.02252}, 2021.
+
+\bibitem{powell1992delta}
+David Powell et~al.
+\newblock The delta-4 approach to dependability in open distributed computing
+  systems.
+\newblock {\em IEEE Transactions on Software Engineering}, 18(4):359--369,
+  1992.
+
+\bibitem{qi2021digital}
+Qinglin Qi, Fei Tao, Tianliang Hu, Nabil Anwer, Ang Liu, Yanling Wei, Lihui
+  Wang, and Andrew~YC Nee.
+\newblock Digital twin and big data towards smart manufacturing and industry
+  4.0: 360 degree comparison.
+\newblock {\em IEEE Access}, 6:3585--3593, 2018.
+
+\bibitem{qin2023tool}
+Yujia Qin, Shengding Liang, Yining Ye, Kunlun Zhu, Lan Yan, Yaxi Lu, Yankai
+  Lin, Xin Cong, Xiangru Tang, Bill Qian, et~al.
+\newblock Tool learning with foundation models.
+\newblock {\em arXiv preprint arXiv:2304.08354}, 2023.
+
+\bibitem{rajkumar2010cyber}
+Ragunathan Rajkumar, Insup Lee, Lui Sha, and John Stankovic.
+\newblock Cyber-physical systems: the next computing revolution.
+\newblock In {\em Proceedings of the 47th Design Automation Conference}, pages
+  731--736. ACM, 2010.
+
+\bibitem{ramesh2021zero}
+Aditya Ramesh, Mikhail Pavlov, Gabriel Goh, Scott Gray, Chelsea Voss, Alec
+  Radford, Mark Chen, and Ilya Sutskever.
+\newblock Zero-shot text-to-image generation.
+\newblock {\em arXiv preprint arXiv:2102.12092}, 2021.
+
+\bibitem{rasheed2020digital}
+Adil Rasheed, Omer San, and Trond Kvamsdal.
+\newblock Digital twin: Values, challenges and enablers from a modeling
+  perspective.
+\newblock {\em IEEE Access}, 8:21980--22012, 2020.
+
+\bibitem{schick2023toolformer}
+Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria Lomeli,
+  Luke Zettlemoyer, Nicola Cancedda, and Thomas Scialom.
+\newblock Toolformer: Language models can teach themselves to use tools.
+\newblock {\em arXiv preprint arXiv:2302.04761}, 2023.
+
+\bibitem{scholak2021duorat}
+Torsten Scholak, Nathan Schucher, and Dzmitry Bahdanau.
+\newblock Duorat: Towards simpler text-to-sql models.
+\newblock In {\em Proceedings of the 2021 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 1313--1321. Association for Computational Linguistics,
+  2021.
+
+\bibitem{smeulders2000content}
+Arnold~WM Smeulders, Marcel Worring, Simone Santini, Amarnath Gupta, and Ramesh
+  Jain.
+\newblock Content-based image retrieval at the end of the early years.
+\newblock {\em IEEE Transactions on pattern analysis and machine intelligence},
+  22(12):1349--1380, 2000.
+
+\bibitem{spirtes2000causation}
+Peter Spirtes, Clark~N Glymour, and Richard Scheines.
+\newblock {\em Causation, prediction, and search}.
+\newblock MIT press, 2000.
+
+\bibitem{studer1998knowledge}
+Rudi Studer, V~Richard Benjamins, and Dieter Fensel.
+\newblock Knowledge engineering: principles and methods.
+\newblock {\em Data \& knowledge engineering}, 25(1-2):161--197, 1998.
+
+\bibitem{smith1987situated}
+Lucy~A Suchman.
+\newblock Plans and situated actions: the problem of human-machine
+  communication.
+\newblock {\em Cambridge university press}, 1987.
+
+\bibitem{suchman1987plans}
+Lucy~A Suchman.
+\newblock {\em Plans and situated actions: The problem of human-machine
+  communication}.
+\newblock Cambridge university press, 1987.
+
+\bibitem{tao2018digital}
+Fei Tao, Jiangfeng Cheng, Qinglin Qi, Meng Zhang, He~Zhang, and Fangyuan Sui.
+\newblock Digital twin in industry: State-of-the-art.
+\newblock {\em Future generation computer systems}, 83:721--735, 2018.
+
+\bibitem{tao2019digital}
+Fei Tao, He~Zhang, Ang Liu, and Andrew~YC Nee.
+\newblock Digital twin driven prognostics and health management for complex
+  equipment.
+\newblock {\em CIRP annals}, 67(1):169--172, 2018.
+
+\bibitem{wu2023autogen}
+Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu,
+  Li~Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, et~al.
+\newblock Autogen: Enabling next-gen llm applications via multi-agent
+  conversation framework.
+\newblock {\em arXiv preprint arXiv:2308.08155}, 2023.
+
+\bibitem{xiong2020approximate}
+Lee Xiong, Chenyan Xiong, Ye~Li, Kwok-Fung Tang, Jialin Liu, Paul Bennett,
+  Junaid Ahmed, and Arnold Overwijk.
+\newblock Approximate nearest neighbor negative contrastive learning for dense
+  text retrieval.
+\newblock {\em arXiv preprint arXiv:2007.00808}, 2020.
+
+\bibitem{xu2018industry}
+Li~Da Xu, Eric~L Xu, and Ling Li.
+\newblock Industry 4.0: state of the art and future trends.
+\newblock {\em International journal of production research}, 56(8):2941--2962,
+  2018.
+
+\bibitem{yao2022react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Avidan, Te-Yen Edwards, and
+  Quoc~V Le.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock {\em arXiv preprint arXiv:2210.03629}, 2022.
+
+\bibitem{yasunaga2021qa}
+Michihiro Yasunaga, Hongyu Ren, Antoine Bosselut, Percy Liang, and Jure
+  Leskovec.
+\newblock Qa-gnn: Reasoning with language models and knowledge graphs for
+  question answering.
+\newblock {\em arXiv preprint arXiv:2104.06378}, 2021.
+
+\bibitem{yu2018spider}
+Tao Yu, Rui Zhang, Kai Yang, Michihiro Yasunaga, Dongxu Wang, Zifan Li, James
+  Ma, Irene Li, Qingning Yao, Shanelle Roman, et~al.
+\newblock Spider: A large-scale human-labeled dataset for complex and
+  cross-domain semantic parsing and text-to-sql task.
+\newblock In {\em Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing}, pages 3911--3921, 2018.
+
+\bibitem{yue2022ts2vec}
+Zhihan Yue, Yujing Wang, Juanyong Duan, Tianmeng Yang, Congrui Huang, Yunhai
+  Tong, and Bixiong Xu.
+\newblock Ts2vec: Towards universal representation of time series.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~36, pages 8980--8987, 2022.
+
+\bibitem{zhang2021cognitive}
+Hongming Zhang, Yangqing Chen, and Daqing Zhou.
+\newblock Cognitive architectures for robotics: A survey.
+\newblock {\em Robotics and Autonomous Systems}, 145:103870, 2021.
+
+\bibitem{zhou1996robust}
+Kemin Zhou, John~C Doyle, and Keith Glover.
+\newblock {\em Robust and optimal control}.
+\newblock Prentice hall, 1996.
+
+\bibitem{zhou2023webarena}
+Shuyan Zhou, Frank~F Xu, Hao Zhu, Xuhui Zhou, Robert Lo, Abishek Sridhar,
+  Xianyi Cheng, Yonatan Bisk, Daniel Fried, Uri Alon, et~al.
+\newblock Webarena: A realistic web environment for building autonomous agents.
+\newblock {\em arXiv preprint arXiv:2307.13854}, 2023.
+
+\end{thebibliography}
