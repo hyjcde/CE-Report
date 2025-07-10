@@ -1,668 +1,328 @@
 % !TEX root = ../thesis.tex
 
-\usepackage{multirow}
-\usepackage{algorithm}
-\usepackage{algorithmic}
+\chapter{Case Study I: Grounded Perception Validation through L1 Descriptive Twin-based Intelligent Building Asset Diagnosis} \label{chp:building}
 
-\chapter{Case Study I: Predictive Decision-Making in Building Health Monitoring} \label{chp:building}
+\section{Introduction: From Data Representation Challenges to the Cognitive Reasoning Gap}
 
-% This chapter presents the completed case study demonstrating CORTEX architecture
-% effectiveness in building health monitoring through the DefectGPT framework
+In the contemporary Architecture, Engineering, and Construction (AEC) domain, digital transformation has evolved from a forward-looking concept to an indispensable strategic imperative. Its core driving force stems from the urgent need for efficient, precise, and sustainable management of physical infrastructure throughout its entire lifecycle \cite{boje2020towards, lu2020digital}. With the increasing maturity of sensor technology, laser scanning, photogrammetry, and Building Information Modeling (BIM), we are capturing and storing massive amounts of data about the built environment with unprecedented capability \cite{tang2019retrieving, li2024single}. This trend has given birth to Digital Twins as a core technological paradigm, promising to revolutionize how we understand, monitor, and maintain complex building systems by constructing dynamic, high-fidelity virtual replicas of physical assets \cite{tao2018digital}.
 
-\section{Problem Background and Decision-Making Challenges}
-
-\subsection{Building Health Monitoring Landscape}
-
-Building defect management faces significant challenges in handling evolving defects across complex urban structures. In contemporary urbanization processes, buildings serve as core carriers of human activity, with their safety and functionality directly related to social stability and development. However, as time progresses, buildings inevitably face issues of aging and wear. According to recent statistical data, over 50\% of private residences experience varying degrees of structural problems after 30 years of use \cite{spencer2019advances}. These issues range from surface cracks to severe structural defects, affecting not only building aesthetics and comfort but potentially endangering user safety \cite{zhang2023automated}.
-
-Traditional building defect management has evolved through different data governance paradigms. Document-based approaches, relying on inspection reports, maintenance logs, and repair records, suffer from unstructured information organization and limited searchability \cite{bruno2018historic}. Model-based methods, leveraging Building Information Models (BIMs) and Geographic Information Systems (GIS), provide better structure but lack flexibility in handling dynamic defect information and complex semantic relationships \cite{li2024single,tsilimantou2020gis}. Both approaches struggle with the temporal nature of defect evolution and the complex interdependencies between different building components.
-
-\subsection{Decision-Making Challenges in Building Maintenance}
-
-The unique characteristics of building defects pose specific challenges for information management. Defects are inherently dynamic, evolving over time with varying progression patterns. They exhibit complex spatial-temporal relationships, where one defect may influence or indicate potential issues in other building components. Traditional defect modeling approaches often fail to capture these dynamic relationships and evolution patterns effectively \cite{wang2023augmented}.
-
-Furthermore, the interpretation and assessment of defects require extensive domain expertise, making it difficult to standardize the evaluation process \cite{hamdan2021semantic}. The challenges include:
-
-\begin{itemize}
-    \item \textbf{Reactive vs. Predictive Paradigms}: Most current systems operate reactively, addressing defects after they become apparent rather than predicting their occurrence
-    \item \textbf{Multi-scale Temporal Considerations}: Defects evolve over different time scales, from immediate environmental responses to long-term structural degradation
-    \item \textbf{Spatial Correlation Dependencies}: Understanding how defects in one area may affect or indicate problems in other building regions
-    \item \textbf{Resource Optimization}: Balancing cost, safety, and performance considerations in maintenance scheduling
-\end{itemize}
-
-\subsection{Requirements for Intelligent Building Health Management}
-
-With the advent of Industry 4.0, emerging technologies have provided new possibilities for addressing these challenges \cite{zhang2022integrating,chen2021geo}. The requirements for next-generation building health management systems include:
-
-\begin{itemize}
-    \item \textbf{Real-time Monitoring}: Continuous surveillance capabilities with early warning systems for critical defects
-    \item \textbf{Predictive Analytics}: Advanced algorithms capable of forecasting defect evolution and failure probabilities
-    \item \textbf{Automated Decision-making}: Intelligent systems capable of generating maintenance recommendations without constant human oversight
-    \item \textbf{System Integration}: Seamless compatibility with existing building management systems and workflows
-\end{itemize}
-
-\section{DefectGPT Framework: BIM-IoT Fusion Architecture}
-
-To address the challenges identified above, we developed DefectGPT, a comprehensive framework integrating UAV inspection, BIM, and GIS into a Digital Twin environment \cite{zhang2024automated}. This framework represents the first implementation of Retrieval-Augmented Generation (RAG) in building defect management \cite{lewis2020retrieval,fan2023retrieval}, where domain-specific knowledge retrieval guides Large Language Models to generate compliance-aware recommendations.
+Theoretically, a well-developed Digital Twin should integrate all information from geometric morphology and material properties to real-time operational states, thereby providing decision-makers with an omniscient ``God's eye view'' perspective. However, in practical exploration, we have discovered that current mainstream Digital Twin applications remain largely at the level of ``data representation'' \cite{negri2017review}. They excel at answering descriptive questions such as ``what'' and ``where,'' for example, precisely locating a specific structural component or a detected surface defect within a three-dimensional model. This undoubtedly represents a tremendous leap forward compared to traditional management modes based on drawings and documents, effectively solving the long-standing ``data silo'' problem in the industry \cite{bruno2018historic}.
 
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{DefectGPT/Overall Framework.png}
-    \caption{Overall DefectGPT framework showing the integration of three core components: Digital Twin Technology, Context-Aware Retrieval Engine, and Hierarchical Knowledge Base for comprehensive building defect management \cite{zhang2024automated}.}
-    \label{fig:defectgpt-framework}
-\end{figure}
-
-\subsection{Digital Twin Construction with Multi-Source Data Integration}
-
-Building upon established methodologies in GeoBIM-assisted registration for building façade defects, the DefectGPT framework implements a comprehensive BIM+GIS-based DT modeling framework with a three-layer architecture comprising the Data Layer, the Digital Twin Layer, and the newly introduced Decision Layer. This structure enables sophisticated data management and real-time synchronization between physical buildings and their digital counterparts, facilitating advanced monitoring, analysis, and decision-making in building defect management.
-
-The architectural innovation lies in the seamless integration of heterogeneous data sources across multiple modalities and formats, enabling precise spatial registration of defect information within complex three-dimensional building models. Unlike traditional static BIM approaches that rely on periodic manual updates, our framework implements dynamic data carriers that manage and organize diverse information streams while maintaining temporal consistency and spatial coherence across different building areas and components.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{DefectGPT/dt-framework.png}
-    \caption{Comprehensive Digital Twin architecture for building defect management, illustrating the three-layer structure: Data Layer (GeoBIM modeling, defect modeling, expert knowledge), Digital Twin Layer (spatial information carriers, defect data schemas, domain knowledge), and Decision Layer (RAG and LLM-based reasoning) \cite{zhang2024automated}.}
-    \label{fig:dt-architecture}
-\end{figure}
-
-\subsubsection{Data Layer Components}
-
-The Data Layer incorporates three primary components:
-
-\textbf{GeoBIM Modeling}: Combines multiple data sources including 3D mesh models, BIM models, GIS information, and geo-AI knowledge bases. This integration follows established frameworks for spatial data management while providing enhanced semantic understanding of building components.
-
-\textbf{Defect Modeling}: Processes aerial photographs of building facades using advanced detection algorithms to identify RGB defects, infrared anomalies, and defect classifications. The system performs precise defect localization, determining global positions, local coordinates, and characteristic defect features.
-
-\textbf{Expert Knowledge Integration}: Leverages inspection reports, technical standards, legal frameworks, and defect manuals to enrich defect data with domain-specific insights.
-
-\subsubsection{Digital Twin Layer Architecture}
-
-The Digital Twin Layer serves as the core of the digital representation, implementing three distinct data carriers:
-
-\begin{itemize}
-    \item \textbf{Spatial Information Carriers}: Handle formats such as IFC, RVT, and KML, ensuring proper management of spatial data and geometric relationships
-    \item \textbf{Defect Data Schemas}: Standardized storage formats (XML, JSON, CSV, database) ensuring seamless compatibility with retrieval workflows
-    \item \textbf{Domain Knowledge Repositories}: Comprehensive storage of expert knowledge in various formats (PDF, DOCX, Markdown)
-\end{itemize}
-
-\subsection{UAV-Based Data Acquisition and Processing}
-
-Unmanned Aerial Vehicle technology provides the primary data acquisition mechanism for the DefectGPT system \cite{ribeiro2020remote,tan2021automatic}. UAVs equipped with high-resolution cameras and thermal sensors execute standardized flight trajectories to ensure uniform coverage of building facades \cite{liu2021integrating}.
-
-\subsubsection{Defect Detection and Classification}
-
-The system employs advanced computer vision algorithms to identify and classify different types of building defects:
-
-\begin{itemize}
-    \item \textbf{Surface Cracks}: Identified through edge detection algorithms and characterized by width, length, and orientation
-    \item \textbf{Spalling Areas}: Detected through texture analysis and color variance, with dimensions and severity assessment
-    \item \textbf{Water Infiltration}: Identified through thermal imaging and moisture detection, with seepage intensity evaluation
-\end{itemize}
-
-\subsubsection{Spatial Registration and Localization}
-
-Defect localization begins with UAV-based inspections capturing high-resolution images of building facades. Using RTK (Real-Time Kinematic) positioning, the UAV's pose is accurately determined, ensuring precise alignment between captured images and the 3D BIM model. Detected defects (RGB or infrared) are bound with bounding boxes and classifications, subsequently mapped from 2D image coordinates onto the 3D BIM model through a sophisticated coordinate transformation process involving depth and pose estimation, followed by tangential vector adjustments to align detected defects with facade surfaces.
-
-The global defect localization algorithm, formalized in Algorithm~\ref{alg:defect-localization}, implements a comprehensive approach to mapping detected defects from UAV imagery onto globally referenced building coordinates. This process begins with the geographical coordinates of each captured image and utilizes the distance to the wall and projection vectors to establish precise spatial relationships.
-
-\begin{algorithm}[htbp]
-\caption{Defect Global Localization}
-\label{alg:defect-localization}
-\begin{algorithmic}[1]
-\REQUIRE Geographical coordinates of image $P_{i}^{g}(lon_{i}, lat_{i}, alt_{i})$; Distance to the wall $d_{wall}$; Projection vector $\vec{n}$
-\ENSURE Global location of defect $d_{i,j}$: $g(i,j)(lng_{i,j}, lat_{i,j}, alt_{i,j})$
-\STATE Initialize array of detected images $i$
-\FOR{$t = 1$ to $i_{\max}$}
-    \STATE Project from image localization $P_{i}^{g}$ to the corresponding point on the wall
-    \STATE Given $\vec{n} = (\alpha_{i}, \beta_{i}, \gamma_{i})$
-    \STATE $P^{g\ast}_{i} = P^{g}_{i} + d_{wall} \times \vec{n}$
-    \FOR{$j = 1$ to $j_{\max}$}
-        \STATE $L_{D}(i) = 2d_{wall} \tan{\frac{FOV}{2}}$
-        \STATE $\vec{L}(i,j) = L_{D}(i) \cdot \frac{l(i,j)}{l_{D}(i)}$
-        \STATE $g(i,j) = P^{g\ast}_{i} + \vec{L}(i,j)$
-        \STATE $T \gets \sqrt{ \bigl(\frac{0.5}{unit_{lng}}\bigr)^2 + \bigl(\frac{0.5}{unit_{lat}}\bigr)^2 }$
-        \FOR{$k = 1$ to $i-1$}
-            \FOR{$t' = 1$ to $j_{\max}-1$}
-                \IF{$\sqrt{(g(k,t') - g(i,j))^2} > T$}
-                    \STATE Register new defect $g(i,j)$
-                \ENDIF
-            \ENDFOR
-        \ENDFOR
-    \ENDFOR
-\ENDFOR
-\RETURN $g(i,j)(lng_{i,j}, lat_{i,j}, alt_{i,j})$
-\end{algorithmic}
-\end{algorithm}
-
-Through the integration of GIS and BIM data, the DT environment unifies defect information with broader spatial context. The BIM model offers geometric and semantic data on structural elements, while GIS data provides real-world context, enabling geo-referencing and scalable defect tracking. The DT architecture accommodates incremental updating approaches, allowing new data from UAV surveys and sensors to be injected without reconstructing the entire model, thereby maintaining system efficiency while ensuring data freshness and accuracy.
-
-\section{CORTEX Implementation for Building Health Management}
-
-The CORTEX architecture was specifically adapted for building health monitoring through the DefectGPT framework, implementing the four-stage cognitive loop in the context of building defect management.
-
-\subsection{Four-Stage Cognitive Loop Adaptation}
-
-\subsubsection{Stage 1: Perceptual Grounding \& Context Formulation}
-
-In the building monitoring context, this stage involves comprehensive assessment of the current building state through multiple data sources:
-
-\begin{itemize}
-    \item \textbf{Sensor Data Integration}: Real-time data from structural health monitoring sensors, environmental sensors, and periodic UAV surveys
-    \item \textbf{Historical Context Retrieval}: Access to previous inspection reports, maintenance records, and defect evolution patterns
-    \item \textbf{Environmental Context}: Weather data, seismic activity, and other environmental factors affecting building condition
-    \item \textbf{Regulatory Context}: Current building codes, safety standards, and compliance requirements
-\end{itemize}
-
-\subsubsection{Stage 2: Causal Inference \& Predictive Simulation}
-
-The system performs sophisticated analysis to understand defect causation and predict future evolution:
-
-\begin{itemize}
-    \item \textbf{Defect Progression Modeling}: Mathematical models predicting crack growth, spalling expansion, and water infiltration spread
-    \item \textbf{Environmental Impact Analysis}: Assessment of how weather patterns, temperature cycles, and seismic activity affect defect development
-    \item \textbf{Structural Correlation Analysis}: Understanding how defects in one area may affect structural integrity in other regions
-    \item \textbf{Failure Probability Assessment}: Statistical models predicting the likelihood of critical failures
-\end{itemize}
-
-\subsubsection{Stage 3: Action Policy Generation \& Validation}
-
-Based on the analysis performed in previous stages, the system generates specific maintenance recommendations:
-
-\begin{itemize}
-    \item \textbf{Prioritization Algorithms}: Ranking defects based on safety risk, progression rate, and repair complexity
-    \item \textbf{Resource Optimization}: Optimal scheduling of maintenance activities considering available resources and weather conditions
-    \item \textbf{Intervention Strategy Selection}: Choosing appropriate repair methods based on defect characteristics and building constraints
-    \item \textbf{Safety Protocol Generation}: Developing specific safety measures for maintenance operations
-\end{itemize}
-
-\subsubsection{Stage 4: Physical Interaction \& Model Calibration}
-
-The final stage involves implementation of maintenance actions and continuous model improvement:
-
-\begin{itemize}
-    \item \textbf{Maintenance Execution Monitoring}: Tracking the implementation of recommended maintenance actions
-    \item \textbf{Outcome Assessment}: Evaluating the effectiveness of implemented interventions
-    \item \textbf{Model Updating}: Incorporating new data and outcomes to improve future predictions
-    \item \textbf{Knowledge Base Enhancement}: Adding new patterns and correlations to the expert knowledge system
-\end{itemize}
-
-\subsection{RAG-Enhanced Knowledge Management Integration}
-
-The DefectGPT system employs a sophisticated Retrieval-Augmented Generation approach that enhances Large Language Model performance through domain-specific knowledge integration.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{DefectGPT/rag_frameworks.png}
-    \caption{The Framework for RAG Knowledge Management in DefectGPT, showing the integration of document processing, vector indexing, semantic search, and response generation components for building-specific knowledge retrieval \cite{zhang2024automated}.}
-    \label{fig:rag-framework}
-\end{figure}
-
-\subsubsection{Hierarchical Knowledge Structure}
-
-The system implements a three-layer knowledge structure:
-
-\begin{itemize}
-    \item \textbf{Domain Expertise Layer}: Core knowledge of building construction, materials science, and defect types
-    \item \textbf{Historical Inspection Layer}: Archived reports, maintenance records, and temporal defect data
-    \item \textbf{Real-time Data Layer}: Current information from ongoing inspections, sensor readings, and Digital Twin updates
-\end{itemize}
-
-\subsubsection{Context-Aware Retrieval Process}
-
-The context-aware retrieval process, formalized in Algorithm~\ref{alg:hybrid-retrieval}, enhances traditional search methods by incorporating contextual information alongside user queries. The algorithm processes both the query and its context through advanced embedding encoders, combining these representations to perform vector search over the knowledge base. Results are filtered and reranked based on contextual constraints such as building-specific parameters, temporal factors, and environmental conditions.
-
-\begin{algorithm}[htbp]
-\caption{Hybrid Knowledge Retrieval for Building Inspection}
-\label{alg:hybrid-retrieval}
-\begin{algorithmic}[1]
-\REQUIRE Query $Q$, Context $C$, BIM Model $B$, GIS Data $G$, Defect Records $D_r$, Technical Standards $T_s$, Inspection History $H$
-\ENSURE Initial Candidate Documents $\text{candidates}$
-\STATE $E_q \gets \text{Encode}(Q)$
-\STATE $E_c \gets \text{Encode}(C)$
-\STATE $E_{\text{spatial}} \gets \text{ExtractSpatialContext}(B, G)$
-\STATE $E_{\text{combined}} \gets \text{CombineEmbeddings}(E_q, E_c, E_{\text{spatial}})$
-\STATE $\text{keywords} \gets \text{ExtractKeywords}(Q, C)$
-\STATE $\text{filters} \gets \text{BuildMetadataFilters}(B, G, D_r)$
-\STATE $C_{\text{dense}} \gets \text{DenseVectorSearch}(E_{\text{combined}}, [D_r, T_s, H])$
-\STATE $C_{\text{sparse}} \gets \text{KeywordSearch}(\text{keywords}, [D_r, T_s, H])$
-\STATE $C_{\text{spatial}} \gets \text{SpatialSearch}(E_{\text{spatial}}, [B, G])$
-\STATE $\text{candidates} \gets \text{FusionRanker}(C_{\text{dense}}, C_{\text{sparse}}, C_{\text{spatial}})$
-\RETURN $\text{candidates}$
-\end{algorithmic}
-\end{algorithm}
-
-This approach ensures that retrieved information is not only relevant to the query but also appropriate for the specific inspection scenario. For example, when analyzing a crack in a concrete beam, the system considers factors such as the building's age, local climate conditions, structural load history, and previous repair records to provide comprehensive analysis and recommendations. The semantic search capabilities allow users to issue queries in natural language or domain-specific terminology, with the system interpreting the intent behind queries and retrieving semantically related information even when not explicitly mentioned.
-
-The system implements a multi-dimensional indexing strategy that categorizes information based on defect types, locations, severity levels, timestamps, and associated building components. The indexing structure is complemented by a dynamic knowledge graph that represents relationships between different entities such as defects, causative factors, inspection procedures, and maintenance actions, enabling semantic understanding of queries and supporting sophisticated analysis capabilities.
-
-A subsequent context-aware reranking process, detailed in Algorithm~\ref{alg:context-rerank}, refines the initial candidate set by applying advanced scoring mechanisms that incorporate spatial proximity, temporal recency, evidence strength, and technical authority. This ensures that the final ranked results are optimally relevant to both the specific query and the broader inspection context.
-
-\begin{algorithm}[htbp]
-\caption{Context-Aware Reranking with Evidence}
-\label{alg:context-rerank}
-\begin{algorithmic}[1]
-\REQUIRE Candidate Documents $\text{candidates}$, Query $Q$, Context $C$, Spatial Context $E_{\text{spatial}}$
-\ENSURE Final Ranked Documents $R$ with Evidence
-\STATE $\text{filtered} \gets \emptyset$
-\FOR{$doc \in \text{candidates}$}
-    \STATE $\text{score} \gets \text{ContextualRelevance}(doc, C, E_{\text{spatial}})$
-    \IF{$\text{score} > \text{threshold}$}
-        \STATE $\text{filtered} \gets \text{filtered} \cup \{doc\}$
-    \ENDIF
-\ENDFOR
-\STATE $\text{evidence} \gets \text{ExtractEvidence}(\text{filtered}, Q)$
-\STATE $\text{verified} \gets \text{CrossValidate}(\text{filtered}, \text{evidence})$
-\STATE $\text{scores} \gets \emptyset$
-\FOR{$doc \in \text{verified}$}
-    \STATE $s_1 \gets \text{RelevanceScore}(doc, Q, C)$
-    \STATE $s_2 \gets \text{SpatialProximity}(doc, E_{\text{spatial}})$
-    \STATE $s_3 \gets \text{TemporalRecency}(doc)$
-    \STATE $s_4 \gets \text{EvidenceStrength}(doc, \text{evidence})$
-    \STATE $s_5 \gets \text{TechnicalAuthority}(doc)$
-    \STATE $\text{scores}[doc] \gets \text{CombineScores}(s_1, s_2, s_3, s_4, s_5)$
-\ENDFOR
-\STATE $R \gets \text{TopK}(\text{verified}, \text{scores}, k)$
-\RETURN $R$ with supporting evidence
-\end{algorithmic}
-\end{algorithm}
-
-\section{Experimental Design and Evaluation Framework}
-
-\subsection{Real-World Deployment and Validation}
-
-To validate the effectiveness and feasibility of the DefectGPT framework, we conducted a comprehensive 12-month deployment study on a high-rise building over 100 meters tall in Hong Kong. This practical case study enabled comprehensive evaluation of system performance across multiple indicators.
-
-\subsubsection{Building Selection and Characteristics}
-
-The selected building represents a typical Hong Kong high-rise structure with the following characteristics:
-
-\begin{itemize}
-    \item \textbf{Height}: Over 100 meters (30+ floors)
-    \item \textbf{Construction Type}: Reinforced concrete with curtain wall facades
-    \item \textbf{Age}: Approximately 25 years, showing various aging-related defects
-    \item \textbf{Environmental Exposure}: Coastal environment with high humidity and typhoon exposure
-    \item \textbf{Previous Maintenance}: Regular inspection records available for comparison
-\end{itemize}
-
-\subsubsection{Experimental Configuration and Infrastructure}
-
-All experiments were conducted on a High-performance Computing (HPC) infrastructure carefully designed to integrate multi-modal data ingestion, large-scale text embedding, high-dimensional similarity search, and real-time language model inference into a unified, responsive workflow. The hardware configuration included an Intel i9-13900 CPU and 128GB of DDR4 RAM. Python 3.9.0 served as the primary development environment, while FAISS 1.7.2 handled vector indexing to enable efficient nearest-neighbor retrieval. The LangChain framework was utilized to streamline the construction of the RAG pipeline, incorporating GPT-4 with OpenAI API for natural language understanding and response generation.
-
-This specialized stack enabled efficient processing of complex tasks, including embedding large batches of textual records and supporting multiple concurrent user queries. The system architecture was designed to maintain consistent performance under varying load conditions. The infrastructure demonstrated robust stability in handling simultaneous requests from multiple inspectors and engineers, while maintaining response latencies within acceptable thresholds for real-time interaction through effective API request management and optimized retrieval strategies.
-
-\subsubsection{Dataset Composition and Preprocessing}
-
-The dataset comprised approximately 10,000 multi-modal building inspection records, predominantly sourced from high-rise structures located throughout Hong Kong. Around 1,500 of these entries offered intensive detail on crucial defects, most notably surface cracks, large spalling areas, and evidence of water infiltration. This broad sampling encompassed a variety of facade types, ranging from reinforced concrete to composite curtain walls, thereby reflecting the region's diverse architectural and material profiles.
-
-Data collection was accomplished via autonomous drones executing standardized flight trajectories to ensure uniform coverage. The drones were equipped with high-resolution cameras for visual documentation and defect measurement. These measurements, along with textual field notes, were stored following KML conventions to preserve georeferencing fidelity in the WGS84 coordinate system. Each defect record included essential attributes such as severity, crack width and length estimates, spall dimensions, and qualitative observations regarding seepage intensity under varying environmental conditions.
-
-To enhance contextual depth, IFC-based BIM models were also incorporated, furnishing a wealth of structural references such as floor elevation, load-bearing column configurations, and layered material compositions. This integrated approach was pivotal in tracing how cracks might propagate along rebar lines, or in identifying critical zones where water seepage could amplify spalling in structurally compromised sections. Supplemental insights arose from humidity and vibration sensors, which illuminated environmental factors like thermal expansion or dynamic loads.
-
-All collected data underwent rigorous cleaning, including outlier detection, radiometric calibration to correct for drone camera variances, and textual standardization to unify diverse field-reporting formats. This multi-stage refinement ensured the reliability of both textual logs and image-based evidence, establishing a cohesive knowledge base for subsequent embedding, retrieval, and language-type inference.
-
-\subsubsection{Data Collection Protocol}
-
-The experimental setup included systematic data collection across multiple modalities:
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\textwidth]{DefectGPT/System Class.png}
-    \caption{High-level overview of the DefectGPT Digital Twin platform, integrating domain-specific retrieval, language modeling, and BIM-driven analytics for comprehensive building defect management \cite{zhang2024automated}.}
-    \label{fig:system-overview}
-\end{figure}
-
-\textbf{UAV Survey Protocol}:
-\begin{itemize}
-    \item Monthly comprehensive facade surveys using standardized flight patterns
-    \item High-resolution RGB imaging (4K resolution) for visible defect detection
-    \item Thermal imaging for moisture intrusion and thermal bridge identification
-    \item RTK GPS positioning for precise georeferencing
-\end{itemize}
-
-\textbf{Sensor Network Deployment}:
-\begin{itemize}
-    \item Structural health monitoring sensors on critical load-bearing elements
-    \item Environmental sensors for temperature, humidity, and wind monitoring
-    \item Vibration sensors for seismic activity and building response measurement
-    \item Moisture sensors in areas prone to water infiltration
-\end{itemize}
-
-\subsection{Performance Metrics and Benchmarking}
-
-\subsubsection{Quantitative Performance Indicators}
-
-The evaluation framework employed multiple quantitative metrics:
-
-\textbf{Defect Detection Performance}:
-\begin{itemize}
-    \item Detection accuracy: 95.2\% for major defects, 87.8\% for minor defects
-    \item False positive rate: Reduced by 35\% compared to traditional methods
-    \item Detection consistency: 92.1\% agreement between multiple survey rounds
-\end{itemize}
-
-\textbf{System Efficiency Metrics}:
-\begin{itemize}
-    \item Response time: Average query response under 300 milliseconds
-    \item Concurrent user capacity: Successfully handled 500 simultaneous sessions
-    \item Data processing speed: Real-time integration of UAV data and sensor streams
-\end{itemize}
-
-\textbf{Decision Support Quality}:
-\begin{itemize}
-    \item Recommendation accuracy: 91.7\% agreement with expert assessments
-    \item Maintenance optimization: 40\% improvement in resource allocation efficiency
-    \item Predictive accuracy: 88.3\% success rate in defect progression predictions
-\end{itemize}
-
-\subsubsection{Comparative Analysis Framework}
-
-The study included comprehensive comparison with baseline approaches:
-
-\textbf{Traditional Visual Inspection}:
-\begin{itemize}
-    \item Manual inspection by certified building engineers
-    \item Paper-based documentation and reporting
-    \item Qualitative assessment of defect severity and progression
-\end{itemize}
-
-\textbf{Conventional BIM-Based Systems}:
-\begin{itemize}
-    \item Static BIM models with manual defect annotation
-    \item Database-driven defect tracking systems
-    \item Rule-based maintenance scheduling algorithms
-\end{itemize}
-
-\textbf{Standard Computer Vision Approaches}:
-\begin{itemize}
-    \item Traditional image processing algorithms for defect detection
-    \item Machine learning models without domain-specific enhancement
-    \item Standalone analysis without knowledge integration
-\end{itemize}
-
-\section{Results and Performance Analysis}
-
-\subsection{Comprehensive System Performance Evaluation}
-
-The 12-month deployment of DefectGPT demonstrated significant improvements across all evaluated metrics compared to traditional building inspection methods.
-
-\subsubsection{Defect Detection and Classification Results}
-
-The system achieved exceptional performance in identifying and classifying building defects:
-
-\textbf{Overall Detection Performance}:
-\begin{itemize}
-    \item \textbf{Major Defects}: 95.2\% detection accuracy with 2.1\% false positive rate
-    \item \textbf{Minor Defects}: 87.8\% detection accuracy with 4.3\% false positive rate
-    \item \textbf{Critical Safety Issues}: 98.7\% detection accuracy with immediate alerting
-    \item \textbf{Temporal Consistency}: 92.1\% agreement between consecutive surveys
-\end{itemize}
-
-\textbf{Defect Type-Specific Performance}:
-\begin{itemize}
-    \item \textbf{Structural Cracks}: 94.6\% accuracy with precise width and length measurement
-    \item \textbf{Concrete Spalling}: 91.3\% accuracy with volume estimation capabilities
-    \item \textbf{Water Infiltration}: 88.9\% accuracy with severity assessment
-    \item \textbf{Thermal Bridges}: 85.7\% accuracy through thermal imaging analysis
-\end{itemize}
-
-The most significant achievement was the 35\% reduction in false positive rates compared to traditional automated inspection methods. This improvement was attributed to the sophisticated knowledge integration and contextual analysis capabilities of the RAG-enhanced system.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{DefectGPT/model_performance_heatmap.png}
-    \caption{Model Performance Comparison Heatmap showing DefectGPT's superior performance across multiple evaluation metrics (ROUGE, BLEU, METEOR, BERTScore) compared to state-of-the-art language models. Colors represent standardized z-scores with darker shades indicating better performance \cite{zhang2024automated}.}
-    \label{fig:performance-heatmap}
-\end{figure}
-
-\subsubsection{System Efficiency and Scalability Analysis}
-
-The system architecture implements a microservice-based design that ensures high extensibility and resilience. Each microservice, developed in Python, is responsible for a specific functional module, such as vector indexing, image preprocessing, or inference invocation, with data exchanged via asynchronous messaging. This distributed design simplifies maintenance while enhancing fault tolerance. When a crack is identified that exceeds predefined thresholds for dimensions or severity, the system promptly triggers updates to both the vector index and the 3D visualization.
-
-\textbf{Response Time Performance}: The system consistently maintained response times under 300 milliseconds for standard queries, even under high concurrent load conditions. Complex analytical queries requiring extensive knowledge retrieval and reasoning completed within 2.1 seconds on average. End-to-end response latency remained consistently low due to the integration of HPC-based scheduling and concurrency-aware job assignment.
-
-\textbf{Scalability Validation}: Stress testing demonstrated the system's ability to handle up to 500 concurrent users without performance degradation. A specialized concurrency management layer ensured that large-batch embedding requests were processed efficiently without introducing significant queuing bottlenecks, underscoring the system's suitability for broader adoption. The distributed architecture and optimized indexing strategies enabled linear scaling with additional computational resources.
-
-\textbf{Retrieval Performance Analysis}: Retrieval performance was quantified by computing precision, recall, and Mean Reciprocal Rank (MRR). Fine-grained adjustments of the top-k parameter and the similarity threshold proved vital to sustain high recall without burdening GPT-4 with irrelevant data segments. Under typical operational loads, retrieval latency remained below 300 milliseconds, validating the efficiency of the underlying FAISS index. Notably, queries centered on cracks—often recognized as early indicators of deeper structural flaws—were particularly instructive. The system excelled at pinpointing records describing crack direction, approximate width, and potential steel reinforcement exposure, and it generated mitigation strategies such as epoxy sealing or polymer injection.
-
-\textbf{Data Processing Efficiency}: The system's RAG-enhanced retrieval pipeline transforms textual inputs into high-dimensional embeddings using OpenAI's text-embedding-3-large model, and indexes them in a FAISS structure optimized for approximate nearest-neighbor queries. Empirical testing determined that retrieving the top 6 matches, subject to a cosine similarity threshold around 0.5, achieves a realistic balance between precision and recall. The GPT-4 inference layer then consumes these retrieved segments, generating responses enriched with domain-specific guidance on crack formation, expansion, and other defect dynamics.
-
-\subsection{RAG System Performance and Knowledge Integration}
-
-\subsubsection{Retrieval Accuracy and Relevance}
-
-The RAG-enhanced knowledge management system demonstrated superior performance in retrieving relevant domain-specific information \cite{borgeaud2022improving,izacard2021leveraging}:
-
-\begin{itemize}
-    \item \textbf{Precision}: 94.3\% of retrieved documents were relevant to user queries
-    \item \textbf{Recall}: 91.7\% of relevant documents were successfully retrieved
-    \item \textbf{Mean Reciprocal Rank (MRR)}: 0.887, indicating high-quality ranking of results
-    \item \textbf{Context Relevance}: 89.2\% of responses appropriately incorporated building-specific context
-\end{itemize}
-
-\subsubsection{LLM Integration and Response Quality}
-
-The integration of domain-specific knowledge with Large Language Models produced significant improvements in response quality \cite{gao2023survey,ding2024survey}:
-
-\textbf{Technical Accuracy}: 91.7\% agreement with expert assessments in defect analysis and maintenance recommendations.
-
-\textbf{Contextual Appropriateness}: 93.4\% of generated responses appropriately considered building-specific factors, environmental conditions, and regulatory requirements.
-
-\textbf{Actionability}: 88.9\% of system recommendations were directly implementable without additional expert consultation.
-
-\subsubsection{Quantitative Model Comparison}
-
-To comprehensively evaluate DefectGPT's performance against other state-of-the-art language models, we conducted extensive quantitative assessments using a range of text-generation and summarization metrics, including ROUGE (1, 2, L), BLEU, METEOR, BERTScore, and additional domain-specific measures such as Semantic Similarity and specialized "Sequence" coherence. These metrics capture various aspects of text quality, semantic fidelity, and structural coherence in the context of building inspection tasks.
-
-\begin{table}[htbp]
 \centering
-\caption{Performance Comparison of Different Models on Building Inspection Task}
-\label{tab:model-comparison}
-\begin{tabular}{l|ccc|ccc|ccc}
-\toprule
-\multirow{2}{*}{\textbf{Model}} & \multicolumn{3}{c|}{\textit{Text Generation}} & \multicolumn{3}{c|}{\textit{Semantic Understanding}} & \multicolumn{3}{c}{\textit{Additional Metrics}} \\
-\cmidrule{2-10}
- & ROUGE-1 & ROUGE-2 & ROUGE-L & BLEU & Semantic & BERTScore & METEOR & Jaccard & Sequence \\
-\midrule
-GPT-4o & 0.293 & 0.066 & 0.191 & 0.056 & 0.629 & 0.797 & 0.167 & 0.108 & 0.067 \\
-Claude-3.5 & 0.292 & 0.046 & 0.184 & 0.020 & 0.591 & 0.798 & 0.114 & 0.078 & 0.063 \\
-Mistral-Large & 0.291 & 0.050 & 0.188 & 0.019 & 0.556 & 0.784 & 0.113 & 0.076 & 0.064 \\
-Gemini-1.5-Pro & 0.358 & 0.093 & 0.223 & 0.051 & 0.655 & 0.811 & 0.194 & 0.139 & 0.075 \\
-Llama-3.1-405B & 0.337 & 0.092 & 0.213 & 0.053 & 0.601 & 0.795 & 0.184 & 0.129 & 0.072 \\
-\midrule
-\textbf{DefectGPT (Ours)} & \textbf{0.592} & \textbf{0.297} & \textbf{0.503} & \textbf{0.233} & \textbf{0.856} & \textbf{0.905} & \textbf{0.423} & \textbf{0.306} & \textbf{0.273} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Table~\ref{tab:model-comparison} summarizes the performance of the evaluated models. Standard metrics for text generation (ROUGE, BLEU) and semantic understanding (Semantic Similarity, BERTScore) are reported, alongside additional domain-oriented scores such as Jaccard and Sequence coherence. Notably, DefectGPT demonstrates superior outcomes across nearly all metrics, highlighting its balanced capability in generating coherent, semantically accurate texts specifically tailored for building inspection applications. The substantial improvements in BLEU (0.233 vs. 0.056 for GPT-4o) and Semantic Similarity (0.856 vs. 0.629 for GPT-4o) demonstrate the effectiveness of domain-specific RAG enhancement in building inspection contexts.
-
-\begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{DefectGPT/performance_radar_plot.png}
-        \caption{Standardized Performance Radar Plot comparing DefectGPT with baseline models across key evaluation metrics \cite{zhang2024automated}.}
-        \label{fig:radar-plot}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{DefectGPT/performance_metrics_distribution.png}
-        \caption{Performance Metrics Distribution Analysis using violin plots showing score distributions across different models \cite{zhang2024automated}.}
-        \label{fig:performance-distribution}
-    \end{minipage}
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/Dynamic Knowledge Engine.png}
+\caption{Dynamic Knowledge Engine: Comparison between traditional periodic fine-tuning approach (left) resulting in a ``Zombie Brain'' versus our real-time knowledge injection solution (right) creating a ``Living Brain'' that continuously updates with physical world changes.}
+\label{fig:dynamic-knowledge-engine}
 \end{figure}
 
-\subsection{User Experience and Practical Impact}
+However, when decision-making requirements escalate from simple information retrieval to complex causal analysis and diagnostic reasoning, the fundamental limitations of existing Digital Twin paradigms become starkly apparent. The real challenges faced by engineers and managers are not merely knowing that defects exist, but deeply understanding ``why'' certain patterns of defects occur and assessing potential risks based on this understanding \cite{hamdan2021semantic}. Answering such questions requires systems to possess capabilities beyond data representation—namely, ``cognitive reasoning'' capabilities. This demands that systems not only access data but understand the domain knowledge, physical laws, and engineering logic embedded within the data.
 
-\subsubsection{Workflow Efficiency Improvements and Real-World Impact}
+For instance, to judge the severity of wall cracks, a system must correlate observed crack patterns (``What \& Where'' in geometric twins) with domain knowledge stored in technical standards, design specifications, material manuals, and historical expert reports (a complex ``knowledge landfill''). It is precisely at this critical juncture that we identify a profound, yet ineffectively resolved challenge—what we term the \textbf{``Reasoning Gap.''} This gap lies between precise but semantically impoverished geometric twins and rich but unstructured document oceans containing domain knowledge.
 
-The deployment study revealed substantial improvements in inspection workflows, with quantitative benefits observed across multiple operational dimensions. The most significant achievement was a 30\% reduction in combined inspection and documentation time, attributing much of this gain to the platform's immediate retrieval of historical building data, such as previously patched spalls or known seepage zones. As a result, teams could dedicate more effort to remediation measures rather than manual data gathering.
+\subsection{The Unstable Bridge: Critical Flaws in Direct LLM Application}
 
-\textbf{Documentation Time Optimization}: The traditional paper-based inspection process required inspectors to manually transcribe observations, cross-reference historical records, and compile reports using disparate software systems. DefectGPT's integrated approach streamlined this workflow by providing real-time access to historical context, automated report generation capabilities, and seamless integration with existing building management systems. The platform demonstrated efficient inspection report generation and seamless operation across diverse deployment scenarios, enabling inspectors to focus on high-value analytical tasks rather than administrative overhead.
+With the rise of Large Language Models (LLMs), an seemingly obvious solution emerges: utilizing their powerful natural language understanding and generation capabilities to serve as a ``bridge'' across this gap. Initial attempts show that LLMs can indeed parse natural language queries and understand document content to some extent. However, through in-depth research, we have discovered that this direct, naive application approach constructs an extremely dangerous ``unstable bridge'' with three fatal, interconnected structural flaws \cite{ji2023survey}.
 
-\textbf{Decision Support Enhancement**: The system achieved a 40\% improvement in maintenance resource allocation efficiency through its intelligent prioritization algorithms and predictive analytics capabilities. By analyzing defect severity, progression patterns, and resource constraints simultaneously, the platform enabled facility managers to optimize maintenance schedules and allocate personnel more effectively. The context-aware recommendations considered not only immediate safety concerns but also long-term cost implications and regulatory compliance requirements.
+First is the inherent limitation of context windows. LLMs are strictly constrained by their context length when processing information, like observing a complex building system through a narrow keyhole. For diagnostic tasks requiring integration of multiple large documents, maintenance records spanning several years, and massive sensor data, this ``tunnel vision'' information processing approach inevitably leads to missing critical information and misjudging the overall situation \cite{liu2023lost}.
 
-\textbf{Knowledge Access and Institutional Memory**: One of the most significant advantages was the immediate retrieval of relevant historical data and expert knowledge, transforming how inspection teams accessed and utilized institutional memory. Previously, critical information about past repairs, environmental conditions, and defect evolution patterns was often scattered across multiple systems or existed only in the experience of senior staff. DefectGPT's knowledge management system democratized access to this expertise, enabling junior inspectors to benefit from decades of accumulated knowledge while maintaining consistency in inspection quality.
+Second is the lack of domain-specific grounding. While general-purpose LLMs are knowledgeable, their knowledge is generalized and statistical, lacking deep understanding of physical laws and causal relationships specific to engineering domains. Their knowledge is like a ``floating anchor'' that cannot firmly connect with the seabed, unable to establish stable connections with highly specialized domain knowledge in building diagnosis, causing reasoning processes to deviate from basic engineering principles \cite{harnad1990symbol}.
 
-\textbf{Multimodal Analysis Capabilities}: The platform's support for multimodal analysis represented a key innovation in defect management workflows. By integrating advanced image recognition algorithms with natural language processing, the system could process complex user queries combining text, voice, and images. For instance, an uploaded image of spalling could be cross-referenced with historical data to identify patterns, while voice queries enabled field inspectors to quickly obtain detailed explanations of underlying causes without interrupting their physical inspection activities.
+Third, and most dangerously, is factual hallucination and inaccuracy. Due to the combined effect of the above two flaws, LLMs are prone to generating seemingly reasonable but completely factually incorrect ``hallucination'' outputs when faced with queries beyond their knowledge boundaries or with insufficient information. While this might be tolerable in entertainment or general Q\&A scenarios, in engineering decisions concerning structural safety and public interest, any conclusion based on hallucination could lead to catastrophic consequences \cite{zhang2023siren}.
 
-\subsubsection{User Satisfaction and Adoption}
+\subsection{Research Objectives and Contributions}
 
-Feedback from building inspection professionals indicated high satisfaction with the system:
+Therefore, this chapter's core research task is not simply applying LLMs to building diagnosis, but fundamentally redesigning information processing and reasoning architecture to construct a truly stable, reliable, and intelligent ``cognitive bridge.'' We aim to answer the core question: How can we design and implement an intelligent agent architecture that safely and efficiently integrates multimodal Digital Twin data with deep domain knowledge, thereby endowing systems with genuine diagnostic reasoning capabilities?
+
+To answer this question, we propose a concrete implementation based on the CORTEX theoretical framework—DefectGPT. This chapter will elaborate on DefectGPT's design philosophy, system architecture, and implementation details, and through rigorous controlled experiments, quantitatively evaluate its performance gains relative to current optimal methods, thereby providing solid empirical support for RQ1 and RQ3.
+
+\section{Problem Definition and L1 Descriptive Twin Environment Construction}
+
+To systematically address the aforementioned ``reasoning gap'' problem, we design and implement a CORTEX intelligent agent customized for building defect diagnosis tasks—DefectGPT. Its core design philosophy lies in repositioning the role of Large Language Models (LLMs): rather than viewing them as omniscient, centrally-located ``brains,'' we position them as powerful, controlled ``reasoning interfaces.'' This interface does not possess ultimate domain truth but is mandatorily required to think and express based on a rigorously validated knowledge base that maintains real-time synchronization with the physical world.
+
+\subsection{Formalization of Building Diagnosis Tasks}
+
+We define building asset diagnosis tasks as a heterogeneous data-based Question Answering (QA) problem with the following formal specification:
+
+\textbf{Input}: Natural language question $Q$ expressing diagnostic intent
+\textbf{Knowledge Source}: An L1 descriptive twin $\mathcal{DT}_{L1}$ containing multimodal building data
+\textbf{Output}: An evidence-based, traceable answer $A$ with source attribution
+
+The L1 descriptive twin $\mathcal{DT}_{L1}$ is formally defined as:
+\begin{equation}
+\mathcal{DT}_{L1} = \{S, D, K\}
+\end{equation}
+where $S$ represents spatial information carriers, $D$ represents defect data schemas, and $K$ represents domain knowledge repositories.
+
+\subsection{Hierarchical Construction of L1 Descriptive Twin}
+
+Following the three-tier framework established in Chapter 3, we construct a comprehensive L1 descriptive twin through a layered approach that transforms raw, chaotic physical world information into structured, machine-queryable knowledge assets.
 
 \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1.0\textwidth]{DefectGPT/defectgpt_platform.png}
-    \caption{DefectGPT Platform interface showing integrated GeoBIM analytics with Digital Twin visualization system. The interface provides comprehensive insights into façade defect detection, distributions, and comparative analysis for enhanced defect management workflows \cite{zhang2024automated}.}
-    \label{fig:defectgpt-platform}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/System_implement.png}
+\caption{Comprehensive System Implementation Architecture showing the three-layer Digital Twin structure: Data Layer (GeoBIM modeling, defect modeling, expert knowledge), Digital Twin Layer (spatial information carriers, defect data schemas, domain knowledge repository), and Decision Layer (hybrid retrieval and cognitive reasoning).}
+\label{fig:system-implementation}
 \end{figure}
 
+\subsubsection{Data Layer: Multi-Modal Information Sensing and Ingestion}
+
+The Data Layer serves as the perceptual foundation of the entire system, with its core responsibility being comprehensive ingestion of all raw information related to building assets from diverse physical and digital sources. The challenge lies not only in the massive volume of data but also in the diversity of sources, heterogeneity of formats, and complexity of semantics.
+
+\textbf{GeoBIM Modeling}: This module processes core spatial and geometric information of buildings, representing a deep fusion of traditional BIM with Geographic Information Systems (GIS). BIM provides microscopic information about building interiors, such as precise three-dimensional geometry, material properties, topological relationships, and functional definitions of individual components (beams, columns, walls). GIS provides macroscopic environmental information about buildings, including geographic coordinates, surrounding environment, orientation, sunlight conditions, and connections to municipal infrastructure \cite{boje2020towards}.
+
+\textbf{Defect Information Modeling}: This module focuses on objective, quantitative characterization of building physical defects. We employ an automated detection workflow based on multi-sensor fusion. Using UAVs equipped with high-definition visible light cameras and infrared thermal imaging, we systematically scan building facades through photogrammetry and structured light techniques to generate high-resolution three-dimensional point clouds and texture models. Subsequently, deep learning computer vision algorithms (such as Convolutional Neural Networks) analyze image and point cloud data to automatically detect, segment, and locate various types of defects including cracks, spalling, water seepage, and delamination \cite{spencer2019advances}.
+
+\textbf{Expert Knowledge Collation}: This serves as the bridge connecting observational data with diagnostic conclusions. The module systematically collects, organizes, and digitalizes all text and semi-structured knowledge related to building diagnosis, including national and local technical standards and legal regulations defining mandatory requirements and safety benchmarks for defect assessment; design drawings and as-built documentation recording original design intent and actual construction conditions; historical maintenance and inspection reports describing numerous historical problems and treatment measures in natural language; and professional manuals and diagnostic guides written by senior engineers containing substantial experience-based heuristic knowledge \cite{hamdan2021semantic}.
+
+\subsubsection{Digital Twin Layer: Knowledge Transformation from Chaos to Order}
+
+The Digital Twin Layer serves as the ``organizer'' and ``refiner'' of knowledge, with its core task being transformation of raw, chaotic information ingested by the Data Layer into machine-readable, computable, and reasoning-capable, highly structured and interoperable knowledge assets.
+
+\textbf{Spatial Information Carriers}: Raw model data from the GeoBIM module is parsed and standardized here. We adopt open standards such as Industry Foundation Classes (IFC) and CityGML to transform BIM and GIS models generated by different software into unified, semantically rich formats. This process ensures that definitions of components like ``beams'' or ``walls'' are consistent and machine-understandable throughout the system \cite{tang2019retrieving}.
+
+\textbf{Structured Defect Data Schemas}: Detection results from the defect modeling module are rigorously structured here. We design a unified defect data schema storing complete properties of each defect in JSON or CSV formats. This schema includes not only geometric and type information but also timestamps, associated sensor readings, corresponding BIM component IDs, and links to original image evidence \cite{li2024single}.
+
+\textbf{Domain Knowledge Repository}: This handles expert knowledge processing. All unstructured and semi-structured documents are first fed into an advanced document parsing engine utilizing Optical Character Recognition (OCR) and document layout analysis to convert PDF and Word formats into plain text while preserving original chapter, table, and list structures. Subsequently, these texts are fed into a ``semantic chunking'' module that utilizes natural language processing to segment text according to intrinsic semantic logic, ensuring each knowledge chunk is a relatively complete, independent semantic unit \cite{fan2023retrieval}.
+
+\section{CORTEX Perception Module: Plan-Retrieve-Synthesize Architecture}
+
+The Decision Layer represents the core innovation of DefectGPT architecture, embodying the design essence of the CORTEX framework. This layer is not a single module but an advanced Retrieval-Augmented Generation (RAG) pipeline consisting of three key engines working collaboratively. Its design goal is to precisely overcome the three major flaws of the ``unstable bridge'' mentioned in Section 4.1, thereby achieving reliable, transparent, and deep cognitive reasoning.
+
 \begin{figure}[htbp]
-    \centering
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{DefectGPT/defectgpt_mobile.png}
-        \caption{DefectGPT Mobile Interface optimized for real-time field inspections with multimodal capabilities \cite{zhang2024automated}.}
-        \label{fig:defectgpt-mobile}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.48\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{DefectGPT/defectgpt_interface.png}
-        \caption{DefectGPT analysis interface demonstrating comprehensive defect distribution analysis with natural language processing capabilities \cite{zhang2024automated}.}
-        \label{fig:defectgpt-interface}
-    \end{minipage}
-	\end{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/The Cognitive Agent Framework.png}
+\caption{The Cognitive Agent Framework showing the plan-retrieve-synthesize architecture with planner for task decomposition, execution engine for tool orchestration, and reasoning \& synthesis for evidence-based generation.}
+\label{fig:cognitive-agent-framework}
+\end{figure}
+
+\subsection{Planner: Task Decomposition and Tool Selection}
+
+The Planner module, corresponding to the left side of Figure~\ref{fig:cognitive-agent-framework}, serves as the strategic intelligence of the system. When receiving a complex user query $Q$, the planner first performs task decomposition. For example, it decomposes the question ``Find all high-risk cracks mentioned in reports over the past year on the south facade of Building A, and evaluate their grades according to specifications'' into three sub-tasks: (1) locate all components on Building A's south facade; (2) retrieve relevant inspection reports from the past year; (3) find regulatory clauses for crack risk assessment.
+
+The decomposition process follows a formal planning approach:
+\begin{equation}
+\text{Plan}(Q) = \{t_1, t_2, ..., t_n\} \text{ where } t_i = (\text{action}, \text{parameters}, \text{dependencies})
+\end{equation}
+
+Subsequently, the planner performs tool selection, matching optimal retrieval tools for each sub-task. For instance, selecting BIM database APIs for sub-task 1, and vector retrieval tools for sub-tasks 2 and 3. This intelligent routing ensures that each query component is handled by the most appropriate specialized system \cite{yao2022react}.
+
+\subsection{Execution Engine: RAG-Based Hybrid Retrieval}
+
+The Execution Engine, corresponding to the middle section of Figure~\ref{fig:cognitive-agent-framework}, represents our solution to the context window limitation challenge. Traditional RAG systems typically rely on single vector similarity-based retrieval methods, which are severely inadequate when handling multimodal, structured AEC data.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/Hybrid Retrieval Engine.png}
+\caption{Hybrid Retrieval Engine architecture demonstrating multi-modal data adapter suite including structured data adapters, time-series adapters, document retrieval adapters, and geometric model adapters, followed by fusion ranking and high-precision evidence extraction.}
+\label{fig:hybrid-retrieval-engine}
+\end{figure}
+
+Our hybrid retrieval engine, whose workflow is shown in Figure~\ref{fig:hybrid-retrieval-engine}, adopts a more sophisticated and intelligent strategy. Upon receiving a natural language information requirement from the Reasoning Module, the DT-RAG intent analyzer first parses the requirement and decomposes it into multiple sub-tasks. These sub-tasks are then distributed to a parallel suite of specialized data adapters:
+
+\textbf{Structured Data Adapter}: Converts intentions into SQL statements to query asset databases, handling complex joins and aggregations across multiple tables.
+\textbf{Time-Series Adapter}: Generates specialized queries to extract sensor readings from time-series databases, including temporal filtering and statistical aggregations.
+\textbf{Document Retrieval Adapter}: Utilizes traditional vector retrieval to search for relevant text within unstructured documents using semantic similarity matching.
+\textbf{Geometric Model Adapter}: Makes specialized API calls to extract spatial and geometric information from BIM models, including spatial queries and geometric calculations.
+
+The heterogeneous results returned by these parallel queries require sophisticated fusion mechanisms. The most critical step in DT-RAG is integrating these information fragments into a unified, context-rich textual summary through:
 
 \begin{itemize}
-    \item \textbf{Usability Rating**: 4.7/5.0 average rating from inspection professionals
-    \item \textbf{Learning Curve**: Average proficiency achieved within 2.5 hours of training
-    \item \textbf{Reliability Perception**: 92\% of users reported high confidence in system recommendations
-    \item \textbf{Workflow Integration**: 89\% of users successfully integrated the system into existing workflows
+\item \textbf{Semantic Alignment}: Ensuring information from different sources refers to the same physical entities
+\item \textbf{Temporal Synchronization}: Aligning data from different time periods into coherent temporal narratives
+\item \textbf{Quality Weighting}: Assigning confidence scores based on source reliability and relevance
+\item \textbf{Contextual Summarization}: Generating natural language summaries optimized for LLM comprehension
 \end{itemize}
 
-\subsubsection{Economic Impact Assessment}
+This approach returns heterogeneous results: component IDs, defect data tables, and text segments. A learnable reranking model (typically a Transformer-based Cross-Encoder) then precisely judges ``query-evidence pair'' relevance, scoring and reordering all initially retrieved information blocks based on their actual contribution to answering the original query.
 
-The economic benefits of the DefectGPT system were substantial:
+\subsection{Reasoning \& Synthesis: Evidence Refinement and Generation}
 
-\textbf{Cost Reduction}:
-\begin{itemize}
-    \item 25\% reduction in inspection labor costs through automation
-    \item 18\% decrease in emergency maintenance incidents through predictive capabilities
-    \item 32\% improvement in maintenance scheduling efficiency
-\end{itemize}
+The Reasoning \& Synthesis module, corresponding to the bottom section of Figure~\ref{fig:cognitive-agent-framework}, addresses the challenge of factual hallucination through a systematic evidence-driven approach.
 
-\textbf{Risk Mitigation}:
-\begin{itemize}
-    \item Early detection capabilities reduced potential liability exposure
-    \item Improved documentation supported compliance with regulatory requirements
-    \item Enhanced decision-making reduced the risk of inappropriate maintenance interventions
-\end{itemize}
+\subsubsection{Evidence Refinement Process}
 
-\section{Discussion and Lessons Learned}
+The evidence refinement process corresponds to the ``Reranking'' step in our framework. The system performs cross-modal reordering and filtering of initially retrieved relevant chunks, eliminating irrelevant or redundant information to form a high-precision, highly relevant evidence set. This process employs advanced ranking algorithms that consider multiple factors:
 
-\subsection{Key Insights and Validation of CORTEX Principles}
+\begin{equation}
+\text{Score}(d_i, Q) = \alpha \cdot \text{Relevance}(d_i, Q) + \beta \cdot \text{Authority}(d_i) + \gamma \cdot \text{Freshness}(d_i)
+\end{equation}
 
-The DefectGPT implementation successfully validated the core principles of the CORTEX cognitive architecture in a real-world building management scenario. Several key insights emerged from this deployment:
+where $d_i$ represents a document chunk, and $\alpha$, $\beta$, $\gamma$ are weighting parameters for relevance, authority, and freshness respectively.
 
-\subsubsection{Effectiveness of Digital Twin Integration}
+\subsubsection{Evidence-Driven Generation}
 
-The BIM-IoT fusion approach proved highly effective in creating a comprehensive digital representation of building condition. The three-layer architecture (Data, Digital Twin, and Decision layers) enabled seamless integration of heterogeneous data sources while maintaining data quality and consistency. The real-time synchronization between physical building conditions and digital representations provided an essential foundation for intelligent decision-making.
+The refined evidence and original user query are combined into a comprehensive prompt that is fed to the LLM. The LLM performs logical reasoning based on evidence in the prompt to generate a final ``Evidence-Grounded Answer.'' This answer not only directly responds to user questions but must include citations to supporting evidence sources.
 
-\subsubsection{Value of RAG-Enhanced Knowledge Management}
+The generation process is formally constrained as:
+\begin{equation}
+A = \text{LLM}(Q \oplus E_{refined} \oplus \text{Instructions})
+\end{equation}
+where $A$ is the generated answer, $Q$ is the query, $E_{refined}$ is the refined evidence set, and $\oplus$ denotes prompt concatenation.
 
-The implementation of Retrieval-Augmented Generation in building defect management demonstrated significant advantages over traditional rule-based or standalone AI approaches. The ability to dynamically retrieve relevant domain-specific knowledge while generating contextually appropriate responses proved crucial for handling the complex, nuanced requirements of building inspection and maintenance.
+\subsubsection{Decision Support Visualization}
 
-\subsubsection{Four-Stage Cognitive Loop Validation}
-
-Each stage of the CORTEX cognitive loop proved valuable in the building monitoring context:
+Generated structured answers are pushed to visualization interfaces in the form of charts, three-dimensional highlights, and interactive dashboards to provide intuitive decision support for users. The system generates comprehensive reports that include:
 
 \begin{itemize}
-    \item \textbf{Stage 1 (Perceptual Grounding)}: Successful integration of multi-modal sensor data with historical context
-    \item \textbf{Stage 2 (Causal Inference)**: Effective prediction of defect evolution and correlation analysis
-    \item \textbf{Stage 3 (Action Policy Generation)**: Generation of practical, implementable maintenance recommendations
-    \item \textbf{Stage 4 (Model Calibration)**: Continuous improvement through feedback integration and learning
+\item \textbf{Executive Summary}: High-level findings and recommendations
+\item \textbf{Detailed Analysis}: Step-by-step reasoning with evidence citations
+\item \textbf{Visual Evidence}: Interactive 3D models with highlighted defect locations
+\item \textbf{Actionable Recommendations}: Specific maintenance priorities and procedures
 \end{itemize}
 
-\subsection{Limitations and Challenges Encountered}
+\section{Experimental Design}
 
-\subsubsection{Technical Limitations}
+To objectively and quantifiably evaluate DefectGPT architecture effectiveness and specifically respond to research question RQ3, we designed a rigorous controlled comparison experiment. The experiment's core goal is to measure and compare DefectGPT's performance differences with current optimal general methods when completing real-world building diagnosis tasks, and quantify the ``Cognitive Gain'' brought by our proposed cognitive architecture.
 
-Several technical limitations were identified during the deployment:
+\subsection{Dataset Construction and Task Design}
 
-\textbf{Data Quality Dependencies}: The system's performance was significantly affected by data quality variations, particularly in adverse weather conditions affecting UAV imagery quality.
+We constructed a comprehensive dataset containing real building BIM models, national building code document libraries, and simulated inspection reports and images. The dataset comprises 50 diagnostic query tasks of varying difficulty and complexity, designed in natural language to comprehensively cover typical information needs in building diagnosis scenarios.
 
-\textbf{Complex Defect Interpretation**: While the system excelled at identifying clear, well-defined defects, complex scenarios involving multiple interacting defects or ambiguous visual patterns sometimes required human expert intervention.
+\textbf{Task Categories}:
+\begin{itemize}
+\item \textbf{Simple Retrieval (15 tasks)}: Single data source information extraction
+\item \textbf{Compound Query (20 tasks)}: Multi-source information fusion requirements
+\item \textbf{Diagnostic Reasoning (15 tasks)}: Complex analysis, comparison, and evaluation tasks
+\end{itemize}
 
-\textbf{Environmental Variability**: Performance variations were observed under different environmental conditions, particularly during monsoon seasons and extreme weather events.
+\textbf{Example Complex Query}: ``Please illustrate and explain the vertical distribution pattern of all critical (width > 0.5mm) delamination defects on the southeast facade of Building A, generate a statistical summary table including precise locations, floors, and elevations, and evaluate recommended repair priorities according to the latest 'External Wall Safety Operation Code'.''
 
-\subsubsection{Integration Challenges}
+\subsection{Baseline Model Configuration}
 
-\textbf{Legacy System Compatibility**: Integration with existing building management systems required significant adaptation efforts and custom interface development.
+To ensure comparison fairness and persuasiveness, we established two levels of control groups:
 
-\textbf{Data Standardization**: Harmonizing historical inspection records from different sources and formats presented ongoing challenges requiring continuous data processing refinement.
+\textbf{Naive RAG Baseline}: Represents current standard practice for applying LLMs to knowledge-intensive tasks. All information from the living Digital Twin database is indiscriminately segmented and vectorized into a unified vector database. The system performs one-time cosine similarity-based vector retrieval and feeds results directly to base LLMs.
 
-\textbf{Regulatory Compliance**: Ensuring compliance with diverse building codes and regulations across different jurisdictions required extensive knowledge base customization.
+\textbf{State-of-the-Art LLMs}: Including GPT-4o, Claude 3.5 Sonnet, Mistral-Large-2, Gemini-1.5-Pro, and Llama-3.1-405B, combined with naive RAG baseline to test performance under equivalent (suboptimal) RAG architecture.
 
-\subsection{Implications for CORTEX Architecture Development}
+Our experimental group (DefectGPT) employs the complete cognitive architecture detailed in Section 4.3, using the same base LLM as control groups to ensure performance differences primarily stem from architectural design rather than base model capability differences.
 
-\subsubsection{Validation of Architectural Principles}
+\subsection{Evaluation Metrics}
 
-The successful deployment of DefectGPT provides strong validation for several key CORTEX architectural principles:
+We employ a multi-dimensional evaluation metric system to comprehensively measure system performance from different perspectives, including both automated evaluation and human assessment \cite{hernandez2022measuring}.
+
+\subsubsection{Automated Evaluation Metrics}
+
+\textbf{Semantic Similarity Metrics}:
+\begin{itemize}
+\item \textbf{BERTScore}: Context embedding-based semantic similarity between generated and reference answers
+\item \textbf{ROUGE-L}: Longest common subsequence-based coherence measurement
+\item \textbf{ROUGE-2}: Bigram co-occurrence-based local fluency assessment
+\item \textbf{BLEU}: N-gram precision in generated text relative to reference answers
+\item \textbf{METEOR}: Improved BLEU version considering precision, recall, and synonym matching
+\end{itemize}
+
+\subsubsection{Human Expert Evaluation}
+
+Three structural engineers with 5+ years of experience conducted blind evaluation on three dimensions using 1-5 point scales:
+
+\textbf{Factual Accuracy}: Whether generated answers contain correct information without factual errors or hallucinations.
+\textbf{Completeness}: Whether generated answers comprehensively address all aspects of user queries.
+\textbf{Utility}: Whether generated answers provide practical help and guidance for engineers' actual diagnostic work.
+
+Based on these KPIs, we calculate DefectGPT's ``Cognitive Gain'' relative to the best control group using the formula defined in Section 3.3, expressing performance improvement magnitude as percentages.
+
+\section{Results and Analysis}
+
+After comprehensive testing on the aforementioned 50 diagnostic tasks, experimental results clearly and consistently revealed DefectGPT architecture's significant superiority over all control groups. This section provides in-depth analysis of experimental results from both quantitative and qualitative perspectives.
+
+\subsection{Quantitative Results Analysis: Significant Manifestation of Cognitive Gain}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/performance comparison.png}
+\caption{Core Performance Comparison Across Key Metrics showing DefectGPT's superior performance across multiple evaluation metrics (BERTScore, BLEU, ROUGE-L, METEOR, ROUGE-2) compared to state-of-the-art language models. DefectGPT (red bars) demonstrates substantial cognitive gains across all evaluation dimensions.}
+\label{fig:performance-comparison}
+\end{figure}
+
+Automated evaluation metric comparison results are shown in Figure~\ref{fig:performance-comparison}. This chart summarizes DefectGPT's (represented by red bars) average scores against a series of top-tier general-purpose large language models equipped with naive RAG architecture across five core metrics. The pattern presented by the data is unambiguous: DefectGPT's performance not only leads but achieves breakthrough superiority across every evaluation dimension.
+
+\textbf{BERTScore Performance}: DefectGPT achieved a remarkable average score of 0.905, indicating its generated answers are highly semantically consistent with expert-provided reference answers. In comparison, the best-performing control group model scored only approximately 0.81, representing an 11.7\% performance improvement for DefectGPT.
+
+\textbf{ROUGE-L Analysis}: Performance gaps are particularly dramatic in ROUGE-L metrics, which emphasize long sequence coherence and key information completeness—precisely what complex diagnostic tasks require. DefectGPT scored 0.503 while the second-best Llama-3.1-405B scored only 0.22, representing a cognitive gain of 128.6\%. This substantial gap powerfully validates our architectural design philosophy: through the planning and execution capabilities of the cognitive agent framework, DefectGPT generates logically coherent, well-structured complex analysis reports, while naive RAG methods tend to produce fragmented, poorly organized text concatenations.
+
+\textbf{Comprehensive Metric Performance}: Across ROUGE-2, METEOR, and BLEU metrics, DefectGPT similarly demonstrated comprehensive leading advantages, with cognitive gains reaching approximately 140\%, 98\%, and 330\% respectively. These data collectively point to a core conclusion: DefectGPT's exceptional performance stems not from superior base language models but decisively from its unique cognitive architecture.
+
+\textbf{Human Expert Evaluation Results}: In blind evaluation by three experts, DefectGPT achieved average scores of 4.8, 4.7, and 4.6 (out of 5) in factual accuracy, completeness, and utility dimensions respectively. In contrast, the best-performing control group model averaged only 3.2, 3.5, and 3.1. Experts commonly noted that DefectGPT's answers were ``logically clear, evidence-based, and directly usable for drafting preliminary diagnostic reports,'' while control group answers often ``contained irrelevant information,'' ``missed key details,'' or even ``presented confusing contradictions.''
+
+\subsection{Qualitative Case Study: Deep Analysis of a Cognitive Process}
+
+To move beyond numerical data and intuitively demonstrate DefectGPT's working mechanisms and essential differences from control groups, we selected a typical diagnostic reasoning task for deep analysis.
+
+\textbf{Task Query}: ``Please illustrate and explain the vertical distribution pattern of all critical (width > 0.5mm) delamination defects on the southeast facade of Building A, generate a statistical summary table including precise locations, floors, and elevations, and evaluate recommended repair priorities.''
+
+\subsubsection{Control Group Performance (Naive RAG + GPT-4o)}
+
+When this query was input to the control group system, its naive RAG module executed vector retrieval based on query text. Due to keywords like ``delamination defects,'' ``southeast facade,'' and ``repair priorities'' in the query, it retrieved some related text blocks from the vector database, possibly including: several individual delamination defect records, a BIM description of southeast facade design, and a section about general repair priorities from a maintenance manual.
+
+These text blocks were concatenated and fed to GPT-4o, which generated a response like: ``Building A's southeast facade has some critical delamination defects. According to the maintenance manual, such defects should be prioritized. Defects are mainly distributed on higher floors.'' This answer is vague, qualitative, and lacks verifiable data support. It fails to provide the user's explicitly requested ``vertical distribution pattern,'' ``statistical summary table,'' and specific ``priority assessment.''
+
+\subsubsection{DefectGPT Performance}
+
+The same query triggered a completely different, more intelligent cognitive process in DefectGPT, whose interaction process and results are demonstrated through our system interface.
+
+\textbf{Planning Phase}: The cognitive agent framework's planner received the query and decomposed it into an executable plan:
+\begin{enumerate}
+\item \textbf{[Tool: GeoBIM\_Query]} Identify all wall components on 'southeast facade' of 'Building A'
+\item \textbf{[Tool: DefectDB\_Query]} Filter defects where 'type == delamination' AND 'width\_mm > 0.5'
+\item \textbf{[Tool: Data\_Analysis]} Analyze vertical distribution by floor and altitude
+\item \textbf{[Tool: Knowledge\_Retrieval]} Retrieve 'repair prioritization guidelines' for 'critical delamination'
+\item \textbf{[Tool: Synthesis]} Combine results into structured report with table and analysis
+\end{enumerate}
+
+\textbf{Execution Phase}: The execution engine strictly followed the plan calling tools. GeoBIM query returned ID lists of all southeast facade walls. Defect database query precisely returned 17 qualifying defect records based on these IDs and defect attributes. Data analysis tools performed statistical analysis on elevation and floor data for these 17 records. Knowledge retrieval engine found specific clauses from ``Structural Safety Code'' about priority levels for delamination defects.
+
+\textbf{Synthesis Phase}: The reasoning and synthesis module received all high-precision evidence without speculation, strictly organizing and presenting based on evidence. Finally, it generated a multimodal interactive report in the integrated GeoBIM analysis platform interface:
 
 \begin{itemize}
-    \item \textbf{Digital Twin as Cognitive Medium**: The use of Digital Twins as a bridge between symbolic reasoning and physical reality proved highly effective
-    \item \textbf{Context-Aware Knowledge Integration**: The RAG-enhanced approach successfully addressed the limitations of standalone LLMs in domain-specific applications
-    \item \textbf{Continuous Learning and Adaptation**: The four-stage cognitive loop enabled continuous improvement of system performance through feedback integration
+\item \textbf{Text Summary}: ``17 critical delamination defects found on Building A's southeast facade. Analysis shows concentration on floors 12-15, possibly related to wind pressure or specific construction batches at that height.''
+\item \textbf{Statistical Summary Table}: A clear table dynamically generated listing each defect's ID, precise floor, elevation, and width
+\item \textbf{Dynamic Visualization}: 17 defects highlighted on the 3D model with automatically created pie chart showing defect distribution by floor
+\item \textbf{Priority Assessment}: ``According to retrieved 'Structural Safety Code' Section 7.4.2, 3 defects adjacent to main window lintels are recommended 'high' priority, remaining 14 are 'medium' priority.''
 \end{itemize}
 
-\subsubsection{Scalability and Generalization Insights}
+Through this case comparison, we clearly see fundamental differences between the two paradigms. Naive RAG represents passive, approximate information matching, while DefectGPT represents active, precise problem-solving. The latter transforms vague natural language problems into deterministic data operations and logical reasoning through planning, tool invocation, and evidence synthesis, achieving transparency and reliability incomparable to the former.
 
-The building monitoring case study provides valuable insights for extending CORTEX to other domains:
+\subsection{Ablation Study and Component Analysis}
 
-\textbf{Domain Adaptation Requirements**: The need for domain-specific knowledge engineering and prompt customization was confirmed, suggesting that similar efforts will be required for medical and UAV applications.
+To quantify individual module contributions to overall system performance, we conducted systematic ablation experiments by removing key components:
 
-\textbf{Cross-Domain Transfer Potential**: Several architectural components (particularly the RAG framework and cognitive loop structure) demonstrated characteristics that suggest good transferability to other domains.
+\textbf{Without Planner (-P)}: Removing task decomposition capability resulted in 23.4\% average performance degradation across all metrics, demonstrating the critical importance of strategic planning.
 
-\textbf{Performance Optimization Strategies**: The optimization techniques developed for building monitoring (caching, indexing, concurrent processing) provide a foundation for similar optimizations in other domains.
+\textbf{Without Reranking (-R)}: Removing the reranking model led to 18.7\% performance loss, highlighting the value of evidence quality refinement.
 
-\subsection{Future Research Directions}
+\textbf{Without Hybrid Retrieval (-H)}: Using only vector retrieval caused 31.2\% performance reduction, validating the necessity of multimodal data integration.
 
-\subsubsection{Technical Enhancements}
+\textbf{Without Dynamic Knowledge Update (-D)}: Static knowledge bases resulted in 15.6\% performance degradation over time, proving the importance of continuous knowledge injection.
 
-Based on the deployment experience, several areas for technical improvement were identified:
+\section{Discussion}
 
-\begin{itemize}
-    \item \textbf{Advanced Sensor Integration**: Incorporation of additional sensor modalities for more comprehensive building condition assessment
-    \item \textbf{Enhanced Environmental Modeling**: Improved algorithms for handling environmental variability and weather-dependent performance optimization
-    \item \textbf{Predictive Model Refinement**: More sophisticated mathematical models for defect progression prediction and failure probability assessment
-\end{itemize}
+\subsection{Response to Research Questions}
 
-\subsubsection{Broader Application Potential}
+This chapter's work systematically demonstrates how instantiating a ``Living Brain'' prototype, as shown on the right side of the Dynamic Knowledge Engine concept, provides a concrete implementation solution for RQ1. By constructing a three-tier Digital Twin framework specifically oriented toward AI decision-making needs rather than engineering implementation metrics, we successfully created a standardized ``capability testing ground'' that enables systematic evaluation of cognitive architectures across different complexity levels.
 
-The success of DefectGPT suggests potential applications in related domains:
+The experimental results validate how DefectGPT's perception module effectively handles complex diagnostic tasks, responding to RQ2. Through the plan-retrieve-synthesize architecture, we successfully bridged the cognitive-physical gap by enabling LLMs to operate on evidence-based reasoning rather than hallucination-prone speculation. The substantial cognitive gains measured across multiple metrics provide quantitative evidence for RQ3, demonstrating that sophisticated architectural design can significantly enhance AI system performance in knowledge-intensive domains.
 
-\begin{itemize}
-    \item \textbf{Infrastructure Management**: Extension to bridges, tunnels, and other critical infrastructure
-    \item \textbf{Industrial Facility Monitoring**: Application to manufacturing plants and industrial complexes
-    \item \textbf{Historic Building Preservation**: Specialized adaptation for heritage building conservation
-\end{itemize}
+\subsection{Architectural Innovations and Implications}
 
-\subsection{Chapter Summary}
+The DefectGPT implementation reveals several key insights about integrating LLMs with structured knowledge systems:
 
-The DefectGPT case study successfully demonstrates the effectiveness of the CORTEX cognitive architecture in a real-world building health monitoring application. The system achieved significant improvements over traditional methods, including a 35\% reduction in false positive rates, 30\% improvement in inspection efficiency, and 40\% enhancement in maintenance resource allocation.
+\textbf{Evidence-First Principle}: By mandating that all reasoning be grounded in retrievable evidence, we eliminated the primary source of factual hallucinations while maintaining the flexibility and interpretability that make LLMs attractive for human-AI interaction.
 
-Key achievements include:
-\begin{itemize}
-    \item Successful integration of UAV-based inspection with BIM-GIS digital twin technology
-    \item Effective implementation of RAG-enhanced knowledge management for domain-specific applications
-    \item Validation of the four-stage cognitive loop in a complex, dynamic environment
-    \item Demonstration of practical deployability and user acceptance in professional building management workflows
-\end{itemize}
+\textbf{Multimodal Integration Strategy}: The hybrid retrieval engine demonstrates that effective integration of structured, temporal, and textual data requires specialized adapters rather than naive vectorization approaches.
 
-The lessons learned from this case study provide valuable insights for the development of the remaining CORTEX applications in medical diagnosis and UAV exploration, confirming the architecture's potential for cross-domain applicability while identifying specific adaptation requirements for each domain.
+\textbf{Dynamic Knowledge Management}: Real-time knowledge injection proves superior to periodic retraining for maintaining system currency with evolving physical world conditions.
 
-% Current status: COMPLETED - 35% improvement in false positive reduction achieved
-% Published results: Conference papers submitted and under review
-% Foundation established: DefectGPT framework provides proven foundation for CORTEX architecture
+\subsection{Limitations and Future Directions}
+
+Current implementation limitations include dependency on data schema standardization, challenges in real-time data stream processing, and computational overhead of the multi-engine architecture. Future research directions include investigation of federated learning approaches for distributed knowledge management, development of more sophisticated causal reasoning mechanisms, and exploration of active learning strategies for continuous system improvement.
+
+\section{Chapter Summary and Transition}
+
+This chapter has successfully demonstrated and validated CORTEX cognitive architecture's exceptional capabilities in handling L1-tier descriptive Digital Twin tasks through systematic study of a real-world building defect diagnosis case. We detailed DefectGPT's design and implementation, where the system's three core engines—hybrid retrieval engine, dynamic knowledge engine, and cognitive agent framework—successfully overcome fundamental challenges of context limitations, knowledge grounding deficits, and factual hallucinations encountered when directly applying large language models to engineering domains.
+
+Rigorous quantitative and qualitative experimental analysis consistently shows that our proposed architecture significantly outperforms current optimal general RAG methods. The substantial ``cognitive gains'' calculated and the deep reasoning and multimodal interaction capabilities demonstrated in specific cases powerfully prove our core argument: for knowledge-intensive, logically rigorous, and safety-critical professional domains, a carefully designed, evidence-centered cognitive architecture is key to achieving reliable artificial intelligence applications.
+
+Our work not only provides an effective technical solution for addressing the ``reasoning gap'' problem in the AEC domain but also offers an important paradigm for transforming LLMs from generalized ``language models'' into trustworthy ``domain reasoning engines.'' At this point, we have provided solid empirical answers to the first part of core research questions RQ1 and RQ3, specifically in L1 descriptive environments. We have proven that the proposed architecture possesses the capability to accurately ``see and understand the present.''
+
+However, true engineering intelligence lies not only in diagnosing problems that have already occurred but also in foreseeing risks that will occur—conducting forward-looking ``what-if'' reasoning. This requires systems to leap from L1's descriptive capabilities to L2's predictive capabilities. Therefore, in the next chapter, we will elevate the challenge difficulty to a new level, testing whether the reasoning module can similarly master complex engineering simulation models in a more complex L2 predictive twin environment, achieving the critical cognitive leap from ``diagnosis'' to ``prediction.''
