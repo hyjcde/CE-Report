@@ -23,18 +23,13 @@ The L3 Interactive Twins environment demands real-time bidirectional interaction
 \label{fig:llm_planning}
 \end{figure}
 
-Key characteristics include:
-\textbf{Real-time Interaction}: 100-200ms decision cycles with immediate physical consequences.
-\textbf{Closed-loop Feedback}: UAV actions affect environment state, influencing subsequent decisions.
-\textbf{Dynamic Obstacles}: Moving objects including debris, other aircraft, and environmental hazards.
-\textbf{Uncertainty and Noise}: Sensor limitations, communication delays, and environmental unpredictability.
-\textbf{Safety Criticality}: Navigation errors can result in crash, mission failure, or safety hazards.
+Key characteristics include: (i) Real-time Interaction with 100-200ms decision cycles and immediate physical consequences; (ii) Closed-loop Feedback where UAV actions affect environment state, influencing subsequent decisions; (iii) Dynamic Obstacles including moving objects such as debris, other aircraft, and environmental hazards; (iv) Uncertainty and Noise from sensor limitations, communication delays, and environmental unpredictability; and (v) Safety Criticality where navigation errors can result in crash, mission failure, or safety hazards.
 
 \section{Hypothesis and CORTEX Mapping}
 
 \subsection{Hypothesis H3}
 
-\textbf{H3}: CORTEX's action module (Safe Execution) with its dual-loop coordination mechanism can achieve higher task efficiency while maintaining safety compared to traditional planning + reactive avoidance combinations, specifically providing better exploration coverage and fewer safety incidents in GPS-denied autonomous reconnaissance scenarios.
+\emph{H3}: CORTEX's action module (Safe Execution) with its dual-loop coordination mechanism can achieve higher task efficiency while maintaining safety compared to traditional planning + reactive avoidance combinations, specifically providing better exploration coverage and fewer safety incidents in GPS-denied autonomous reconnaissance scenarios.
 
 This hypothesis directly tests the core value proposition of the CORTEX architecture: that the integration of LLM-based high-level reasoning with Digital Twin-enabled environmental understanding can outperform traditional autonomous navigation approaches in complex, safety-critical scenarios.
 
@@ -42,77 +37,51 @@ This hypothesis directly tests the core value proposition of the CORTEX architec
 
 The UAV case study utilizes the complete CORTEX architecture, with particular emphasis on the action module's dual-loop coordination mechanism:
 
-\textbf{Slow Loop (LLM Strategic Layer)}: Operates at 1-5 second intervals, responsible for high-level mission planning and area prioritization, strategic path planning around known obstacles, mission objective optimization and resource allocation, risk assessment and contingency planning, and natural language communication with human operators.
+\emph{Slow Loop (LLM Strategic Layer)}: Operates at 1-5 second intervals, responsible for high-level mission planning and area prioritization, strategic path planning around known obstacles, mission objective optimization and resource allocation, risk assessment and contingency planning, and natural language communication with human operators.
 
-\textbf{Fast Loop (CORTEX Execution Layer)}: Operates at 100-200ms intervals, responsible for real-time obstacle detection and avoidance, immediate safety response and emergency maneuvers, low-level flight control and stabilization, sensor data processing and Digital Twin updates, and safety constraint validation and enforcement.
+\emph{Fast Loop (CORTEX Execution Layer)}: Operates at 100-200ms intervals, responsible for real-time obstacle detection and avoidance, immediate safety response and emergency maneuvers, low-level flight control and stabilization, sensor data processing and Digital Twin updates, and safety constraint validation and enforcement.
 
 \section{Experimental Setup}
 
 \subsection{Simulation Environment}
 
-\textbf{Digital Twin Environment}: High-fidelity Unity-based simulation environment incorporating realistic physics engine with aerodynamic modeling, dynamic weather conditions and lighting changes, procedurally generated terrain with variable complexity, dynamic obstacle generation including falling debris and moving objects, realistic sensor simulation with noise and failure modes, and communication latency and bandwidth limitations.
+The digital twin environment employs a high-fidelity Unity-based simulation environment incorporating realistic physics engine with aerodynamic modeling, dynamic weather conditions and lighting changes, procedurally generated terrain with variable complexity, dynamic obstacle generation including falling debris and moving objects, realistic sensor simulation with noise and failure modes, and communication latency and bandwidth limitations.
 
-\textbf{Scenario Complexity Levels}:
-\textbf{Map 1 (Low Complexity)}: Open terrain, minimal static obstacles, predictable weather.
-\textbf{Map 2 (Medium Complexity)}: Urban environment, moderate obstacle density, variable weather.
-\textbf{Map 3 (High Complexity)}: Dense urban with damaged infrastructure, high dynamic obstacle density, adverse weather.
+Scenario complexity levels are designed as follows: Map 1 (Low Complexity) features open terrain, minimal static obstacles, and predictable weather; Map 2 (Medium Complexity) includes urban environment, moderate obstacle density, and variable weather; Map 3 (High Complexity) presents dense urban areas with damaged infrastructure, high dynamic obstacle density, and adverse weather conditions.
 
 \subsection{CORTEX Configuration}
 
-\textbf{Complete CORTEX Architecture} including perception module with real-time 3D SLAM using LiDAR and camera fusion, thinking module with GPT-4 based strategic reasoning with aviation domain adaptation, action module with dual-loop coordination with safety constraint validation, and learning module with continuous performance optimization and strategy adaptation.
+The complete CORTEX architecture includes: (i) perception module with real-time 3D SLAM using LiDAR and camera fusion; (ii) thinking module with GPT-4 based strategic reasoning with aviation domain adaptation; (iii) action module with dual-loop coordination with safety constraint validation; and (iv) learning module with continuous performance optimization and strategy adaptation.
 
-\textbf{LLM Integration}: Domain-specific prompt engineering for aviation operations, including flight safety protocols and emergency procedures, mission planning and resource optimization strategies, risk assessment and decision-making under uncertainty, and natural language communication with human operators.
+LLM integration involves domain-specific prompt engineering for aviation operations, including flight safety protocols and emergency procedures, mission planning and resource optimization strategies, risk assessment and decision-making under uncertainty, and natural language communication with human operators.
 
 \subsection{Baseline System}
 
-\textbf{Traditional Approach}: RRT* (Rapidly-exploring Random Tree) for global path planning combined with Dynamic Window Approach (DWA) for local reactive obstacle avoidance.
+The traditional approach employs RRT* (Rapidly-exploring Random Tree) for global path planning combined with Dynamic Window Approach (DWA) for local reactive obstacle avoidance.
 
-\textbf{Evaluation Metrics}:
-\textbf{Area Coverage Rate (%)}: Percentage of designated area successfully explored.
-\textbf{Mission Completion Time (minutes)}: Total time to achieve coverage objectives.
-\textbf{Safety Events}: Number of near-miss incidents, collision avoidance maneuvers, and safety protocol activations.
-\textbf{Intelligence Quality}: Completeness and accuracy of reconnaissance data collected.
+Evaluation metrics include: (i) Area Coverage Rate (%) as the percentage of designated area successfully explored; (ii) Mission Completion Time (minutes) as the total time to achieve coverage objectives; (iii) Safety Events counting near-miss incidents, collision avoidance maneuvers, and safety protocol activations; and (iv) Intelligence Quality measuring completeness and accuracy of reconnaissance data collected.
 
 \section{Implementation Plan}
 
 \subsection{Phase 1: Simulation Framework (Partially Completed)}
 
-\textbf{Completed Work}:
-Unity basic simulation environment setup, basic physics engine and UAV dynamics model, simple sensor data generation (LiDAR point clouds, camera images).
+Completed work includes Unity basic simulation environment setup, basic physics engine and UAV dynamics model, and simple sensor data generation (LiDAR point clouds, camera images).
 
-\textbf{Remaining Work}:
-\textbf{Environment Complexity}: Add dynamic obstacle generation algorithms, implement realistic weather and lighting change systems.
-\textbf{Sensor Realism}: Add sensor noise models, failure mode simulation, and communication delay effects.
-\textbf{Map Generation}: Develop standardized test maps for three complexity levels, ensure reproducible experimental conditions.
+Remaining work encompasses: Environment Complexity enhancements including dynamic obstacle generation algorithms and realistic weather and lighting change systems; Sensor Realism improvements with sensor noise models, failure mode simulation, and communication delay effects; and Map Generation development of standardized test maps for three complexity levels ensuring reproducible experimental conditions.
 
 \subsection{Phase 2: CORTEX Integration (Planned)}
 
-\textbf{Perception Module Integration}:
-\textbf{SLAM System}: Integrate open-source SLAM algorithms (such as ORB-SLAM3), adapt for UAV applications.
-\textbf{Obstacle Detection}: Develop real-time obstacle detection and classification algorithms based on point clouds.
-\textbf{Digital Twin Updates}: Establish real-time mapping mechanisms from environment state to Digital Twin.
+Perception Module Integration involves: SLAM System integration of open-source SLAM algorithms (such as ORB-SLAM3) adapted for UAV applications; Obstacle Detection development of real-time obstacle detection and classification algorithms based on point clouds; and Digital Twin Updates establishment of real-time mapping mechanisms from environment state to Digital Twin.
 
-\textbf{LLM Strategic Reasoning Integration}:
-\textbf{Domain Adaptation}: Fine-tune GPT-4 using aviation domain corpora, including flight safety manuals, emergency procedures, and navigation specifications.
-\textbf{Interface Design}: Develop API interfaces between LLM and simulation environment, enable environment state queries and command transmission.
-\textbf{Prompt Engineering}: Design specialized prompt templates for mission planning, risk assessment, and decision generation.
+LLM Strategic Reasoning Integration includes: Domain Adaptation through fine-tuning GPT-4 using aviation domain corpora including flight safety manuals, emergency procedures, and navigation specifications; Interface Design developing API interfaces between LLM and simulation environment enabling environment state queries and command transmission; and Prompt Engineering designing specialized prompt templates for mission planning, risk assessment, and decision generation.
 
-\textbf{Dual-Loop Coordination Mechanism}:
-\textbf{Fast Loop Controller}: Implement low-level flight controller based on Model Predictive Control (MPC).
-\textbf{Safety Constraints}: Establish hard and soft constraint systems ensuring LLM decisions meet safety requirements.
-\textbf{Coordination Algorithms}: Develop information passing and decision coordination algorithms between slow and fast loops.
+Dual-Loop Coordination Mechanism encompasses: Fast Loop Controller implementation of low-level flight controller based on Model Predictive Control (MPC); Safety Constraints establishment of hard and soft constraint systems ensuring LLM decisions meet safety requirements; and Coordination Algorithms development of information passing and decision coordination algorithms between slow and fast loops.
 
 \subsection{Phase 3: Experimental Validation (Planned)}
 
-\textbf{Baseline System Implementation}:
-\textbf{RRT* Implementation}: Integrate open-source RRT* path planning algorithms, configure parameters suitable for UAV applications.
-\textbf{DWA Integration}: Implement Dynamic Window Approach for local obstacle avoidance, ensure effective coordination with RRT*.
-\textbf{Performance Optimization}: Tune parameters of both baseline algorithms to achieve optimal performance as comparison benchmarks.
+Baseline System Implementation involves: RRT* Implementation integrating open-source RRT* path planning algorithms configured with parameters suitable for UAV applications; DWA Integration implementing Dynamic Window Approach for local obstacle avoidance ensuring effective coordination with RRT*; and Performance Optimization tuning parameters of both baseline algorithms to achieve optimal performance as comparison benchmarks.
 
-\textbf{Experimental Design}:
-\textbf{Statistical Approach}: Conduct 10 trials per complexity level, ensure statistical significance of results.
-\textbf{Data Collection}: Automate experimental processes, collect all key metric data.
-\textbf{Analysis Methods}: Design statistical analysis approach, including significance testing and confidence interval calculations.
+Experimental Design includes: Statistical Approach conducting 10 trials per complexity level ensuring statistical significance of results; Data Collection through automated experimental processes collecting all key metric data; and Analysis Methods designing statistical analysis approach including significance testing and confidence interval calculations.
 
 \section{Expected Results and Cognitive Gains}
 
@@ -120,61 +89,37 @@ Unity basic simulation environment setup, basic physics engine and UAV dynamics 
 
 Based on preliminary analysis of architectural advantages, CORTEX is expected to demonstrate significant improvements across all evaluation metrics:
 
-\textbf{Area Coverage Efficiency}: 25-40% improvement in coverage rate compared to RRT*+DWA baseline through strategic mission planning enabling more efficient exploration patterns, LLM reasoning optimizing area prioritization based on mission objectives, and adaptive strategy modification responding to real-time discoveries.
+Area Coverage Efficiency is anticipated to show 25-40\% improvement in coverage rate compared to RRT*+DWA baseline through strategic mission planning enabling more efficient exploration patterns, LLM reasoning optimizing area prioritization based on mission objectives, and adaptive strategy modification responding to real-time discoveries.
 
-\textbf{Safety Performance}: 80-90% reduction in safety incidents and near-miss events through proactive risk assessment identifying potential hazards before they become critical, dual-loop architecture providing multiple layers of safety validation, and predictive modeling anticipating dangerous situations and enabling preventive action.
+Safety Performance is expected to achieve 80-90\% reduction in safety incidents and near-miss events through proactive risk assessment identifying potential hazards before they become critical, dual-loop architecture providing multiple layers of safety validation, and predictive modeling anticipating dangerous situations and enabling preventive action.
 
-\textbf{Mission Completion Time}: 15-30% reduction in time to achieve coverage objectives through intelligent path planning reducing redundant exploration, strategic decision-making optimizing resource allocation, and adaptive mission modification responding to changing conditions.
+Mission Completion Time should demonstrate 15-30\% reduction in time to achieve coverage objectives through intelligent path planning reducing redundant exploration, strategic decision-making optimizing resource allocation, and adaptive mission modification responding to changing conditions.
 
 \subsection{Cognitive Gain Categories}
 
-Expected cognitive gains by category:
+Expected cognitive gains by category include:
 
-\textbf{Strategic Planning and Mission Optimization}:
-Path efficiency improvement: 30-45% reduction in total flight distance.
-Mission objective completion: 20-35% improvement in intelligence gathering quality.
-Resource optimization: 25-40% improvement in energy efficiency.
+Strategic Planning and Mission Optimization: Path efficiency improvement of 30-45\% reduction in total flight distance; Mission objective completion showing 20-35\% improvement in intelligence gathering quality; Resource optimization demonstrating 25-40\% improvement in energy efficiency.
 
-\textbf{Dynamic Adaptation and Learning}:
-Environment adaptation: 40-60% faster response to changing conditions.
-Strategic replanning: 50-70% improvement in handling unexpected situations.
-Mission flexibility: 35-50% better adaptation to evolving objectives.
+Dynamic Adaptation and Learning: Environment adaptation achieving 40-60\% faster response to changing conditions; Strategic replanning showing 50-70\% improvement in handling unexpected situations; Mission flexibility demonstrating 35-50\% better adaptation to evolving objectives.
 
-\textbf{Safety and Risk Management}:
-Proactive hazard avoidance: 70-85% reduction in reactive safety maneuvers.
-Risk assessment accuracy: 45-60% improvement in threat identification.
-Emergency response: 30-45% faster response to critical situations.
+Safety and Risk Management: Proactive hazard avoidance achieving 70-85\% reduction in reactive safety maneuvers; Risk assessment accuracy showing 45-60\% improvement in threat identification; Emergency response demonstrating 30-45\% faster response to critical situations.
 
 \section{Technical Challenges and Solutions}
 
 \subsection{Key Technical Challenges}
 
-\textbf{Real-time Performance Constraints}:
-\textbf{Challenge}: LLM reasoning time may exceed 100-200ms fast loop requirements.
-\textbf{Solution}: Implement reasoning caching, parallel processing, and progressive decision updates.
-\textbf{Implementation Plan}: Develop lightweight LLM variants and edge optimization techniques.
+Real-time Performance Constraints present the challenge that LLM reasoning time may exceed 100-200ms fast loop requirements. The proposed solution implements reasoning caching, parallel processing, and progressive decision updates. The implementation plan develops lightweight LLM variants and edge optimization techniques.
 
-\textbf{Dual-Loop Coordination Complexity}:
-\textbf{Challenge}: Ensure consistency between slow loop strategic decisions and fast loop execution.
-\textbf{Solution}: Design hierarchical decision architecture and conflict resolution mechanisms.
-\textbf{Implementation Plan}: Develop formal verification methods to ensure safety.
+Dual-Loop Coordination Complexity involves ensuring consistency between slow loop strategic decisions and fast loop execution. The solution designs hierarchical decision architecture and conflict resolution mechanisms. The implementation plan develops formal verification methods to ensure safety.
 
-\textbf{Environmental Uncertainty}:
-\textbf{Challenge}: Sensor noise, dynamic obstacles, and communication interruptions affect decision quality.
-\textbf{Solution}: Implement robust uncertainty quantification and conservative decision strategies.
-\textbf{Implementation Plan}: Develop multi-sensor fusion and fault detection algorithms.
+Environmental Uncertainty addresses how sensor noise, dynamic obstacles, and communication interruptions affect decision quality. The solution implements robust uncertainty quantification and conservative decision strategies. The implementation plan develops multi-sensor fusion and fault detection algorithms.
 
 \subsection{Innovative Solutions}
 
-\textbf{Hierarchical Safety Architecture}:
-\textbf{Hard Constraint Layer}: Physical limitations (maximum speed, acceleration, collision boundaries).
-\textbf{Soft Constraint Layer}: Mission-related constraints (energy consumption limits, communication range).
-\textbf{Intelligent Constraint Layer}: LLM-based contextualized safety assessment.
+Hierarchical Safety Architecture comprises: Hard Constraint Layer addressing physical limitations (maximum speed, acceleration, collision boundaries); Soft Constraint Layer handling mission-related constraints (energy consumption limits, communication range); and Intelligent Constraint Layer providing LLM-based contextualized safety assessment.
 
-\textbf{Progressive Decision System}:
-\textbf{Immediate Response}: Fast reactions based on precomputed strategies.
-\textbf{Short-term Adjustment}: Strategy fine-tuning based on local observations.
-\textbf{Long-term Planning}: Strategic replanning based on LLM deep reasoning.
+Progressive Decision System includes: Immediate Response providing fast reactions based on precomputed strategies; Short-term Adjustment enabling strategy fine-tuning based on local observations; and Long-term Planning facilitating strategic replanning based on LLM deep reasoning.
 
 \section{Chapter Conclusion}
 
@@ -190,8 +135,8 @@ The UAV case study demonstrates the full CORTEX architecture operating under the
 
 \subsection{Implementation Timeline}
 
-\textbf{Year 2} (Current): Complete simulation framework development and baseline system implementation.
-\textbf{Year 3}: Full CORTEX integration, experimental validation, and results analysis.
-\textbf{Key Milestones}: Complete core algorithm development by end of 2024, complete comprehensive experimental validation by mid-2025.
+Year 2 (Current): Complete simulation framework development and baseline system implementation.
+Year 3: Full CORTEX integration, experimental validation, and results analysis.
+Key Milestones: Complete core algorithm development by end of 2024, complete comprehensive experimental validation by mid-2025.
 
-The expected cognitive gains of 25-40% in task efficiency and 80-90% in safety performance represent substantial improvements that justify the complexity and investment required for CORTEX implementation. These gains emerge from qualitatively different decision-making capabilities rather than simple performance optimization, establishing that CORTEX represents a new paradigm for autonomous system design rather than an evolution of existing approaches. 
+The expected cognitive gains of 25-40\% in task efficiency and 80-90\% in safety performance represent substantial improvements that justify the complexity and investment required for CORTEX implementation. These gains emerge from qualitatively different decision-making capabilities rather than simple performance optimization, establishing that CORTEX represents a new paradigm for autonomous system design rather than an evolution of existing approaches. 
