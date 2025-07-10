@@ -29,6 +29,7 @@
 %\usepackage[authoryear,longnamesfirst]{natbib}
 \usepackage[sort, numbers]{natbib}
 % \usepackage[sorting=none]{biblatex}
+\usepackage[table,dvipsnames]{xcolor}
 \usepackage{amssymb}% http://ctan.org/pkg/amssymb
 \usepackage{mdframed}
 \usepackage{times}
@@ -39,7 +40,6 @@
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{hyperref}
-\usepackage{xcolor}
 \usepackage{pifont}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -55,7 +55,6 @@
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
 \usepackage{textcomp}
 \usepackage{stfloats}
-\usepackage[table]{xcolor}
 \usepackage{url}
 \usepackage{multirow}
 \usepackage{verbatim}
@@ -82,9 +81,6 @@
 % algorithm package
 \usepackage{epsfig}
 \usepackage[linesnumbered,ruled,vlined,noline]{algorithm2e}
-% color package
-\usepackage[dvipsnames]{xcolor}
-\usepackage{xcolor}
 %\usepackage[sorting=none]{biblatex}
 % For author et al. citation
 % \usepackage[longnamesfirst, authoryear]{natbib}
@@ -171,8 +167,16 @@
 
 % Here goes the abstract
 \begin{abstract}
-Building defect management faces challenges in handling evolving defects across complex urban structures. This paper develops DefectGPT, a framework integrating Unmanned Aerial Vehicle (UAV) inspection, Building Information Modeling (BIM), and Geographic Information Systems (GIS) into a Digital Twin (DT) environment. The framework introduces three innovations: (1) a dynamic knowledge engine that automatically updates defect patterns from multi-source data streams; (2) a natural language interface enabling contextual queries; and (3) an explainable analysis module linking maintenance decisions to historical cases and regulatory standards. To our knowledge, this is the first implementation of Retrieval-Augmented Generation (RAG) in building defect management, where domain-specific knowledge retrieval guides Large Language Models (LLMs) to generate compliance-aware recommendations. A 12-month deployment on a Hong Kong high-rise shows systematic correlation analysis and real-time decision support compared to document-driven approaches. This work provides a paradigm for automated defect diagnosis in infrastructure maintenance workflows, advancing DT applications in urban sustainability.
-\end{abstract}
+The emergence of Large Language Models (LLMs) provides previously unattainable cognitive capabilities for solving complex problems. However, when applying them to high-risk, dynamic physical world decision-making, a fundamental ``cognitive-physical gap'' exists. This gap manifests as three core technical challenges: the ``reality grounding'' problem where LLMs struggle to accurately understand multimodal, structured data from physical systems; the ``model utilization'' problem where they cannot effectively invoke and orchestrate complex physical simulation models; and the ``safe execution'' problem where they fail to coordinate their slow reasoning with the rapid, safe response requirements of the physical world.
+
+To systematically address these challenges, a doctoral research plan has been formulated, centered on conceptualizing and designing a new Agent architecture named CORTEX. The theoretical foundation of this work is a novel ``three-tier digital twin decision framework.'' This framework categorizes physical decision tasks by complexity evolution into three levels: L1-Descriptive Twins (for diagnostic decisions), L2-Predictive Twins (for strategic decisions), and L3-Interactive Twins (for action-oriented decisions). This framework not only provides logical justification for CORTEX architecture design but also constructs a standardized ``capability testing ground'' for subsequent empirical evaluation.
+
+The CORTEX architecture directly responds to the three challenges through deep extensions of existing paradigms. Its ``Perception Module'' employs a novel Digital Twin Retrieval-Augmented Generation (DT-RAG) mechanism to address reality grounding; its ``Reasoning Module'' encapsulates complex physical models as LLM-callable tools to address model utilization; and its ``Action Module'' designs a ``slow-fast dual-loop'' safety coordinator to address safe execution.
+
+The effectiveness of this architecture will be rigorously evaluated through a series of representative cases. The evaluation centers on quantifying a metric called ``Cognitive Gain'' to measure the performance improvement CORTEX brings compared to the best traditional methods in the field. Three case studies map to L1, L2, and L3 levels respectively: structural health diagnosis of buildings at L1 level, cancer treatment strategy planning based on tumor microenvironment twins at L2 level, and autonomous UAV exploration in unknown environments at L3 level.
+
+Ultimately, this doctoral research aims to deliver a thoroughly validated, scalable architectural blueprint, laying the foundation for future development of powerful next-generation artificial intelligence systems capable of advanced reasoning and reliable action in complex, dynamic physical worlds.
+\end{abstract>
 
 % Research highlights
 \nolinenumbers
