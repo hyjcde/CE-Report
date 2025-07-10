@@ -1172,8 +1172,6 @@ INPUT ./pages/abstract.tex
 INPUT pages/abstract.tex
 INPUT ./pages/abstract.tex
 INPUT pages/abstract.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 OUTPUT thesis.toc
 OUTPUT thesis.lof
 OUTPUT thesis.lot
@@ -1188,13 +1186,12 @@ INPUT ./chapters/chp1-introduction.tex
 INPUT chapters/chp1-introduction.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong20.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./chapters/chp2-preliminaries.tex
 OUTPUT chapters/chp2-preliminaries.aux
 INPUT ./chapters/chp2-preliminaries.tex
@@ -1204,131 +1201,3 @@ INPUT ./chapters/chp2-preliminaries.tex
 INPUT chapters/chp2-preliminaries.tex
 INPUT ./chapters/chp2-preliminaries.tex
 INPUT chapters/chp2-preliminaries.tex
-INPUT ./chapters/chp3-proof.tex
-OUTPUT chapters/chp3-proof.aux
-INPUT ./chapters/chp3-proof.tex
-INPUT ./chapters/chp3-proof.tex
-INPUT ./chapters/chp3-proof.tex
-INPUT ./chapters/chp3-proof.tex
-INPUT chapters/chp3-proof.tex
-INPUT ./chapters/chp3-proof.tex
-INPUT chapters/chp3-proof.tex
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT ./chapters/chp4-applications.tex
-OUTPUT chapters/chp4-applications.aux
-INPUT ./chapters/chp4-applications.tex
-INPUT ./chapters/chp4-applications.tex
-INPUT ./chapters/chp4-applications.tex
-INPUT ./chapters/chp4-applications.tex
-INPUT chapters/chp4-applications.tex
-INPUT ./chapters/chp4-applications.tex
-INPUT chapters/chp4-applications.tex
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/Dynamic Knowledge Engine.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/The Cognitive Agent Framework.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/Hybrid Retrieval Engine.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT ./chapters/chp5-medical-case.tex
-OUTPUT chapters/chp5-medical-case.aux
-INPUT ./chapters/chp5-medical-case.tex
-INPUT ./chapters/chp5-medical-case.tex
-INPUT ./chapters/chp5-medical-case.tex
-INPUT ./chapters/chp5-medical-case.tex
-INPUT chapters/chp5-medical-case.tex
-INPUT ./chapters/chp5-medical-case.tex
-INPUT chapters/chp5-medical-case.tex
-INPUT ./chapters/chp6-uav-case.tex
-OUTPUT chapters/chp6-uav-case.aux
-INPUT ./chapters/chp6-uav-case.tex
-INPUT ./chapters/chp6-uav-case.tex
-INPUT ./chapters/chp6-uav-case.tex
-INPUT ./chapters/chp6-uav-case.tex
-INPUT chapters/chp6-uav-case.tex
-INPUT ./chapters/chp6-uav-case.tex
-INPUT chapters/chp6-uav-case.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcbx1200.tfm
-INPUT ./chapters/chp7-discussion.tex
-OUTPUT chapters/chp7-discussion.aux
-INPUT ./chapters/chp7-discussion.tex
-INPUT ./chapters/chp7-discussion.tex
-INPUT ./chapters/chp7-discussion.tex
-INPUT ./chapters/chp7-discussion.tex
-INPUT chapters/chp7-discussion.tex
-INPUT ./chapters/chp7-discussion.tex
-INPUT chapters/chp7-discussion.tex
-INPUT ./chapters/chp8-conclusion.tex
-OUTPUT chapters/chp8-conclusion.aux
-INPUT ./chapters/chp8-conclusion.tex
-INPUT ./chapters/chp8-conclusion.tex
-INPUT ./chapters/chp8-conclusion.tex
-INPUT ./chapters/chp8-conclusion.tex
-INPUT chapters/chp8-conclusion.tex
-INPUT ./chapters/chp8-conclusion.tex
-INPUT chapters/chp8-conclusion.tex
-INPUT ./appendices/appx-A.tex
-OUTPUT appendices/appx-A.aux
-INPUT ./appendices/appx-A.tex
-INPUT ./appendices/appx-A.tex
-INPUT ./appendices/appx-A.tex
-INPUT ./appendices/appx-A.tex
-INPUT appendices/appx-A.tex
-INPUT ./appendices/appx-A.tex
-INPUT appendices/appx-A.tex
-INPUT ./thesis.bbl
-INPUT thesis.bbl
-INPUT ./thesis.bbl
-INPUT thesis.bbl
-INPUT thesis.aux
-INPUT ./chapters/chp1-introduction.aux
-INPUT chapters/chp1-introduction.aux
-INPUT chapters/chp1-introduction.aux
-INPUT ./chapters/chp2-preliminaries.aux
-INPUT chapters/chp2-preliminaries.aux
-INPUT chapters/chp2-preliminaries.aux
-INPUT ./chapters/chp3-proof.aux
-INPUT chapters/chp3-proof.aux
-INPUT chapters/chp3-proof.aux
-INPUT ./chapters/chp4-applications.aux
-INPUT chapters/chp4-applications.aux
-INPUT chapters/chp4-applications.aux
-INPUT ./chapters/chp5-medical-case.aux
-INPUT chapters/chp5-medical-case.aux
-INPUT chapters/chp5-medical-case.aux
-INPUT ./chapters/chp6-uav-case.aux
-INPUT chapters/chp6-uav-case.aux
-INPUT chapters/chp6-uav-case.aux
-INPUT ./chapters/chp7-discussion.aux
-INPUT chapters/chp7-discussion.aux
-INPUT chapters/chp7-discussion.aux
-INPUT ./chapters/chp8-conclusion.aux
-INPUT chapters/chp8-conclusion.aux
-INPUT chapters/chp8-conclusion.aux
-INPUT ./appendices/appx-A.aux
-INPUT appendices/appx-A.aux
-INPUT appendices/appx-A.aux
-INPUT ./thesis.out
-INPUT ./thesis.out

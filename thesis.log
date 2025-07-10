@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.5)  10 JUL 2025 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.5)  10 JUL 2025 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,14 +877,55 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 38.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [0
 
-] (./pages/abstract.tex [1
+] (./pages/abstract.tex
+./pages/abstract.tex:7: Misplaced alignment tab character &.
+l.7 ...red four-stage loop: Perceptual Grounding &
+                                                   Context Formulation, Caus...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-]) [2] [3]
+./pages/abstract.tex:7: Misplaced alignment tab character &.
+l.7 ...g & Context Formulation, Causal Inference &
+                                                   Predictive Simulation, Ac...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./pages/abstract.tex:7: Misplaced alignment tab character &.
+l.7 ...tive Simulation, Action Policy Generation &
+                                                   Validation, and Physical ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./pages/abstract.tex:7: Misplaced alignment tab character &.
+l.7 ...on & Validation, and Physical Interaction &
+                                                   Model Calibration. To val...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[1
+
+]) [2]
 No file thesis.toc.
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
-[4
+[3
 
 
 
@@ -893,7 +934,7 @@ No file thesis.lof.
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
-[5
+[4
 
 
 ]
@@ -901,7 +942,7 @@ No file thesis.lot.
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
-[6
+[5
 
 
 ]
@@ -937,1223 +978,282 @@ Package natbib Warning: Citation `doyle1989robust' on page 2 undefined on input 
 
 Package natbib Warning: Citation `zhou1996robust' on page 2 undefined on input line 13.
 
-LaTeX Font Info:    Trying to load font information for C70+rm on input line 13.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
-)
-Package CJKpunct Info: punctuation spaces for family 'rm' do not exist. Use family 'def' instead. on input line 13.
+
+Package natbib Warning: Citation `ashby1956introduction' on page 2 undefined on input line 15.
 
 
-Package natbib Warning: Citation `ashby1956introduction' on page 2 undefined on input line 13.
+Package natbib Warning: Citation `lasi2014industry' on page 2 undefined on input line 17.
 
 
-Package natbib Warning: Citation `lasi2014industry' on page 2 undefined on input line 15.
+Package natbib Warning: Citation `xu2018industry' on page 2 undefined on input line 17.
 
 
-Package natbib Warning: Citation `xu2018industry' on page 2 undefined on input line 15.
+Package natbib Warning: Citation `tao2018digital' on page 2 undefined on input line 17.
 
 
-Package natbib Warning: Citation `tao2018digital' on page 2 undefined on input line 15.
-
-
-Package natbib Warning: Citation `grieves2014digital' on page 2 undefined on input line 15.
-
-
-Package natbib Warning: Citation `pearl2019seven' on page 2 undefined on input line 15.
-
-
-Package natbib Warning: Citation `peters2017elements' on page 2 undefined on input line 15.
-
-
-Package natbib Warning: Citation `pearl2000causality' on page 2 undefined on input line 17.
-
-
-Package natbib Warning: Citation `spirtes2000causation' on page 2 undefined on input line 17.
-
-
-Package natbib Warning: Citation `hendrycks2019natural' on page 2 undefined on input line 17.
-
-
-Package natbib Warning: Citation `koh2021wilds' on page 2 undefined on input line 17.
+Package natbib Warning: Citation `grieves2014digital' on page 2 undefined on input line 17.
 
 [2]
 
-Package natbib Warning: Citation `chen2020cognitive' on page 3 undefined on input line 19.
+Package natbib Warning: Citation `pearl2019seven' on page 3 undefined on input line 21.
 
 
-Package natbib Warning: Citation `zhang2021cognitive' on page 3 undefined on input line 19.
+Package natbib Warning: Citation `peters2017elements' on page 3 undefined on input line 21.
 
 
-Package natbib Warning: Citation `lake2017building' on page 3 undefined on input line 19.
+Package natbib Warning: Citation `pearl2000causality' on page 3 undefined on input line 21.
 
 
-Package natbib Warning: Citation `marcus2020next' on page 3 undefined on input line 19.
+Package natbib Warning: Citation `spirtes2000causation' on page 3 undefined on input line 21.
 
 
-Package natbib Warning: Citation `smith1987situated' on page 3 undefined on input line 21.
+Package natbib Warning: Citation `hendrycks2019natural' on page 3 undefined on input line 23.
 
 
-Package natbib Warning: Citation `suchman1987plans' on page 3 undefined on input line 21.
+Package natbib Warning: Citation `koh2021wilds' on page 3 undefined on input line 23.
 
 
-Package natbib Warning: Citation `harnad1990symbol' on page 3 undefined on input line 23.
+Package natbib Warning: Citation `chen2020cognitive' on page 3 undefined on input line 25.
 
 
-Package natbib Warning: Citation `barsalou2008grounded' on page 3 undefined on input line 23.
+Package natbib Warning: Citation `zhang2021cognitive' on page 3 undefined on input line 25.
 
 
-Package natbib Warning: Citation `hayes1985naive' on page 3 undefined on input line 25.
+Package natbib Warning: Citation `harnad1990symbol' on page 3 undefined on input line 27.
 
 
-Package natbib Warning: Citation `davis1990representation' on page 3 undefined on input line 25.
+Package natbib Warning: Citation `barsalou2008grounded' on page 3 undefined on input line 27.
 
 
-Package natbib Warning: Citation `lake2018generalization' on page 3 undefined on input line 25.
+Package natbib Warning: Citation `lake2017building' on page 3 undefined on input line 29.
 
 
-Package natbib Warning: Citation `fodor1988connectionism' on page 3 undefined on input line 25.
+Package natbib Warning: Citation `marcus2020next' on page 3 undefined on input line 29.
+
+
+Package natbib Warning: Citation `smith1987situated' on page 3 undefined on input line 29.
+
+
+Package natbib Warning: Citation `suchman1987plans' on page 3 undefined on input line 29.
 
 [3]
 
-Package natbib Warning: Citation `grieves2014digital' on page 4 undefined on input line 31.
+Package natbib Warning: Citation `hayes1985naive' on page 4 undefined on input line 31.
 
 
-Package natbib Warning: Citation `tao2019digital' on page 4 undefined on input line 31.
+Package natbib Warning: Citation `davis1990representation' on page 4 undefined on input line 31.
+
+LaTeX Font Info:    Trying to load font information for C70+rm on input line 31.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+File: c70rm.fd 2022/07/14 v2.5.10 Chinese font definition (CTEX)
+)
+Package CJKpunct Info: punctuation spaces for family 'rm' do not exist. Use family 'def' instead. on input line 31.
 
 
-Package natbib Warning: Citation `ISO23247' on page 4 undefined on input line 31.
+Package natbib Warning: Citation `lake2018generalization' on page 4 undefined on input line 31.
 
 
-Package natbib Warning: Citation `jones2020characterising' on page 4 undefined on input line 31.
+Package natbib Warning: Citation `fodor1988connectionism' on page 4 undefined on input line 31.
 
 
-Package natbib Warning: Citation `boje2020towards' on page 4 undefined on input line 35.
+Package natbib Warning: Citation `grieves2014digital' on page 4 undefined on input line 37.
 
 
-Package natbib Warning: Citation `lu2020digital' on page 4 undefined on input line 35.
+Package natbib Warning: Citation `tao2019digital' on page 4 undefined on input line 37.
 
 
-Package natbib Warning: Citation `smeulders2000content' on page 4 undefined on input line 37.
+Package natbib Warning: Citation `ISO23247' on page 4 undefined on input line 37.
 
 
-Package natbib Warning: Citation `datta2008image' on page 4 undefined on input line 37.
+Package natbib Warning: Citation `jones2020characterising' on page 4 undefined on input line 37.
 
 
-Package natbib Warning: Citation `gruber1993translation' on page 4 undefined on input line 37.
+Package natbib Warning: Citation `boje2020towards' on page 4 undefined on input line 41.
 
 
-Package natbib Warning: Citation `studer1998knowledge' on page 4 undefined on input line 37.
+Package natbib Warning: Citation `lu2020digital' on page 4 undefined on input line 41.
 
 [4]
-
-Package natbib Warning: Citation `baltrusaitis2018multimodal' on page 5 undefined on input line 39.
-
-
-Package natbib Warning: Citation `ramesh2021zero' on page 5 undefined on input line 39.
-
-
-Package natbib Warning: Citation `negri2017review' on page 5 undefined on input line 43.
-
-
-Package natbib Warning: Citation `kritzinger2018digital' on page 5 undefined on input line 43.
-
-
-Package natbib Warning: Citation `pearl2019seven' on page 5 undefined on input line 45.
-
-
-Package natbib Warning: Citation `zhao2020sim' on page 5 undefined on input line 47.
-
-
-Package natbib Warning: Citation `peng2018sim' on page 5 undefined on input line 47.
-
-[5]
-
-Package natbib Warning: Citation `schluse2018experimentable' on page 6 undefined on input line 51.
-
-
-Package natbib Warning: Citation `minerva2020digital' on page 6 undefined on input line 51.
-
-
-Package natbib Warning: Citation `garcia1989model' on page 6 undefined on input line 53.
-
-
-Package natbib Warning: Citation `rawlings2009model' on page 6 undefined on input line 53.
-
-
-Package natbib Warning: Citation `gibson1979ecological' on page 6 undefined on input line 55.
-
-
-Package natbib Warning: Citation `aloimonos1988active' on page 6 undefined on input line 55.
-
-[6]
-
-Package natbib Warning: Citation `brown2020language' on page 7 undefined on input line 61.
-
-
-Package natbib Warning: Citation `chowdhery2022palm' on page 7 undefined on input line 61.
-
-
-Package natbib Warning: Citation `openai2023gpt4' on page 7 undefined on input line 61.
-
-
-Package natbib Warning: Citation `brown2020language' on page 7 undefined on input line 65.
-
-
-Package natbib Warning: Citation `wei2022emergent' on page 7 undefined on input line 65.
-
-
-Package natbib Warning: Citation `dong2022survey' on page 7 undefined on input line 67.
-
-
-Package natbib Warning: Citation `liu2023pre' on page 7 undefined on input line 67.
-
-[7]
-
-Package natbib Warning: Citation `wei2022chain' on page 8 undefined on input line 69.
-
-
-Package natbib Warning: Citation `kojima2022large' on page 8 undefined on input line 69.
-
-
-Package natbib Warning: Citation `wang2022self' on page 8 undefined on input line 69.
-
-
-Package natbib Warning: Citation `wei2022chain' on page 8 undefined on input line 69.
-
-
-Package natbib Warning: Citation `zhang2022automatic' on page 8 undefined on input line 69.
-
-
-Package natbib Warning: Citation `huang2022language' on page 8 undefined on input line 73.
-
-
-Package natbib Warning: Citation `ahn2022can' on page 8 undefined on input line 73.
-
-
-Package natbib Warning: Citation `newell1972human' on page 8 undefined on input line 75.
-
-
-Package natbib Warning: Citation `anderson1993rules' on page 8 undefined on input line 75.
-
-
-Package natbib Warning: Citation `valmeekam2022large' on page 8 undefined on input line 77.
-
-
-Package natbib Warning: Citation `pallagani2023planbench' on page 8 undefined on input line 77.
-
-
-Package natbib Warning: Citation `yao2022react' on page 8 undefined on input line 81.
-
-
-Package natbib Warning: Citation `schick2023toolformer' on page 8 undefined on input line 81.
-
-[8]
-
-Package natbib Warning: Citation `clark1998extended' on page 9 undefined on input line 83.
-
-
-Package natbib Warning: Citation `clark2010supersizing' on page 9 undefined on input line 83.
-
-
-Package natbib Warning: Citation `parisi2022talm' on page 9 undefined on input line 85.
-
-
-Package natbib Warning: Citation `qin2023toolllm' on page 9 undefined on input line 85.
-
-
-Package natbib Warning: Citation `mnih2016asynchronous' on page 9 undefined on input line 89.
-
-
-Package natbib Warning: Citation `sutton2018reinforcement' on page 9 undefined on input line 89.
-
-[9]
-
-Package natbib Warning: Citation `treisman1996binding' on page 10 undefined on input line 99.
-
-
-Package natbib Warning: Citation `shadlen2003neural' on page 10 undefined on input line 99.
-
-[10] [11]
-
-Package natbib Warning: Citation `harnad1990symbol' on page 12 undefined on input line 117.
-
-
-Package natbib Warning: Citation `barsalou2008grounded' on page 12 undefined on input line 117.
-
-[12]
-Overfull \hbox (8.30705pt too wide) in paragraph at lines 123--124
-[]\OT1/cmr/m/n/12 Furthermore, phys-i-cal sys-tems ex-hibit what en-gi-neers call "op-er-a-tional regimes"
+Overfull \hbox (3.21408pt too wide) in paragraph at lines 43--44
+\OT1/cmr/m/n/12 spa-tial and tem-po-ral align-ment, they do not ad-dress se-man-tic align-ment |\C70/rm/m/n/12/20 ^^T| \OT1/cmr/m/n/12 ensuring
  []
 
 
-Package natbib Warning: Citation `negri2017review' on page 13 undefined on input line 127.
+Package natbib Warning: Citation `baltrusaitis2018multimodal' on page 5 undefined on input line 45.
 
 
-Package natbib Warning: Citation `tao2019digital' on page 13 undefined on input line 127.
-
-[13{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-Package natbib Warning: Citation `leveson2011engineering' on page 14 undefined on input line 137.
+Package natbib Warning: Citation `ramesh2021zero' on page 5 undefined on input line 45.
 
 
-Package natbib Warning: Citation `knight2002safety' on page 14 undefined on input line 137.
-
-[14]
-
-Package natbib Warning: Citation `avizienis2004basic' on page 15 undefined on input line 143.
+Package natbib Warning: Citation `smeulders2000content' on page 5 undefined on input line 47.
 
 
-Package natbib Warning: Citation `powell1992delta' on page 15 undefined on input line 143.
-
-[15] [16] [17] [18]
-
-LaTeX Warning: Reference `chp:literature' on page 19 undefined on input line 196.
+Package natbib Warning: Citation `datta2008image' on page 5 undefined on input line 47.
 
 
-LaTeX Warning: Reference `chp:cortex' on page 19 undefined on input line 198.
+Package natbib Warning: Citation `gruber1993translation' on page 5 undefined on input line 49.
 
 
-LaTeX Warning: Reference `chp:building' on page 19 undefined on input line 200.
+Package natbib Warning: Citation `studer1998knowledge' on page 5 undefined on input line 49.
 
-[19]
+[5]
 
-LaTeX Warning: Reference `chp:medical' on page 20 undefined on input line 202.
-
-
-LaTeX Warning: Reference `chp:uav' on page 20 undefined on input line 204.
+Package natbib Warning: Citation `negri2017review' on page 6 undefined on input line 53.
 
 
-LaTeX Warning: Reference `chp:discussion' on page 20 undefined on input line 206.
+Package natbib Warning: Citation `kritzinger2018digital' on page 6 undefined on input line 53.
 
 
-LaTeX Warning: Reference `chp:conclusion' on page 20 undefined on input line 208.
+Package natbib Warning: Citation `pearl2019seven' on page 6 undefined on input line 61.
+
+[6]
+Overfull \hbox (1.37888pt too wide) in paragraph at lines 69--70
+\OT1/cmr/m/n/12 dis-crete events. Con-tin-u-ous evo-lu-tion in-cludes pro-cesses like tem-per-a-ture changes,
+ []
+
+[7]
+
+Package natbib Warning: Citation `brown2020language' on page 8 undefined on input line 85.
 
 
-LaTeX Warning: Reference `chp:discussion' on page 20 undefined on input line 210.
+Package natbib Warning: Citation `chowdhery2022palm' on page 8 undefined on input line 85.
+
+[8] [9] [10]
+
+Package natbib Warning: Citation `harnad1990symbol' on page 11 undefined on input line 115.
 
 
-LaTeX Warning: Reference `chp:conclusion' on page 20 undefined on input line 212.
+Package natbib Warning: Citation `barsalou2008grounded' on page 11 undefined on input line 115.
 
-) [20]
+
+Overfull \hbox (0.11685pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/12 dence be-tween sym-bolic rep-re-sen-ta-tions and con-tin-u-ously evolv-ing phys-i-cal states.
+ []
+
+[11]
+
+Package natbib Warning: Citation `negri2017review' on page 12 undefined on input line 125.
+
+
+Package natbib Warning: Citation `tao2019digital' on page 12 undefined on input line 125.
+
+[12]
+
+Package natbib Warning: Citation `leveson2011engineering' on page 13 undefined on input line 135.
+
+
+Package natbib Warning: Citation `knight2002safety' on page 13 undefined on input line 135.
+
+[13]
+
+Package natbib Warning: Citation `avizienis2004basic' on page 14 undefined on input line 141.
+
+
+Package natbib Warning: Citation `powell1992delta' on page 14 undefined on input line 141.
+
+[14] [15] [16] [17]
+
+LaTeX Warning: Reference `chp:literature' on page 18 undefined on input line 196.
+
+
+LaTeX Warning: Reference `chp:methodology' on page 18 undefined on input line 198.
+
+
+LaTeX Warning: Reference `chp:building' on page 18 undefined on input line 200.
+
+
+LaTeX Warning: Reference `chp:medical' on page 18 undefined on input line 202.
+
+
+LaTeX Warning: Reference `chp:uav' on page 18 undefined on input line 204.
+
+
+LaTeX Warning: Reference `chp:discussion' on page 18 undefined on input line 206.
+
+[18]
+
+LaTeX Warning: Reference `chp:conclusion' on page 19 undefined on input line 208.
+
+) [19]
 \openout2 = `chapters/chp2-preliminaries.aux'.
 
  (./chapters/chp2-preliminaries.tex
 Chapter 2.
 
-Package natbib Warning: Citation `glaessgen2012digital' on page 21 undefined on input line 9.
+Package natbib Warning: Citation `glaessgen2012digital' on page 20 undefined on input line 9.
 
 
-Package natbib Warning: Citation `grieves2014digital' on page 21 undefined on input line 9.
+Package natbib Warning: Citation `grieves2014digital' on page 20 undefined on input line 9.
 
-[21
+[20
 
 
 
 
 ]
 
-Package natbib Warning: Citation `tao2018digital' on page 22 undefined on input line 11.
+Package natbib Warning: Citation `tao2018digital' on page 21 undefined on input line 11.
 
 
-Package natbib Warning: Citation `kritzinger2018digital' on page 22 undefined on input line 15.
+Package natbib Warning: Citation `kritzinger2018digital' on page 21 undefined on input line 15.
 
 
-Package natbib Warning: Citation `rasheed2020digital' on page 22 undefined on input line 15.
+Package natbib Warning: Citation `rasheed2020digital' on page 21 undefined on input line 15.
 
 
-Package natbib Warning: Citation `iso23247' on page 22 undefined on input line 17.
+Package natbib Warning: Citation `iso23247' on page 21 undefined on input line 17.
 
-[22] [23]
+[21] [22]
 
-Package natbib Warning: Citation `jones2020cognitive' on page 24 undefined on input line 27.
-
-
-Package natbib Warning: Citation `negri2017review' on page 24 undefined on input line 27.
+Package natbib Warning: Citation `jones2020cognitive' on page 23 undefined on input line 27.
 
 
-Overfull \hbox (9.2928pt too wide) in paragraph at lines 29--29
-[]\OT1/cmr/bx/n/17.28 Retrieval-Augmented Gen-er-a-tion: Prin-ci-ples
- []
+Package natbib Warning: Citation `negri2017review' on page 23 undefined on input line 27.
 
 
-Package natbib Warning: Citation `lewis2020retrieval' on page 24 undefined on input line 31.
+Package natbib Warning: Citation `lewis2020retrieval' on page 23 undefined on input line 31.
 
 
-Package natbib Warning: Citation `karpukhin2020dense' on page 24 undefined on input line 31.
+Package natbib Warning: Citation `karpukhin2020dense' on page 23 undefined on input line 31.
 
 
-Package natbib Warning: Citation `guu2020retrieval' on page 24 undefined on input line 33.
+Package natbib Warning: Citation `guu2020retrieval' on page 23 undefined on input line 33.
 
 
-Package natbib Warning: Citation `karpukhin2020dense' on page 24 undefined on input line 37.
+Package natbib Warning: Citation `karpukhin2020dense' on page 23 undefined on input line 37.
 
 
-Package natbib Warning: Citation `izacard2021leveraging' on page 24 undefined on input line 37.
+Package natbib Warning: Citation `izacard2021leveraging' on page 23 undefined on input line 37.
 
 
-Package natbib Warning: Citation `yu2022generate' on page 24 undefined on input line 37.
+Package natbib Warning: Citation `yu2022generate' on page 23 undefined on input line 37.
+
+[23]
+
+Package natbib Warning: Citation `izacard2021leveraging' on page 24 undefined on input line 39.
+
+
+Package natbib Warning: Citation `lewis2020retrieval' on page 24 undefined on input line 39.
+
+
+Package natbib Warning: Citation `asai2023self' on page 24 undefined on input line 41.
 
 [24]
 
-Package natbib Warning: Citation `izacard2021leveraging' on page 25 undefined on input line 39.
+Package natbib Warning: Citation `tang2019retrieving' on page 25 undefined on input line 47.
 
 
-Package natbib Warning: Citation `lewis2020retrieval' on page 25 undefined on input line 39.
+Package natbib Warning: Citation `yue2022ts2vec' on page 25 undefined on input line 49.
 
 
-Package natbib Warning: Citation `asai2023self' on page 25 undefined on input line 41.
+Package natbib Warning: Citation `chen2022murag' on page 25 undefined on input line 51.
+
+
+Package natbib Warning: Citation `scholak2021duorat' on page 25 undefined on input line 55.
 
 [25]
 
-Package natbib Warning: Citation `tang2019retrieving' on page 26 undefined on input line 47.
+Package natbib Warning: Citation `yu2018spider' on page 26 undefined on input line 57.
 
 
-Package natbib Warning: Citation `yue2022ts2vec' on page 26 undefined on input line 49.
-
-
-Package natbib Warning: Citation `chen2022murag' on page 26 undefined on input line 51.
-
-
-Package natbib Warning: Citation `scholak2021duorat' on page 26 undefined on input line 55.
-
-[26]
-
-Package natbib Warning: Citation `yu2018spider' on page 27 undefined on input line 57.
-
-
-Package natbib Warning: Citation `berant2013semantic' on page 27 undefined on input line 59.
-
-
-Overfull \hbox (1.97517pt too wide) in paragraph at lines 59--60
-[]\OT1/cmr/m/n/12 Recent work on se-man-tic pars-ing for struc-tured knowl-edge bases shows promise
- []
-
-
-Overfull \hbox (3.31065pt too wide) in paragraph at lines 61--61
-[]\OT1/cmr/bx/n/17.28 LLM Agents: Paradigm Evo-lu-tion and Chal-
- []
-
-
-Package natbib Warning: Citation `mialon2023augmented' on page 27 undefined on input line 63.
-
-
-Package natbib Warning: Citation `wei2022chain' on page 27 undefined on input line 67.
-
-[27]
-
-Package natbib Warning: Citation `yao2022react' on page 28 undefined on input line 69.
-
-
-Package natbib Warning: Citation `schick2023toolformer' on page 28 undefined on input line 71.
-
-
-Package natbib Warning: Citation `richards2023autogpt' on page 28 undefined on input line 73.
-
-
-Package natbib Warning: Citation `nijkamp2022codegen' on page 28 undefined on input line 77.
-
-
-Package natbib Warning: Citation `press2022measuring' on page 28 undefined on input line 77.
-
-[28]
-
-Package natbib Warning: Citation `deng2023mind2web' on page 29 undefined on input line 79.
-
-
-Package natbib Warning: Citation `sumers2023cognitive' on page 29 undefined on input line 81.
-
-
-Package natbib Warning: Citation `bisk2020experience' on page 29 undefined on input line 89.
-
-[29]
-
-Package natbib Warning: Citation `harnad1990symbol' on page 30 undefined on input line 91.
-
-
-Package natbib Warning: Citation `lu2021physics' on page 30 undefined on input line 91.
-
-
-Package natbib Warning: Citation `hughes2012finite' on page 30 undefined on input line 95.
-
-
-Package natbib Warning: Citation `li2023apibank' on page 30 undefined on input line 97.
-
-
-Package natbib Warning: Citation `chen2021evaluating' on page 30 undefined on input line 99.
-
-[30]
-
-Package natbib Warning: Citation `thrun2002probabilistic' on page 31 undefined on input line 103.
-
-
-Package natbib Warning: Citation `amodei2016concrete' on page 31 undefined on input line 105.
-
-
-Package natbib Warning: Citation `pecka2014safe' on page 31 undefined on input line 107.
-
-
-Package natbib Warning: Citation `ahn2022saycan' on page 31 undefined on input line 111.
-
-[31]
-
-Package natbib Warning: Citation `tobin2017domain' on page 32 undefined on input line 113.
-
-
-Package natbib Warning: Citation `alayrac2022flamingo' on page 32 undefined on input line 115.
-
-
-Overfull \hbox (3.7018pt too wide) in paragraph at lines 123--124
-\OT1/cmr/m/n/12 Retrieval-Augmented Gen-er-a-tion (RAG) and Large Lan-guage Model (LLM) Agent
- []
-
-[32] [33] [34]) [35] [36]
-\openout2 = `chapters/chp3-proof.aux'.
-
- (./chapters/chp3-proof.tex
-Chapter 3.
-
-Package natbib Warning: Citation `glaessgen2012digital' on page 37 undefined on input line 9.
-
-
-Package natbib Warning: Citation `iso23247' on page 37 undefined on input line 9.
-
-[37
-
-
-
-
-]
-Underfull \hbox (badness 1533) in paragraph at lines 23--23
-[]\OT1/cmr/bx/n/12 Core Func-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]\OT1/cmr/bx/n/12 Decision
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]\OT1/cmr/bx/n/12 Data
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\OT1/cmr/bx/n/12 Char-ac-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]\OT1/cmr/bx/n/12 Key
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\OT1/cmr/bx/n/12 Chal-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-[]\OT1/cmr/bx/n/12 Case
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]\OT1/cmr/m/n/12 Descriptive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]\OT1/cmr/m/n/12 Authoritative
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 Record of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]\OT1/cmr/m/n/12 Diagnostic
- []
-
-
-Overfull \hbox (9.41603pt too wide) in paragraph at lines 25--25
-[]\OT1/cmr/m/n/12 Static/quasi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 static,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 struc-tured,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 mul-ti-
- []
-
-
-Overfull \hbox (3.79803pt too wide) in paragraph at lines 25--25
-[]\OT1/cmr/m/n/12 Information
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 fu-sion,
- []
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 25--25
-\OT1/cmr/m/n/12 noise pro-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-[]\OT1/cmr/m/n/12 Building
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]\OT1/cmr/m/n/12 Predictive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]\OT1/cmr/m/n/12 Strategic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]\OT1/cmr/m/n/12 Model-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 based,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 re-quires
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 in-put,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 out-puts
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]\OT1/cmr/m/n/12 Model
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 or-ches-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 tra-tion,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 pa-ram-e-ter
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-\OT1/cmr/m/n/12 un-der-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-[]\OT1/cmr/m/n/12 Cancer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-\OT1/cmr/m/n/12 Treat-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]\OT1/cmr/m/n/12 Interactive
- []
-
-
-Overfull \hbox (5.24232pt too wide) in paragraph at lines 29--29
-[]\OT1/cmr/m/n/12 Counterfactual
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 Sand-box for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]\OT1/cmr/m/n/12 Actionable
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 (What to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]\OT1/cmr/m/n/12 Real-time
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 in-ter-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 ac-tion,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 closed-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 de-lays
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-[]\OT1/cmr/m/n/12 Safety,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 ef-fi-ciency,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 real-time
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-\OT1/cmr/m/n/12 per-for-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-[]\OT1/cmr/m/n/12 UAV Ex-
- []
-
-
-Overfull \hbox (83.99992pt too wide) in paragraph at lines 21--32
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package natbib Warning: Citation `tao2018digital' on page 38 undefined on input line 36.
-
-
-Package natbib Warning: Citation `negri2017review' on page 38 undefined on input line 36.
-
-[38]
-
-Package natbib Warning: Citation `boje2020towards' on page 39 undefined on input line 38.
-
-
-Package natbib Warning: Citation `lu2020digital' on page 39 undefined on input line 42.
-
-
-Package natbib Warning: Citation `rasheed2020digital' on page 39 undefined on input line 50.
-
-
-Package natbib Warning: Citation `fuller2020digital' on page 39 undefined on input line 50.
-
-[39]
-
-Package natbib Warning: Citation `rasheed2020digital' on page 40 undefined on input line 52.
-
-
-Package natbib Warning: Citation `thrun2002probabilistic' on page 40 undefined on input line 64.
-
-[40]
-
-Package natbib Warning: Citation `grande2012scan' on page 41 undefined on input line 66.
-
-[41]
-Overfull \hbox (40.28867pt too wide) in paragraph at lines 88--88
-[]\OT1/cmr/bx/n/17.28 Architecture De-sign: A Phys-i-cal World-Oriented
- []
-
-[42]
-
-LaTeX Warning: Reference `fig:architecture_overview' on page 43 undefined on input line 92.
-
-
-LaTeX Warning: Reference `chp:intro' on page 43 undefined on input line 92.
-
-<figures/DefectGPT/Overall Framework.png, id=282, 5070.945pt x 3625.545pt>
-File: figures/DefectGPT/Overall Framework.png Graphic file (type png)
-<use figures/DefectGPT/Overall Framework.png>
-Package pdftex.def Info: figures/DefectGPT/Overall Framework.png  used on input line 96.
-(pdftex.def)             Requested size: 371.30595pt x 265.43155pt.
-[43 <./figures/DefectGPT/Overall Framework.png>]
-
-Package natbib Warning: Citation `lewis2020retrieval' on page 44 undefined on input line 103.
-
-
-Package natbib Warning: Citation `gao2023retrieval' on page 44 undefined on input line 105.
-
-
-Overfull \hbox (5.2683pt too wide) in paragraph at lines 105--106
-[]\OT1/cmr/m/n/12 Digital Twin in-for-ma-tion en-vi-ron-ments are struc-tured (such as SQL databases),
- []
-
-
-Package natbib Warning: Citation `scholak2021duorat' on page 44 undefined on input line 112.
-
-
-Package natbib Warning: Citation `yue2022ts2vec' on page 44 undefined on input line 113.
-
-
-Package natbib Warning: Citation `karpukhin2020dense' on page 44 undefined on input line 114.
-
-[44]
-
-Package natbib Warning: Citation `boje2020towards' on page 45 undefined on input line 115.
-
-
-Package natbib Warning: Citation `ji2023survey' on page 45 undefined on input line 129.
-
-
-Overfull \hbox (2.35793pt too wide) in paragraph at lines 131--131
-[]\OT1/cmr/bx/n/14.4 Reasoning Mod-ule: Model-Profile-Driven Deep Tool
- []
-
-
-Package natbib Warning: Citation `hughes2012finite' on page 45 undefined on input line 133.
-
-[45]
-
-Package natbib Warning: Citation `lu2022unified' on page 46 undefined on input line 135.
-
-[46]
-Overfull \hbox (2.4545pt too wide) in paragraph at lines 155--156
-[]\OT1/cmr/bx/n/12 Configuration Gen-er-a-tion\OT1/cmr/m/n/12 : Dy-nam-i-cally gen-er-at-ing com-pli-ant in-put con-
- []
-
-
-Package natbib Warning: Citation `lu2022unified' on page 47 undefined on input line 161.
-
-
-Package natbib Warning: Citation `amodei2016concrete' on page 47 undefined on input line 165.
-
-[47]
-
-Package natbib Warning: Citation `gat1998three' on page 48 undefined on input line 167.
-
-
-Overfull \hbox (24.97495pt too wide) in paragraph at lines 184--185
-[]\OT1/cmr/m/n/12 Independent of the LLM, im-ple-mented as a real-time pro-cess in high-performance
- []
-
-[48]
-Overfull \hbox (7.06087pt too wide) in paragraph at lines 204--204
-[]\OT1/cmr/bx/n/17.28 Evaluation Frame-work and Met-rics (An-swer-
- []
-
-
-Package natbib Warning: Citation `stone2016artificial' on page 49 undefined on input line 206.
-
-[49]
-
-Package natbib Warning: Citation `duan2022survey' on page 50 undefined on input line 210.
-
-
-Package natbib Warning: Citation `rogers2021primer' on page 50 undefined on input line 214.
-
-[50]
-Overfull \hbox (1.06999pt too wide) in paragraph at lines 232--233
-[]\OT1/cmr/bx/n/12 State-of-the-art Per-for-mance\OT1/cmr/m/n/12 : Cur-rent best-performing meth-ods in each
- []
-
-
-Overfull \hbox (3.49318pt too wide) in paragraph at lines 234--235
-[]\OT1/cmr/bx/n/12 Algorithmic Di-ver-sity\OT1/cmr/m/n/12 : Rep-re-sen-ta-tive ap-proaches from dif-fer-ent method-
- []
-
-
-Package natbib Warning: Citation `hernandez2022measuring' on page 51 undefined on input line 240.
-
-
-Overfull \hbox (32.7554pt too wide) in paragraph at lines 240--241
-\OT1/cmr/m/n/12 To com-pre-hen-sively char-ac-ter-ize per-for-mance, the eval-u-a-tion em-ploys multi-dimensional
- []
-
-[51] [52]
-
-Package natbib Warning: Citation `rasheed2020digital' on page 53 undefined on input line 266.
-
-
-Overfull \hbox (11.08643pt too wide) in paragraph at lines 274--275
-[]\OT1/cmr/bx/n/12 Environmental Adap-ta-tion\OT1/cmr/m/n/12 : Abil-ity to main-tain ef-fec-tive-ness un-der chang-
- []
-
-
-Package natbib Warning: Citation `grande2012scan' on page 53 undefined on input line 280.
-
-[53]
-Overfull \hbox (7.96442pt too wide) in paragraph at lines 282--282
-[]\OT1/cmr/bx/n/14.4 Cognitive Gain: A Com-pre-hen-sive Per-for-mance Met-
- []
-
-
-Package natbib Warning: Citation `stone2016artificial' on page 54 undefined on input line 284.
-
-
-Package natbib Warning: Citation `hernandez2022measuring' on page 54 undefined on input line 300.
-
-[54] [55] [56] [57]) [58] [59]
-\openout2 = `chapters/chp4-applications.aux'.
-
- (./chapters/chp4-applications.tex
-Chapter 4.
-
-Overfull \hbox (24.87279pt too wide) in paragraph at lines 5--5
-[]\OT1/cmr/bx/n/17.28 Introduction: From Data Rep-re-sen-ta-tion Chal-
- []
-
-
-Package natbib Warning: Citation `boje2020towards' on page 60 undefined on input line 7.
-
-
-Package natbib Warning: Citation `lu2020digital' on page 60 undefined on input line 7.
-
-
-Package natbib Warning: Citation `tang2019retrieving' on page 60 undefined on input line 7.
-
-
-Package natbib Warning: Citation `li2024single' on page 60 undefined on input line 7.
-
-
-Package natbib Warning: Citation `tao2018digital' on page 60 undefined on input line 7.
-
-[60
-
-
-
-
-]
-
-Package natbib Warning: Citation `negri2017review' on page 61 undefined on input line 9.
-
-
-Package natbib Warning: Citation `bruno2018historic' on page 61 undefined on input line 9.
-
-<figures/DefectGPT/Dynamic Knowledge Engine.png, id=416, 930.47626pt x 493.845pt>
-File: figures/DefectGPT/Dynamic Knowledge Engine.png Graphic file (type png)
-<use figures/DefectGPT/Dynamic Knowledge Engine.png>
-Package pdftex.def Info: figures/DefectGPT/Dynamic Knowledge Engine.png  used on input line 13.
-(pdftex.def)             Requested size: 371.30595pt x 197.06729pt.
-
-Package natbib Warning: Citation `hamdan2021semantic' on page 61 undefined on input line 18.
-
-[61]
-
-Package natbib Warning: Citation `ji2023survey' on page 62 undefined on input line 24.
-
-[62 <./figures/DefectGPT/Dynamic Knowledge Engine.png>]
-
-Package natbib Warning: Citation `liu2023lost' on page 63 undefined on input line 26.
-
-
-Package natbib Warning: Citation `harnad1990symbol' on page 63 undefined on input line 28.
-
-
-Package natbib Warning: Citation `zhang2023siren' on page 63 undefined on input line 30.
-
-[63]
-Overfull \hbox (1.7528pt too wide) in paragraph at lines 38--38
-[]\OT1/cmr/bx/n/17.28 Problem Def-i-ni-tion and L1 De-scrip-tive Twin
- []
-
-[64]
-<figures/DefectGPT/System_implement.png, id=438, 1003.75pt x 581.17125pt>
-File: figures/DefectGPT/System_implement.png Graphic file (type png)
-<use figures/DefectGPT/System_implement.png>
-Package pdftex.def Info: figures/DefectGPT/System_implement.png  used on input line 62.
-(pdftex.def)             Requested size: 371.30595pt x 214.98566pt.
- [65] [66 <./figures/DefectGPT/System_implement.png>]
-
-Package natbib Warning: Citation `boje2020towards' on page 67 undefined on input line 71.
-
-
-Package natbib Warning: Citation `spencer2019advances' on page 67 undefined on input line 73.
-
-
-Package natbib Warning: Citation `hamdan2021semantic' on page 67 undefined on input line 75.
-
-[67]
-
-Package natbib Warning: Citation `tang2019retrieving' on page 68 undefined on input line 81.
-
-
-Package natbib Warning: Citation `li2024single' on page 68 undefined on input line 83.
-
-
-Package natbib Warning: Citation `fan2023retrieval' on page 68 undefined on input line 85.
-
-[68]
-Overfull \hbox (15.32266pt too wide) in paragraph at lines 87--87
-[]\OT1/cmr/bx/n/17.28 CORTEX Per-cep-tion Mod-ule: Plan-Retrieve-
- []
-
-<figures/DefectGPT/The Cognitive Agent Framework.png, id=465, 1012.78375pt x 474.77374pt>
-File: figures/DefectGPT/The Cognitive Agent Framework.png Graphic file (type png)
-<use figures/DefectGPT/The Cognitive Agent Framework.png>
-Package pdftex.def Info: figures/DefectGPT/The Cognitive Agent Framework.png  used on input line 93.
-(pdftex.def)             Requested size: 371.30595pt x 174.05527pt.
-
-LaTeX Warning: Reference `fig:cognitive-agent-framework' on page 69 undefined on input line 100.
-
-[69 <./figures/DefectGPT/The Cognitive Agent Framework.png>]
-
-Package natbib Warning: Citation `yao2022react' on page 70 undefined on input line 107.
-
-
-LaTeX Warning: Reference `fig:cognitive-agent-framework' on page 70 undefined on input line 111.
-
-<figures/DefectGPT/Hybrid Retrieval Engine.png, id=473, 855.195pt x 480.79625pt>
-File: figures/DefectGPT/Hybrid Retrieval Engine.png Graphic file (type png)
-<use figures/DefectGPT/Hybrid Retrieval Engine.png>
-Package pdftex.def Info: figures/DefectGPT/Hybrid Retrieval Engine.png  used on input line 115.
-(pdftex.def)             Requested size: 371.30595pt x 208.7485pt.
-
-LaTeX Warning: Reference `fig:hybrid-retrieval-engine' on page 70 undefined on input line 120.
-
-[70] [71 <./figures/DefectGPT/Hybrid Retrieval Engine.png>] [72]
-
-LaTeX Warning: Reference `fig:cognitive-agent-framework' on page 73 undefined on input line 140.
-
-[73] [74] [75]
-
-Package natbib Warning: Citation `hernandez2022measuring' on page 76 undefined on input line 202.
-
-[76]
-<figures/DefectGPT/performance comparison.png, id=519, 742.775pt x 473.77pt>
-File: figures/DefectGPT/performance comparison.png Graphic file (type png)
-<use figures/DefectGPT/performance comparison.png>
-Package pdftex.def Info: figures/DefectGPT/performance comparison.png  used on input line 233.
-(pdftex.def)             Requested size: 371.30595pt x 236.83382pt.
-
-
-LaTeX Warning: Reference `fig:performance-comparison' on page 77 undefined on input line 238.
-
-[77] [78 <./figures/DefectGPT/performance comparison.png>]
-Overfull \hbox (8.70541pt too wide) in paragraph at lines 242--243
-[]\OT1/cmr/bx/n/12 ROUGE-L Anal-y-sis\OT1/cmr/m/n/12 : Per-for-mance gaps are par-tic-u-larly dra-matic in ROUGE-
- []
-
-[79] [80] [81] [82]
-Overfull \hbox (30.85405pt too wide) in paragraph at lines 304--305
-\OT1/cmr/m/n/12 gap by en-abling LLMs to op-er-ate on evidence-based rea-son-ing rather than hallucination-
- []
-
-[83] [84]
-Overfull \hbox (0.60435pt too wide) in paragraph at lines 324--325
-[]\OT1/cmr/m/n/12 Rigorous quan-ti-ta-tive and qual-i-ta-tive ex-per-i-men-tal anal-y-sis con-sis-tently shows
- []
-
-) [85]
-\openout2 = `chapters/chp5-medical-case.aux'.
-
- (./chapters/chp5-medical-case.tex
-Chapter 5.
-[86
-
-
-
-
-] [87]
-
-Package natbib Warning: Citation `dietrich2017efsumb' on page 88 undefined on input line 21.
-
-[88]
-
-Package natbib Warning: Citation `van2019deep' on page 89 undefined on input line 25.
-
-[89]
-
-Package natbib Warning: Citation `abramowicz2013benefits' on page 90 undefined on input line 33.
-
-[90] [91] [92]
-Overfull \hbox (14.60281pt too wide) in paragraph at lines 53--53
-[]\OT1/cmr/bx/n/17.28 Non-Visual Dig-i-tal Twin: Feature-Space Rep-
- []
-
-[93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
-Overfull \hbox (13.56393pt too wide) in paragraph at lines 189--190
-\OT1/cmr/m/n/12 moves iden-ti-fy-ing fea-tures while pre-serv-ing di-ag-nos-tic con-tent, meta-data anonymiza-
- []
-
-[109] [110] [111] [112] [113] [114]
-Overfull \hbox (0.56418pt too wide) in paragraph at lines 233--234
-\OT1/cmr/m/n/12 The pre-lim-i-nary val-i-da-tion of the COR-TEX med-i-cal di-ag-nos-tic sys-tem has demon-
- []
-
-[115]
-Overfull \hbox (9.12509pt too wide) in paragraph at lines 243--244
-[]\OT1/cmr/m/n/12 Confidence scor-ing and un-cer-tainty quan-tifi-ca-tion rep-re-sent sig-nif-i-cant strengths
- []
-
-[116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]) [129] [130]
-\openout2 = `chapters/chp6-uav-case.aux'.
-
- (./chapters/chp6-uav-case.tex
-Chapter 6.
-[131
-
-
-
-
-] [132]
-Overfull \hbox (1.87868pt too wide) in paragraph at lines 30--30
-[]\OT1/cmr/bx/n/17.28 Chapter Hy-poth-e-sis and COR-TEX Map-ping 
- []
-
-[133] [134] [135] [136] [137] [138] [139]
-Overfull \hbox (2.91545pt too wide) in paragraph at lines 224--229
-[]\OT1/cmr/m/n/12 **Cross-Mission Learn-ing**: - Ex-pe-ri-ence ac-cu-mu-la-tion im-proves per-for-mance
- []
-
-[140] [141]
-Overfull \hbox (3.18488pt too wide) in paragraph at lines 272--273
-\OT1/cmr/m/n/12 ap-proach that iden-ti-fies both uni-ver-sal ar-chi-tec-tural prin-ci-ples and domain-specific
- []
-
-[142]) [143]
-\openout2 = `chapters/chp7-discussion.aux'.
-
- (./chapters/chp7-discussion.tex
-Chapter 7.
-[144
-
-
-
-
-]
-Overfull \hbox (1.73917pt too wide) in paragraph at lines 21--22
-\OT1/cmr/m/n/12 feature-space rep-re-sen-ta-tion ap-proach proved that COR-TEX can ef-fec-tively bridge
- []
-
-
-Overfull \hbox (1.06279pt too wide) in paragraph at lines 27--27
-[]\OT1/cmr/bx/n/14.4 CORTEX Ar-chi-tec-ture Ef-fec-tive-ness and Adapt-abil-
- []
-
-[145] [146]
-Overfull \hbox (3.65625pt too wide) in paragraph at lines 56--56
-\OT1/cmr/bx/n/14.4 a De-ci-sion En-vi-ron-ment Frame-work Re-flect-ing Phys-
- []
-
-[147] [148] [149] [150] [151]
-Overfull \hbox (1.67387pt too wide) in paragraph at lines 135--137
-\OT1/cmr/m/n/12 re-li-a-bil-ity, and human-AI col-lab-o-ra-tion pro-vides the-o-ret-i-cal frame-works that could
- []
-
-[152] [153]
-Overfull \hbox (3.11128pt too wide) in paragraph at lines 168--170
-\OT1/cmr/m/n/12 **Computational Com-plex-ity Chal-lenges**: The in-te-gra-tion of so-phis-ti-cated LLM
- []
-
-[154]
-Overfull \hbox (4.18082pt too wide) in paragraph at lines 183--185
-[]\OT1/cmr/m/n/12 **Scalability Lim-i-ta-tions**: While COR-TEX demon-strates ef-fec-tive-ness across
- []
-
-[155] [156] [157]
-Overfull \hbox (8.60287pt too wide) in paragraph at lines 234--236
-\OT1/cmr/m/n/12 based sys-tems could con-tribute to sig-nif-i-cant so-ci-etal and eco-nomic ben-e-fits through
- []
-
-[158]) [159]
-\openout2 = `chapters/chp8-conclusion.aux'.
-
- (./chapters/chp8-conclusion.tex
-Chapter 8.
-[160
-
-
-
-
-] [161] [162]
-Overfull \hbox (9.11676pt too wide) in paragraph at lines 60--61
-\OT1/cmr/m/n/12 driven decision-making, pro-vid-ing prac-ti-cal guid-ance for im-ple-ment-ing AI-enhanced
- []
-
-
-Overfull \hbox (3.79877pt too wide) in paragraph at lines 62--63
-[]\OT1/cmr/m/n/12 **Safety and Re-li-a-bil-ity Mech-a-nisms**: The re-search es-tab-lishes proven frame-
- []
-
-[163] [164] [165] [166] [167]) [168]
-\openout2 = `appendices/appx-A.aux'.
-
- (./appendices/appx-A.tex
-Appendix A.
-) [169
-
-
-
-
-] (./thesis.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-(./thesis.aux (./chapters/chp1-introduction.aux) (./chapters/chp2-preliminaries.aux) (./chapters/chp3-proof.aux) (./chapters/chp4-applications.aux) (./chapters/chp5-medical-case.aux) (./chapters/chp6-uav-case.aux) (./chapters/chp7-discussion.aux) (./chapters/chp8-conclusion.aux) (./appendices/appx-A.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  BE56BA7C00A2F39D40380BD95DF19A2A;42923.
- ) 
-Here is how much of TeX's memory you used:
- 28701 strings out of 476025
- 552227 string characters out of 5790018
- 1862388 words of memory out of 5000000
- 48145 multiletter control sequences out of 15000+600000
- 522495 words of font info for 67 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 107i,10n,107p,1061b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-!pdfTeX error: pdflatex (file unisong20): Font unisong20 at 720 not found
- ==> Fatal error occurred, no output PDF file produced!
+Package natbib Warning: Citation `berant2013semantic' on page 26 undefined on input line 59

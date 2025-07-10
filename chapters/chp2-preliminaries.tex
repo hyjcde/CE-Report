@@ -4,7 +4,7 @@
 
 This chapter aims to systematically review the current state of research across four critical domains through a critical examination of existing literature, thereby precisely identifying the theoretical and technological gaps that this research seeks to address and elucidating the innovative starting point of this investigation. These four domains are: Digital Twin maturity models, Retrieval-Augmented Generation (RAG), Large Language Model (LLM) Agent paradigms, and classical decision and control architectures in physical systems.
 
-\section{Digital Twin Maturity Models and Applications}
+\section{Digital Twin Models and Applications}
 
 Digital Twins (DT), as a core enabling technology for Cyber-Physical Systems, have undergone extensive research and continuous evolution in both academic and industrial communities. The theoretical foundations of this field can be traced back to early concepts proposed by NASA for addressing aircraft health management challenges, which emphasized the three fundamental components: physical entities, virtual models, and data connections \cite{glaessgen2012digital}. Building upon this foundation, Grieves proposed a three-dimensional conceptual model consisting of physical space entities, virtual space models, and the connections between them, providing a concise yet profoundly influential starting point for theoretical development in this field \cite{grieves2014digital}.
 
@@ -26,7 +26,7 @@ This limitation reveals a critical gap in existing frameworks: the absence of a 
 
 Recent research has begun to address this gap through cognitive-oriented taxonomies that classify Digital Twins based on their decision-support capabilities rather than their technical implementation characteristics \cite{jones2020cognitive, negri2017review}. These emerging frameworks recognize three primary functional categories: monitoring-oriented twins that support descriptive analytics, prediction-oriented twins that enable scenario analysis, and optimization-oriented twins that facilitate autonomous decision-making. However, these classifications remain preliminary and lack the systematic theoretical development necessary for principled AI system design.
 
-\section{Retrieval-Augmented Generation: Principles and Limitations}
+\section{RAG: Principles and Limitations}
 
 Retrieval-Augmented Generation (RAG) has emerged as the standard paradigm for mitigating knowledge staleness and factual hallucination issues in Large Language Models (LLMs). The core mechanism involves utilizing user queries to retrieve relevant information fragments from external knowledge bases (typically text vector databases) prior to generation, injecting this information as context into the prompt provided to the LLM \cite{lewis2020retrieval, karpukhin2020dense}.
 
@@ -58,7 +58,7 @@ Text-to-SQL generation approaches attempt to bridge this gap by training models 
 
 Recent work on semantic parsing for structured knowledge bases shows promise for more sophisticated integration approaches. These methods learn to map natural language to formal meaning representations that can be executed against structured data sources \cite{berant2013semantic}. However, adapting these approaches to the dynamic, multimodal nature of Digital Twin data requires substantial extensions to current methodologies.
 
-\section{LLM Agents: Paradigm Evolution and Challenges}
+\section{LLM Agents: Evolution and Challenges}
 
 The emergence of Large Language Models (LLMs) has catalyzed not only a revolution in natural language processing but also a paradigmatic shift toward transforming LLMs from passive text generators into active, goal-oriented intelligent agents. This evolution centers on endowing LLMs with the capabilities to plan and utilize external tools, fundamentally expanding their operational scope from text generation to autonomous action \cite{mialon2023augmented}.
 
