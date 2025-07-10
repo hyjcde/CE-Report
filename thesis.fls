@@ -197,6 +197,17 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -1210,8 +1221,6 @@ INPUT ./chapters/chp3-proof.tex
 INPUT chapters/chp3-proof.tex
 INPUT ./chapters/chp3-proof.tex
 INPUT chapters/chp3-proof.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./figures/DefectGPT/Overall Framework.png
 INPUT ./figures/DefectGPT/Overall Framework.png
 INPUT figures/DefectGPT/Overall Framework.png
@@ -1279,11 +1288,6 @@ INPUT ./chapters/chp6-uav-case.tex
 INPUT chapters/chp6-uav-case.tex
 INPUT ./chapters/chp6-uav-case.tex
 INPUT chapters/chp6-uav-case.tex
-INPUT ./figures/UAV/LLM Planning.png
-INPUT ./figures/UAV/LLM Planning.png
-INPUT figures/UAV/LLM Planning.png
-INPUT ./figures/UAV/LLM Planning.png
-INPUT ./figures/UAV/LLM Planning.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ./chapters/chp7-discussion.tex
 OUTPUT chapters/chp7-discussion.aux
@@ -1316,12 +1320,6 @@ INPUT ./thesis.bbl
 INPUT thesis.bbl
 INPUT ./thesis.bbl
 INPUT thesis.bbl
-INPUT ./thesis.brf
-INPUT thesis.brf
-INPUT thesis.brf
-INPUT ./thesis.brf
-INPUT ./thesis.brf
-OUTPUT thesis.brf
 INPUT thesis.aux
 INPUT ./chapters/chp1-introduction.aux
 INPUT chapters/chp1-introduction.aux
@@ -1352,5 +1350,3 @@ INPUT appendices/appx-A.aux
 INPUT appendices/appx-A.aux
 INPUT ./thesis.out
 INPUT ./thesis.out
-INPUT ./thesis.brf
-INPUT ./thesis.brf

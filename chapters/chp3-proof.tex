@@ -16,18 +16,16 @@ The Three-Tier Digital Twin Decision Framework is structured as follows:
 
 \begin{table}[h]
 \centering
-\caption{Three-Tier Digital Twin Framework Detailed Specification}
+\caption{Three-Tier Digital Twin Framework}
 \label{tab:three_tier_framework}
-\begin{tabular}{|p{1.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-\hline
-\textbf{Tier} & \textbf{Name} & \textbf{Core Function} & \textbf{Decision Type} & \textbf{Data Characteristics} & \textbf{Key Challenges} & \textbf{Case Study} \\
-\hline
-L1 & Descriptive Twin & Authoritative Record of Reality & Diagnostic (What is?) & Static/quasi-static, structured, multimodal & Information fusion, noise processing & Building Diagnosis \\
-\hline
-L2 & Predictive Twin & Causal Simulator of Time & Strategic (What if?) & Model-based, requires input, outputs predictions & Model orchestration, parameter understanding & Cancer Treatment Planning \\
-\hline
-L3 & Interactive Twin & Counterfactual Sandbox for Action & Actionable (What to do?) & Real-time interaction, closed-loop, with delays and consequences & Safety, efficiency, real-time performance & UAV Exploration \\
-\hline
+\begin{tabular}{llll}
+\toprule
+\textbf{Tier} & \textbf{Type} & \textbf{Decision Mode} & \textbf{Case Study} \\
+\midrule
+L1 & Descriptive Twin & Diagnostic (What is?) & Building Monitoring \\
+L2 & Predictive Twin & Strategic (What if?) & Medical Diagnosis \\
+L3 & Interactive Twin & Actionable (What to do?) & UAV Navigation \\
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -37,13 +35,7 @@ The L1 tier represents a high-fidelity ``digital archive'' of the physical world
 
 At this tier, the core cognitive challenge for agents is diagnosis and attribution. Agents must be able to understand natural language queries about ``current state'' or ``past events'' and accurately transform them into complex, joint queries across different data sources. For example, in the ``building diagnosis'' case study, agents need to integrate structural information from BIM models, dynamic readings from multiple stress sensors, and textual inspection records from engineers to comprehensively assess risk in a specific area \cite{boje2020towards}.
 
-The key challenges of L1 environments lie in information fusion and noise processing, directly testing the data grounding and robustness of the perception module. The complexity arises from the need to handle:
-\begin{itemize}
-\item \textbf{Heterogeneous Data Integration}: Combining structured databases, time-series sensor data, and unstructured text documents while maintaining semantic coherence \cite{lu2020digital}.
-\item \textbf{Temporal Alignment}: Synchronizing data from different sources with varying sampling rates and timestamps.
-\item \textbf{Quality Assessment}: Identifying and handling inconsistent, missing, or corrupted data across multiple sources.
-\item \textbf{Semantic Mapping}: Translating natural language queries into appropriate database queries, API calls, and file operations.
-\end{itemize}
+The key challenges of L1 environments lie in information fusion and noise processing, directly testing the data grounding and robustness of the perception module. The complexity arises from the need to handle heterogeneous data integration, which involves combining structured databases, time-series sensor data, and unstructured text documents while maintaining semantic coherence \cite{lu2020digital}. Temporal alignment presents additional challenges as data from different sources must be synchronized despite varying sampling rates and timestamps. Quality assessment requires identifying and handling inconsistent, missing, or corrupted data across multiple sources. Finally, semantic mapping involves translating natural language queries into appropriate database queries, API calls, and file operations.
 
 \subsection{L2 - Predictive Twin: Causal Simulator of Time}
 
@@ -51,13 +43,7 @@ The L2 tier builds upon L1 by integrating engineering simulation models with pre
 
 At this tier, the core cognitive challenge for agents is planning and strategy generation. Agents must engage in forward-looking ``what-if'' reasoning by understanding, selecting, parameterizing, and orchestrating these complex simulation models to evaluate the potential consequences of different strategies. For example, in the ``cancer treatment planning'' case study, agents need to invoke tumor microenvironment simulation models, input different treatment protocols, and compare predicted tumor growth curves to find optimal solutions \cite{rasheed2020digital}.
 
-The key challenges of L2 environments lie in complex model orchestration and semantic understanding of inputs/outputs, directly testing the planning and tool utilization capabilities of the reasoning module. The complexity includes:
-\begin{itemize}
-\item \textbf{Model Selection}: Choosing appropriate simulation models from available options based on the specific prediction requirements.
-\item \textbf{Parameter Configuration}: Understanding complex input requirements and generating appropriate configuration files for simulations.
-\item \textbf{Execution Management}: Coordinating potentially long-running simulations while maintaining system responsiveness.
-\item \textbf{Result Interpretation}: Extracting meaningful insights from complex simulation outputs, often requiring domain expertise.
-\end{itemize}
+The key challenges of L2 environments lie in complex model orchestration and semantic understanding of inputs/outputs, directly testing the planning and tool utilization capabilities of the reasoning module. The complexity includes model selection, which involves choosing appropriate simulation models from available options based on specific prediction requirements. Parameter configuration requires understanding complex input requirements and generating appropriate configuration files for simulations. Execution management involves coordinating potentially long-running simulations while maintaining system responsiveness. Result interpretation demands extracting meaningful insights from complex simulation outputs, often requiring domain expertise.
 
 \subsection{L3 - Interactive Twin: Counterfactual Sandbox for Action}
 
@@ -65,25 +51,13 @@ The L3 tier represents the pinnacle of cognitive challenges, adding closed-loop 
 
 At this tier, the core cognitive challenge for agents is safe autonomous action. Agents must not only plan ``what to do'' but also solve the problem of ``how to do it safely and efficiently.'' For example, in the ``UAV exploration'' case study, each movement command from the agent changes the UAV's position and must be executed in real-time within a dynamically changing environment while maintaining safety as the highest priority \cite{grande2012scan}.
 
-The key challenges of L3 environments lie in the trade-offs and assurance among safety, task efficiency, and real-time performance, directly testing the effectiveness of the dual-loop safety execution mechanism of the action module. The complexity encompasses:
-\begin{itemize}
-\item \textbf{Real-time Constraints}: Making decisions within strict time limits while maintaining safety and effectiveness.
-\item \textbf{Safety Assurance}: Ensuring all actions remain within safe operational boundaries despite uncertainties.
-\item \textbf{Adaptive Planning}: Modifying plans based on real-time feedback and changing environmental conditions.
-\item \textbf{Multi-objective Optimization}: Balancing competing objectives such as task completion, safety, and resource efficiency.
-\end{itemize}
+The key challenges of L3 environments lie in the trade-offs and assurance among safety, task efficiency, and real-time performance, directly testing the effectiveness of the dual-loop safety execution mechanism of the action module. The complexity encompasses real-time constraints that require making decisions within strict time limits while maintaining safety and effectiveness. Safety assurance involves ensuring all actions remain within safe operational boundaries despite uncertainties. Adaptive planning requires modifying plans based on real-time feedback and changing environmental conditions. Multi-objective optimization involves balancing competing objectives such as task completion, safety, and resource efficiency.
 
 \subsection{Framework Validation and Application}
 
 By establishing this cognition-challenge-oriented three-tier framework, this research provides a clear methodology for answering RQ1. It creates a ``testing track'' with progressively increasing cognitive complexity, enabling the core capabilities of the proposed architecture to be independently and systematically evaluated at their corresponding tiers, thereby laying a solid foundation for the overall empirical research of this thesis.
 
-The framework's effectiveness is demonstrated through its ability to:
-\begin{itemize}
-\item Provide standardized evaluation environments across different complexity levels
-\item Enable systematic comparison of different architectural approaches
-\item Support incremental capability development and testing
-\item Facilitate reproducible research through well-defined experimental conditions
-\end{itemize}
+The framework's effectiveness is demonstrated through its ability to provide standardized evaluation environments across different complexity levels, enable systematic comparison of different architectural approaches, support incremental capability development and testing, and facilitate reproducible research through well-defined experimental conditions.
 
 \section{CORTEX: A Cognitive Architecture for LLM-driven Agents}
 
@@ -93,7 +67,7 @@ As illustrated in Figure~\ref{fig:architecture_overview}, the architecture consi
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/Overall Framework.png}
+\includegraphics[width=0.9\textwidth]{DefectGPT/Overall Framework.png}
 \caption{Architecture Overview: The integrated system showing the three main modules (Perception, Reasoning, Action) and their interfaces with the three-tier Digital Twin environment.}
 \label{fig:architecture_overview}
 \end{figure}
@@ -104,23 +78,9 @@ To address the reality grounding challenge, the Perception Module implements a s
 
 Digital Twin information environments are structured (such as SQL databases), multimodal (such as BIM geometric models and time-series data), and dynamic, making simple vectorized text retrieval methods completely ineffective. To overcome this obstacle, the Perception Module upgrades the core concept of RAG from ``single retrieval'' to ``intelligent query routing and multimodal knowledge fusion'' \cite{gao2023retrieval}.
 
-\textbf{Multi-Modal Data Adapter Suite}: The process begins with a natural language information requirement generated by the Reasoning Module. The DT-RAG intent analyzer first parses this requirement and decomposes it into multiple sub-tasks. Subsequently, these sub-tasks are distributed to a parallel suite of specialized data adapters for execution:
+\textbf{Multi-Modal Data Adapter Suite}: The process begins with a natural language information requirement generated by the Reasoning Module. The DT-RAG intent analyzer first parses this requirement and decomposes it into multiple sub-tasks. Subsequently, these sub-tasks are distributed to a parallel suite of specialized data adapters for execution. The structured data adapter converts intentions into SQL statements to query asset databases, handling complex joins and aggregations across multiple tables \cite{scholak2021duorat}. The time-series adapter generates specialized queries to extract sensor readings from time-series databases, including temporal filtering and statistical aggregations \cite{yue2022ts2vec}. The document retrieval adapter utilizes traditional vector retrieval to search for relevant text within unstructured documents, employing semantic similarity matching \cite{karpukhin2020dense}. The geometric model adapter makes specialized API calls to extract spatial and geometric information from BIM models, including spatial queries and geometric calculations \cite{boje2020towards}.
 
-\begin{itemize}
-\item \textbf{Structured Data Adapter}: Converts intentions into SQL statements to query asset databases, handling complex joins and aggregations across multiple tables \cite{scholak2021duorat}.
-\item \textbf{Time-Series Adapter}: Generates specialized queries to extract sensor readings from time-series databases, including temporal filtering and statistical aggregations \cite{yue2022ts2vec}.
-\item \textbf{Document Retrieval Adapter}: Utilizes traditional vector retrieval to search for relevant text within unstructured documents, employing semantic similarity matching \cite{karpukhin2020dense}.
-\item \textbf{Geometric Model Adapter}: Makes specialized API calls to extract spatial and geometric information from BIM models, including spatial queries and geometric calculations \cite{boje2020towards}.
-\end{itemize}
-
-\textbf{Information Fusion and Contextualization}: The heterogeneous results returned by these parallel queries require sophisticated fusion mechanisms. The most critical step in DT-RAG is integrating these information fragments into a unified, context-rich textual summary. This fusion process involves:
-
-\begin{itemize}
-\item \textbf{Semantic Alignment}: Ensuring that information from different sources refers to the same physical entities or phenomena.
-\item \textbf{Temporal Synchronization}: Aligning data from different time periods and sampling rates into coherent temporal narratives.
-\item \textbf{Quality Weighting}: Assigning confidence scores to different information sources based on reliability and relevance.
-\item \textbf{Contextual Summarization}: Generating natural language summaries that preserve essential quantitative relationships while being optimized for LLM comprehension.
-\end{itemize}
+\textbf{Information Fusion and Contextualization}: The heterogeneous results returned by these parallel queries require sophisticated fusion mechanisms. The most critical step in DT-RAG is integrating these information fragments into a unified, context-rich textual summary. This fusion process involves semantic alignment to ensure that information from different sources refers to the same physical entities or phenomena. Temporal synchronization aligns data from different time periods and sampling rates into coherent temporal narratives. Quality weighting assigns confidence scores to different information sources based on reliability and relevance. Contextual summarization generates natural language summaries that preserve essential quantitative relationships while being optimized for LLM comprehension.
 
 This summary is ultimately injected into the LLM's prompt, transforming a raw and unreadable physical environment into preprocessed, grounded knowledge that the LLM can directly understand and reason about, fundamentally resolving the LLM's ``hallucination'' problem in physical domains \cite{ji2023survey}.
 
@@ -130,25 +90,9 @@ Building upon the resolved data grounding issue, the Reasoning Module focuses on
 
 The architecture addresses this challenge through a ``model-profile-driven deep tool orchestration'' mechanism, elevating the LLM's role from a simple API caller to a ``virtual systems engineer'' \cite{lu2022unified}.
 
-\textbf{Model Profile System}: In this architecture, every complex physical model is encapsulated as a ``tool'' and equipped with a detailed ``Model Profile.'' This profile is a semi-structured description that details:
+\textbf{Model Profile System}: In this architecture, every complex physical model is encapsulated as a ``tool'' and equipped with a detailed ``Model Profile.'' This profile is a semi-structured description that details functional specification (what the model simulates and under what conditions it is applicable), input requirements (complex input formats including configuration files, boundary conditions, and parameter specifications), execution protocol (precise command sequences, expected runtime, and resource requirements), output structure (format and interpretation of simulation results, including visualization options), and domain guidelines (expert knowledge for interpreting results and understanding limitations).
 
-\begin{itemize}
-\item \textbf{Functional Specification}: What the model simulates and under what conditions it is applicable.
-\item \textbf{Input Requirements}: Complex input formats including configuration files, boundary conditions, and parameter specifications.
-\item \textbf{Execution Protocol}: Precise command sequences, expected runtime, and resource requirements.
-\item \textbf{Output Structure}: Format and interpretation of simulation results, including visualization options.
-\item \textbf{Domain Guidelines}: Expert knowledge for interpreting results and understanding limitations.
-\end{itemize}
-
-\textbf{Multi-Step Engineering Orchestration}: When facing an L2-level task requiring prediction, the LLM's reasoning chain becomes a multi-step orchestration process following rigorous engineering logic rather than single-step tool invocation:
-
-\begin{enumerate}
-\item \textbf{Task Analysis}: Understanding the prediction requirements and identifying appropriate simulation models.
-\item \textbf{Configuration Generation}: Dynamically generating compliant input configuration files based on task objectives and model profiles.
-\item \textbf{Execution Management}: Invoking execution commands for potentially long-running simulations while monitoring progress.
-\item \textbf{Result Processing}: Analyzing output results using model profile interpretation guidelines and calling data analysis tools.
-\item \textbf{Insight Generation}: Forming high-level insights based on physical model evidence and domain knowledge.
-\end{enumerate}
+\textbf{Multi-Step Engineering Orchestration}: When facing an L2-level task requiring prediction, the LLM's reasoning chain becomes a multi-step orchestration process following rigorous engineering logic rather than single-step tool invocation. This process begins with task analysis to understand the prediction requirements and identify appropriate simulation models. Configuration generation follows, where the system dynamically generates compliant input configuration files based on task objectives and model profiles. Execution management involves invoking execution commands for potentially long-running simulations while monitoring progress. Result processing analyzes output results using model profile interpretation guidelines and calling data analysis tools. Finally, insight generation forms high-level insights based on physical model evidence and domain knowledge.
 
 This deep interaction capability enables the architecture to truly harness professional engineering knowledge within Digital Twins, systematically solving the challenge of combining LLMs with complex physical models \cite{lu2022unified}.
 
@@ -158,34 +102,9 @@ When decisions need to be translated into physical actions, the Action Module ad
 
 To resolve this risk, the Action Module innovatively designs a ``Slow-Fast Dual-Loop Coordination Mechanism,'' completely decoupling decision-making ``thinking'' from ``execution.'' This mechanism draws inspiration from and modernizes classical deliberative-reactive control theory in robotics \cite{gat1998three}.
 
-\textbf{Dual-Loop Architecture}: The mechanism consists of two interconnected but independent control loops:
+\textbf{Dual-Loop Architecture}: The mechanism consists of two interconnected but independent control loops. The slow loop serves as the cognitive brain, driven by the LLM serving as the system's cognitive ``brain'' and responsible for deliberate, globally-informed macro-strategic planning. It operates at lower frequency to fully leverage LLM's cognitive intelligence, generates high-level commands and strategic objectives, and monitors long-term performance while adjusting strategies accordingly. The fast loop functions as a deterministic spinal cord, operating independently of the LLM and implemented as a real-time process in high-performance languages. It continuously monitors low-level sensors at extremely high frequency, receives macro-commands from the slow loop, possesses absolute safety review authority over all instructions, and executes immediate emergency responses when safety violations are detected.
 
-\textbf{Slow Loop (Cognitive Brain)}: 
-\begin{itemize}
-\item Driven by the LLM serving as the system's cognitive ``brain''
-\item Responsible for deliberate, globally-informed macro-strategic planning
-\item Operates at lower frequency to fully leverage LLM's cognitive intelligence
-\item Generates high-level commands and strategic objectives
-\item Monitors long-term performance and adjusts strategies accordingly
-\end{itemize}
-
-\textbf{Fast Loop (Deterministic Spinal Cord)}:
-\begin{itemize}
-\item Independent of the LLM, implemented as a real-time process in high-performance languages
-\item Continuously monitors low-level sensors at extremely high frequency
-\item Receives macro-commands from the slow loop
-\item Possesses absolute safety review authority over all instructions
-\item Executes immediate emergency responses when safety violations are detected
-\end{itemize}
-
-\textbf{Safety-First Execution Protocol}: The core innovation lies in the fast loop's absolute safety review authority. Before executing any action, it performs comprehensive safety verification:
-
-\begin{enumerate}
-\item \textbf{Constraint Verification}: Ensuring all actions satisfy predefined safety boundaries (maximum torque, minimum safety distance, etc.).
-\item \textbf{Real-time Monitoring}: Continuously checking environmental conditions and system states.
-\item \textbf{Emergency Override}: Immediately interrupting tasks and executing predefined safety procedures when risks are detected.
-\item \textbf{Feedback Generation}: Providing error feedback to the slow loop for strategy adjustment.
-\end{enumerate}
+\textbf{Safety-First Execution Protocol}: The core innovation lies in the fast loop's absolute safety review authority. Before executing any action, it performs comprehensive safety verification through constraint verification to ensure all actions satisfy predefined safety boundaries (maximum torque, minimum safety distance, etc.). Real-time monitoring continuously checks environmental conditions and system states. Emergency override immediately interrupts tasks and executes predefined safety procedures when risks are detected. Feedback generation provides error feedback to the slow loop for strategy adjustment.
 
 This clear responsibility separation elegantly resolves the conflict between advanced cognition and physical safety, providing a solid and reliable architectural foundation for deploying LLM agents in dynamic, unpredictable physical worlds, thus providing a complete answer to RQ2.
 
@@ -199,61 +118,23 @@ The evaluation employs a rigorous controlled comparison scheme to highlight the 
 
 \textbf{Controlled Experiment Design}: This comparison can be viewed as a type of ``ablation experiment'': by maintaining completely identical environmental and task conditions while introducing the proposed architecture's cognitive modules as the only variable, we can ensure that any observed performance differences primarily stem from the advanced cognitive capabilities within the architecture \cite{rogers2021primer}.
 
-The experimental design philosophy emphasizes fairness and reproducibility:
-
-\begin{itemize}
-\item \textbf{Environmental Parity}: Both experimental and control groups access identical Digital Twin data, simulation models, and task specifications.
-\item \textbf{Task Equivalence}: All groups receive identical objective functions, constraints, and success criteria.
-\item \textbf{Resource Constraints}: Computational resources and time limits are standardized across all experimental conditions.
-\item \textbf{Statistical Rigor}: Multiple trials with proper randomization and statistical significance testing.
-\end{itemize}
+The experimental design philosophy emphasizes fairness and reproducibility through environmental parity where both experimental and control groups access identical Digital Twin data, simulation models, and task specifications. Task equivalence ensures all groups receive identical objective functions, constraints, and success criteria. Resource constraints standardize computational resources and time limits across all experimental conditions. Statistical rigor incorporates multiple trials with proper randomization and statistical significance testing.
 
 For example, in the L1 building diagnosis task, both groups access the same Digital Twin data; in the L2 medical decision task, both groups base their protocol development on identical patient information and simulation models; in the L3 UAV exploration task, both systems execute equivalent task objectives in identical simulated environments.
 
-\textbf{Baseline Selection and Validation}: The selection of appropriate baselines is crucial for meaningful evaluation. For each tier, baselines are chosen based on:
-
-\begin{itemize}
-\item \textbf{State-of-the-art Performance}: Current best-performing methods in each domain
-\item \textbf{Practical Deployment}: Methods that have been successfully deployed in real-world scenarios
-\item \textbf{Algorithmic Diversity}: Representative approaches from different methodological families
-\item \textbf{Fair Comparison}: Methods that operate under similar computational and information constraints
-\end{itemize}
+\textbf{Baseline Selection and Validation}: The selection of appropriate baselines is crucial for meaningful evaluation. For each tier, baselines are chosen based on state-of-the-art performance representing current best-performing methods in each domain, practical deployment from methods that have been successfully deployed in real-world scenarios, algorithmic diversity representing approaches from different methodological families, and fair comparison ensuring methods operate under similar computational and information constraints.
 
 \subsection{Key Performance Indicators (KPIs)}
 
 To comprehensively characterize performance, the evaluation employs multi-dimensional core performance indicators covering three major aspects: task effectiveness, decision quality, and robustness with adaptability \cite{hernandez2022measuring}.
 
-\textbf{Task Effectiveness Metrics}: Task effectiveness indicators directly reflect the agent's ability to complete tasks quantitatively or qualitatively:
+\textbf{Task Effectiveness Metrics}: Task effectiveness indicators directly reflect the agent's ability to complete tasks quantitatively or qualitatively through success rate (percentage of tasks completed successfully within specified constraints), coverage rate (proportion of problem space explored or addressed), completion time (time required to achieve task objectives), resource utilization (computational, energy, or material resources consumed during task execution), and throughput (number of tasks completed per unit time in batch processing scenarios).
 
-\begin{itemize}
-\item \textbf{Success Rate}: Percentage of tasks completed successfully within specified constraints
-\item \textbf{Coverage Rate}: Proportion of problem space explored or addressed (e.g., area covered in UAV exploration)
-\item \textbf{Completion Time}: Time required to achieve task objectives
-\item \textbf{Resource Utilization}: Computational, energy, or material resources consumed during task execution
-\item \textbf{Throughput}: Number of tasks completed per unit time in batch processing scenarios
-\end{itemize}
-
-\textbf{Decision Quality Metrics}: Decision quality indicators measure the optimality and appropriateness of agent-generated decisions or solutions:
-
-\begin{itemize}
-\item \textbf{Expert Agreement}: Consistency between agent recommendations and expert judgments, measured through inter-rater reliability metrics
-\item \textbf{Optimality Gap}: Difference between agent solutions and theoretical or empirically-determined optimal solutions
-\item \textbf{Risk Assessment Accuracy}: Precision and recall in identifying potential hazards or failure modes
-\item \textbf{Consistency}: Stability of decisions across similar scenarios or repeated trials
-\item \textbf{Interpretability}: Clarity and logical coherence of decision explanations and justifications
-\end{itemize}
+\textbf{Decision Quality Metrics}: Decision quality indicators measure the optimality and appropriateness of agent-generated decisions or solutions through expert agreement (consistency between agent recommendations and expert judgments, measured through inter-rater reliability metrics), optimality gap (difference between agent solutions and theoretical or empirically-determined optimal solutions), risk assessment accuracy (precision and recall in identifying potential hazards or failure modes), consistency (stability of decisions across similar scenarios or repeated trials), and interpretability (clarity and logical coherence of decision explanations and justifications).
 
 For example, in medical protocol planning, this manifests as consistency scores between proposed treatment protocols and recommendations from oncology expert panels; in building diagnosis, it appears as accuracy in structural risk assessment (precisely identifying actual hidden dangers while avoiding false positives) \cite{rasheed2020digital}.
 
-\textbf{Robustness and Adaptability Metrics}: Robustness and adaptability indicators evaluate the agent's ability to maintain performance under non-ideal conditions:
-
-\begin{itemize}
-\item \textbf{Noise Tolerance}: Performance degradation curves when sensor data contains varying levels of noise
-\item \textbf{Environmental Adaptation}: Ability to maintain effectiveness under changing environmental conditions
-\item \textbf{Failure Recovery}: Speed and effectiveness of recovery from component failures or unexpected events
-\item \textbf{Generalization}: Performance maintenance when deployed in scenarios different from training conditions
-\item \textbf{Learning Efficiency}: Rate of performance improvement over time with accumulated experience
-\end{itemize}
+\textbf{Robustness and Adaptability Metrics}: Robustness and adaptability indicators evaluate the agent's ability to maintain performance under non-ideal conditions through noise tolerance (performance degradation curves when sensor data contains varying levels of noise), environmental adaptation (ability to maintain effectiveness under changing environmental conditions), failure recovery (speed and effectiveness of recovery from component failures or unexpected events), generalization (performance maintenance when deployed in scenarios different from training conditions), and learning efficiency (rate of performance improvement over time with accumulated experience).
 
 For instance, testing building diagnosis accuracy degradation curves when sensor data contains certain noise levels, or introducing sudden obstacles in UAV exploration tasks to observe system replanning efficiency and safety \cite{grande2012scan}.
 
@@ -273,55 +154,19 @@ For metrics where lower values indicate better performance (such as error rates 
 
 \textbf{Multi-Dimensional Cognitive Gain Analysis}: Cognitive Gain is not merely focused on single metric improvement but aims to capture the total advantage gained through introducing cognitive intelligence. In actual analysis, we calculate Cognitive Gain for each case study's key indicators separately and discuss them in combination with qualitative results, evaluating the practical value of the proposed architecture from multiple perspectives \cite{hernandez2022measuring}.
 
-The comprehensive analysis includes:
+The comprehensive analysis includes primary metrics representing core performance indicators most relevant to each application domain, secondary metrics providing additional insights into system behavior, interaction effects showing how improvements in one metric may influence others, domain specificity indicating which types of cognitive gains are most pronounced in different application areas, and scalability demonstrating how cognitive gains change with problem complexity or scale.
 
-\begin{itemize}
-\item \textbf{Primary Metrics}: Core performance indicators most relevant to each application domain
-\item \textbf{Secondary Metrics}: Supporting indicators that provide additional insights into system behavior
-\item \textbf{Interaction Effects}: How improvements in one metric may influence others
-\item \textbf{Domain Specificity}: Which types of cognitive gains are most pronounced in different application areas
-\item \textbf{Scalability}: How cognitive gains change with problem complexity or scale
-\end{itemize}
-
-\textbf{Statistical Significance and Confidence Intervals}: To ensure robust and reliable conclusions, Cognitive Gain measurements include:
-
-\begin{itemize}
-\item \textbf{Statistical Testing}: Appropriate hypothesis tests to determine significance of observed gains
-\item \textbf{Confidence Intervals}: Uncertainty bounds around Cognitive Gain estimates
-\item \textbf{Effect Size}: Practical significance of observed differences beyond statistical significance
-\item \textbf{Power Analysis}: Ensuring sufficient sample sizes for reliable detection of meaningful differences
-\end{itemize}
+\textbf{Statistical Significance and Confidence Intervals}: To ensure robust and reliable conclusions, Cognitive Gain measurements include statistical testing through appropriate hypothesis tests to determine significance of observed gains, confidence intervals providing uncertainty bounds around Cognitive Gain estimates, effect size indicating practical significance of observed differences beyond statistical significance, and power analysis ensuring sufficient sample sizes for reliable detection of meaningful differences.
 
 \subsection{Evaluation Protocol and Procedures}
 
-The evaluation follows a standardized protocol ensuring consistent and reproducible results across all case studies:
+The evaluation follows a standardized protocol ensuring consistent and reproducible results across all case studies.
 
-\textbf{Pre-Evaluation Phase}:
+\textbf{Pre-Evaluation Phase}: The pre-evaluation phase involves environment setup through standardized configuration of Digital Twin environments and baseline systems, calibration to verify that all systems operate within expected parameters, baseline validation to confirm that baseline methods achieve expected performance levels, and metric specification providing clear definition of all evaluation metrics and measurement procedures.
 
-\begin{enumerate}
-\item \textbf{Environment Setup}: Standardized configuration of Digital Twin environments and baseline systems
-\item \textbf{Calibration}: Verification that all systems operate within expected parameters
-\item \textbf{Baseline Validation}: Confirmation that baseline methods achieve expected performance levels
-\item \textbf{Metric Specification}: Clear definition of all evaluation metrics and measurement procedures
-\end{enumerate}
+\textbf{Evaluation Execution}: The evaluation execution phase includes randomization through proper randomization of test scenarios and initial conditions, parallel testing with simultaneous evaluation of experimental and control conditions where possible, data collection involving systematic recording of all relevant performance metrics and system behaviors, and quality assurance through real-time monitoring for evaluation integrity and data quality.
 
-\textbf{Evaluation Execution}:
-
-\begin{enumerate}
-\item \textbf{Randomization}: Proper randomization of test scenarios and initial conditions
-\item \textbf{Parallel Testing}: Simultaneous evaluation of experimental and control conditions where possible
-\item \textbf{Data Collection}: Systematic recording of all relevant performance metrics and system behaviors
-\item \textbf{Quality Assurance}: Real-time monitoring for evaluation integrity and data quality
-\end{enumerate}
-
-\textbf{Post-Evaluation Analysis}:
-
-\begin{enumerate}
-\item \textbf{Statistical Analysis}: Comprehensive statistical testing of collected data
-\item \textbf{Cognitive Gain Calculation}: Computation of Cognitive Gain metrics with appropriate uncertainty quantification
-\item \textbf{Qualitative Analysis}: Interpretation of quantitative results with domain expert insights
-\item \textbf{Validation}: Cross-validation of results and sensitivity analysis for key findings
-\end{enumerate}
+\textbf{Post-Evaluation Analysis}: The post-evaluation analysis phase encompasses statistical analysis through comprehensive statistical testing of collected data, cognitive gain calculation involving computation of Cognitive Gain metrics with appropriate uncertainty quantification, qualitative analysis for interpretation of quantitative results with domain expert insights, and validation through cross-validation of results and sensitivity analysis for key findings.
 
 \section{Research Plan}
 

@@ -8,9 +8,9 @@ In the contemporary Architecture, Engineering, and Construction (AEC) domain, di
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/dynamic_knowledge_engine.png}
-\caption{Dynamic Knowledge Engine: Comparison between traditional periodic fine-tuning approach (left) resulting in a "Zombie Brain" versus our real-time knowledge injection solution (right) creating a "Living Brain" that continuously updates with physical world changes.}
-\label{fig:dynamic-knowledge-engine}
+\includegraphics[width=0.9\textwidth]{DefectGPT/dynamic_knowledge_engine.png}
+\caption{Dynamic knowledge engine architecture integrating real-time sensor data with historical building information models.}
+\label{fig:dynamic_knowledge_engine}
 \end{figure}
 
 Theoretically, a well-developed Digital Twin should integrate all information from geometric morphology and material properties to real-time operational states, thereby providing decision-makers with an omniscient "God's eye view" perspective. However, in practical exploration, we have discovered that current mainstream Digital Twin applications remain largely at the level of "data representation" \cite{negri2017review}. They excel at answering descriptive questions such as "what" and "where," for example, precisely locating a specific structural component or a detected surface defect within a three-dimensional model. This undoubtedly represents a tremendous leap forward compared to traditional management modes based on drawings and documents, effectively solving the long-standing "data silo" problem in the industry \cite{bruno2018historic}.
@@ -57,9 +57,9 @@ Following the three-tier framework established in Chapter 3, we construct a comp
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/System_implement.png}
-\caption{Comprehensive System Implementation Architecture showing the three-layer Digital Twin structure: Data Layer (GeoBIM modeling, defect modeling, expert knowledge), Digital Twin Layer (spatial information carriers, defect data schemas, domain knowledge repository), and Decision Layer (hybrid retrieval and cognitive reasoning).}
-\label{fig:system-implementation}
+\includegraphics[width=0.9\textwidth]{DefectGPT/System_implement.png}
+\caption{CORTEX implementation for building health monitoring showing the integration of BIM data, IoT sensors, and diagnostic reasoning.}
+\label{fig:system_implementation}
 \end{figure}
 
 \textbf{Data Layer: Multi-Modal Information Processing}: The Data Layer serves as the perceptual foundation of the entire system, with its core responsibility being comprehensive ingestion of all raw information related to building assets from diverse physical and digital sources. The challenge lies not only in the massive volume of data but also in the diversity of sources, heterogeneity of formats, and complexity of semantics.
@@ -84,8 +84,8 @@ The Decision Layer represents the core innovation of DefectGPT architecture, emb
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/cognitive_agent_framework.png}
-\caption{The Cognitive Agent Framework showing the plan-retrieve-synthesize architecture with planner for task decomposition, execution engine for tool orchestration, and reasoning \& synthesis for evidence-based generation.}
+\includegraphics[width=0.9\textwidth]{DefectGPT/cognitive_agent_framework.png}
+\caption{The Cognitive Agent Framework showing the plan-retrieve-synthesize cognitive loop. The system processes queries through specialized adapters, document retrieval adapters, and geometric model adapters, culminating in structured diagnostic outputs.}
 \label{fig:cognitive-agent-framework}
 \end{figure}
 
@@ -106,8 +106,8 @@ The Execution Engine, corresponding to the middle section of Figure~\ref{fig:cog
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/hybrid_retrieval_engine.png}
-\caption{Hybrid Retrieval Engine architecture demonstrating multi-modal data adapter suite including structured data adapters, time-series adapters, document retrieval adapters, and geometric model adapters, followed by fusion ranking and high-precision evidence extraction.}
+\includegraphics[width=0.9\textwidth]{DefectGPT/hybrid_retrieval_engine.png}
+\caption{Hybrid retrieval engine demonstrating multi-modal data fusion from BIM geometric models, IoT sensor time-series, and technical documentation for comprehensive building diagnosis.}
 \label{fig:hybrid-retrieval-engine}
 \end{figure}
 
@@ -178,8 +178,8 @@ We employ a multi-dimensional evaluation metric system to comprehensively measur
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/performance comparison.png}
-\caption{Core Performance Comparison Across Key Metrics showing DefectGPT's superior performance across multiple evaluation metrics (BERTScore, BLEU, ROUGE-L, METEOR, ROUGE-2) compared to state-of-the-art language models. DefectGPT (red bars) demonstrates substantial cognitive gains across all evaluation dimensions.}
+\includegraphics[width=0.9\textwidth]{DefectGPT/performance comparison.png}
+\caption{Performance comparison between CORTEX and baseline methods across multiple evaluation metrics.}
 \label{fig:performance-comparison}
 \end{figure}
 
