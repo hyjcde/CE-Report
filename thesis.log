@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 02:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,7 +1098,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout5 = `thesis.toc'.
 
  [5] (./thesis.lof
-Overfull \hbox (13.56714pt too wide) in paragraph at lines 9--9
+Overfull \hbox (13.56714pt too wide) in paragraph at lines 10--10
  [][] [][][]\TU/lmr/m/n/12 The Cognitive Agent Framework showing the plan-retri
 eve-synthesize 
  []
@@ -1153,13 +1153,7 @@ Chapter 2.
 
 
 
-] [12]
-Overfull \hbox (1.27188pt too wide) in paragraph at lines 25--26
-\TU/lmr/m/n/12 guage processing and demonstrated remarkable capabilities in rea
-soning, problem-
- []
-
-[13] [14]
+] [12] [13] [14]
 Overfull \hbox (10.63089pt too wide) in paragraph at lines 47--47
 []\TU/lmr/bx/n/17.28 Cognitive Agents: Integration Paradigms and
  []
@@ -1228,35 +1222,31 @@ Chapter 4.
 
 
 ]
-File: figures//DefectGPT/dynamic_knowledge_engine.png Graphic file (type bmp)
-<figures//DefectGPT/dynamic_knowledge_engine.png>
-
-Overfull \hbox (11.05905pt too wide) in paragraph at lines 20--21
+Overfull \hbox (11.05905pt too wide) in paragraph at lines 14--15
 []\TU/lmr/m/n/12 Traditional approaches to building monitoring typically rely o
 n simple threshold-
  []
 
 [33]
-Overfull \hbox (4.12282pt too wide) in paragraph at lines 28--28
+Overfull \hbox (4.12282pt too wide) in paragraph at lines 22--22
 []\TU/lmr/bx/n/17.28 Twin Construction and CORTEX Implemen-
  []
 
 File: figures/DefectGPT//dt-framework.png Graphic file (type bmp)
 <figures/DefectGPT//dt-framework.png>
-
-LaTeX Warning: Reference `fig:dt-framework-building' on page 34 undefined on in
-put line 39.
-
-[34] [35] [36]
-File: figures//DefectGPT/System_implement.png Graphic file (type bmp)
-<figures//DefectGPT/System_implement.png>
- [37]
-File: figures//DefectGPT/cognitive_agent_framework.png Graphic file (type bmp)
-<figures//DefectGPT/cognitive_agent_framework.png>
- [38]
+[34] [35]
+File: figures//DefectGPT/dynamic_knowledge_engine.png Graphic file (type bmp)
+<figures//DefectGPT/dynamic_knowledge_engine.png>
+ [36]
+File: figures/DefectGPT/cognitive_agent_framework.png Graphic file (type bmp)
+<figures/DefectGPT/cognitive_agent_framework.png>
+ [37] [38]
 File: figures//DefectGPT/hybrid_retrieval_engine.png Graphic file (type bmp)
 <figures//DefectGPT/hybrid_retrieval_engine.png>
- [39] [40] [41] [42]) [43]
+ [39]
+File: figures/DefectGPT/System_implement.png Graphic file (type bmp)
+<figures/DefectGPT/System_implement.png>
+ [40] [41] [42]) [43]
 \openout2 = `chapters/chp5-medical-case.aux'.
 
 
@@ -1293,7 +1283,7 @@ Overfull \hbox (3.87505pt too wide) in paragraph at lines 27--28
 en CORTEX-
  []
 
-) [54] [55]
+[54]) [55]
 \openout2 = `chapters/chp7-discussion.aux'.
 
  (./chapters/chp7-discussion.tex
@@ -1344,27 +1334,18 @@ t/12 arXiv preprint
 (./chapters/chp7-discussion.aux) (./chapters/chp8-conclusion.aux)
 (./appendices/appx-A.aux))
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 7A42745B9B27B05162CAD97BBA5F4EDD;9116
-(rerunfilecheck)             After:  5AF0CDCFB9CF93CE860840C9772A5B30;8850.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 5AF0CDCFB9CF93CE860840C9772A5B30;8850.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 22AB020D07AD918C7E9DA9DCAAB1CB02;5478.
  ) 
 Here is how much of TeX's memory you used:
- 30850 strings out of 476683
+ 30852 strings out of 476683
  668226 string characters out of 5804048
  1856018 words of memory out of 5000000
- 50479 multiletter control sequences out of 15000+600000
+ 50475 multiletter control sequences out of 15000+600000
  519580 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  105i,8n,107p,980b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -19,8 +19,8 @@
 \contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring}{32}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Domain and Experimental Objectives}{32}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Twin Construction and CORTEX Implementation}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Design and Results}{41}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Summary of Findings}{42}{section.4.4}%
+\contentsline {section}{\numberline {4.3}Experimental Design and Results}{40}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Summary of Findings}{43}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Case Study II: Medical Ultrasound Diagnosis}{44}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Clinical Problem Statement}{44}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Predictive Twin Design and CORTEX Adaptation}{45}{section.5.2}%
@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {7.1}Synthesis Across the Cognitive Layers}{56}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Answering the Research Questions}{57}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Theoretical Contributions and Practical Implications}{58}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Limitations and Future Work}{58}{section.7.4}%
+\contentsline {section}{\numberline {7.4}Limitations and Future Work}{59}{section.7.4}%
 \contentsline {chapter}{\numberline {8}Conclusion}{60}{chapter.8}%
 \contentsline {chapter}{\numberline {A}Index of glossary terms}{63}{appendix.A}%
 \contentsline {chapter}{Bibliography}{64}{section*.17}%
