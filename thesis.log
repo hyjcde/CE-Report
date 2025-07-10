@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 02:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 02:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,7 +1098,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout5 = `thesis.toc'.
 
  [5] (./thesis.lof
-Overfull \hbox (13.56714pt too wide) in paragraph at lines 10--10
+Overfull \hbox (13.56714pt too wide) in paragraph at lines 9--9
  [][] [][][]\TU/lmr/m/n/12 The Cognitive Agent Framework showing the plan-retri
 eve-synthesize 
  []
@@ -1206,17 +1206,25 @@ ications through
  []
 
 [30]
-Overfull \hbox (2.99506pt too wide) in paragraph at lines 126--127
+File: figures//Gantt.png Graphic file (type bmp)
+<figures//Gantt.png>
+
+
+LaTeX Warning: Reference `fig:research_timeline' on page 31 undefined on input 
+line 133.
+
+
+Overfull \hbox (2.99506pt too wide) in paragraph at lines 135--136
 []\TU/lmr/m/n/12 Risk mitigation strategies address potential challenges in eac
 h validation phase.
  []
 
-) [31]
+[31]) [32]
 \openout2 = `chapters/chp4-applications.aux'.
 
  (./chapters/chp4-applications.tex
 Chapter 4.
-[32
+[33
 
 
 
@@ -1227,32 +1235,32 @@ Overfull \hbox (11.05905pt too wide) in paragraph at lines 14--15
 n simple threshold-
  []
 
-[33]
+[34]
 Overfull \hbox (4.12282pt too wide) in paragraph at lines 22--22
 []\TU/lmr/bx/n/17.28 Twin Construction and CORTEX Implemen-
  []
 
 File: figures/DefectGPT//dt-framework.png Graphic file (type bmp)
 <figures/DefectGPT//dt-framework.png>
-[34] [35]
+[35] [36]
 File: figures//DefectGPT/dynamic_knowledge_engine.png Graphic file (type bmp)
 <figures//DefectGPT/dynamic_knowledge_engine.png>
- [36]
+ [37]
 File: figures/DefectGPT/cognitive_agent_framework.png Graphic file (type bmp)
 <figures/DefectGPT/cognitive_agent_framework.png>
- [37] [38]
+ [38] [39]
 File: figures//DefectGPT/hybrid_retrieval_engine.png Graphic file (type bmp)
 <figures//DefectGPT/hybrid_retrieval_engine.png>
- [39]
+ [40]
 File: figures/DefectGPT/System_implement.png Graphic file (type bmp)
 <figures/DefectGPT/System_implement.png>
- [40] [41] [42]) [43]
+ [41] [42] [43]) [44]
 \openout2 = `chapters/chp5-medical-case.aux'.
 
 
 (./chapters/chp5-medical-case.tex
 Chapter 5.
-[44
+[45
 
 
 
@@ -1264,51 +1272,51 @@ Overfull \hbox (2.42938pt too wide) in paragraph at lines 15--15
 
 File: figures//Med/med_framework.png Graphic file (type bmp)
 <figures//Med/med_framework.png>
-[45] [46] [47]
+[46] [47] [48]
 File: figures//Med/medsam_result.png Graphic file (type bmp)
 <figures//Med/medsam_result.png>
- [48] [49]) [50] [51]
+ [49] [50]) [51] [52]
 \openout2 = `chapters/chp6-uav-case.aux'.
 
  (./chapters/chp6-uav-case.tex
 Chapter 6.
-[52
+[53
 
 
 
 
-] [53]
+] [54]
 Overfull \hbox (3.87505pt too wide) in paragraph at lines 27--28
 []\TU/lmr/m/n/12 The experimental design emphasizes controlled comparison betwe
 en CORTEX-
  []
 
-[54]) [55]
+[55]) [56]
 \openout2 = `chapters/chp7-discussion.aux'.
 
  (./chapters/chp7-discussion.tex
 Chapter 7.
-[56
+[57
 
 
 
 
-] [57] [58]) [59]
+] [58] [59]) [60]
 \openout2 = `chapters/chp8-conclusion.aux'.
 
  (./chapters/chp8-conclusion.tex
 Chapter 8.
-[60
+[61
 
 
 
 
-] [61]) [62]
+] [62]) [63]
 \openout2 = `appendices/appx-A.aux'.
 
  (./appendices/appx-A.tex
 Appendix A.
-) [63
+) [64
 
 
 
@@ -1317,7 +1325,7 @@ Appendix A.
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [64
+ [65
 
 
 
@@ -1327,27 +1335,36 @@ Underfull \hbox (badness 1189) in paragraph at lines 74--74
 t/12 arXiv preprint
  []
 
-[65] [66] [67] [68] [69] [70] [71] [72] [73]) [74] (./thesis.aux
+[66] [67] [68] [69] [70] [71] [72] [73] [74]) [75] (./thesis.aux
 (./chapters/chp1-introduction.aux) (./chapters/chp2-preliminaries.aux)
 (./chapters/chp3-proof.aux) (./chapters/chp4-applications.aux)
 (./chapters/chp5-medical-case.aux) (./chapters/chp6-uav-case.aux)
 (./chapters/chp7-discussion.aux) (./chapters/chp8-conclusion.aux)
 (./appendices/appx-A.aux))
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5AF0CDCFB9CF93CE860840C9772A5B30;8850.
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 5AF0CDCFB9CF93CE860840C9772A5B30;8850
+(rerunfilecheck)             After:  E899EC004DDCB693CB0848EDD72AD6E1;8850.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 22AB020D07AD918C7E9DA9DCAAB1CB02;5478.
  ) 
 Here is how much of TeX's memory you used:
- 30852 strings out of 476683
- 668226 string characters out of 5804048
+ 30869 strings out of 476683
+ 668571 string characters out of 5804048
  1856018 words of memory out of 5000000
- 50475 multiletter control sequences out of 15000+600000
+ 50485 multiletter control sequences out of 15000+600000
  519580 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  105i,8n,107p,980b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (84 pages).
+Output written on thesis.pdf (85 pages).

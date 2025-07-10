@@ -16,26 +16,26 @@
 \contentsline {section}{\numberline {3.2}CORTEX: A Cognitive Architecture for LLM-driven Agents}{23}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Evaluation Framework and Metrics}{28}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Research Plan}{30}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Domain and Experimental Objectives}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Twin Construction and CORTEX Implementation}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Design and Results}{40}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Summary of Findings}{43}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Case Study II: Medical Ultrasound Diagnosis}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Clinical Problem Statement}{44}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Predictive Twin Design and CORTEX Adaptation}{45}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Experimental Design and Validation}{48}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Summary of Findings}{50}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Case Study III: Autonomous Task Planning for UAVs}{52}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Domain and Mission Objectives}{52}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Interactive Twin Design and CORTEX Configuration}{53}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Implementation and Validation}{54}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Summary of Findings}{54}{section.6.4}%
-\contentsline {chapter}{\numberline {7}General Discussion}{56}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Synthesis Across the Cognitive Layers}{56}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Answering the Research Questions}{57}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Theoretical Contributions and Practical Implications}{58}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Limitations and Future Work}{59}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Conclusion}{60}{chapter.8}%
-\contentsline {chapter}{\numberline {A}Index of glossary terms}{63}{appendix.A}%
-\contentsline {chapter}{Bibliography}{64}{section*.17}%
+\contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Domain and Experimental Objectives}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Twin Construction and CORTEX Implementation}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Design and Results}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Summary of Findings}{44}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Case Study II: Medical Ultrasound Diagnosis}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Clinical Problem Statement}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Predictive Twin Design and CORTEX Adaptation}{46}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Experimental Design and Validation}{49}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Summary of Findings}{51}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Case Study III: Autonomous Task Planning for UAVs}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Domain and Mission Objectives}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Interactive Twin Design and CORTEX Configuration}{54}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementation and Validation}{55}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Summary of Findings}{55}{section.6.4}%
+\contentsline {chapter}{\numberline {7}General Discussion}{57}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Synthesis Across the Cognitive Layers}{57}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Answering the Research Questions}{58}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Theoretical Contributions and Practical Implications}{59}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Limitations and Future Work}{60}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Index of glossary terms}{64}{appendix.A}%
+\contentsline {chapter}{Bibliography}{65}{section*.18}%
