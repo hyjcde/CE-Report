@@ -9,7 +9,12 @@ Building health monitoring represents a critical application domain for L1 Descr
 Modern building management systems generate vast amounts of heterogeneous data from IoT sensors, Building Information Models (BIM), maintenance records, and operational documentation. This data diversity creates ideal conditions for testing the CORTEX Perception Module's ability to integrate and reason about multi-modal information sources. The building domain provides clear diagnostic objectives with verifiable ground truth, enabling rigorous evaluation of cognitive enhancement benefits.
 
 The experimental setup focuses on fault detection and diagnosis tasks that require reasoning across multiple information sources. Unlike simple threshold-based monitoring systems, effective building diagnosis requires understanding complex relationships between symptoms, potential causes, and system interdependencies. This cognitive complexity makes the domain particularly suitable for demonstrating the value of LLM-enhanced approaches over traditional rule-based systems.
-
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{dynamic_knowledge_engine.png}
+    \caption{Enter Caption}
+    \label{fig:enter-label}
+\end{figure}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{DefectGPT/dynamic_knowledge_engine.png}
@@ -35,7 +40,7 @@ The solution approach must demonstrate capability for multi-source data integrat
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{DefectGPT/System_implement.png}
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/System_implement.png}
 \caption{CORTEX implementation for building health monitoring showing the integration of BIM data, IoT sensors, and diagnostic reasoning.}
 \label{fig:system_implementation}
 \end{figure}
@@ -48,7 +53,8 @@ The resulting Digital Twin provides a comprehensive, queryable representation of
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{DefectGPT/cognitive_agent_framework.png}
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/cognitive_agent_framework.png}
+
 \caption{The Cognitive Agent Framework showing the plan-retrieve-synthesize cognitive loop. The system processes queries through deliberate planning, targeted information retrieval, and comprehensive synthesis to generate diagnostic insights.}
 \label{fig:cognitive_agent_framework}
 \end{figure}
@@ -64,6 +70,7 @@ The Hybrid Retrieval Engine implements parallel execution of specialized adapter
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{DefectGPT/hybrid_retrieval_engine.png}
+
 \caption{Hybrid retrieval engine demonstrating multi-modal data fusion from BIM geometric models, IoT sensor time-series, and technical documentation for comprehensive building diagnosis.}
 \label{fig:hybrid_retrieval_engine}
 \end{figure}
