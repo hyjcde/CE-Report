@@ -1,172 +1,3 @@
-%% 
-%% Copyright 2019-2021 Elsevier Ltd
-%% 
-%% This file is part of the 'CAS Bundle'.
-%% --------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.2 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.2 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'CAS Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for cas-sc documentclass for 
-%% single column output.
-
-\documentclass[a4paper,fleqn]{cas-sc}
-
-% If the frontmatter runs over more than one page 
-% use the longmktitle option.
-
-%\documentclass[a4paper,fleqn,longmktitle]{cas-sc}
-
-%\usepackage[numbers]{natbib}
-%\usepackage[authoryear]{natbib}
-%\usepackage[authoryear,longnamesfirst]{natbib}
-\usepackage[sort, numbers]{natbib}
-% \usepackage[sorting=none]{biblatex}
-\usepackage[table,dvipsnames,svgnames]{xcolor}
-\usepackage{amssymb}% http://ctan.org/pkg/amssymb
-\usepackage{mdframed}
-\usepackage{times}
-\usepackage{enumitem}
-\usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\usepackage{tcolorbox}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage{hyperref}
-\usepackage{pifont}
-\usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\usepackage{tcolorbox}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{amsmath,amsfonts}
-\usepackage{algorithmic}
-\usepackage{booktabs}
-\usepackage{lipsum}
-\usepackage{array}
-\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-\usepackage{textcomp}
-\usepackage{stfloats}
-\usepackage{url}
-\usepackage{multirow}
-\usepackage{verbatim}
-\usepackage{color}
-\usepackage{tikz}   
-\usepackage[toc,page]{appendix}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{graphicx}
-\usepackage{caption}
-% Custom section and subsection styles
-\usepackage{setspace}  % 添加 setspace 包
-% Custom tcolorbox styles
-\tcbuselibrary{listingsutf8}
-\tcbset{
-  userstyle/.style={colback=blue!5!white, colframe=blue!75!black, sharp corners},
-  defectstyle/.style={colback=green!5!white, colframe=green!75!black, sharp corners},
-  gptstyle/.style={colback=red!5!white, colframe=red!75!black, sharp corners},
-  boxsep=5pt, arc=4pt
-}
-% http://ctan.org/pkg/pifont
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
-% algorithm package
-\usepackage{epsfig}
-\usepackage[linesnumbered,ruled,vlined,noline]{algorithm2e}
-%\usepackage[sorting=none]{biblatex}
-% For author et al. citation
-% \usepackage[longnamesfirst, authoryear]{natbib}
-\usepackage{multirow}
-\usepackage{lineno}
-
-\pagestyle{plain}
-
-% Define et al.
-\newcommand{\etal}{\textit{et al.}}
-
-%\usepackage[linesnumbered,algoruled,boxed,lined]{algorithm2e}
-%%%Author macros
-\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
-\tsc{WGM}
-\tsc{QE}
-%%%
-
-% Uncomment and use as if needed
-%\newtheorem{theorem}{Theorem}
-%\newtheorem{lemma}[theorem]{Lemma}
-%\newdefinition{rmk}{Remark}
-%\newproof{pf}{Proof}
-%\newproof{pot}{Proof of Theorem \ref{thm}}
-\begin{document}
-% 调整行号间距，避免行号重叠
-\renewcommand\linenumberfont{\normalfont\small}
-\setlength\linenumbersep{10pt}
-\linenumbers
-\let\WriteBookmarks\relax
-\def\floatpagepagefraction{1}
-\def\textpagefraction{.001}
-\pagestyle{plain}
-
-\captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={Fig.}}
-
-% Short title
-\shorttitle{DefectGPT: A LLM-based Integrated Building Digital Twin Information Retrieval-augmented Generation Framework and Its Application}    
-% Short author
-\shortauthors{Y. Huang~\etal}  
-% Main title of the paper
-\title [mode = title]{DefectGPT: A LLM-based Integrated Building Digital Twin Information Retrieval-augmented Generation Framework and Its Application}  
-% Title footnote mark
-% \tnotemark[1]
-
-% Title footnote 1.
-% \tnotetext[1]{This work was supported in part by the InnoHK of the Government of the Hong Kong Special Administrative Region via the Hong Kong Centre for Logistics Robotics and in part by the Research Grants Council of Hong Kong SAR (Grant Nos: 14217922, 14209623, 14209424 and 14200524).}
-
-\author[1]{Yijun Huang}
-\credit{Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Validation, Visualization, Writing - original draft}
-
-\author[1]{Jihan Zhang}[type=editor,orcid=0009-0004-2773-1361]
-\cormark[1]
-\ead{1155139089@link.cuhk.edu.hk}
-\credit{Investigation, Data curation, Visualization, Writing - review \& editing}
-
-\author[1]{Qingxiang Li}
-\credit{Investigation, Writing - review \& editing}
-
-\author[1]{Xi Chen}[type=editor,orcid=0000-0003-2168-9057]
-\cormark[1]
-\ead{xichen002@cuhk.edu.hk}
-\credit{Funding acquisition, Resources, Supervision, Writing - review \& editing}
-
-\author[1]{Alan Lam}
-\credit{Supervision, Writing - review \& editing}
-
-\author[2,3,4]{Mirosław J. Skibniewski}
-\credit{Supervision, Validation, Writing - review \& editing}
-
-\author[1]{Ben M. Chen}
-\credit{Funding acquisition, Resources, Supervision, Validation, Writing - review \& editing}
-
-% Define corresponding authors
-\cortext[cor1]{$\ast$Corresponding authors.}
-
-% Author footnotes
-% \fntext[fn1]{All authors contributed significantly to this work.}
-
-\address[1]{Department of Mechanical and Automation Engineering, The Chinese University of Hong Kong, Shatin, N.T., Hong Kong, China}
-\address[2]{Department of Civil and Environmental Engineering, University of Maryland, College Park, MD 20742, USA}
-\address[3]{Polish Academy of Sciences Institute of Theoretical Informatics, Gliwice, Poland}
-\address[4]{Chaoyang University of Technology, Taichung, Taiwan}
-
-% Here goes the abstract
-\begin{abstract}
 The emergence of Large Language Models (LLMs) provides previously unattainable cognitive capabilities for solving complex problems. However, when applying them to high-risk, dynamic physical world decision-making, a fundamental ``cognitive-physical gap'' exists. This gap manifests as three core technical challenges: the ``reality grounding'' problem where LLMs struggle to accurately understand multimodal, structured data from physical systems; the ``model utilization'' problem where they cannot effectively invoke and orchestrate complex physical simulation models; and the ``safe execution'' problem where they fail to coordinate their slow reasoning with the rapid, safe response requirements of the physical world.
 
 To systematically address these challenges, a doctoral research plan has been formulated, centered on conceptualizing and designing a new Agent architecture named CORTEX. The theoretical foundation of this work is a novel ``three-tier digital twin decision framework.'' This framework categorizes physical decision tasks by complexity evolution into three levels: L1-Descriptive Twins (for diagnostic decisions), L2-Predictive Twins (for strategic decisions), and L3-Interactive Twins (for action-oriented decisions). This framework not only provides logical justification for CORTEX architecture design but also constructs a standardized ``capability testing ground'' for subsequent empirical evaluation.
@@ -313,7 +144,7 @@ The framework depicted in Fig.~\ref{fig:framework} comprises six interconnected 
 
 Complementing these components, the Multi-Source Data Integration module harmonizes heterogeneous data streams from various inspection methodologies, sensor systems, and documentation repositories to create a unified and comprehensive representation of building conditions. This integrated data undergoes further processing through the Semantic Enrichment Processor, which augments raw defect information with contextual metadata, significantly enhancing interpretability through semantic annotations that describe relationships, classifications, and domain-specific attributes. The final component, the Spatial Registration Engine, implements advanced algorithms to map detected defects onto georeferenced building components, enabling precise localization and temporal tracking of structural anomalies within the three-dimensional architectural model. The central integration hub represented in Fig.~\ref{fig:framework} functions as the nexus for alert management, notification prioritization, and critical information synthesis based on severity metrics and contextual relevance.
 
-This architectural framework transcends the limitations of conventional building inspection methodologies by facilitating: (1) seamless integration of heterogeneous data sources across multiple modalities and formats, (2) precise spatial registration of defect information within complex three-dimensional building models, (3) context-aware knowledge retrieval that considers both explicit and implicit query parameters, (4) automated semantic enrichment through domain-specific ontologies, and (5) intelligent decision support through advanced computational modeling techniques. 
+This architectural framework transcends the limitations of conventional building inspection methodologies by facilitating: (1) seamless integration of heterogeneous data sources across multiple modalities and formats, (2) precise spatial registration of defect information within complex three-dimensional building models, (3) context-aware knowledge retrieval that considers both explicit and implicit query parameters, (4) automated semantic enrichment through domain-specific ontologies, and (5) intelligent decision support through advanced computational modeling techniques.
 
 The subsequent sections examine these components in detail, beginning with DT Modeling, which serves as the foundational infrastructure for spatial representation and defect contextualization. We then analyze the RAG-enhanced knowledge management system that enables sophisticated information retrieval and organizational capabilities. Finally, we present the LLM-based intelligence layer that transforms structured knowledge repositories into actionable insights and evidence-based recommendations for building maintenance planning and management.
 
@@ -418,7 +249,7 @@ Our context-aware retrieval process, formalized in Algorithm~\ref{alg:retrieval}
 \begin{algorithm}[hbt!]
 \caption{Hybrid Knowledge Retrieval for Building Inspection}\label{alg:retrieval}
 \KwData{
-    Query $Q$, 
+    Query $Q$,
     Context $C$,
     BIM Model $B$,
     GIS Data $G$,
