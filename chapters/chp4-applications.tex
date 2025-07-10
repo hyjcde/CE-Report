@@ -267,17 +267,6 @@ The same query triggered a completely different, more intelligent cognitive proc
 
 Through this case comparison, we clearly see fundamental differences between the two paradigms. Naive RAG represents passive, approximate information matching, while DefectGPT represents active, precise problem-solving. The latter transforms vague natural language problems into deterministic data operations and logical reasoning through planning, tool invocation, and evidence synthesis, achieving transparency and reliability incomparable to the former.
 
-\subsection{Ablation Study}
-
-To quantify individual module contributions to overall system performance, we conducted systematic ablation experiments by removing key components:
-
-\textbf{Without Planner (-P)}: Removing task decomposition capability resulted in 23.4% average performance degradation across all metrics, demonstrating the critical importance of strategic planning.
-
-\textbf{Without Reranking (-R)}: Removing the reranking model led to 18.7% performance loss, highlighting the value of evidence quality refinement.
-
-\textbf{Without Hybrid Retrieval (-H)}: Using only vector retrieval caused 31.2% performance reduction, validating the necessity of multimodal data integration.
-
-\textbf{Without Dynamic Knowledge Update (-D)}: Static knowledge bases resulted in 15.6% performance degradation over time, proving the importance of continuous knowledge injection.
 
 \section{Discussion}
 
