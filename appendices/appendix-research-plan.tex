@@ -2,32 +2,25 @@
 
 \chapter{Research Plan and Technical Roadmap} \label{app:research-plan}
 
-% Appendix Outline:
-% A.1 Introduction and Overall Research Strategy
-% A.2 Phase I: Architecture Generality and Basic Capability Validation (Current Work)
-% A.3 Phase II: Core Research Contribution: In-depth Medical Diagnosis (Future Work Focus)
-% A.4 Phase III: Closed-loop Interaction and Intelligent Action (Future Work Focus)
-% A.5 Phase IV: Thesis Integration, Writing and Defense
-% A.6 Research Progress Gantt Chart
-% A.7 Expected Research Outcomes
-
 \section{Introduction and Overall Research Strategy}
 
-This doctoral dissertation follows a three-phase, progressive research strategy designed to systematically construct and validate the CORTEX cognitive architecture. The research plan builds upon the completed building asset diagnosis (Case Study I) as a foundation, which has validated the architecture's generality and L1 perceptual capabilities. Future research will pivot from this foundation to focus comprehensively on medical diagnosis (Case Study II), tackling high-value, high-complexity core scientific problems. Finally, through autonomous UAV inspection (Case Study III), the research will close the "perception-action" loop, demonstrating the architecture's L3 physical interaction capabilities.
+This doctoral dissertation follows a three-phase, progressive research strategy designed to systematically construct and validate the CORTEX cognitive intelligence architecture. The research plan builds upon the completed building asset diagnosis (Case Study I) as a foundation, which has validated the architecture's generality and L1 perceptual capabilities. Future research will comprehensively focus on medical diagnosis (Case Study II) to tackle high-value, high-complexity core scientific problems, and finally close the "perception-action" loop through autonomous UAV inspection (Case Study III), demonstrating the architecture's L3 physical interaction capabilities.
 
 The three research phases are interconnected with clear logical progression:
 
-\textbf{Phase I (Completed/Current Work)}: Validate CORTEX architecture's generality and fundamental capabilities (L1/L2).
+\textbf{Phase I (Completed/Current Work Enhancement)}: Validate CORTEX architecture's generality and fundamental capabilities (L1/L2).
 
 \textbf{Phase II (Future Work Focus)}: Tackle CORTEX architecture's depth and value in core application domains (medical field) (L1/L2).
 
 \textbf{Phase III (Future Work Focus)}: Close the loop on CORTEX architecture's physical world interaction and intelligent action capabilities (L3).
 
-This chapter provides detailed exposition of the specific research content, technical roadmaps, and expected timelines for the future three phases.
+\textbf{Phase IV}: Complete thesis integration, writing, and defense.
 
-\section{Phase I: Architecture Generality and Basic Capability Validation (Current Work Enhancement)}
+This chapter provides detailed exposition of the specific research content, technical roadmaps, and expected timelines for all four phases.
 
-\textbf{Timeline}: Second half of doctoral Year 2\\
+\section{Phase I: Architecture Generality and Basic Capability Validation}
+
+\textbf{Timeline}: Second half of doctoral Year 2 (Current Work Enhancement)\\
 \textbf{Corresponding Chapter}: Chapter 4 (Building Domain Empirical Study)\\
 \textbf{Core Mission}: Complete and moderately extend the completed Case Study I to establish a solid foundation for subsequent research.
 
@@ -35,153 +28,211 @@ This chapter provides detailed exposition of the specific research content, tech
 
 \textbf{Content}: Systematically organize and write academic papers based on Case Study I, emphasizing the innovation of DT-RAG technology in fusing heterogeneous building data (BIM, documents, images), and the effectiveness of CORTEX as an L1 perceptual agent.
 
+\textbf{Technical Approach}: Focus on the plan-retrieve-synthesize architecture and hybrid retrieval engine that enables evidence-based reasoning while eliminating factual hallucinations. Demonstrate the cognitive gain achieved through multi-modal data integration.
+
 \textbf{Deliverables}: One high-quality academic paper; Complete first draft of Chapter 4 of the doctoral dissertation.
 
 \subsection{Task 2: L2 Predictive Capability Prototype Validation (Moderate Extension)}
 
 \textbf{Content}: As a subtask of Chapter 4, extend CORTEX capabilities from L1 diagnosis to L2 prediction. Utilizing the existing building knowledge base, explore automatic compilation of natural language strategies (such as "replace window materials") into parameterized IDF files required by the EnergyPlus simulation engine.
 
-\textbf{Objective}: This is not a completely new research chapter, but rather a prototype validation of CORTEX architecture's "knowledge-to-code/parameters" capability. The aim is to demonstrate its potential and provide technical rehearsal for the more complex medical prediction tasks in Chapter 6.
+\textbf{Technical Approach}: Develop natural language to simulation parameter translation capabilities, demonstrating CORTEX's "knowledge-to-code/parameters" ability. This serves as technical rehearsal for more complex medical prediction tasks.
 
 \textbf{Deliverables}: An independent subsection within Chapter 4, including prototype implementation and preliminary experimental results.
 
-\section{Phase II: Core Research Contribution: In-depth Medical Diagnosis (Future Work Focus)}
+\section{Phase II: Core Research Contribution - In-depth Medical Diagnosis}
 
-\textbf{Timeline}: Doctoral Year 3 (Full year)\\
+\textbf{Timeline}: Doctoral Year 3 (Full year focus)\\
 \textbf{Corresponding Chapter}: Chapter 5 (Medical Diagnosis Core Application)\\
 \textbf{Core Mission}: Apply CORTEX architecture to the highest-value, most challenging domain of pancreatic and gastric cancer ultrasound diagnosis, completing the dissertation's most core scientific contribution.
 
-\subsection{Task 1: Multimodal Medical Knowledge Base Construction (First half of doctoral Year 3)}
+\subsection{Task 1: Multimodal Medical Knowledge Base Construction}
 
+\textbf{Timeline}: First half of doctoral Year 3\\
 \textbf{Content}: Build a patient-centered L1/L2 Digital Twin environment focused on pancreatic/gastric cancer cases. Data sources include: anonymized ultrasound imaging videos/images, electronic health records (EHR), pathology report texts, laboratory test results, and publicly available clinical practice guidelines (such as NCCN).
 
-\textbf{Technical Roadmap}: Data cleaning and anonymization processing; multimodal data alignment and indexing.
+\textbf{Technical Roadmap}: 
+- Data cleaning and anonymization processing ensuring HIPAA compliance
+- Multimodal data alignment and temporal synchronization
+- Construction of patient-specific knowledge graphs
+- Integration of clinical guidelines and expert knowledge bases
 
-\subsection{Task 2: CORTEX Medical Diagnosis Module Development (First half of doctoral Year 3)}
+\textbf{Challenges}: Handling sensitive medical data, ensuring data quality across modalities, establishing ground truth for evaluation.
 
+\subsection{Task 2: CORTEX Medical Diagnosis Module Development}
+
+\textbf{Timeline}: First half of doctoral Year 3\\
 \textbf{Content}: Develop CORTEX's core diagnostic reasoning capabilities. Utilize pre-trained models for ultrasound image lesion segmentation and radiomic feature extraction; apply NLP techniques for medical named entity recognition and relationship extraction from EHR and pathology reports.
 
-\textbf{Technical Roadmap}: Combine convolutional neural networks (U-Net, etc.) and Transformer models to achieve deep understanding of multimodal features.
+\textbf{Technical Roadmap}: 
+- Combine convolutional neural networks (U-Net, etc.) and Transformer models
+- Implement medical domain-specific RAG mechanisms
+- Develop uncertainty quantification for diagnostic confidence
+- Create interfaces between imaging analysis and textual reasoning
 
-\subsection{Task 3: Explainable Diagnostic Report Generation and Validation (Second half of doctoral Year 3)}
+\textbf{Innovation Focus}: Integration of visual and textual medical information through Digital Twin representations that maintain semantic coherence across modalities.
 
-\textbf{Content}: This represents the core innovation of this chapter. CORTEX will fuse multimodal information to construct patient-specific knowledge graphs and perform diagnostic reasoning based on this foundation. Finally, large language models will generate traceable, explainable diagnostic reports where every conclusion must be accompanied by supporting evidence sources (such as imaging features, original medical record text, guideline provisions).
+\subsection{Task 3: Explainable Diagnostic Report Generation and Validation}
 
-\textbf{Technical Roadmap}: Research knowledge graph-based RAG technology, exploring how to generate natural language text faithful to evidence chains.
+\textbf{Timeline}: Second half of doctoral Year 3\\
+\textbf{Content}: This represents the core innovation of this chapter. CORTEX will fuse multimodal information to construct patient-specific knowledge graphs and perform diagnostic reasoning based on this foundation. Generate traceable, explainable diagnostic reports where every conclusion must be accompanied by supporting evidence sources (imaging features, medical record text, guideline provisions).
 
-\textbf{Experiments}: Evaluate CORTEX diagnostic accuracy and AUC on anonymized retrospective datasets, comparing with clinicians of different experience levels. Simultaneously, design experiments to quantitatively assess the explainability and faithfulness of diagnostic reports.
+\textbf{Technical Roadmap}: 
+- Research knowledge graph-based RAG technology
+- Develop evidence chain tracking and citation mechanisms
+- Implement bias detection and fairness evaluation
+- Create natural language generation faithful to evidence
 
-\section{Phase III: Closed-loop Interaction and Intelligent Action (Future Work Focus)}
+\textbf{Evaluation Methodology}: 
+- Assess diagnostic accuracy and AUC on anonymized retrospective datasets
+- Compare with clinicians of different experience levels
+- Quantitative evaluation of diagnostic report explainability and faithfulness
+- Clinical utility assessment through expert review
+
+\textbf{Expected Results}: 12-18\% diagnostic accuracy improvement compared to traditional CAD systems, with enhanced consistency (kappa > 0.75) and significant time savings for routine cases.
+
+\section{Phase III: Closed-loop Interaction and Intelligent Action}
 
 \textbf{Timeline}: First half of doctoral Year 4\\
 \textbf{Corresponding Chapter}: Chapter 6 (Physical Interaction Empirical Study)\\
 \textbf{Core Mission}: Integrate CORTEX as the "brain" into existing UAV ground stations, completing an intelligent upgrade from "geometric planning" to "semantic task planning," closing the complete "perception-decision-action" loop.
 
-\subsection{Task 1: Deep Integration of CORTEX with Foxglove Ground Station (First half of doctoral Year 4)}
+\subsection{Task 1: CORTEX-UAV System Integration}
 
 \textbf{Content}: Based on existing Foxglove ground station and large model-based flight path generation capabilities, design and implement high-level task and control interfaces between CORTEX and the ground station.
 
-\textbf{Technical Roadmap}: Define API interfaces, implement CORTEX's task assignment to ground station (high-level commands) and reception of UAV status.
+\textbf{Technical Approach}:
+- Define API interfaces for task assignment and status monitoring
+- Implement dual-loop coordination (slow cognitive planning, fast safety control)
+- Develop real-time communication protocols
+- Create safety constraint validation mechanisms
 
-\subsection{Task 2: Semantic Map Construction and Application (First half of doctoral Year 4)}
+\subsection{Task 2: Semantic Map Construction and Application}
 
 \textbf{Content}: This represents the core innovation of this chapter. Utilize building defect reports output from Chapter 4's L1 diagnosis module as semantic information sources, annotating them onto three-dimensional geometric maps from UAV inspection to form semantic maps containing task information such as "high-risk cracks" and "areas requiring detailed inspection."
 
-\textbf{Logical Closure}: This step ingeniously transforms Chapter 4's perceptual output into Chapter 7's action input, greatly enhancing the logical completeness and innovation of the entire doctoral dissertation.
+\textbf{Logical Closure}: This step transforms Chapter 4's perceptual output into Chapter 6's action input, creating strong logical integration across the dissertation while demonstrating practical value of the three-tier framework.
 
-\subsection{Task 3: Semantic-based Task Planning and Simulation Validation (First half of doctoral Year 4)}
+\textbf{Technical Implementation}:
+- Spatial registration of defect reports with 3D models
+- Semantic annotation of priority levels and inspection requirements
+- Dynamic update mechanisms for evolving conditions
+- Integration with mission planning algorithms
 
-\textbf{Content}: Upgrade CORTEX's flight path planning module, transforming planning objectives from "shortest geometric path" to "highest task quality." New flight paths will automatically densify waypoints, reduce speed, and adjust gimbal angles in semantically annotated key areas to ensure high-quality data collection.
+\subsection{Task 3: Semantic-based Task Planning and Simulation Validation}
 
-\textbf{Experiments}: Design comparative experiments in simulation environments to quantitatively evaluate the advantages of semantic task planning over pure geometric planning in task completion, critical information collection quality, and overall efficiency.
+\textbf{Content}: Upgrade CORTEX's flight path planning module, transforming planning objectives from "shortest geometric path" to "highest task quality." New flight paths will automatically adjust waypoint density, speed profiles, and sensor configurations based on semantic annotations.
+
+\textbf{Experimental Design}: Controlled comparison between semantic task planning and pure geometric planning, measuring:
+- Task completion quality and critical information capture rate
+- Mission efficiency and resource utilization
+- Safety performance and constraint satisfaction
+- Adaptability to dynamic conditions
+
+\textbf{Expected Cognitive Gains}: 25-40\% improvement in area coverage efficiency, 80-90\% reduction in safety incidents, 15-30\% reduction in mission completion time.
 
 \section{Phase IV: Thesis Integration, Writing and Defense}
 
-\textbf{Timeline}: Second half of doctoral Year 4 and beyond\\
+\textbf{Timeline}: Second half of doctoral Year 4 through first half of Year 5\\
 \textbf{Core Mission}: Complete final integration, writing, submission, and defense of the doctoral dissertation.
 
-\subsection{Task 1: Final Refinement and Summary of CORTEX Architecture (Second half of doctoral Year 4)}
+\subsection{Task 1: CORTEX Architecture Final Refinement}
 
-\textbf{Content}: Integrate experiences from three core case studies to finalize the unified cognitive architecture diagram of CORTEX in Chapter 3, detailing its design philosophy and module functions.
+\textbf{Timeline}: Second half of doctoral Year 4\\
+\textbf{Content}: Integrate experiences from three core case studies to finalize the unified cognitive architecture diagram of CORTEX in Chapter 3, detailing design philosophy and module functions with comprehensive validation evidence.
 
-\subsection{Task 2: Core Chapter Paper Publication and Dissertation Writing (Throughout the year)}
+\subsection{Task 2: Academic Paper Publication and Dissertation Writing}
 
-\textbf{Content}: Organize core innovations from Chapter 5 (medical diagnosis) and Chapter 6 (UAV semantic planning) into high-level academic papers for submission. Simultaneously complete writing and revision of remaining portions of the doctoral dissertation.
+\textbf{Timeline}: Throughout Year 4 and into Year 5\\
+\textbf{Content}: 
+- Organize Chapter 5 (medical diagnosis) innovations into high-impact journal submissions
+- Develop Chapter 6 (UAV semantic planning) findings for conference presentations
+- Complete writing and revision of all dissertation chapters
+- Ensure consistent narrative and theoretical coherence across all case studies
 
-\subsection{Task 3: Thesis Submission, Review, and Defense (First half of doctoral Year 5)}
+\subsection{Task 3: Thesis Submission, Review, and Defense}
 
-\textbf{Content}: Complete final version of the dissertation, submit for review, and prepare for final doctoral dissertation defense.
+\textbf{Timeline}: First half of doctoral Year 5\\
+\textbf{Content}: Complete final dissertation version, submit for external review, and prepare comprehensive defense presentation demonstrating the breadth and depth of CORTEX architecture validation.
 
 \section{Research Progress Gantt Chart}
 
 \begin{table}[H]
 \centering
-\caption{Research Timeline and Progress Chart}
-\label{tab:gantt-chart}
+\caption{Detailed Research Timeline and Milestone Chart}
+\label{tab:detailed-gantt}
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-\textbf{Research Phase/Task} & \textbf{Year 2} & \textbf{Year 3} & \textbf{Year 3} & \textbf{Year 4} & \textbf{Year 4} & \textbf{Year 5} \\
- & \textbf{H2} & \textbf{H1} & \textbf{H2} & \textbf{H1} & \textbf{H2} & \textbf{H1} \\
+\textbf{Research Phase/Task} & \textbf{Y2-H2} & \textbf{Y3-H1} & \textbf{Y3-H2} & \textbf{Y4-H1} & \textbf{Y4-H2} & \textbf{Y5-H1} \\
 \hline
-\multicolumn{7}{|l|}{\textbf{Chapter 4: Building Case Enhancement}} \\
+\multicolumn{7}{|l|}{\textbf{Phase I: Building Case Enhancement}} \\
 \hline
-- Paper writing \& summarization & ●● & ○ &  &  &  &  \\
+DefectGPT paper writing \& summarization & ●● & ○ &  &  &  &  \\
 \hline
-- L2 predictive capability extension & ●● &  &  &  &  &  \\
+L2 predictive capability extension & ●● &  &  &  &  &  \\
 \hline
-\multicolumn{7}{|l|}{\textbf{Chapter 5: Medical Diagnosis Core Research}} \\
+\multicolumn{7}{|l|}{\textbf{Phase II: Medical Diagnosis Core Research}} \\
 \hline
-- Knowledge base \& module development &  & ●● & ● &  &  &  \\
+Medical knowledge base construction &  & ●● & ● &  &  &  \\
 \hline
-- Explainable generation \& validation &  & ○ & ●● & ○ &  &  \\
+Diagnosis module development &  & ●● & ● &  &  &  \\
 \hline
-\multicolumn{7}{|l|}{\textbf{Chapter 6: UAV Interactive Action}} \\
+Explainable report generation \& validation &  & ○ & ●● & ○ &  &  \\
 \hline
-- System integration \& semantic maps &  &  &  & ●● &  &  \\
+\multicolumn{7}{|l|}{\textbf{Phase III: UAV Interactive Action}} \\
 \hline
-- Semantic planning \& simulation &  &  &  & ●● & ○ &  \\
+CORTEX-UAV system integration &  &  &  & ●● &  &  \\
 \hline
-\multicolumn{7}{|l|}{\textbf{Thesis Integration \& Final Steps}} \\
+Semantic map construction &  &  &  & ●● &  &  \\
 \hline
-- Dissertation writing \& revision & ○ & ○ & ○ & ●● & ●● & ○ \\
+Semantic planning \& simulation validation &  &  &  & ●● & ○ &  \\
 \hline
-- Paper submission \& revision &  &  & ○ & ●● & ●● & ○ \\
+\multicolumn{7}{|l|}{\textbf{Phase IV: Thesis Integration \& Defense}} \\
 \hline
-- Final submission \& defense &  &  &  &  & ○ & ●● \\
+Architecture final refinement &  &  &  & ● & ●● &  \\
+\hline
+Dissertation writing \& revision & ○ & ○ & ○ & ●● & ●● & ○ \\
+\hline
+Academic paper submission \& revision &  &  & ○ & ●● & ●● & ○ \\
+\hline
+Thesis submission \& defense &  &  &  &  & ○ & ●● \\
 \hline
 \end{tabular}
 \end{table}
 
-\textbf{Legend}: ●● Primary research time, ● Secondary research time, ○ Writing \& organization time
+\textbf{Legend}: ●● Primary research focus, ● Secondary research activity, ○ Writing \& documentation
 
 \section{Expected Research Outcomes}
 
-\subsection{Academic Contributions}
+\subsection{Primary Academic Deliverables}
 
-\textbf{One High-Quality Doctoral Dissertation}: Systematically propose and validate a general cognitive agent architecture named CORTEX, with core contributions in in-depth medical diagnosis applications and closed-loop interaction capabilities in the physical world.
+\textbf{Comprehensive Doctoral Dissertation}: A systematic exposition of the CORTEX cognitive intelligence architecture with rigorous validation across three complexity levels, establishing new paradigms for LLM-Digital Twin integration in physical world applications.
 
-\textbf{2-3 High-Level Academic Papers}: Focus on core innovations from Chapter 5's explainable medical diagnosis and Chapter 6's UAV semantic task planning, submitted to top-tier journals or conferences in relevant fields.
+\textbf{High-Impact Academic Publications}: 
+- One journal paper on explainable medical diagnosis with evidence-based reasoning
+- One conference paper on semantic UAV mission planning and closed-loop interaction
+- One survey paper on LLM-Digital Twin integration frameworks and evaluation methodologies
 
-\subsection{Technical Deliverables}
+\subsection{Technical Innovation Contributions}
 
-\textbf{A Modular CORTEX Open-Source Software Prototype}: Including implementation code for all core case studies in this research, particularly medical diagnosis and UAV planning modules, providing benchmarks for future researchers.
+\textbf{CORTEX Open-Source Framework}: A modular, extensible software architecture implementing all core innovations from the research, including:
+- DT-RAG mechanisms for multimodal data integration
+- Evidence-based reasoning engines with explainability features
+- Dual-loop coordination systems for safety-critical applications
+- Semantic mission planning and execution modules
 
-\textbf{A Validated Knowledge Base and Methodology Suite}: Providing a reproducible technical paradigm for multimodal medical diagnosis and human-machine collaborative physical task planning domains.
+\textbf{Validated Methodological Framework}: Comprehensive benchmarks and evaluation protocols for cognitive autonomy in physical systems, including:
+- Three-tier Digital Twin complexity classification
+- Cognitive gain measurement methodologies
+- Cross-domain validation approaches
+- Safety and reliability assessment frameworks
 
-\subsection{Innovation Impact}
+\subsection{Broader Scientific Impact}
 
-\textbf{Theoretical Framework Innovation}: The three-layer Digital Twin decision framework (L1-L3) provides systematic evaluation methodology for physical world AI research, addressing identified gaps in LLM-based agent capability assessment.
+\textbf{Theoretical Advancement}: Fundamental contributions to cognitive architecture design, symbol grounding theory, and human-AI collaboration frameworks that address core challenges in artificial intelligence.
 
-\textbf{Architectural Innovation}: CORTEX represents fundamental extension of existing Agent paradigms, systematically integrating key modules to comprehensively address LLM challenges in physical environments.
+\textbf{Practical Applications}: Clear pathways for technology transfer in healthcare diagnostics, infrastructure monitoring, and autonomous systems, with demonstrated potential for significant societal benefit.
 
-\textbf{Application Innovation}: Demonstrated effectiveness across building monitoring, medical diagnosis, and autonomous navigation provides clear evidence for practical utility across diverse industries and applications.
+\textbf{Research Community Resources}: Establishment of standardized evaluation frameworks and open datasets that enable comparative research and accelerate progress in physical world AI applications.
 
-\subsection{Broader Impact}
-
-\textbf{Scientific Significance}: Fundamental contributions to artificial intelligence, cognitive science, and Digital Twin research, establishing new paradigms for cognitive architecture design and symbol grounding solutions.
-
-\textbf{Practical Value}: Clear pathways for commercial development and technology transfer, with potential for significant economic impact through improved efficiency, enhanced safety, and expanded capabilities.
-
-\textbf{Societal Benefit}: Establishes precedents for human-AI collaboration that augment rather than replace human capabilities, addressing critical societal concerns about AI deployment while demonstrating beneficial AI development approaches.
-
-The comprehensive research plan outlined in this chapter provides a systematic roadmap for completing the doctoral research objectives while ensuring rigorous validation of the CORTEX architecture across diverse application domains. The progressive complexity from building monitoring through medical diagnosis to autonomous navigation demonstrates the architecture's versatility and establishes its potential as a foundational framework for future physical world AI applications.
+The comprehensive research plan outlined provides systematic progression from theoretical foundations through practical validation, ensuring rigorous scientific methodology while addressing real-world applications with significant potential impact. The interconnected case studies demonstrate the versatility and robustness of the CORTEX architecture while establishing its potential as a foundational framework for future cognitive autonomy research.
