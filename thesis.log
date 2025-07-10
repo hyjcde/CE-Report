@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 00:34
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,12 +935,8 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@dummy=\count356
 \c@exercise=\count357
 )
-(./preamble/cmds.tex) (./preamble/usrcmds.tex) (./thesis.aux
-(./chapters/chp1-introduction.aux) (./chapters/chp2-preliminaries.aux)
-(./chapters/chp3-proof.aux) (./chapters/chp4-applications.aux)
-(./chapters/chp5-medical-case.aux) (./chapters/chp6-uav-case.aux)
-(./chapters/chp7-discussion.aux) (./chapters/chp8-conclusion.aux)
-(./appendices/appx-A.aux))
+(./preamble/cmds.tex) (./preamble/usrcmds.tex)
+No file thesis.aux.
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -967,7 +963,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1060,17 +1055,18 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 36.
 Package backref Info: ** backref set up for natbib ** on input line 36.
 Package hyperref Info: Link coloring ON on input line 36.
-(./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
- [1
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+[1
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
@@ -1089,38 +1085,29 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ]
 (./pages/abstract.tex [1
 
-]) [2] (./thesis.toc [3
-
-
-
-] [4]
-Overfull \hbox (15.5391pt too wide) in paragraph at lines 45--45
- [][] [][][]\TU/lmr/m/n/12 Perception Module: Digital Twin-native Retrieval-Aug
-mented 
- []
-
-[5] [6] [7])
+]) [2]
+No file thesis.toc.
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [8] (./thesis.lof
-Overfull \hbox (13.56714pt too wide) in paragraph at lines 8--8
- [][] [][][]\TU/lmr/m/n/12 The Cognitive Agent Framework showing the plan-retri
-eve-synthesize 
- []
-
-[9
+[3
 
 
-])
+
+]
+No file thesis.lof.
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [10] (./thesis.lot)
+[4
+
+
+]
+No file thesis.lot.
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [11
+[5
 
 
 ]
@@ -1349,12 +1336,39 @@ Package natbib Warning: Citation `powell1992delta' on page 6 undefined on input
  line 59.
 
 [6] [7] [8]
-Overfull \hbox (4.01376pt too wide) in paragraph at lines 107--108
-[]\TU/lmr/m/n/12 Chapter [][]6[][] describes L3 (Interactive) Twin validation t
-hrough UAV autonomous
+
+LaTeX Warning: Reference `chp:literature' on page 9 undefined on input line 99.
+
+
+
+LaTeX Warning: Reference `chp:methodology' on page 9 undefined on input line 10
+1.
+
+
+LaTeX Warning: Reference `chp:building' on page 9 undefined on input line 103.
+
+
+LaTeX Warning: Reference `chp:medical' on page 9 undefined on input line 105.
+
+
+LaTeX Warning: Reference `chp:uav' on page 9 undefined on input line 107.
+
+
+Overfull \hbox (10.87776pt too wide) in paragraph at lines 107--108
+[]\TU/lmr/m/n/12 Chapter [] describes L3 (Interactive) Twin validation through 
+UAV autonomous
  []
 
-[9]) [10]
+[9]
+
+LaTeX Warning: Reference `chp:discussion' on page 10 undefined on input line 10
+9.
+
+
+LaTeX Warning: Reference `chp:conclusion' on page 10 undefined on input line 11
+1.
+
+) [10]
 \openout2 = `chapters/chp2-preliminaries.aux'.
 
  (./chapters/chp2-preliminaries.tex
@@ -1596,4 +1610,180 @@ line 35.
 
 
 ] [20] [21] [22]
-Ove
+Overfull \hbox (14.14523pt too wide) in paragraph at lines 55--55
+[]\TU/lmr/bx/n/17.28 CORTEX: A Cognitive Architecture for LLM-
+ []
+
+File: figures//DefectGPT/Overall Framework.png Graphic file (type bmp)
+<figures//DefectGPT/Overall Framework.png>
+
+Package natbib Warning: Citation `scholak2021duorat' on page 23 undefined on in
+put line 70.
+
+
+Package natbib Warning: Citation `yue2022ts2vec' on page 23 undefined on input 
+line 70.
+
+
+Package natbib Warning: Citation `karpukhin2020dense' on page 23 undefined on i
+nput line 70.
+
+[23] [24] [25] [26]
+Overfull \hbox (6.08305pt too wide) in paragraph at lines 94--95
+\TU/lmr/m/n/12 The evaluation methodology emphasizes controlled comparison betw
+een CORTEX-
+ []
+
+[27] [28]
+Overfull \hbox (47.66776pt too wide) in paragraph at lines 104--105
+[]\TU/lmr/m/n/12 Cognitive Gain = $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Performanc
+e[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 Performance[]\OT1/cmr/m/n/12 )/\OML/c
+mm/m/it/12 Performance[]$ 
+ []
+
+[29]
+Overfull \hbox (3.52707pt too wide) in paragraph at lines 120--121
+[]\TU/lmr/m/n/12 Phase 3 completes the validation with L3 Interactive Twin appl
+ications through
+ []
+
+[30]
+Overfull \hbox (2.99506pt too wide) in paragraph at lines 126--127
+[]\TU/lmr/m/n/12 Risk mitigation strategies address potential challenges in eac
+h validation phase.
+ []
+
+) [31] [32]
+\openout2 = `chapters/chp4-applications.aux'.
+
+ (./chapters/chp4-applications.tex
+Chapter 4.
+[33
+
+
+
+
+]
+File: figures//DefectGPT/dynamic_knowledge_engine.png Graphic file (type bmp)
+<figures//DefectGPT/dynamic_knowledge_engine.png>
+
+Overfull \hbox (11.05905pt too wide) in paragraph at lines 20--21
+[]\TU/lmr/m/n/12 Traditional approaches to building monitoring typically rely o
+n simple threshold-
+ []
+
+[34]
+Overfull \hbox (4.12282pt too wide) in paragraph at lines 28--28
+[]\TU/lmr/bx/n/17.28 Twin Construction and CORTEX Implemen-
+ []
+
+[35]
+File: figures//DefectGPT/System_implement.png Graphic file (type bmp)
+<figures//DefectGPT/System_implement.png>
+ [36]
+File: figures//DefectGPT/cognitive_agent_framework.png Graphic file (type bmp)
+<figures//DefectGPT/cognitive_agent_framework.png>
+ [37]
+File: figures//DefectGPT/hybrid_retrieval_engine.png Graphic file (type bmp)
+<figures//DefectGPT/hybrid_retrieval_engine.png>
+ [38] [39] [40] [41]) [42]
+\openout2 = `chapters/chp5-medical-case.aux'.
+
+ (./chapters/chp5-medical-case.tex
+Chapter 5.
+[43
+
+
+
+
+]
+Overfull \hbox (2.42938pt too wide) in paragraph at lines 15--15
+[]\TU/lmr/bx/n/17.28 Predictive Twin Design and CORTEX Adap-
+ []
+
+File: figures//Med/med_framework.png Graphic file (type bmp)
+<figures//Med/med_framework.png>
+[44] [45] [46]
+File: figures//Med/medsam_result.png Graphic file (type bmp)
+<figures//Med/medsam_result.png>
+ [47] [48]) [49] [50]
+\openout2 = `chapters/chp6-uav-case.aux'.
+
+ (./chapters/chp6-uav-case.tex
+Chapter 6.
+[51
+
+
+
+
+] [52]
+Overfull \hbox (3.87505pt too wide) in paragraph at lines 27--28
+[]\TU/lmr/m/n/12 The experimental design emphasizes controlled comparison betwe
+en CORTEX-
+ []
+
+) [53] [54]
+\openout2 = `chapters/chp7-discussion.aux'.
+
+ (./chapters/chp7-discussion.tex
+Chapter 7.
+[55
+
+
+
+
+] [56] [57]) [58]
+\openout2 = `chapters/chp8-conclusion.aux'.
+
+ (./chapters/chp8-conclusion.tex
+Chapter 8.
+[59
+
+
+
+
+] [60]) [61]
+\openout2 = `appendices/appx-A.aux'.
+
+ (./appendices/appx-A.tex
+Appendix A.
+) [62
+
+
+
+
+]
+No file thesis.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+(./thesis.aux (./chapters/chp1-introduction.aux)
+(./chapters/chp2-preliminaries.aux) (./chapters/chp3-proof.aux)
+(./chapters/chp4-applications.aux) (./chapters/chp5-medical-case.aux)
+(./chapters/chp6-uav-case.aux) (./chapters/chp7-discussion.aux)
+(./chapters/chp8-conclusion.aux) (./appendices/appx-A.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  EEA54F2E18A3D7A63DB5009C5EDAD1C5;9010.
+ ) 
+Here is how much of TeX's memory you used:
+ 30295 strings out of 476683
+ 655664 string characters out of 5804048
+ 1853018 words of memory out of 5000000
+ 49980 multiletter control sequences out of 15000+600000
+ 519572 words of font info for 74 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 105i,8n,107p,980b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on thesis.pdf (69 pages).

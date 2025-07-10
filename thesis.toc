@@ -1,0 +1,42 @@
+\contentsline {chapter}{Abstract}{i}{chapter*.1}%
+\contentsline {chapter}{List of Figures}{iv}{section*.3}%
+\contentsline {chapter}{List of Tables}{v}{section*.5}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background and Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The Cognitive-Physical Gap in Cyber-Physical Systems}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Objectives and Questions}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Core Contributions}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Thesis Structure}{9}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Literature Review}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Digital Twins: Maturity Models and Functional Gaps}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Large Language Models and the Grounding Problem}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Cognitive Agents: Integration Paradigms and Architectural Deficiencies}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Chapter Summary}{18}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Methodology}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The Three-Tier Digital Twin Framework}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}CORTEX: A Cognitive Architecture for LLM-driven Agents}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Evaluation Framework and Metrics}{28}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Research Plan}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Chapter Summary}{31}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Case Study I: Building Health Monitoring}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Domain and Experimental Objectives}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Twin Construction and CORTEX Implementation}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Design and Results}{40}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Summary of Findings}{41}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Case Study II: Medical Ultrasound Diagnosis}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Clinical Problem Statement}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Predictive Twin Design and CORTEX Adaptation}{44}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Experimental Design and Validation}{47}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Summary of Findings}{49}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Case Study III: Autonomous Task Planning for UAVs}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Domain and Mission Objectives}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Interactive Twin Design and CORTEX Configuration}{52}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Implementation and Validation}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Summary of Findings}{53}{section.6.4}%
+\contentsline {chapter}{\numberline {7}General Discussion}{55}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Synthesis Across the Cognitive Layers}{55}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Answering the Research Questions}{56}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Theoretical Contributions and Practical Implications}{57}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Limitations and Future Work}{57}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Conclusion}{59}{chapter.8}%
+\contentsline {chapter}{\numberline {A}Index of glossary terms}{62}{appendix.A}%

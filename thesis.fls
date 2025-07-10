@@ -1195,14 +1195,7 @@ INPUT ./chapters/chp1-introduction.tex
 INPUT chapters/chp1-introduction.tex
 INPUT ./chapters/chp1-introduction.tex
 INPUT chapters/chp1-introduction.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong20.tfm
 INPUT ./chapters/chp2-preliminaries.tex
 OUTPUT chapters/chp2-preliminaries.aux
 INPUT ./chapters/chp2-preliminaries.tex
@@ -1212,6 +1205,11 @@ INPUT ./chapters/chp2-preliminaries.tex
 INPUT chapters/chp2-preliminaries.tex
 INPUT ./chapters/chp2-preliminaries.tex
 INPUT chapters/chp2-preliminaries.tex
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fd/c70rm.fd
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong20.tfm
 INPUT ./chapters/chp3-proof.tex
 OUTPUT chapters/chp3-proof.aux
 INPUT ./chapters/chp3-proof.tex
@@ -1221,11 +1219,14 @@ INPUT ./chapters/chp3-proof.tex
 INPUT chapters/chp3-proof.tex
 INPUT ./chapters/chp3-proof.tex
 INPUT chapters/chp3-proof.tex
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
-INPUT ./figures/DefectGPT/Overall Framework.png
+INPUT ./figures//Framework/DT_Framework.png
+INPUT figures//Framework/DT_Framework.png
+INPUT ./figures//Framework/DT_Framework.png
+INPUT ./figures//Framework/DT_Framework.png
+INPUT ./figures//DefectGPT/Overall Framework.png
+INPUT figures//DefectGPT/Overall Framework.png
+INPUT ./figures//DefectGPT/Overall Framework.png
+INPUT ./figures//DefectGPT/Overall Framework.png
 INPUT ./chapters/chp4-applications.tex
 OUTPUT chapters/chp4-applications.aux
 INPUT ./chapters/chp4-applications.tex
@@ -1235,31 +1236,22 @@ INPUT ./chapters/chp4-applications.tex
 INPUT chapters/chp4-applications.tex
 INPUT ./chapters/chp4-applications.tex
 INPUT chapters/chp4-applications.tex
-INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
-INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
-INPUT figures/DefectGPT/dynamic_knowledge_engine.png
-INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
-INPUT ./figures/DefectGPT/dynamic_knowledge_engine.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/System_implement.png
-INPUT ./figures/DefectGPT/cognitive_agent_framework.png
-INPUT ./figures/DefectGPT/cognitive_agent_framework.png
-INPUT figures/DefectGPT/cognitive_agent_framework.png
-INPUT ./figures/DefectGPT/cognitive_agent_framework.png
-INPUT ./figures/DefectGPT/cognitive_agent_framework.png
-INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
-INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
-INPUT figures/DefectGPT/hybrid_retrieval_engine.png
-INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
-INPUT ./figures/DefectGPT/hybrid_retrieval_engine.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
-INPUT ./figures/DefectGPT/performance comparison.png
+INPUT ./figures//DefectGPT/dynamic_knowledge_engine.png
+INPUT figures//DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures//DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures//DefectGPT/dynamic_knowledge_engine.png
+INPUT ./figures//DefectGPT/System_implement.png
+INPUT figures//DefectGPT/System_implement.png
+INPUT ./figures//DefectGPT/System_implement.png
+INPUT ./figures//DefectGPT/System_implement.png
+INPUT ./figures//DefectGPT/cognitive_agent_framework.png
+INPUT figures//DefectGPT/cognitive_agent_framework.png
+INPUT ./figures//DefectGPT/cognitive_agent_framework.png
+INPUT ./figures//DefectGPT/cognitive_agent_framework.png
+INPUT ./figures//DefectGPT/hybrid_retrieval_engine.png
+INPUT figures//DefectGPT/hybrid_retrieval_engine.png
+INPUT ./figures//DefectGPT/hybrid_retrieval_engine.png
+INPUT ./figures//DefectGPT/hybrid_retrieval_engine.png
 INPUT ./chapters/chp5-medical-case.tex
 OUTPUT chapters/chp5-medical-case.aux
 INPUT ./chapters/chp5-medical-case.tex
@@ -1269,16 +1261,14 @@ INPUT ./chapters/chp5-medical-case.tex
 INPUT chapters/chp5-medical-case.tex
 INPUT ./chapters/chp5-medical-case.tex
 INPUT chapters/chp5-medical-case.tex
-INPUT ./figures/Med/med_framework.png
-INPUT ./figures/Med/med_framework.png
-INPUT figures/Med/med_framework.png
-INPUT ./figures/Med/med_framework.png
-INPUT ./figures/Med/med_framework.png
-INPUT ./figures/Med/medsam_result.png
-INPUT ./figures/Med/medsam_result.png
-INPUT figures/Med/medsam_result.png
-INPUT ./figures/Med/medsam_result.png
-INPUT ./figures/Med/medsam_result.png
+INPUT ./figures//Med/med_framework.png
+INPUT figures//Med/med_framework.png
+INPUT ./figures//Med/med_framework.png
+INPUT ./figures//Med/med_framework.png
+INPUT ./figures//Med/medsam_result.png
+INPUT figures//Med/medsam_result.png
+INPUT ./figures//Med/medsam_result.png
+INPUT ./figures//Med/medsam_result.png
 INPUT ./chapters/chp6-uav-case.tex
 OUTPUT chapters/chp6-uav-case.aux
 INPUT ./chapters/chp6-uav-case.tex
@@ -1288,7 +1278,6 @@ INPUT ./chapters/chp6-uav-case.tex
 INPUT chapters/chp6-uav-case.tex
 INPUT ./chapters/chp6-uav-case.tex
 INPUT chapters/chp6-uav-case.tex
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ./chapters/chp7-discussion.tex
 OUTPUT chapters/chp7-discussion.aux
 INPUT ./chapters/chp7-discussion.tex
