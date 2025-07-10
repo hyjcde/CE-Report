@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:09
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.5)  11 JUL 2025 01:24
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
@@ -935,8 +935,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@dummy=\count356
 \c@exercise=\count357
 )
-(./preamble/cmds.tex) (./preamble/usrcmds.tex)
-No file thesis.aux.
+(./preamble/cmds.tex) (./preamble/usrcmds.tex) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -963,6 +962,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1614,8 +1614,8 @@ Overfull \hbox (14.14523pt too wide) in paragraph at lines 55--55
 []\TU/lmr/bx/n/17.28 CORTEX: A Cognitive Architecture for LLM-
  []
 
-File: figures//DefectGPT/Overall Framework.png Graphic file (type bmp)
-<figures//DefectGPT/Overall Framework.png>
+File: figures//DefectGPT/Overall_Framework.png Graphic file (type bmp)
+<figures//DefectGPT/Overall_Framework.png>
 
 Package natbib Warning: Citation `scholak2021duorat' on page 23 undefined on in
 put line 70.
@@ -1752,8 +1752,7 @@ Appendix A.
 
 
 
-]
-No file thesis.bbl.
+] (./thesis.bbl)
 
 Package natbib Warning: There were undefined citations.
 
@@ -1778,8 +1777,8 @@ Package rerunfilecheck Info: Checksums for `thesis.out':
 (rerunfilecheck)             After:  EEA54F2E18A3D7A63DB5009C5EDAD1C5;9010.
  ) 
 Here is how much of TeX's memory you used:
- 30295 strings out of 476683
- 655664 string characters out of 5804048
+ 30311 strings out of 476683
+ 656092 string characters out of 5804048
  1853018 words of memory out of 5000000
  49980 multiletter control sequences out of 15000+600000
  519572 words of font info for 74 fonts, out of 8000000 for 9000
