@@ -9,12 +9,7 @@ Building health monitoring represents a critical application domain for L1 Descr
 Modern building management systems generate vast amounts of heterogeneous data from IoT sensors, Building Information Models (BIM), maintenance records, and operational documentation. This data diversity creates ideal conditions for testing the CORTEX Perception Module's ability to integrate and reason about multi-modal information sources. The building domain provides clear diagnostic objectives with verifiable ground truth, enabling rigorous evaluation of cognitive enhancement benefits.
 
 The experimental setup focuses on fault detection and diagnosis tasks that require reasoning across multiple information sources. Unlike simple threshold-based monitoring systems, effective building diagnosis requires understanding complex relationships between symptoms, potential causes, and system interdependencies. This cognitive complexity makes the domain particularly suitable for demonstrating the value of LLM-enhanced approaches over traditional rule-based systems.
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.9\textwidth]{DefectGPT/dynamic_knowledge_engine.png}
-\caption{Dynamic knowledge engine architecture integrating real-time sensor data with historical building information models.}
-\label{fig:dynamic_knowledge_engine}
-\end{figure}
+
 
 Traditional approaches to building monitoring typically rely on simple threshold-based alerts and isolated sensor analysis. These approaches suffer from high false positive rates due to their inability to consider system context and interdependencies. For example, a temperature sensor reading may appear anomalous in isolation but be completely normal when considered alongside HVAC schedules, occupancy patterns, and weather conditions.
 
@@ -45,14 +40,16 @@ The building diagnosis task formalization establishes a systematic framework for
 
 Formal problem definition: Given a building Digital Twin containing BIM data (B), sensor time series (S), maintenance records (M), and operational documentation (D), along with a natural language query describing symptoms or concerns (Q), generate a diagnostic assessment (A) that includes fault identification, confidence estimation, explanatory reasoning, and recommended actions.
 
-The solution approach must demonstrate capability for multi-source data integration, temporal reasoning about system behavior, causal analysis of potential fault mechanisms, and uncertainty quantification for diagnostic conclusions.
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{figures/DefectGPT/System_implement.png}
-\caption{CORTEX implementation for building health monitoring showing the integration of BIM data, IoT sensors, and diagnostic reasoning.}
-\label{fig:system_implementation}
+\includegraphics[width=0.9\textwidth]{DefectGPT/dynamic_knowledge_engine.png}
+\caption{Dynamic knowledge engine architecture integrating real-time sensor data with historical building information models.}
+\label{fig:dynamic_knowledge_engine}
 \end{figure}
+
+The solution approach must demonstrate capability for multi-source data integration, temporal reasoning about system behavior, causal analysis of potential fault mechanisms, and uncertainty quantification for diagnostic conclusions.
+
+
 
 The L1 Descriptive Twin construction integrates multiple data sources into a comprehensive representation of building state and history. The core components include BIM geometric models providing spatial relationships, system layouts, and equipment specifications; sensor networks delivering real-time data on temperature, humidity, air quality, energy consumption, and occupancy; maintenance databases containing historical service records, warranty information, and replacement schedules; and operational documentation including system manuals, troubleshooting guides, and performance specifications.
 
@@ -95,6 +92,13 @@ The synthesis process generates natural language explanations that justify diagn
 \section{Experimental Design and Results}
 
 Dataset construction involves creating comprehensive evaluation scenarios that represent realistic building diagnostic challenges while providing verifiable ground truth for performance assessment. The dataset includes scenarios with verified faults (confirmed through expert analysis and physical inspection), normal operation periods (verified through system performance monitoring), and ambiguous cases (requiring expert judgment for resolution).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/DefectGPT/System_implement.png}
+\caption{CORTEX implementation for building health monitoring showing the integration of BIM data, IoT sensors, and diagnostic reasoning.}
+\label{fig:system_implementation}
+\end{figure}
 
 The dataset construction process involves collaboration with building operators to identify representative diagnostic scenarios, expert annotation to establish ground truth labels and explanatory reasoning, data augmentation to ensure coverage of different fault types and building systems, and validation protocols to ensure dataset quality and reliability.
 
