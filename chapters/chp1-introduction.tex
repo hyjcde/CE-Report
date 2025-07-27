@@ -1,111 +1,95 @@
 % !TEX root = ../thesis.tex
 
-\chapter{Introduction} \label{chp:intro}
+\chapter{引言 (Introduction)} \label{chp:intro}
 
-\section{Background and Motivation}
+\section{胃癌与胰腺癌：一个严峻的现代医学挑战}
 
-The concept of Cyber-Physical Systems (CPS) emerged in the early 2000s as a paradigm for integrating computational elements with physical processes through networked communication \cite{lee2008cyber, rajkumar2010cyber, baheti2011cyber, kim2012cyber}. These systems represent a fundamental departure from traditional embedded systems by emphasizing the bidirectional interaction between cyber and physical domains, enabling unprecedented levels of monitoring, control, and optimization in complex engineering systems.
+\subsection{惊人的致死率与停滞的生存率}
 
-Traditional control theory established fundamental principles for system stability and performance through mathematical frameworks like robust control \cite{doyle1989robust, zhou1996robust} and cybernetics \cite{ashby1956introduction}. However, the contemporary landscape of Industry 4.0 and intelligent manufacturing presents challenges that exceed the scope of classical approaches \cite{lasi2014industry, xu2018industry}. Modern CPS must handle massive data streams, uncertain environments, and complex decision-making scenarios that require sophisticated reasoning capabilities beyond traditional control algorithms.
+胃癌与胰腺癌是消化系统最致命的两种恶性肿瘤，其对全球公共卫生的威胁程度与其发病率不成比例。根据最新的全球癌症统计数据，这两类癌症的死亡率与发病率之比异常之高，这意味着一旦确诊，患者的预后往往极差。这种严峻的现实反映在五年生存率上，数十年来，尽管晚期治疗手段如靶向治疗和免疫治疗取得了一定的进展，但总体五年生存率的提升却微乎其微，胃癌仍低于35\%，而胰腺癌更是不足12\%，这一数字在所有主要癌种中几乎垫底。
 
-Digital Twins represent a paradigm shift in how we conceptualize and interact with physical systems \cite{tao2018digital, grieves2014digital}. Unlike static simulations or monitoring systems, Digital Twins maintain real-time bidirectional connections with their physical counterparts, enabling continuous model updates, predictive analysis, and scenario exploration. This capability addresses a fundamental limitation in traditional CPS: the inability to reason about complex scenarios and adapt strategies based on comprehensive understanding of system behavior.
+这种停滞不前的生存率数据，向整个医学界发出了一个明确的信号：单纯依赖于对晚期疾病的治疗策略，已经触及了天花板。高昂的治疗费用与极低的生存获益形成了鲜明对比，给患者家庭和社会带来了沉重的负担。因此，将研究和临床实践的重心从"治疗晚期"向"发现早期"战略性转移，已成为肿瘤学界刻不容缓的共识和核心任务。
 
-The emergence of causal inference and structured reasoning methods provides new tools for understanding complex system relationships \cite{pearl2019seven, peters2017elements, pearl2000causality, spirtes2000causation}. These approaches enable AI systems to move beyond correlation-based pattern recognition toward genuine understanding of cause-and-effect relationships, which is essential for effective decision-making in physical systems where actions have consequences.
+\subsection{早期检测：改变局面的唯一关键}
 
-However, significant challenges remain in bridging the gap between advanced AI reasoning and practical CPS applications \cite{hendrycks2019natural, koh2021wilds}. Current approaches often struggle with uncertainty quantification, real-time constraints, and safety requirements that are fundamental to physical world applications.
+医学界公认，显著提升胃癌与胰腺癌患者生存率的唯一、也是最关键的途径，在于实现真正意义上的早期检测。当肿瘤尚局限于原发器官、未发生淋巴结转移或远处扩散时，根治性手术切除的可能性最高，患者的预后也最为理想。一个典型的例子是，早期胃癌若能被及时发现并接受内镜下切除或根治性手术，其五年生存率可超过90\%，这与晚期胃癌不足10\%的生存率形成了天壤之别。
 
-The integration of cognitive architectures with CPS represents an emerging research frontier \cite{chen2020cognitive, zhang2021cognitive}. These approaches attempt to incorporate human-like reasoning patterns into autonomous systems, potentially enabling more flexible and adaptive behavior in complex environments.
+然而，这两类癌症的早期症状往往极其隐匿、不具特异性，常被误认为是普通的胃部不适或消化不良，导致患者在出现显著症状（如黄疸、剧烈腹痛、体重骤降）时才就医，而此时往往已是中晚期。这一"沉默的杀手"特性，使得依赖于症状驱动的诊断模式完全失效，从而对开发能够在大规模无症状或高危人群中进行有效筛查的技术提出了极为迫切的需求。
 
-The symbol grounding problem represents a fundamental challenge in artificial intelligence, particularly relevant to CPS applications \cite{harnad1990symbol, barsalou2008grounded}. This problem concerns how symbolic representations in AI systems correspond to real-world phenomena, which is crucial for effective CPS operation where symbolic decisions must translate into appropriate physical actions.
+\section{现有诊断技术的"筛查鸿沟"与超声的机遇}
 
-Recent advances in machine learning and AI provide new opportunities for CPS enhancement \cite{lake2017building, marcus2020next}, but significant gaps remain in translating these capabilities to physical world applications. Issues include real-time performance requirements, safety constraints, and the need for interpretable decision-making in critical systems \cite{smith1987situated, suchman1987plans}.
+\subsection{CT, MRI, EUS在一线筛查中的局限性}
 
-The challenge extends beyond technical implementation to fundamental questions about knowledge representation and reasoning \cite{hayes1985naive, davis1990representation}. Physical systems operate according to complex, often non-linear dynamics that are difficult to capture in symbolic representations, yet symbolic reasoning remains essential for high-level decision-making and strategic planning \cite{lake2018generalization, fodor1988connectionism}.
+在现有的医学影像武库中，计算机断层扫描（CT）、磁共振成像（MRI）和超声内镜（EUS）无疑是诊断胃肠道肿瘤的强大工具。它们在疾病的确诊、分期和治疗方案制定中扮演着不可或缺的角色。CT以其快速成像和全局视野见长；MRI在软组织对比度上无与伦比；EUS则能提供极致的近场高分辨率图像。
 
-Current Digital Twin implementations largely focus on monitoring and visualization rather than intelligent decision-making \cite{grieves2014digital, tao2019digital, ISO23247, jones2020characterising}. While these systems successfully integrate real-time data with 3D models and provide valuable insights for human operators, they generally lack the autonomous reasoning capabilities needed for intelligent CPS operation.
+然而，这些技术的强大能力与其高昂的成本、侵入性或辐射风险相伴相生，使其本质上均不适用于大规模的一线筛查。CT的电离辐射使其无法用于对普通人群的周期性筛查；MRI的检查费用高昂、耗时漫长且对设备要求苛刻，限制了其可及性；EUS作为一种侵入性检查，不仅给患者带来痛苦和风险，且其操作复杂，无法作为普查手段。这些固有的局限性，在诊断路径的开端，共同构成了一个巨大的"筛查鸿沟"，即我们缺乏一种安全、经济、便捷且有效的工具来完成第一道防线的守卫任务。
 
-The potential for AI-enhanced Digital Twins extends beyond traditional applications to include proactive maintenance, autonomous optimization, and adaptive control strategies \cite{boje2020towards, lu2020digital}. However, realizing this potential requires addressing fundamental challenges in AI reasoning, knowledge representation, and human-AI collaboration.
+\subsection{经腹超声的技术优势与战略价值}
 
-Recent developments in multimodal AI and cross-modal reasoning show promise for bridging different types of data and representations \cite{baltrusaitis2018multimodal, ramesh2021zero}. These approaches could potentially address some of the integration challenges inherent in CPS applications, where systems must reason across multiple data types, time scales, and abstraction levels.
+经腹超声（TAUS）以其独特的属性，成为了填补上述"筛查鸿沟"的最理想候选者。首先，它完全无创且无电离辐射，具有极高的安全性，适用于任何人群的反复检查。其次，其设备相对廉价、便携，使得检查成本极低，具有无与伦比的可及性和成本效益。再者，TAUS能够进行实时动态评估，可以观察器官的蠕动、血流动力学等功能性信息，这是静态成像技术无法比拟的。最后，它能够对整个腹腔进行快速、全面的解剖学覆盖。
 
-Computer vision and image understanding have made significant advances, but translating these capabilities to CPS applications requires addressing domain-specific challenges \cite{smeulders2000content, datta2008image}. Physical systems often operate in challenging environments with varying lighting, weather, and other conditions that can affect perception accuracy.
+这些技术优势的总和，赋予了TAUS巨大的战略价值，使其有潜力成为继血压、体温后的"第五大生命体征"，成为健康体检和高危人群机会性筛查的基础工具。如果TAUS的诊断效能能够得到稳定和提升，它将有能力将肿瘤诊断的关口极大地前移，从而从根本上改变胃癌与胰腺癌的防治格局。
 
-Knowledge representation and ontology development provide frameworks for structuring domain-specific information \cite{gruber1993translation, studer1998knowledge}. These approaches are particularly relevant to CPS applications where systems must reason about complex relationships between different types of entities, processes, and constraints.
+\section{经腹超声的"悖论"：潜能与瓶颈}
 
-The integration challenge extends to user interfaces and human-AI collaboration \cite{negri2017review, kritzinger2018digital}. Effective CPS must support both autonomous operation and meaningful human oversight, requiring interfaces that provide appropriate levels of detail and control while maintaining system efficiency and safety.
+\subsection{对操作者经验与技能的深度依赖}
 
-\section{The Cognitive-Physical Gap in Cyber-Physical Systems}
+正如本研究所揭示的，经腹超声呈现出一个深刻的、根本性的悖论：一个拥有最高筛查潜力的影像模态，却受限于最低的诊断一致性。一方面，它的安全性、无创性、可及性、成本效益、实时动态评估能力和广泛的解剖覆盖范围，使其在理论上是完美的筛查工具。这些优点是其他任何昂贵的影像技术都无法企及的，构成了其巨大潜力的来源。
 
-The fundamental challenge in modern CPS lies in what we term the "cognitive-physical gap" - the disconnect between sophisticated AI reasoning capabilities and the practical requirements of physical world interaction. This gap manifests in several critical areas that limit the effectiveness of current CPS implementations.
+另一方面，这一巨大潜力在临床实践中却被一系列固有的局限性牢牢束缚。这些局限性包括：对操作者技能和经验的极度依赖（High Operator-Dependence）；极易受到肠道气体等因素的干扰导致视野不佳（Susceptibility to Image Artifacts）；早期微小或等回声病灶的对比度极低，难以被察觉（Low Conspicuity of Early Lesions）；以及最终导致的不同医生、不同机构之间诊断结果存在巨大差异（Significant Diagnostic Variability）。
 
-The reality grounding problem represents a fundamental challenge in applying AI reasoning to physical systems \cite{pearl2019seven}. While AI systems excel at processing symbolic representations and abstract patterns, they often struggle to maintain accurate correspondence between these representations and the continuously evolving state of physical systems. This challenge is particularly acute in dynamic environments where sensor readings, system states, and environmental conditions change continuously.
+\subsection{诊断质量的变异性：核心障碍}
 
-Current approaches to CPS often rely on simplified abstractions that may not capture the full complexity of physical system behavior. These abstractions can lead to mode mismatch between AI reasoning and actual system dynamics, resulting in suboptimal or potentially dangerous decisions. The challenge is compounded by the need to handle uncertain and incomplete information while maintaining real-time performance requirements.
+这个悖论是当前阻碍TAUS成为可靠筛查工具的核心症结所在。这个根本性的悖论，自然而然地引出了本博士论文的核心研究问题：我们如何能够系统性地缓解这些固有的局限性，从而解锁经腹超声的全部潜力？传统上依赖于延长医生培训周期的方法，虽然有效但效率低下，远不能满足日益增长的临床需求。因此，必须寻求一种技术性的、可规模化的解决方案。
 
-Temporal reasoning adds another layer of complexity, as physical systems evolve over time through both continuous processes and discrete events. Continuous evolution includes processes like temperature changes, mechanical wear, and gradual degradation, while discrete events include equipment failures, mode switches, and external disturbances. AI systems must be capable of reasoning across these different temporal scales while maintaining coherent understanding of system state and behavior.
+本研究认为，人工智能，特别是深度学习，为破解这一悖论提供了前所未有的历史性机遇。AI有潜力将顶尖专家的隐性知识和诊断模式，转化为可计算、可复制的显性能力，从而降低对操作者个人经验的依赖，提升在伪影干扰下的鲁棒性，并增强对微弱病理信号的感知能力。因此，本研究的出发点，就是将AI作为一把钥匙，去解锁被"操作者依赖"这把锁锁住的TAUS的巨大潜力。
 
-The model utilization problem concerns how AI systems can effectively leverage complex physical models for decision-making \cite{negri2017review, tao2019digital}. Modern CPS often include sophisticated simulation models, finite element analyses, and other computational tools that provide detailed insights into system behavior. However, these models are typically designed for human experts and may not be easily accessible to AI reasoning systems.
+\section{研究思路的转变：从"分析工具"到"认知伙伴"}
 
-Integration challenges arise from the heterogeneous nature of CPS data and models. Different subsystems may use different data formats, coordinate systems, and abstraction levels, making it difficult for AI systems to maintain coherent understanding across the entire system. The challenge is further complicated by the need to handle real-time data streams while accessing historical information and predictive models.
+\subsection{"协同智能"作为核心研究哲学}
 
-The semantic gap between low-level sensor data and high-level reasoning concepts presents ongoing challenges. AI systems must be able to translate raw sensor readings into meaningful concepts and relationships that support effective decision-making. This translation process requires domain expertise and contextual understanding that may be difficult to capture in traditional AI approaches.
+在寻求AI解决方案时，一个关键的洞察是：胃与胰腺在解剖、病理和临床工作流上存在着密不可分的内在联系。本研究将其总结为"四大协同支柱（Four Pillars of Synergy）"。第一，解剖邻近性（Anatomical Adjacency）：胃部，特别是胃窦和胃体，直接覆盖在胰腺前方，当胃腔内充满液体时，可以形成一个绝佳的、无肠气干扰的声学窗口，为观察原本被遮挡的胰腺提供了可能。第二，病理相互依赖性（Pathological Interdependence）：两者的疾病可以相互影响，例如胰腺肿瘤可能侵犯或压迫胃壁导致梗阻，而胃部的某些病变（如巨大溃疡）也可能在影像上模拟胰腺疾病。
 
-Safe execution represents perhaps the most critical challenge in CPS applications \cite{leveson2011engineering, knight2002safety}. Unlike purely software systems where errors typically result in performance degradation or user inconvenience, errors in CPS can have serious physical consequences including equipment damage, environmental harm, or human injury.
+第三，整合的临床工作流（Integrated Clinical Workflow）：在标准的上腹部超声扫查中，医生本来就会对包括肝、胆、胰、脾、胃在内的多个器官进行系统性探查，这意味着对胃和胰腺的数据采集是天然整合、无需额外操作的，这为构建统一模型提供了高效的数据基础。第四，上下文AI分析的潜力（Contextual AI Analysis）：这是协同效应的最高层次。一个足够智能的AI模型，可以利用一个器官的状态作为另一个器官分析的上下文线索。
 
-The challenge of safe execution is compounded by the need to balance safety with performance and efficiency. Overly conservative approaches may result in suboptimal system performance or inability to achieve system objectives, while aggressive approaches may compromise safety. Finding the appropriate balance requires sophisticated understanding of system dynamics, risk assessment, and decision-making under uncertainty.
+\subsection{赋能而非取代：人机协同的最终目标}
 
-Real-time constraints add another dimension to the safety challenge, as CPS must often make critical decisions within strict time limits. This requirement conflicts with the typically deliberative nature of AI reasoning, which may require significant computation time to evaluate alternatives and reach decisions. Developing approaches that can provide both thoughtful reasoning and timely response remains an open challenge.
+"四大协同支柱"的理论，直接导向了本研究的核心技术路径——构建一个统一的计算框架（A Unified Framework）。传统的"单一任务，单一模型"（例如，一个模型只用于胰腺分割，另一个模型只用于胃癌分类）的研究范式，从根本上割裂了两者之间的内在联系，无法利用上述的协同效应。这种碎片化的方法，无法实现上下文AI分析，也无法模拟真实临床工作流中的整体思维。
 
-Fault tolerance and graceful degradation represent essential capabilities for safe CPS operation \cite{avizienis2004basic, powell1992delta}. Systems must be able to detect and respond to component failures, sensor errors, and other anomalies while maintaining essential functionality. This capability requires sophisticated monitoring, diagnosis, and reconfiguration abilities that integrate across multiple system levels.
+因此，本研究提出的统一框架，旨在设计一个单一的、端到端的深度学习模型，该模型能够同时接收上腹部的超声影像输入，并联合地、同步地输出对胃和胰腺的多种评估结果。这样的设计，使得模型在学习过程中能够内在地捕捉和利用两大器官之间的解剖关系、病理关联和图像上下文信息，从而有望在单一器官的评估任务上，也达到甚至超越专门为其设计的单一任务模型。这个统一框架，是实现"协同智能"理念的技术载体。
 
-The verification and validation of AI-enhanced CPS presents unique challenges, as traditional testing approaches may not be sufficient for systems that exhibit emergent or adaptive behavior. Developing appropriate testing methodologies, simulation environments, and certification processes represents an ongoing area of research and development.
+\section{核心科学问题 (Core Research Questions)}
 
-A systematic approach to addressing the cognitive-physical gap requires integrated solutions that span multiple technical domains including AI reasoning, control theory, software engineering, and domain-specific knowledge. Piecemeal solutions that address individual challenges in isolation are unlikely to provide the comprehensive capabilities needed for next-generation CPS.
+基于以上的背景分析、问题识别和理论构建，本博士论文旨在系统性地回答以下三个环环相扣的核心科学问题：
 
-The approach must also consider human factors and human-AI collaboration, as most CPS applications require some level of human oversight or intervention. Designing systems that support effective human-AI teams while maintaining appropriate levels of automation represents a complex design challenge that requires careful consideration of human cognitive capabilities and limitations.
+\subsection{RQ1: 统一计算框架的构建问题}
 
-\section{Research Objectives and Questions}
+如何构建一个能够有效利用胃与胰腺协同效应的统一计算框架？这不仅仅是一个简单的模型拼接问题，而是涉及到如何设计一个能够同时处理两个器官、多种任务（检测、分割、分类、属性评估）的先进网络架构；如何设计一种新颖的训练策略，使其能够从异构的（包含胃、胰腺、或两者的）数据中高效学习，并真正利用上下文信息来提升性能。
 
-This research addresses the cognitive-physical gap through three fundamental research questions that collectively span the theoretical, technical, and empirical dimensions of LLM-CPS integration.
+\subsection{RQ2: 临床信任的价值验证问题}
 
-\textbf{Research Question 1 (RQ1)}: How can we construct a decision environment framework that reflects the evolutionary complexity of physical decision-making tasks, for systematically evaluating LLM agent capabilities?
+如何科学、严谨地验证该框架的临床价值，以建立临床信任？这要求我们超越传统的、仅关注技术指标（如AUC）的验证方法。我们需要建立一个多维度的验证体系，将AI模型的输出与最权威的临床终点——病理学金标准和术后TNM分期——直接挂钩，并使用决策曲线分析等工具，从临床决策学的角度量化其真实的净获益，回答"这个模型能否帮助医生做出更好的决策？"这一根本问题。
 
-Current evaluation approaches for LLM-based agents focus primarily on text-based tasks or simplified digital environments that do not adequately represent the complexity and constraints of physical world applications. This research question addresses the need for systematic evaluation frameworks that can assess LLM capabilities across different types of physical decision-making contexts.
+\subsection{RQ3: 临床工作流的无缝整合问题}
 
-\textbf{Research Question 2 (RQ2)}: How can we design a cognitive architecture that systematically addresses the three major challenges of LLMs in the physical world (grounding, model utilization, safe execution) through deep extensions of RAG and agent paradigms?
+如何将经过验证的AI能力，无缝、安全地整合进真实的临床工作流中，实现真正的人机协同？一个离线的算法模型与一个临床可用的产品之间存在巨大的鸿沟。这个问题关注的是"最后一公里"的转化，即如何设计一个交互原型，使其能够在超声医生动态扫查的实时过程中提供智能、非干扰的辅助，并在检查后高效、可靠地生成报告草稿，从而真正地赋能医生，提升其工作效率和诊断信心。
 
-Existing RAG and agent architectures were primarily designed for information retrieval and text-based reasoning tasks. Adapting these approaches to physical world applications requires fundamental extensions that address the unique challenges of sensor data integration, real-time constraints, and safety requirements.
+\section{研究目标与核心贡献 (Research Objectives \& Core Contributions)}
 
-\textbf{Research Question 3 (RQ3)}: How can we quantitatively evaluate and validate the "cognitive gain" brought by the proposed architecture compared to the best traditional methods in the field?
+为回答上述科学问题，本研究设立了以下具体目标：
 
-Demonstrating the value of LLM-enhanced approaches requires rigorous empirical validation against established baseline methods. This research question focuses on developing appropriate metrics and experimental methodologies that can quantify the benefits of cognitive enhancement in CPS applications.
+1. 设计并实现一个名为USANet (Unified Sonographic Assessment Network) 的统一深度学习框架，并提出一种"两阶段知识注入"训练策略。
 
-\section{Core Contributions}
+2. 构建一个包含胃癌与胰腺癌的多中心、高质量、精标注的经腹超声数据集，作为模型训练与验证的基础。
 
-This research makes several key contributions to the fields of artificial intelligence, cyber-physical systems, and digital twin technology:
+3. 建立并执行一个"技术-临床-决策"三位一体的多维度综合验证方案，全面评估USANet的性能与临床价值。
 
-\textbf{Theoretical Contribution: Three-Tier Digital Twin Decision Framework} - A novel classification framework that categorizes Digital Twin environments based on decision-making complexity rather than traditional engineering metrics. This framework provides standardized evaluation environments for LLM-CPS integration research and establishes clear progression paths for capability development.
+4. 设计并开发一个名为Sono-Agent的人机协同工作流原型，并通过可用性研究进行初步评估。
 
-\textbf{Architectural Contribution: CORTEX Cognitive Architecture} - A systematic approach to integrating LLM reasoning with physical world interaction through three specialized modules: perception (DT-RAG), reasoning (model orchestration), and action (dual-loop coordination). This architecture addresses fundamental challenges in grounding, model utilization, and safe execution.
+本研究的核心贡献在于其系统性和创新性，涵盖理论、技术、方法学和应用四个层面。它旨在为解决TAUS在胃癌与胰腺癌早期诊断中的核心瓶颈，提供一套从理论基础、技术实现、临床验证到应用集成的完整解决方案。
 
-\textbf{Empirical Contribution: Cognitive Gain Quantification} - Comprehensive evaluation methodology and metrics for assessing the benefits of LLM-enhanced approaches compared to traditional methods. This includes both quantitative performance measures and qualitative assessment of decision-making capabilities.
+\section{论文结构安排 (Thesis Structure)}
 
-\textbf{Domain Contributions: Cross-Domain Validation} - Demonstration of the proposed approach across three representative domains: infrastructure monitoring (building health), healthcare (medical diagnosis), and autonomous systems (UAV navigation). These case studies validate the generalizability and practical applicability of the proposed approach.
+本论文的结构将围绕上述三个核心科学问题展开。第一章为引言。第二章将进行全面的文献综述，系统梳理相关领域的研究现状，并进一步明确本研究的知识空白与定位。第三章将详细阐述本研究的总体设计与核心方法论，重点介绍数据集构建、USANet框架的设计与实现、多维度验证体系的建立、以及Sono-Agent原型的设计思路。
 
-\section{Thesis Structure}
-
-This thesis is organized into eight chapters that systematically address the research questions and present the proposed solutions:
-
-Chapter \ref{chp:literature} provides comprehensive review of related work in digital twins, large language models, and cognitive agent architectures, identifying key gaps and opportunities for integration.
-
-Chapter \ref{chp:methodology} presents the theoretical framework and technical architecture, including the three-tier Digital Twin classification system and the CORTEX cognitive architecture.
-
-Chapter \ref{chp:building} demonstrates L1 (Descriptive) Twin validation through building health monitoring, focusing on information fusion and diagnostic reasoning capabilities.
-
-Chapter \ref{chp:medical} presents L2 (Predictive) Twin validation through medical ultrasound diagnosis, emphasizing strategic reasoning and uncertainty quantification.
-
-Chapter \ref{chp:uav} describes L3 (Interactive) Twin validation through UAV autonomous navigation, highlighting real-time decision-making and safety-critical control.
-
-Chapter \ref{chp:discussion} synthesizes results across all three case studies, answers the research questions, and discusses theoretical and practical implications.
-
-Chapter \ref{chp:conclusion} summarizes key findings, outlines limitations, and identifies directions for future research.
+第四章将呈现并分析USANet框架的实验结果，回答第一个和第二个科学问题。第五章将聚焦于Sono-Agent原型的实现与可用性评估，回答第三个科学问题。第六章将对本研究的全部工作进行深入的讨论，分析其优势与局限，并展望未来的研究方向。第七章为全文总结，重申本研究的核心结论与贡献。
